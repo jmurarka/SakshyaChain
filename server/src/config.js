@@ -8,8 +8,8 @@ const __dirname = path.dirname(__filename);
 // Load .env configuration
 dotenv.config({ path: path.join(__dirname, '../.env') });
 
-const defaultOrigins = ['http://localhost:3000', 'http://127.0.0.1:3000', 'http://localhost:5173', 'http://127.0.0.1:5173'];
-const defaultIps = ['127.0.0.1', '::1', '::ffff:127.0.0.1', '10.20.10.', '10.20.20.'];
+const defaultOrigins = ['http://192.168.102.99:5173', 'http://localhost:5173', 'http://127.0.0.1:5173'];
+const defaultIps = ['192.168.102.99', '127.0.0.1', '::1', '::ffff:127.0.0.1', '::ffff:192.168.102.99'];
 
 export const CONFIG = {
   PORT: process.env.PORT || 5000,

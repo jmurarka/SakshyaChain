@@ -122,11 +122,11 @@ function testRequest(headers = {}) {
 }
 
 async function runTests() {
-  console.log('\n[Test 1] Allowed Origin (http://localhost:3000)...');
-  const res1 = await testRequest({ origin: 'http://localhost:3000' });
+  console.log('\n[Test 1] Allowed Origin (http://192.168.102.99:5173)...');
+  const res1 = await testRequest({ origin: 'http://192.168.102.99:5173' });
   console.log('Status:', res1.status);
   console.log('Access-Control-Allow-Origin:', res1.headers['access-control-allow-origin']);
-  if (res1.status === 200 && res1.headers['access-control-allow-origin'] === 'http://localhost:3000') {
+  if (res1.status === 200 && res1.headers['access-control-allow-origin'] === 'http://192.168.102.99:5173') {
     console.log('✅ Test 1 PASS: Allowed origin accepted cleanly!');
   } else {
     console.error('❌ Test 1 FAIL!');
@@ -152,11 +152,11 @@ async function runTests() {
     console.error('❌ Test 3 FAIL!');
   }
 
-  console.log('\n[Test 4] Authorized Subnet IP (10.20.10.45)...');
-  const res4 = await testRequest({ 'x-forwarded-for': '10.20.10.45', origin: 'http://10.20.10.5:3000' });
+  console.log('\n[Test 4] Authorized Client IP (192.168.102.99)...');
+  const res4 = await testRequest({ 'x-forwarded-for': '192.168.102.99', origin: 'http://192.168.102.99:5173' });
   console.log('Status:', res4.status);
   if (res4.status === 200) {
-    console.log('✅ Test 4 PASS: Authorized Subnet IP (10.20.10.x) permitted cleanly!');
+    console.log('✅ Test 4 PASS: Authorized Client IP (192.168.102.99) permitted cleanly!');
   } else {
     console.error('❌ Test 4 FAIL!');
   }
