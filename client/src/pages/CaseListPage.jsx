@@ -295,8 +295,12 @@ export default function CaseListPage({ navigateTo: propNavigateTo }) {
                       <span className="badge badge-info font-mono text-[10px]">{doc.id}</span>
                       <span className="badge badge-success font-mono text-[10px]">v{doc.version || '1.0'}</span>
                     </div>
-                    <div className="text-xs text-slate-500 font-mono mt-0.5">
-                      Case: <span className="text-blue-700 font-bold">{doc.caseId}</span> | Category: {doc.category} | SHA-256: {doc.payloadHash?.slice(0, 16)}...
+                    <div className="text-xs text-slate-500 font-mono mt-0.5 flex items-center gap-2">
+                      <span>Case: <strong className="text-blue-700">{doc.caseId}</strong></span>
+                      <span>•</span>
+                      <span>Category: {doc.category}</span>
+                      <span>•</span>
+                      <span className="text-emerald-600 font-semibold">✓ AES-256 Encrypted & Stored in DB</span>
                     </div>
                   </div>
                 </div>

@@ -2438,5 +2438,144 @@
     "previousBlockHash": "d15be2d8f31e964b9fbf18f511db6f429e643e93445af00147ede80d0c981552",
     "blockHash": "f359994bacbcb88cb6633683046af195acccb870cd378aef90d1ee2b181a7049",
     "gitCommitHash": "d81ec50a0bd21eafcb6e3c2f971124938d9a8671"
+  },
+  {
+    "blockHeight": 146,
+    "timestamp": "2026-09-12T15:21:48.101Z",
+    "action": "MFA_OTP_GENERATED",
+    "actorId": "USR-POL-101",
+    "actorName": "Inspector Vikram Sharma",
+    "caseId": "AUTH-MFA",
+    "docId": "MFA-SESSION",
+    "docHash": "2ccd3dcfbf4621b4569fbf36d432d5cab9500c75aec2cbdf90cbdd35aa2614d3",
+    "details": {
+      "ttlSeconds": 120
+    },
+    "previousBlockHash": "f359994bacbcb88cb6633683046af195acccb870cd378aef90d1ee2b181a7049",
+    "blockHash": "c1d93ebe30024b6d5d104fc707fbd9f7a1d4e80effa0648b742214ddc7cb409d",
+    "gitCommitHash": "8eeed6df1adae58875d37ae39dc04b7e5618ffb5"
+  },
+  {
+    "blockHeight": 147,
+    "timestamp": "2026-09-12T15:21:48.447Z",
+    "action": "MFA_OTP_VERIFIED",
+    "actorId": "USR-POL-101",
+    "actorName": "Inspector Vikram Sharma",
+    "caseId": "AUTH-MFA",
+    "docId": "MFA-SUCCESS",
+    "docHash": "VERIFIED",
+    "details": {
+      "authStatus": "MFA_SUCCESS"
+    },
+    "previousBlockHash": "c1d93ebe30024b6d5d104fc707fbd9f7a1d4e80effa0648b742214ddc7cb409d",
+    "blockHash": "6e6f549db833e065fbd56240f23edda658002e3344c00c2bdf2c09de2f9861f7",
+    "gitCommitHash": "b49eb12e521daec8691135323d07e5c6d8159028"
+  },
+  {
+    "blockHeight": 148,
+    "timestamp": "2026-09-12T15:21:48.701Z",
+    "action": "DOCUMENT_VERSION_CREATED",
+    "actorId": "USR-POL-101",
+    "actorName": "Inspector Vikram Sharma",
+    "caseId": "CASE-2026-8891",
+    "docId": "DOC-8891-003",
+    "docHash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+    "details": {
+      "previousVersion": "1.16",
+      "newVersion": "1.17",
+      "fileId": "DOC-8891-003_v1_17",
+      "parentHash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+      "changeNotes": "Added vehicle license plate info"
+    },
+    "previousBlockHash": "6e6f549db833e065fbd56240f23edda658002e3344c00c2bdf2c09de2f9861f7",
+    "blockHash": "06211323b267df4422b52e262853df2bbac6b735f0fe87403b26bb4be8211186",
+    "gitCommitHash": "cf8a0ee4dee3551bb9389804adfcd0e248aefeca"
+  },
+  {
+    "blockHeight": 149,
+    "timestamp": "2026-09-12T15:21:48.962Z",
+    "action": "EMERGENCY_ACCESS_REQUESTED",
+    "actorId": "USR-POL-101",
+    "actorName": "Inspector Vikram Sharma",
+    "caseId": "CASE-2026-8891",
+    "docId": "BREAK-GLASS",
+    "docHash": "EMERGENCY_REQ",
+    "details": {
+      "requestId": "BG-REQ-08961",
+      "reason": "Urgent homicide lead wiretap inspection required during active hostage situation."
+    },
+    "previousBlockHash": "06211323b267df4422b52e262853df2bbac6b735f0fe87403b26bb4be8211186",
+    "blockHash": "479935688557f4498a331fb465fac8478af3829872c7ab964129cd34d9cf2a7f",
+    "gitCommitHash": "a8928c11beb9f85dd709b54fbfc12597f9395872"
+  },
+  {
+    "blockHeight": 150,
+    "timestamp": "2026-09-12T15:21:49.232Z",
+    "action": "EMERGENCY_ACCESS_GRANTED",
+    "actorId": "USR-POL-101",
+    "actorName": "Inspector Vikram Sharma",
+    "caseId": "CASE-2026-8891",
+    "docId": "BREAK-GLASS",
+    "docHash": "GRANT_ACTIVE",
+    "details": {
+      "requestId": "BG-REQ-08961",
+      "approvedBy": "Inspector Vikram Sharma",
+      "durationMinutes": 30,
+      "expiresAt": "2026-09-12T15:51:49.230Z"
+    },
+    "previousBlockHash": "479935688557f4498a331fb465fac8478af3829872c7ab964129cd34d9cf2a7f",
+    "blockHash": "e09875b8e9d929ea07d0aaae5343f05ce994f3a259d002045e081dad0130be17",
+    "gitCommitHash": "414474806f756a084556d31173d917d757e4e28a"
+  },
+  {
+    "blockHeight": 151,
+    "timestamp": "2026-09-12T15:21:49.563Z",
+    "action": "CONTROLLED_LINK_CREATED",
+    "actorId": "USR-POL-101",
+    "actorName": "Inspector Vikram Sharma",
+    "caseId": "CASE-2026-8891",
+    "docId": "DOC-8891-003",
+    "docHash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+    "details": {
+      "recipientEmail": "defense.counsel@highcourt.gov.in",
+      "policy": "VIEW_ONLY_NO_DOWNLOAD",
+      "expiresAtHours": 24
+    },
+    "previousBlockHash": "e09875b8e9d929ea07d0aaae5343f05ce994f3a259d002045e081dad0130be17",
+    "blockHash": "cd4f5fc6d01bfbc47df23b04b9e89f4eeb95a8e3e52d4ff51ba2b81a8edc57be",
+    "gitCommitHash": "f72af4c772d4e43222261c9e70f214c30bb14dfe"
+  },
+  {
+    "blockHeight": 152,
+    "timestamp": "2026-09-12T15:21:49.864Z",
+    "action": "CONTROLLED_LINK_ACCESSED",
+    "actorId": "RECIPIENT_GUEST",
+    "actorName": "defense.counsel@highcourt.gov.in",
+    "caseId": "CASE-2026-8891",
+    "docId": "DOC-8891-003",
+    "docHash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+    "details": {
+      "shareToken": "SHARE-3f9a46a3148c4091dbacd314b415daa8",
+      "policy": "VIEW_ONLY_NO_DOWNLOAD"
+    },
+    "previousBlockHash": "cd4f5fc6d01bfbc47df23b04b9e89f4eeb95a8e3e52d4ff51ba2b81a8edc57be",
+    "blockHash": "83e20e1b87b8d2e00326d676716074b486c45073a17bf012cfdb38675e179acd",
+    "gitCommitHash": "8764d8032d8c58aa25890c00cf78b69bee5dd324"
+  },
+  {
+    "blockHeight": 153,
+    "timestamp": "2026-09-12T15:21:50.157Z",
+    "action": "SYSTEM_AUDIT_EXECUTED",
+    "actorId": "USR-POL-101",
+    "actorName": "Inspector Vikram Sharma",
+    "caseId": "SYSTEM",
+    "docId": "SYSTEM",
+    "docHash": "AUDIT_CHECK",
+    "details": {
+      "auditStatus": "VERIFIED_OK"
+    },
+    "previousBlockHash": "83e20e1b87b8d2e00326d676716074b486c45073a17bf012cfdb38675e179acd",
+    "blockHash": "ec95f77c948fe040a01d99ac852790eba5eaf6f30f2c8fbbad773bb9b05285b1",
+    "gitCommitHash": "6d0305202fe7605af6cdcd77a3151362edbfacd4"
   }
 ]

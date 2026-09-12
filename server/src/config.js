@@ -18,4 +18,6 @@ export const CONFIG = {
   VAULT_DIR: path.join(__dirname, '../data/vault'),
   DB_FILE: path.join(__dirname, '../data/db.json'),
   LEDGER_FILE: path.join(__dirname, '../data/ledger.json'),
+  SUPABASE_URL: process.env.SUPABASE_URL || 'https://gksffenmjzibtiqcuhxp.supabase.co',
+  SUPABASE_KEY: process.env.SUPABASE_KEY || process.env.SUPABASE_ANON_KEY || 'sb_publishable_Zmj3nBPCOw232xy'
 };

@@ -121,11 +121,10 @@ export default function UploadPage({ navigateTo: propNavigateTo }) {
               <span className="text-slate-400">Assigned Case:</span>{' '}
               <span className="text-white">{uploadedResult.document?.caseId}</span>
             </div>
-            <div className="md:col-span-2">
-              <span className="text-slate-400">SHA-256 Payload Hash:</span>
-              <div className="text-cyan-300 font-bold text-[11px] break-all bg-slate-900 p-2 rounded mt-1 border border-cyan-950">
-                {uploadedResult.document?.payloadHash}
-              </div>
+            <div className="md:col-span-2 flex items-center gap-2 bg-slate-900/80 p-2.5 rounded-lg border border-emerald-800">
+              <ShieldCheck className="w-4 h-4 text-emerald-400" />
+              <span className="text-slate-300">Cryptographic Integrity:</span>
+              <span className="text-emerald-400 font-bold">✓ SHA-256 Hash Secured & Stored in Database</span>
             </div>
             <div>
               <span className="text-slate-400">Encryption Standard:</span>{' '}

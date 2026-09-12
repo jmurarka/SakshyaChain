@@ -155,7 +155,7 @@
       "authorRole": "POLICE_INVESTIGATOR",
       "department": "LEO",
       "dateCreated": "2026-08-15T09:10:00Z",
-      "version": "1.16",
+      "version": "1.17",
       "status": "SIGNED_PKI",
       "extractedText": "Updated witness statement details with supplemental vehicle descriptions.",
       "chainOfCustody": [
@@ -291,6 +291,12 @@
           "actorName": "Inspector Vikram Sharma",
           "department": "LEO",
           "timestamp": "2026-09-12T14:53:42.125Z"
+        },
+        {
+          "action": "REVISION_ADDED (1.16 -> 1.17)",
+          "actorName": "Inspector Vikram Sharma",
+          "department": "LEO",
+          "timestamp": "2026-09-12T15:21:48.697Z"
         }
       ],
       "payloadHash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
@@ -298,11 +304,11 @@
       "encryptionMetadata": {
         "algorithm": "AES-256-GCM",
         "kmsKeyId": "KMS-MASTER-KEY-PROD-2026",
-        "encryptedDEK": "8de5f0aac0599c40d2a8e20fe71e428f5ce221b315f52ff10120671b71cd68dc983557e1f5b8bf8459023c39933bf241dd8218d0de0b6689eb449c9b712179b4",
-        "dekIv": "9e1bbd0be66c07cc2a72934e",
-        "dekAuthTag": "3f9844e5b0220965b84cb5f79a589a5c",
-        "payloadIv": "9c0ec28b4c5006a1f771e07c",
-        "payloadAuthTag": "0d86d2311ccf3945ab3d6194a43a4c73"
+        "encryptedDEK": "3ac331019b842e6f3b6a383da5462b7670d38b6b1c141e811e3e425a730dc0fe3ebcdc12b14cab46bdd0d4a422f09072d4f3890f84e196957f4cfa3ae9eacfa1",
+        "dekIv": "49db20ee58f4b5b027ef45d8",
+        "dekAuthTag": "78265cf91a64943215381631bfe3bb8b",
+        "payloadIv": "d544d801f47d14db45c05b25",
+        "payloadAuthTag": "0b25ada3176b8c8e310894c232a1b771"
       },
       "signature": {
         "signedBy": "Inspector Vikram Sharma",
@@ -688,9 +694,31 @@
             "payloadIv": "9c0ec28b4c5006a1f771e07c",
             "payloadAuthTag": "0d86d2311ccf3945ab3d6194a43a4c73"
           }
+        },
+        {
+          "version": "1.17",
+          "fileId": "DOC-8891-003_v1_17",
+          "parentVersion": "1.16",
+          "parentPayloadHash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+          "payloadHash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+          "fileSize": 73,
+          "authorId": "USR-POL-101",
+          "authorName": "Inspector Vikram Sharma",
+          "department": "LEO",
+          "dateCreated": "2026-09-12T15:21:48.697Z",
+          "changeNotes": "Added vehicle license plate info",
+          "encryptionMetadata": {
+            "algorithm": "AES-256-GCM",
+            "kmsKeyId": "KMS-MASTER-KEY-PROD-2026",
+            "encryptedDEK": "3ac331019b842e6f3b6a383da5462b7670d38b6b1c141e811e3e425a730dc0fe3ebcdc12b14cab46bdd0d4a422f09072d4f3890f84e196957f4cfa3ae9eacfa1",
+            "dekIv": "49db20ee58f4b5b027ef45d8",
+            "dekAuthTag": "78265cf91a64943215381631bfe3bb8b",
+            "payloadIv": "d544d801f47d14db45c05b25",
+            "payloadAuthTag": "0b25ada3176b8c8e310894c232a1b771"
+          }
         }
       ],
-      "currentFileId": "DOC-8891-003_v1_16"
+      "currentFileId": "DOC-8891-003_v1_17"
     },
     {
       "id": "DOC-8891-004",

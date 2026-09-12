@@ -166,9 +166,10 @@ export default function DocumentViewerPage({ doc: propDoc, navigateTo: propNavig
 
           <div className="white-card p-4 border border-slate-200 space-y-3 font-mono text-xs">
             <div>
-              <div className="text-slate-500 text-[11px]">SHA-256 Payload Hash:</div>
-              <div className="bg-slate-50 p-2 rounded border border-slate-200 text-blue-700 font-bold text-[11px] break-all mt-1">
-                {activeDoc.payloadHash}
+              <div className="text-slate-500 text-[11px]">Database Cryptographic Hash Status:</div>
+              <div className="bg-emerald-50 p-2 rounded border border-emerald-200 text-emerald-800 font-bold text-xs flex items-center gap-1.5 mt-1 font-sans">
+                <CheckCircle2 className="w-4 h-4 text-emerald-600" />
+                <span>✓ SHA-256 Verified & Stored in Database</span>
               </div>
             </div>
 

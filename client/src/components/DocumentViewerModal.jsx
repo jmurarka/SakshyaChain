@@ -194,7 +194,7 @@ export default function DocumentViewerModal({ doc, isOpen, onClose }) {
                   <div className="text-center py-4 space-y-2">
                     <div className="text-emerald-400 font-bold text-sm">PDF Binary Document Attachment</div>
                     <div className="text-slate-400 text-xs font-sans">
-                      Binary PDF stored with AES-256-GCM envelope encryption. SHA-256 Hash Digest: {doc.payloadHash?.slice(0, 32)}...
+                      Stored with AES-256-GCM envelope encryption and secured in database.
                     </div>
                   </div>
                 ) : (

@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import { CONFIG } from '../config.js';
 import { generateRSAKeyPair } from './cryptoService.js';
+import { supabase } from '../supabaseClient.js';
 
 // Pre-generated RSA Key Pairs for Demo Users
 const inspectorKeyPair = generateRSAKeyPair();
@@ -243,6 +244,37 @@ class DBService {
       db.documents.push(docObj);
     }
     this.writeDB(db);
+
+    // Asynchronous Supabase Persistence
+    if (supabase) {
+      supabase.from('documents').upsert({
+        id: docObj.id,
+        title: docObj.title,
+        case_id: docObj.caseId,
+        case_title: docObj.caseTitle,
+        category: docObj.category,
+        clearance_level: docObj.clearanceLevel,
+        author_id: docObj.authorId,
+        author_name: docObj.authorName,
+        author_role: docObj.authorRole,
+        department: docObj.department,
+        date_created: docObj.dateCreated,
+        version: docObj.version,
+        status: docObj.status,
+        extracted_text: docObj.extractedText,
+        mime_type: docObj.mimeType,
+        original_file_name: docObj.originalFileName,
+        payload_hash: docObj.payloadHash,
+        file_size: docObj.fileSize,
+        encryption_metadata: docObj.encryptionMetadata,
+        signature: docObj.signature,
+        ai_entities: docObj.aiEntities,
+        version_history: docObj.versionHistory,
+        chain_of_custody: docObj.chainOfCustody
+      }).then(({ error }) => {
+        if (error) console.warn('[Supabase Sync Notice]', error.message);
+      }).catch(err => console.warn('[Supabase Sync Exception]', err.message));
+    }
   }
 
   getTransferRequests() {
