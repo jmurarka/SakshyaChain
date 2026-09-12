@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import api from '../services/api';
 import { useAuth } from '../context/AuthContext';
-import { FilePlus, UploadCloud, Lock, CheckCircle2, RefreshCw, ArrowLeft, ShieldCheck } from 'lucide-react';
+import { FilePlus, UploadCloud, Lock, CheckCircle2, RefreshCw, ArrowLeft, ShieldCheck, AlertTriangle } from 'lucide-react';
 
 export default function UploadPage({ navigateTo: propNavigateTo }) {
   const { user } = useAuth();
@@ -10,13 +10,22 @@ export default function UploadPage({ navigateTo: propNavigateTo }) {
   const [title, setTitle] = useState('');
   const [caseId, setCaseId] = useState('CASE-2026-8891');
   const [category, setCategory] = useState('FIR');
-  const [clearanceLevel, setClearanceLevel] = useState(user?.clearanceLevel ? String(Math.min(2, user.clearanceLevel)) : '1');
+  const [clearanceLevel, setClearanceLevel] = useState('2');
   const [textContent, setTextContent] = useState('');
   const [selectedFile, setSelectedFile] = useState(null);
   const [isUploading, setIsUploading] = useState(false);
   const [uploadProgress, setUploadProgress] = useState(0);
+  const [uploadError, setUploadError] = useState(null);
 
   const [uploadedResult, setUploadedResult] = useState(null);
+
+  const maxClearance = user?.clearanceLevel || 3;
+
+  useEffect(() => {
+    if (user?.clearanceLevel) {
+      setClearanceLevel(String(Math.min(2, user.clearanceLevel)));
+    }
+  }, [user]);
 
   const handleNavigateBack = () => {
     if (propNavigateTo) return propNavigateTo('cases');
@@ -88,9 +97,10 @@ export default function UploadPage({ navigateTo: propNavigateTo }) {
     } catch (err) {
       timerIds.forEach(id => clearTimeout(id));
       const msg = err.response?.data?.message || err.message;
-      alert(`Upload Error: ${msg}`);
+      setUploadError(msg);
       setIsUploading(false);
       setUploadProgress(0);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   };
 
@@ -99,6 +109,16 @@ export default function UploadPage({ navigateTo: propNavigateTo }) {
       <button onClick={handleNavigateBack} className="text-xs text-blue-600 hover:underline flex items-center gap-1 font-semibold">
         <ArrowLeft className="w-4 h-4" /> Back to Cases & Vault
       </button>
+
+      {uploadError && (
+        <div className="p-4 rounded-xl bg-rose-50 border border-rose-200 text-rose-800 flex items-center justify-between text-xs font-semibold">
+          <div className="flex items-center gap-2">
+            <AlertTriangle className="w-5 h-5 text-rose-600 flex-shrink-0" />
+            <span>Upload Error: {uploadError}</span>
+          </div>
+          <button onClick={() => setUploadError(null)} className="text-rose-600 hover:text-rose-900 font-bold">✕</button>
+        </div>
+      )}
 
       {uploadedResult && (
         <div className="p-6 rounded-2xl bg-emerald-950/90 border-2 border-emerald-500 text-white space-y-4 shadow-xl font-sans animate-fade-in">
@@ -209,9 +229,9 @@ export default function UploadPage({ navigateTo: propNavigateTo }) {
               <label className="block text-slate-700 font-semibold mb-1">Security Clearance:</label>
               <select value={clearanceLevel} onChange={(e) => setClearanceLevel(e.target.value)} className="input-field text-sm">
                 <option value="1">Level 1: Unclassified</option>
-                <option value="2">Level 2: Confidential</option>
-                <option value="3">Level 3: Secret</option>
-                <option value="4">Level 4: Top Secret</option>
+                {maxClearance >= 2 && <option value="2">Level 2: Confidential</option>}
+                {maxClearance >= 3 && <option value="3">Level 3: Secret</option>}
+                {maxClearance >= 4 && <option value="4">Level 4: Top Secret</option>}
               </select>
             </div>
           </div>

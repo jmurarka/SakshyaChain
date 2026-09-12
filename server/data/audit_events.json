@@ -4546,5 +4546,165 @@
       "encryptionAlgorithm": "AES-256-GCM"
     },
     "event_hash": "0157fc07db9ec4b2969af7a16bd36660094e160d43ee58425d3ac119d95b5d0b"
+  },
+  {
+    "event_id": "b065ada4-feb4-478d-97fa-f41a9d4cc14e",
+    "document_id": "SYSTEM_AUTH",
+    "case_id": "SYSTEM_AUTH",
+    "version_id": "v1.0",
+    "action": "LOGIN",
+    "user_id": "USR-POL-101",
+    "user_role": "POLICE_INVESTIGATOR",
+    "timestamp": "2026-09-12T22:05:11.338Z",
+    "data_hash": "DIRECT_AUTHENTICATED",
+    "parent_hashes": [
+      "0157fc07db9ec4b2969af7a16bd36660094e160d43ee58425d3ac119d95b5d0b"
+    ],
+    "metadata": {
+      "username": "sharma_leo",
+      "department": "LEO"
+    },
+    "event_hash": "301567b172567aa00baf985777a2d7b7503de5afe0268d076ffd6122403908e0"
+  },
+  {
+    "event_id": "c52efb3b-6060-40a7-b00d-0a55d5755bcc",
+    "document_id": "SYSTEM_AUTH",
+    "case_id": "SYSTEM_AUTH",
+    "version_id": "v1.0",
+    "action": "LOGIN",
+    "user_id": "USR-POL-101",
+    "user_role": "POLICE_INVESTIGATOR",
+    "timestamp": "2026-09-12T22:05:11.387Z",
+    "data_hash": "DIRECT_AUTHENTICATED",
+    "parent_hashes": [
+      "301567b172567aa00baf985777a2d7b7503de5afe0268d076ffd6122403908e0"
+    ],
+    "metadata": {
+      "username": "sharma_leo",
+      "department": "LEO"
+    },
+    "event_hash": "07658adfbdc63b12ae210f8088601570dd5969a5faa0ce2f6ab1edeacb048fc9"
+  },
+  {
+    "event_id": "05a5dadd-6962-46f6-b062-ddccea631dab",
+    "document_id": "DOC-2026-8891-0455",
+    "case_id": "CASE-2026-8891",
+    "version_id": "1.0",
+    "action": "UPLOAD",
+    "user_id": "USR-POL-101",
+    "user_role": "POLICE_INVESTIGATOR",
+    "timestamp": "2026-09-12T22:05:40.487Z",
+    "data_hash": "9dfcfbc025f8dde6092cffd5303f730ef6459d40aa92187a96f1763c816f6769",
+    "parent_hashes": [
+      "07658adfbdc63b12ae210f8088601570dd5969a5faa0ce2f6ab1edeacb048fc9"
+    ],
+    "metadata": {
+      "title": "Screenshot 2026-06-24 003804",
+      "category": "FIR",
+      "clearanceLevel": 2,
+      "encryptionAlgorithm": "AES-256-GCM"
+    },
+    "event_hash": "30dfb2cd1b0fc53750023f2838b472b3da80a96d0465a4cb5fb56fe65f573156"
+  },
+  {
+    "event_id": "d82edc1d-c97f-42e6-8469-7b00017bb668",
+    "document_id": "DOC-2026-8891-6369",
+    "case_id": "CASE-2026-8891",
+    "version_id": "1.0",
+    "action": "UPLOAD",
+    "user_id": "USR-POL-101",
+    "user_role": "POLICE_INVESTIGATOR",
+    "timestamp": "2026-09-12T22:14:06.412Z",
+    "data_hash": "336d89bd79b2d5bd2dc4adf51278260b4a972f28b4902c3ba693d46fbd5c904c",
+    "parent_hashes": [
+      "30dfb2cd1b0fc53750023f2838b472b3da80a96d0465a4cb5fb56fe65f573156"
+    ],
+    "metadata": {
+      "title": "Screenshot 2026-06-11 194520",
+      "category": "FIR",
+      "clearanceLevel": 2,
+      "encryptionAlgorithm": "AES-256-GCM"
+    },
+    "event_hash": "b73d59edaac95c9c5e5d86e6e8efb20f9f5b58d4135cf1ab12c0b93d5445b477"
+  },
+  {
+    "event_id": "e327030f-cb31-4161-b6ce-6d7380c78857",
+    "document_id": "SYSTEM_AUTH",
+    "case_id": "SYSTEM_AUTH",
+    "version_id": "v1.0",
+    "action": "LOGIN",
+    "user_id": "USR-POL-101",
+    "user_role": "POLICE_INVESTIGATOR",
+    "timestamp": "2026-09-12T22:14:17.328Z",
+    "data_hash": "DIRECT_AUTHENTICATED",
+    "parent_hashes": [
+      "b73d59edaac95c9c5e5d86e6e8efb20f9f5b58d4135cf1ab12c0b93d5445b477"
+    ],
+    "metadata": {
+      "username": "sharma_leo",
+      "department": "LEO"
+    },
+    "event_hash": "d3ebfcff27de12a43146276337a5928d73c75ee74891c3c506e39ae7689564f8"
+  },
+  {
+    "event_id": "7a608ca2-3658-4995-8d57-814dd6130d25",
+    "document_id": "SYSTEM_AUTH",
+    "case_id": "SYSTEM_AUTH",
+    "version_id": "v1.0",
+    "action": "LOGIN",
+    "user_id": "USR-POL-101",
+    "user_role": "POLICE_INVESTIGATOR",
+    "timestamp": "2026-09-12T22:14:17.379Z",
+    "data_hash": "DIRECT_AUTHENTICATED",
+    "parent_hashes": [
+      "d3ebfcff27de12a43146276337a5928d73c75ee74891c3c506e39ae7689564f8"
+    ],
+    "metadata": {
+      "username": "sharma_leo",
+      "department": "LEO"
+    },
+    "event_hash": "e54ee8ad39292c19c14814eb71dd2fcf686e8edd8acbf2e9ffa0f745212c94de"
+  },
+  {
+    "event_id": "806f96c4-22a1-49a6-a742-f786ce430639",
+    "document_id": "DOC-2026-8891-1517",
+    "case_id": "CASE-2026-8891",
+    "version_id": "1.0",
+    "action": "UPLOAD",
+    "user_id": "USR-POL-101",
+    "user_role": "POLICE_INVESTIGATOR",
+    "timestamp": "2026-09-12T22:14:41.546Z",
+    "data_hash": "e0aeed7ce36ccf4d911efa4c5b606f2b2d6be208cb7c1017f180fb2f64a20bac",
+    "parent_hashes": [
+      "e54ee8ad39292c19c14814eb71dd2fcf686e8edd8acbf2e9ffa0f745212c94de"
+    ],
+    "metadata": {
+      "title": "BLOOD_DONATION_CAMP_2362001",
+      "category": "FIR",
+      "clearanceLevel": 2,
+      "encryptionAlgorithm": "AES-256-GCM"
+    },
+    "event_hash": "94533da5e256059d190e5db95e826d6fed5045e6dfb9b39f912427c1cbb80429"
+  },
+  {
+    "event_id": "3b3e59e9-b470-403a-8cbf-cb21d9bad914",
+    "document_id": "RAG_INDEX",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "AI_QUERY",
+    "user_id": "USR-POL-101",
+    "user_role": "POLICE_INVESTIGATOR",
+    "timestamp": "2026-09-12T22:15:17.084Z",
+    "data_hash": "Based on verified case files und",
+    "parent_hashes": [
+      "94533da5e256059d190e5db95e826d6fed5045e6dfb9b39f912427c1cbb80429"
+    ],
+    "metadata": {
+      "query": "Who is the suspect identified in the CCTV and bullet forensic report?",
+      "resultsCount": 4,
+      "engine": "SākshyaChain Local RAG Engine (Fallback)",
+      "clientIp": "::1"
+    },
+    "event_hash": "6f2eb1692c74a31d7f899cad8579797af09367de9b214ea14136ae5bc3f003fe"
   }
 ]
