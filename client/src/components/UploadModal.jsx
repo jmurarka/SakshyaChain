@@ -8,7 +8,7 @@ export default function UploadModal({ isOpen, onClose, onUploaded }) {
   const [title, setTitle] = useState('');
   const [caseId, setCaseId] = useState('CASE-2026-8891');
   const [category, setCategory] = useState('FIR');
-  const [clearanceLevel, setClearanceLevel] = useState('2');
+  const [clearanceLevel, setClearanceLevel] = useState(user?.clearanceLevel ? String(Math.min(2, user.clearanceLevel)) : '1');
   const [uploadMode, setUploadMode] = useState('text'); // 'text' | 'file'
   const [textContent, setTextContent] = useState('');
   const [selectedFile, setSelectedFile] = useState(null);
@@ -47,8 +47,10 @@ export default function UploadModal({ isOpen, onClose, onUploaded }) {
         formData.append('caseId', caseId);
         formData.append('category', category);
         formData.append('clearanceLevel', clearanceLevel);
-        formData.append('textContent', textContent);
-        await api.post('/documents/upload', formData);
+        formData.append('textContent', textContent || `[File Attachment: ${selectedFile.name}]`);
+        await api.post('/documents/upload', formData, {
+          headers: { 'Content-Type': 'multipart/form-data' }
+        });
       } else {
         await api.post('/documents/upload', {
           title,

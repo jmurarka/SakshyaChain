@@ -52,125 +52,136 @@ router.get('/:id', authenticateToken, (req, res) => {
 });
 
 // POST /api/documents/upload - Secure File Upload & Envelope Encryption
-router.post('/upload', authenticateToken, upload.single('file'), (req, res) => {
-  const { title, caseId, category, clearanceLevel, textContent } = req.body;
-  const file = req.file;
+router.post('/upload', authenticateToken, upload.single('file'), async (req, res) => {
+  try {
+    const { title, caseId, category, clearanceLevel, textContent } = req.body;
+    const file = req.file;
 
-  if (!title || !caseId || !category) {
-    return res.status(400).json({ error: 'MISSING_FIELDS', message: 'Title, caseId, and category are required' });
-  }
+    if (!title || !caseId || !category) {
+      return res.status(400).json({ error: 'MISSING_FIELDS', message: 'Title, caseId, and category are required' });
+    }
 
-  const docClearance = parseInt(clearanceLevel || '2', 10);
-  if (req.user.clearanceLevel < docClearance) {
-    return res.status(403).json({
-      error: 'FORBIDDEN_CANNOT_CREATE_ABOVE_CLEARANCE',
-      message: `Cannot assign clearance level ${docClearance} higher than your clearance level ${req.user.clearanceLevel}.`
-    });
-  }
+    const docClearance = parseInt(clearanceLevel || '2', 10);
+    if (req.user.clearanceLevel < docClearance) {
+      return res.status(403).json({
+        error: 'FORBIDDEN_CANNOT_CREATE_ABOVE_CLEARANCE',
+        message: `Cannot assign clearance level ${docClearance} higher than your clearance level ${req.user.clearanceLevel}.`
+      });
+    }
 
-  let fileBuffer;
-  let mimeType = 'text/plain';
-  let originalFileName = null;
-  let rawText = '';
+    let fileBuffer;
+    let mimeType = 'text/plain';
+    let originalFileName = null;
+    let rawText = '';
 
-  if (file) {
-    fileBuffer = file.buffer; // Preserve exact binary buffer (PDF, images, etc.)
-    mimeType = file.mimetype || 'application/pdf';
-    originalFileName = file.originalname;
+    if (file) {
+      fileBuffer = file.buffer; // Preserve exact binary buffer (PDF, images, etc.)
+      mimeType = file.mimetype || 'application/pdf';
+      originalFileName = file.originalname;
 
-    // Avoid populating extractedText with raw binary PDF bytes
-    if (textContent && !textContent.trim().startsWith('%PDF-')) {
-      rawText = textContent.trim();
+      // Avoid populating extractedText with raw binary PDF bytes
+      if (textContent && !textContent.trim().startsWith('%PDF-')) {
+        rawText = textContent.trim();
+      } else {
+        rawText = `[PDF Document Attachment: ${file.originalname}]`;
+      }
     } else {
-      rawText = `[PDF Document Attachment: ${file.originalname}]`;
+      rawText = textContent || 'Standard legal document content.';
+      fileBuffer = Buffer.from(rawText, 'utf8');
     }
-  } else {
-    rawText = textContent || 'Standard legal document content.';
-    fileBuffer = Buffer.from(rawText, 'utf8');
-  }
 
-  const docId = `DOC-${caseId.replace('CASE-', '')}-${Date.now().toString().slice(-4)}`;
+    const docId = `DOC-${caseId.replace('CASE-', '')}-${Date.now().toString().slice(-4)}`;
 
-  // AES-256-GCM Envelope Encryption at Rest directly on fileBuffer
-  const storageRes = storageService.saveFileToVault(docId, fileBuffer);
+    // AES-256-GCM Envelope Encryption at Rest directly on fileBuffer
+    const storageRes = storageService.saveFileToVault(docId, fileBuffer);
 
-  // AI Document Intelligence (Auto Classification & Entity Extraction)
-  const aiEntities = ragEngine.generateDocumentSummary(rawText, category);
+    // AI Document Intelligence (Auto Classification & Entity Extraction)
+    let aiEntities = [];
+    try {
+      const summaryRes = await ragEngine.generateDocumentSummary(rawText, category);
+      aiEntities = summaryRes?.criticalEntities || [];
+    } catch (aiErr) {
+      console.warn('AI Document summary extraction warning:', aiErr.message);
+    }
 
-  const newDoc = {
-    id: docId,
-    title,
-    caseId,
-    caseTitle: `Case ${caseId}`,
-    category,
-    clearanceLevel: docClearance,
-    authorId: req.user.id,
-    authorName: req.user.name,
-    authorRole: req.user.role,
-    department: req.user.department,
-    dateCreated: new Date().toISOString(),
-    version: '1.0',
-    status: 'VERIFIED',
-    extractedText: rawText,
-    mimeType,
-    originalFileName: originalFileName || `${title.replace(/[^a-zA-Z0-9]/g, '_')}.pdf`,
-    payloadHash: storageRes.payloadHash,
-    fileSize: storageRes.fileSize,
-    encryptionMetadata: storageRes.encryptionMetadata,
-    signature: null,
-    aiEntities: aiEntities.criticalEntities,
-    versionHistory: [
-      {
-        version: '1.0',
-        parentVersion: 'GENESIS',
-        parentPayloadHash: '0'.repeat(64),
-        payloadHash: storageRes.payloadHash,
-        fileSize: storageRes.fileSize,
-        authorId: req.user.id,
-        authorName: req.user.name,
-        department: req.user.department,
-        dateCreated: new Date().toISOString(),
-        changeNotes: 'Initial document filing (v1.0)'
-      }
-    ],
-    chainOfCustody: [
-      {
-        action: 'UPLOADED_AND_ENCRYPTED',
-        actorName: req.user.name,
-        department: req.user.department,
-        timestamp: new Date().toISOString()
-      }
-    ]
-  };
-
-  // Save Metadata to DB
-  dbService.saveDocumentMetadata(newDoc);
-
-  // Add to RAG Engine
-  ragEngine.addChunksFromDocument(newDoc);
-
-  // Record Immutable Block on Blockchain Ledger
-  const ledgerBlock = ledgerService.createEvent({
-    document_id: newDoc.id,
-    case_id: newDoc.caseId,
-    version_id: newDoc.version,
-    action: 'UPLOAD',
-    user_id: req.user.id,
-    user_role: req.user.role,
-    data_hash: storageRes.payloadHash,
-    metadata: {
-      title: newDoc.title,
-      category: newDoc.category,
+    const newDoc = {
+      id: docId,
+      title,
+      caseId,
+      caseTitle: `Case ${caseId}`,
+      category,
       clearanceLevel: docClearance,
-      encryptionAlgorithm: storageRes.encryptionMetadata.algorithm
-    }
-  });
+      authorId: req.user.id,
+      authorName: req.user.name,
+      authorRole: req.user.role,
+      department: req.user.department,
+      dateCreated: new Date().toISOString(),
+      version: '1.0',
+      status: 'VERIFIED',
+      extractedText: rawText,
+      mimeType,
+      originalFileName: originalFileName || `${title.replace(/[^a-zA-Z0-9]/g, '_')}.pdf`,
+      payloadHash: storageRes.payloadHash,
+      fileSize: storageRes.fileSize,
+      encryptionMetadata: storageRes.encryptionMetadata,
+      signature: null,
+      aiEntities,
+      versionHistory: [
+        {
+          version: '1.0',
+          parentVersion: 'GENESIS',
+          parentPayloadHash: '0'.repeat(64),
+          payloadHash: storageRes.payloadHash,
+          fileSize: storageRes.fileSize,
+          authorId: req.user.id,
+          authorName: req.user.name,
+          department: req.user.department,
+          dateCreated: new Date().toISOString(),
+          changeNotes: 'Initial document filing (v1.0)'
+        }
+      ],
+      chainOfCustody: [
+        {
+          action: 'UPLOADED_AND_ENCRYPTED',
+          actorName: req.user.name,
+          department: req.user.department,
+          timestamp: new Date().toISOString()
+        }
+      ]
+    };
 
-  res.status(201).json({
-    message: 'Document successfully uploaded, AES-256 encrypted, and anchored to Audit DAG.',
-    document: newDoc,
-    ledgerBlock
-  });
+    // Save Metadata to DB
+    dbService.saveDocumentMetadata(newDoc);
+
+    // Add to RAG Engine
+    ragEngine.addChunksFromDocument(newDoc);
+
+    // Record Immutable Block on Blockchain Ledger
+    const ledgerBlock = ledgerService.createEvent({
+      document_id: newDoc.id,
+      case_id: newDoc.caseId,
+      version_id: newDoc.version,
+      action: 'UPLOAD',
+      user_id: req.user.id,
+      user_role: req.user.role,
+      data_hash: storageRes.payloadHash,
+      metadata: {
+        title: newDoc.title,
+        category: newDoc.category,
+        clearanceLevel: docClearance,
+        encryptionAlgorithm: storageRes.encryptionMetadata.algorithm
+      }
+    });
+
+    res.status(201).json({
+      message: 'Document successfully uploaded, AES-256 encrypted, and anchored to Audit DAG.',
+      document: newDoc,
+      ledgerBlock
+    });
+  } catch (err) {
+    console.error('Document upload error:', err);
+    res.status(500).json({ error: 'UPLOAD_FAILED', message: err.message || 'Failed to upload document' });
+  }
 });
 
 // POST /api/documents/:id/versions - Add New Revision/Version (v1.1, v2.0)

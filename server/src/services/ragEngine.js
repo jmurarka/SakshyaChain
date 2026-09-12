@@ -9,85 +9,15 @@ class RAGEngine {
   }
 
   seedKnowledgeBase() {
-    this.chunks = [
-      {
-        id: 'CHK-8891-01',
-        docId: 'DOC-8891-001',
-        docTitle: 'First Information Report (FIR #00492/2026)',
-        caseId: 'CASE-2026-8891',
-        category: 'FIR',
-        clearanceLevel: 2,
-        pageNumber: 1,
-        paragraphIndex: 1,
-        content: 'Police received emergency call at 02:15 AM regarding armed intruders siphoning crypto keys at Tech Vault Facility, Cyber Park. Whistleblower Rajesh Kumar found deceased with gunshot wound near server room B4.'
-      },
-      {
-        id: 'CHK-8891-02',
-        docId: 'DOC-8891-001',
-        docTitle: 'First Information Report (FIR #00492/2026)',
-        caseId: 'CASE-2026-8891',
-        category: 'FIR',
-        clearanceLevel: 2,
-        pageNumber: 1,
-        paragraphIndex: 2,
-        content: 'Accused identified in preliminary CCTV as masked male suspect wearing tactical jacket, matching physical description of former sysadmin Sameer Verma (ID #SV-992). IPC Sections 302 (Murder), 392 (Robbery), and IT Act 66D applied.'
-      },
-      {
-        id: 'CHK-8891-03',
-        docId: 'DOC-8891-002',
-        docTitle: 'Forensic Ballistics & DNA Fingerprint Analysis',
-        caseId: 'CASE-2026-8891',
-        category: 'FORENSIC_REPORT',
-        clearanceLevel: 3,
-        pageNumber: 1,
-        paragraphIndex: 1,
-        content: '9mm bullet casing recovered from crime scene matches test-firing profile of Glock-17 pistol (Serial #GL-88392) seized from suspect residence. Partial DNA profile on weapon safety catch matches suspect Sameer Verma with 99.98% probability.'
-      },
-      {
-        id: 'CHK-8891-04',
-        docId: 'DOC-8891-002',
-        docTitle: 'Forensic Ballistics & DNA Fingerprint Analysis',
-        caseId: 'CASE-2026-8891',
-        category: 'FORENSIC_REPORT',
-        clearanceLevel: 3,
-        pageNumber: 2,
-        paragraphIndex: 3,
-        content: 'Digital forensics on seized hardware revealed encrypted cold wallet containing $4.2M siphoned funds transferred 18 minutes after incident. IP logs trace back to VPN server registered under suspect alias.'
-      },
-      {
-        id: 'CHK-8891-05',
-        docId: 'DOC-8891-003',
-        docTitle: 'Eyewitness Sworn Statement - Security Guard',
-        caseId: 'CASE-2026-8891',
-        category: 'WITNESS_STATEMENT',
-        clearanceLevel: 2,
-        pageNumber: 1,
-        paragraphIndex: 1,
-        content: 'Witness guard Ramesh Chand states he observed a black sedan fleeing facility gate at 02:22 AM. Driver had distinct scar on left cheek and was carrying a black pelican case.'
-      },
-      {
-        id: 'CHK-8891-06',
-        docId: 'DOC-8891-004',
-        docTitle: 'Restricted Judicial Interception Warrant & Note',
-        caseId: 'CASE-2026-8891',
-        category: 'COURT_FILING',
-        clearanceLevel: 4, // Top Secret
-        pageNumber: 1,
-        paragraphIndex: 1,
-        content: 'Judicial order authorizing confidential wiretap on secondary offshore communications of suspected accomplices. Disclosure strictly restricted to presiding Magistrate and Chief Auditor.'
-      },
-      {
-        id: 'CHK-4412-01',
-        docId: 'DOC-4412-001',
-        docTitle: 'Narcotics Seizure Inventory & Ballistics Report',
-        caseId: 'CASE-2026-4412',
-        category: 'FORENSIC_REPORT',
-        clearanceLevel: 3,
-        pageNumber: 1,
-        paragraphIndex: 1,
-        content: 'Seizure of 45kg contraband substance at International Docking Terminal 3 along with two unregistered submachine guns. Chemical purity tested at 94.2% MDMA base.'
-      }
-    ];
+    this.chunks = [];
+    try {
+      const allDocs = dbService.readDB().documents || [];
+      allDocs.forEach(doc => {
+        this.addChunksFromDocument(doc);
+      });
+    } catch (err) {
+      console.warn('[RAG Seed Warning]', err.message);
+    }
   }
 
   addChunksFromDocument(doc) {

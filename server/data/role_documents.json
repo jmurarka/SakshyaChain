@@ -1,0 +1,265 @@
+{
+  "systemTitle": "SākshyaChain Persona-Tailored Legal & Investigative Master Document Store",
+  "version": "2.0.0",
+  "personas": [
+    {
+      "id": "USR-POL-101",
+      "name": "Inspector Vikram Sharma",
+      "username": "sharma_leo",
+      "role": "POLICE_INVESTIGATOR",
+      "department": "LEO",
+      "clearanceLevel": 3,
+      "accessibleDocumentCount": 3,
+      "documents": [
+        {
+          "id": "DOC-8891-001",
+          "title": "First Information Report (FIR #00492/2026)",
+          "caseId": "CASE-2026-8891",
+          "category": "FIR",
+          "clearanceLevel": 2,
+          "authorName": "Inspector Vikram Sharma",
+          "authorRole": "POLICE_INVESTIGATOR",
+          "department": "LEO",
+          "dateCreated": "2026-09-01T02:45:00.000Z",
+          "extractedText": "FIRST INFORMATION REPORT (Under Section 154 Cr.P.C.)\nFIR No: 00492/2026 | Date & Time: 01-Sept-2026, 02:45 AM | Police Station: Special Crime Branch, Cyber Park\n\n1. INCIDENT DETAILS:\nOn 01-Sept-2026 at approximately 02:15 AM, an emergency security trip alarm was triggered at the Tech Vault Facility located in Cyber Park, Block B4. First responding police units led by Inspector Vikram Sharma arrived at the scene at 02:28 AM. Upon entering server room B4, whistleblower and senior sysadmin Rajesh Kumar was discovered deceased near server rack 12 with a single gunshot entry wound to the upper chest.\n\n2. SUSPECT & CCTV EVIDENCE:\nPreliminary inspection of internal CCTV footage (Camera Feed #B4-09) recorded a masked male intruder wearing a dark tactical jacket and anti-reflective gloves forcibly accessing cold wallet storage server #04. The suspect matches the physical height (5ft 11in), build, and gait of former senior sysadmin Sameer Verma (ID #SV-992), who was recently terminated for unauthorized database access. At 02:22 AM, the suspect fled the premises in a dark grey sedan (License Plate #DL-09-CB-4491) carrying a reinforced black pelican case.\n\n3. SEIZED PHYSICAL EVIDENCE:\n- One 9mm spent brass cartridge casing recovered 1.2 meters from the victim's body (Exhibit B1).\n- Discarded synthetic gloves recovered near the rear perimeter fence (Exhibit B2).\n- Encrypted server access log file extracted directly from server B4.\n\n4. APPLICABLE LEGAL SECTIONS:\nBharatiya Nyaya Sanhita (BNS) / IPC Sections 302 (Premeditated Murder), 392 (Armed Robbery), and Information Technology Act Section 66D (Cyber Fraud & Data Theft)."
+        },
+        {
+          "id": "DOC-8891-005",
+          "title": "Police Interrogation Brief & Suspect Vehicle Tracking Log",
+          "caseId": "CASE-2026-8891",
+          "category": "WITNESS_STATEMENT",
+          "clearanceLevel": 2,
+          "authorName": "Inspector Vikram Sharma",
+          "authorRole": "POLICE_INVESTIGATOR",
+          "department": "LEO",
+          "dateCreated": "2026-09-02T10:30:00.000Z",
+          "extractedText": "POLICE INVESTIGATION & INTERROGATION BRIEF\nCase ID: CASE-2026-8891 | Investigating Officer: Inspector Vikram Sharma\n\n1. SUSPECT TRACKING LOG:\nAutomatic Number Plate Recognition (ANPR) cameras located at Cyber Park Expressway Exit 4 captured dark grey sedan (#DL-09-CB-4491) passing at 02:31 AM, traveling towards the western toll plaza. Cell tower triangulation logs for mobile number registered under suspect Sameer Verma (+91 98210-44910) showed active handoffs matching the vehicle trajectory between 02:15 AM and 03:10 AM.\n\n2. WITNESS INTERROGATION - FACILITY GUARD:\nSecurity Guard Ramesh Chand (ID #SG-441) was interrogated at 06:00 AM. Guard Chand stated under sworn oath that at 02:10 AM he observed suspect Sameer Verma bypass the secondary biometric gate using a master override keycard. Guard Chand confirmed suspect Verma had a distinct facial scar across his left cheek and carried a heavy pelican case upon exiting.\n\n3. INVESTIGATIVE SUMMARY & NEXT STEPS:\nPhysical evidence recovered from suspect residence during search warrant execution includes one Glock-17 9mm pistol (Serial #GL-88392) hidden beneath bedroom floorboards and an encrypted laptop containing wallet backup files. Requesting immediate forensic ballistics matching and DNA profiling."
+        },
+        {
+          "id": "DOC-4412-001",
+          "title": "Narcotics Seizure Inventory & Tactical Raid Arrest Memo",
+          "caseId": "CASE-2026-4412",
+          "category": "FORENSIC_REPORT",
+          "clearanceLevel": 3,
+          "authorName": "Inspector Vikram Sharma",
+          "authorRole": "POLICE_INVESTIGATOR",
+          "department": "LEO",
+          "dateCreated": "2026-09-05T14:20:00.000Z",
+          "extractedText": "TACTICAL RAID & SEIZURE MEMORANDUM\nCase ID: CASE-2026-4412 | Location: International Docking Terminal 3, Hangar 9\n\n1. SEIZURE SUMMARY:\nJoint tactical operation conducted by Special Crime Branch resulted in the interception of a commercial shipping container (ID #CONT-8891-X). Physical inventory confirmed the seizure of 45.4 kilograms of high-purity contraband MDMA base packaged in vacuum-sealed industrial pouches.\n\n2. RECOVERED WEAPONRY & ARRESTS:\nTwo unregistered automatic submachine guns (Serials #SMG-991A, #SMG-991B) loaded with 30-round high-capacity magazines were seized from two armed suspects arrested on site. Suspects identified as Carlos Mendez and Rajiv Kapoor. Chemical purity analysis confirmed 94.2% pharmaceutical-grade purity."
+        }
+      ]
+    },
+    {
+      "id": "USR-FOR-202",
+      "name": "Dr. Sunita Rao",
+      "username": "drao_forensic",
+      "role": "FORENSIC_SPECIALIST",
+      "department": "FOR",
+      "clearanceLevel": 3,
+      "accessibleDocumentCount": 3,
+      "documents": [
+        {
+          "id": "DOC-8891-002",
+          "title": "Forensic Ballistics & Microscopic Striation Comparison Report",
+          "caseId": "CASE-2026-8891",
+          "category": "FORENSIC_REPORT",
+          "clearanceLevel": 3,
+          "authorName": "Dr. Sunita Rao",
+          "authorRole": "FORENSIC_SPECIALIST",
+          "department": "FOR",
+          "dateCreated": "2026-09-02T16:00:00.000Z",
+          "extractedText": "STATE CENTRAL FORENSIC SCIENCE LABORATORY - BALLISTICS DIVISION\nLab Report Ref: FSL-BAL-2026-99182 | Lead Analyst: Dr. Sunita Rao\n\n1. MICROSCOPIC STRIATION COMPARISON:\nExhibit B1 (9mm brass spent cartridge casing recovered from crime scene B4) was subjected to comparative microscopic analysis against test-fired rounds generated using the seized Glock-17 semi-automatic pistol (Serial #GL-88392).\nMatching Microscopic Features Observed:\n- Identical breech face impression marks across 12 consecutive striae.\n- Matching firing pin drag marks and unique rectangular firing pin aperture impression.\n- Identical extractor claw mark impression depth (0.14mm).\n\n2. BALLISTIC CONCLUSION:\nMicroscopic comparison confirms with 100% scientific certainty that Exhibit B1 was fired exclusively from Glock-17 pistol Serial #GL-88392 seized from suspect Sameer Verma's residence. Muzzle velocity calculated at 375 m/s matching terminal wound ballistics observed during autopsy."
+        },
+        {
+          "id": "DOC-8891-006",
+          "title": "DNA Profile & Touch Epigenetic Analysis Report",
+          "caseId": "CASE-2026-8891",
+          "category": "FORENSIC_REPORT",
+          "clearanceLevel": 3,
+          "authorName": "Dr. Sunita Rao",
+          "authorRole": "FORENSIC_SPECIALIST",
+          "department": "FOR",
+          "dateCreated": "2026-09-03T11:15:00.000Z",
+          "extractedText": "FORENSIC BIOLOGY & DNA TYPING REPORT\nLab Ref: FSL-DNA-2026-4412 | Forensic Analyst: Dr. Sunita Rao\n\n1. TOUCH DNA EXTRACTION (EXHIBIT B2):\nTouch DNA swabs collected from the manual safety catch and slide serrations of seized Glock-17 pistol (Serial #GL-88392) were amplified using 15 Short Tandem Repeat (STR) genetic markers.\n\n2. STR PROFILE MATCH RESULTS:\nThe extracted DNA profile yielded a complete 15-loci male match corresponding exactly to suspect Sameer Verma (Reference Sample #DNA-SV992).\n- Loci Match Count: 15 out of 15 fully concordant markers (D3S1358, vWA, FGA, D8S1179, D21S11, D18S51, D5S818, D13S317, D7S820, TPOX, TH01, CSF1PO, D16S539, D2S1338, D19S433).\n- Random Match Probability (RMP): 1 in 4.8 billion in the general population.\n- Epigenetic analysis confirmed fresh epithelial cell deposition within 18 hours of seizure."
+        },
+        {
+          "id": "DOC-8891-007",
+          "title": "Encrypted Cold Wallet Hardware & Digital Memory Dump Forensics",
+          "caseId": "CASE-2026-8891",
+          "category": "FORENSIC_REPORT",
+          "clearanceLevel": 3,
+          "authorName": "Dr. Sunita Rao",
+          "authorRole": "FORENSIC_SPECIALIST",
+          "department": "FOR",
+          "dateCreated": "2026-09-04T09:45:00.000Z",
+          "extractedText": "DIGITAL FORENSICS & MEMORY DUMP ANALYSIS REPORT\nLab Ref: FSL-DIG-2026-1102 | Digital Examiner: Dr. Sunita Rao\n\n1. VOLATILE MEMORY FORENSICS:\nVolatile RAM image extracted from suspect Sameer Verma's seized laptop (Serial #LT-99410) revealed an active unallocated memory page containing an unencrypted AES-256 private key fragment.\n\n2. CRYPTO SIPHONING BLOCKCHAIN TRAIL:\nReconstructed transaction logs mapped the illicit transfer of $4,250,000 USD equivalent in cryptocurrency from Tech Vault Master Address (0x742d35Cc6634C0532925a3b844Bc454e4438f44e) to an offshore mixer wallet (0x8891F44e991823901A7e829C1102Aa4438f) executed at 02:33 AM (18 minutes post-incident). VPN IP logs confirm execution via an exit node matching suspect Verma's personal VPN account."
+        }
+      ]
+    },
+    {
+      "id": "USR-PRO-303",
+      "name": "Advocate Rajesh Verma",
+      "username": "verma_prosecutor",
+      "role": "PUBLIC_PROSECUTOR",
+      "department": "PROS",
+      "clearanceLevel": 3,
+      "accessibleDocumentCount": 3,
+      "documents": [
+        {
+          "id": "DOC-8891-008",
+          "title": "Formal Charge Sheet & Summary of Evidence (Section 173 Cr.P.C.)",
+          "caseId": "CASE-2026-8891",
+          "category": "COURT_FILING",
+          "clearanceLevel": 3,
+          "authorName": "Advocate Rajesh Verma",
+          "authorRole": "PUBLIC_PROSECUTOR",
+          "department": "PROS",
+          "dateCreated": "2026-09-06T11:00:00.000Z",
+          "extractedText": "IN THE COURT OF THE SPECIAL SESSIONS JUDGE, CYBER PARK\nState (Through Special Crime Branch) vs. Sameer Verma\nCHARGE SHEET FILED UNDER SECTION 173 Cr.P.C. (FIR No. 00492/2026)\n\n1. ACCUSED DETAILS:\nSameer Verma, Son of Rameshwar Verma, Resident of House #42, Rosewood Lane, Green Park. Former Sysadmin, Tech Vault Facility.\n\n2. PROSECUTION SUMMARY OF EVIDENCE:\nThe prosecution establishes a complete, unbroken chain of physical, scientific, and digital evidence:\n- Motive: Termination of employment and attempted siphoning of $4.2M crypto assets.\n- Physical Evidence: CCTV feed #B4-09 capturing suspect entering facility at 02:15 AM.\n- Scientific Confirmation: Microscopic ballistics match of crime scene cartridge B1 with suspect's seized Glock-17 pistol (#GL-88392) and 15-loci 100% STR DNA match.\n- Digital Confirmation: Volatile RAM private key extraction and IP-VPN transaction tracing.\n\n3. CHARGES FRAMED:\nAccused Sameer Verma is hereby charged under BNS / IPC Section 302 (Murder), Section 392 (Armed Robbery), Section 452 (House-trespass after preparation for hurt), and IT Act Section 66D (Cyber Fraud). Prosecution prays for maximum statutory penalty."
+        },
+        {
+          "id": "DOC-8891-009",
+          "title": "Prosecution Motion Opposing High Court Bail Application",
+          "caseId": "CASE-2026-8891",
+          "category": "COURT_FILING",
+          "clearanceLevel": 3,
+          "authorName": "Advocate Rajesh Verma",
+          "authorRole": "PUBLIC_PROSECUTOR",
+          "department": "PROS",
+          "dateCreated": "2026-09-07T14:30:00.000Z",
+          "extractedText": "IN THE HIGH COURT OF JUDICATURE\nBail Application No. 8891/2026 | State Response Filed by Senior Prosecutor Rajesh Verma\n\n1. OPPOSITION TO BAIL:\nThe State strongly opposes the grant of bail to accused Sameer Verma on the following compelling legal grounds:\n- Severe Flight Risk: Accused holds active possession of $4.2M in siphoned cryptocurrency transferred to offshore mixer wallets, providing immense financial resources to abscond.\n- Threat of Witness Tampering: Key eyewitness Security Guard Ramesh Chand has received anonymous threatening calls since suspect's arrest.\n- Immutable Chain of Evidence: Overwhelming forensic proof including 100% ballistics and DNA match anchored on the SākshyaChain audit ledger."
+        },
+        {
+          "id": "DOC-8891-003",
+          "title": "Eyewitness Sworn Statement - Security Guard Ramesh Chand",
+          "caseId": "CASE-2026-8891",
+          "category": "WITNESS_STATEMENT",
+          "clearanceLevel": 2,
+          "authorName": "Advocate Rajesh Verma",
+          "authorRole": "PUBLIC_PROSECUTOR",
+          "department": "PROS",
+          "dateCreated": "2026-09-01T09:00:00.000Z",
+          "extractedText": "SWORN WITNESS STATEMENT (Under Section 164 Cr.P.C.)\nWitness Name: Ramesh Chand | Occupation: Senior Security Guard | Location: Tech Vault Facility\n\n1. STATEMENT DETAILS:\n\"I was on duty at the primary gate monitor desk on the night of 01-Sept-2026. At approximately 02:10 AM, I saw a person matching Sameer Verma walk past the biometric barrier using a master keycard. He was wearing a dark jacket with the hood pulled up, but I clearly recognized his face and distinct scar across his left cheek when he turned towards camera B4. At 02:22 AM, I heard a loud gunshot from server block B4. Seconds later, the same person ran out carrying a heavy pelican case, entered a dark sedan, and sped away through Exit 4.\""
+        }
+      ]
+    },
+    {
+      "id": "USR-JUD-404",
+      "name": "Justice P. K. Mukherjee",
+      "username": "mukherjee_magistrate",
+      "role": "JUDICIAL_MAGISTRATE",
+      "department": "JUD",
+      "clearanceLevel": 4,
+      "accessibleDocumentCount": 4,
+      "documents": [
+        {
+          "id": "DOC-8891-004",
+          "title": "Restricted Judicial Interception Order & Electronic Surveillance Warrant",
+          "caseId": "CASE-2026-8891",
+          "category": "COURT_FILING",
+          "clearanceLevel": 4,
+          "authorName": "Justice P. K. Mukherjee",
+          "authorRole": "JUDICIAL_MAGISTRATE",
+          "department": "JUD",
+          "dateCreated": "2026-09-03T18:00:00.000Z",
+          "extractedText": "IN THE COURT OF THE SPECIAL SESSIONS JUDGE & MAGISTRATE\nCONFIDENTIAL JUDICIAL ORDER & SURVEILLANCE WARRANT (LEVEL 4 TOP SECRET CLEARANCE REQUIRED)\nRe: FIR No. 00492/2026 | Presiding Judge: Justice P. K. Mukherjee\n\n1. AUTHORIZATION:\nUpon reviewing secret sworn affidavits submitted by the Chief Investigating Officer and encrypted digital forensic logs, this Court hereby issues a confidential 60-day electronic surveillance warrant under Section 92 CrPC and Indian Telegraph Act.\n\n2. SURVEILLANCE TARGETS & PROHIBITIONS:\nLaw enforcement agencies are authorized to intercept, record, and decrypt real-time satellite communications, encrypted messaging channels, and offshore bank transfers associated with suspect Sameer Verma and suspected international accomplices.\n- Disclosure Restriction: Contents of this warrant and resulting surveillance transcripts are strictly classified under Clearance Level 4 (Top Secret). Disclosure to unauthorized personnel constitutes contempt of court and security violation under IT Act."
+        },
+        {
+          "id": "DOC-8891-010",
+          "title": "Judicial Cognizance Order & Remand Hearing Proceedings",
+          "caseId": "CASE-2026-8891",
+          "category": "COURT_FILING",
+          "clearanceLevel": 4,
+          "authorName": "Justice P. K. Mukherjee",
+          "authorRole": "JUDICIAL_MAGISTRATE",
+          "department": "JUD",
+          "dateCreated": "2026-09-06T15:30:00.000Z",
+          "extractedText": "ORDER OF COGNIZANCE & JUDICIAL REMAND\nSpecial Sessions Court | Presiding Magistrate: Justice P. K. Mukherjee\n\n1. COGNIZANCE TAKEN:\nFormal judicial cognizance is hereby taken of Charge Sheet #00492/2026 filed against accused Sameer Verma under IPC Sections 302, 392, and IT Act Section 66D. Prima facie evidence including microscopic ballistics striation match and 15-loci DNA match is deemed sufficient to initiate trial.\n\n2. REMAND & CHAIN OF CUSTODY DIRECTIVE:\nAccused Sameer Verma is remanded to high-security judicial custody until trial commencement. All physical exhibits (Exhibits B1, B2, GL-88392) and digital vault records must remain locked and cross-verified on the SākshyaChain audit ledger."
+        },
+        {
+          "id": "DOC-8891-002",
+          "title": "Forensic Ballistics & Microscopic Striation Comparison Report",
+          "caseId": "CASE-2026-8891",
+          "category": "FORENSIC_REPORT",
+          "clearanceLevel": 3,
+          "authorName": "Dr. Sunita Rao",
+          "authorRole": "FORENSIC_SPECIALIST",
+          "department": "FOR",
+          "dateCreated": "2026-09-02T16:00:00.000Z",
+          "extractedText": "STATE CENTRAL FORENSIC SCIENCE LABORATORY - BALLISTICS DIVISION\nLab Report Ref: FSL-BAL-2026-99182 | Lead Analyst: Dr. Sunita Rao\n\nMicroscopic comparison confirms with 100% scientific certainty that Exhibit B1 cartridge casing was fired exclusively from Glock-17 pistol Serial #GL-88392 seized from suspect Sameer Verma's residence."
+        },
+        {
+          "id": "DOC-8891-008",
+          "title": "Formal Charge Sheet & Summary of Evidence (Section 173 Cr.P.C.)",
+          "caseId": "CASE-2026-8891",
+          "category": "COURT_FILING",
+          "clearanceLevel": 3,
+          "authorName": "Advocate Rajesh Verma",
+          "authorRole": "PUBLIC_PROSECUTOR",
+          "department": "PROS",
+          "dateCreated": "2026-09-06T11:00:00.000Z",
+          "extractedText": "IN THE COURT OF THE SPECIAL SESSIONS JUDGE, CYBER PARK\nProsecution establishes unbroken chain of physical, ballistics, DNA, and memory dump digital evidence against suspect Sameer Verma for premeditated murder and $4.2M crypto robbery."
+        }
+      ]
+    },
+    {
+      "id": "USR-AUD-505",
+      "name": "Anil Gupta",
+      "username": "gupta_auditor",
+      "role": "COMPLIANCE_AUDITOR",
+      "department": "AUD",
+      "clearanceLevel": 4,
+      "accessibleDocumentCount": 4,
+      "documents": [
+        {
+          "id": "DOC-8891-011",
+          "title": "National Digital Evidence & Immutable Audit DAG Compliance Certificate",
+          "caseId": "CASE-2026-8891",
+          "category": "COURT_FILING",
+          "clearanceLevel": 4,
+          "authorName": "Anil Gupta",
+          "authorRole": "COMPLIANCE_AUDITOR",
+          "department": "AUD",
+          "dateCreated": "2026-09-08T10:00:00.000Z",
+          "extractedText": "NATIONAL DIGITAL EVIDENCE OVERSIGHT BOARD - COMPLIANCE AUDIT CERTIFICATE\nCertificate ID: CERT-AUD-2026-8891 | Lead Security Auditor: Anil Gupta\n\n1. AUDIT DAG CHAIN VERIFICATION:\nVerification executed across all 167 mined audit blocks associated with Case #CASE-2026-8891.\n- SHA-256 Canonical Hash Chain Integrity: 100% Verified (Zero broken links or recalculated hashes).\n- RSA-2048 Digital Signatures: Validated for Chief Investigator Sharma, Forensic Analyst Dr. Rao, and Magistrate Justice Mukherjee.\n- Hyperledger Fabric Anchor Verification: Merkle Root Hash #991823901A successfully anchored to ledger node.\n\n2. AUDIT CONCLUSION:\nAll digital evidence, forensic reports, and chain of custody logs satisfy Section 65B Indian Evidence Act / BSA requirements for court admissibility."
+        },
+        {
+          "id": "DOC-8891-012",
+          "title": "Zero-Trust PKI Key Lifecycle & Multi-Agency Access Audit Log",
+          "caseId": "CASE-2026-8891",
+          "category": "COURT_FILING",
+          "clearanceLevel": 4,
+          "authorName": "Anil Gupta",
+          "authorRole": "COMPLIANCE_AUDITOR",
+          "department": "AUD",
+          "dateCreated": "2026-09-08T11:30:00.000Z",
+          "extractedText": "ZERO-TRUST SYSTEM SECURITY & IAM ACCESS AUDIT REPORT\nAudit Log Ref: AUD-IAM-2026-004 | Compliance Auditor: Anil Gupta\n\n1. MULTI-AGENCY IAM VERIFICATION:\nAudited PKI key pairs, MFA OTP verification logs, and IP allowlist enforcement records.\n- IP Allowlist Compliance: 100% of API requests originated from verified local network subnets.\n- Break-Glass Audit: Zero unauthorized emergency access grants detected. 100% compliance with Judicial Order #DOC-8891-004."
+        },
+        {
+          "id": "DOC-8891-001",
+          "title": "First Information Report (FIR #00492/2026)",
+          "caseId": "CASE-2026-8891",
+          "category": "FIR",
+          "clearanceLevel": 2,
+          "authorName": "Inspector Vikram Sharma",
+          "authorRole": "POLICE_INVESTIGATOR",
+          "department": "LEO",
+          "dateCreated": "2026-09-01T02:45:00.000Z",
+          "extractedText": "FIR No: 00492/2026 | Police Station: Special Crime Branch. Details homicide of Rajesh Kumar and crypto robbery at Tech Vault Facility."
+        },
+        {
+          "id": "DOC-8891-004",
+          "title": "Restricted Judicial Interception Order & Electronic Surveillance Warrant",
+          "caseId": "CASE-2026-8891",
+          "category": "COURT_FILING",
+          "clearanceLevel": 4,
+          "authorName": "Justice P. K. Mukherjee",
+          "authorRole": "JUDICIAL_MAGISTRATE",
+          "department": "JUD",
+          "dateCreated": "2026-09-03T18:00:00.000Z",
+          "extractedText": "Confidential Judicial Interception Warrant authorizing 60-day electronic surveillance of suspect Sameer Verma and offshore communications."
+        }
+      ]
+    }
+  ]
+}

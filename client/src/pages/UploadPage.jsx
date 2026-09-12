@@ -67,7 +67,9 @@ export default function UploadPage({ navigateTo: propNavigateTo }) {
         formData.append('category', category);
         formData.append('clearanceLevel', clearanceLevel);
         formData.append('textContent', textContent || `[Attachment: ${selectedFile.name}]`);
-        res = await api.post('/documents/upload', formData);
+        res = await api.post('/documents/upload', formData, {
+          headers: { 'Content-Type': 'multipart/form-data' }
+        });
       } else {
         res = await api.post('/documents/upload', {
           title,

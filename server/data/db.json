@@ -145,170 +145,37 @@
   "documents": [
     {
       "id": "DOC-8891-003",
-      "title": "Eyewitness Sworn Statement - Security Guard",
+      "title": "Eyewitness Sworn Statement - Security Guard Ramesh Chand",
       "caseId": "CASE-2026-8891",
-      "caseTitle": "State vs. Cyber Syndicate (Financial Fraud & Homicide)",
+      "caseTitle": "Case CASE-2026-8891",
       "category": "WITNESS_STATEMENT",
       "clearanceLevel": 2,
-      "authorId": "USR-POL-101",
-      "authorName": "Inspector Vikram Sharma",
-      "authorRole": "POLICE_INVESTIGATOR",
-      "department": "LEO",
-      "dateCreated": "2026-08-15T09:10:00Z",
-      "version": "1.17",
-      "status": "SIGNED_PKI",
-      "extractedText": "Updated witness statement details with supplemental vehicle descriptions.",
+      "authorId": "USR-PRO-303",
+      "authorName": "Advocate Rajesh Verma",
+      "authorRole": "PUBLIC_PROSECUTOR",
+      "department": "PROS",
+      "dateCreated": "2026-09-01T09:00:00.000Z",
+      "version": "1.0",
+      "status": "VERIFIED_PKI",
+      "extractedText": "SWORN WITNESS STATEMENT (Under Section 164 Cr.P.C.)\nWitness Name: Ramesh Chand | Occupation: Senior Security Guard | Location: Tech Vault Facility\n\n1. STATEMENT DETAILS:\n\"I was on duty at the primary gate monitor desk on the night of 01-Sept-2026. At approximately 02:10 AM, I saw a person matching Sameer Verma walk past the biometric barrier using a master keycard. He was wearing a dark jacket with the hood pulled up, but I clearly recognized his face and distinct scar across his left cheek when he turned towards camera B4. At 02:22 AM, I heard a loud gunshot from server block B4. Seconds later, the same person ran out carrying a heavy pelican case, entered a dark sedan, and sped away through Exit 4.\"",
       "chainOfCustody": [
         {
-          "action": "DEPOSITION_RECORDED",
-          "actorName": "Inspector Vikram Sharma",
-          "department": "LEO",
-          "timestamp": "2026-08-15T09:10:00Z"
-        },
-        {
-          "action": "REVISION_ADDED (1.0 -> 1.1)",
-          "actorName": "Inspector Vikram Sharma",
-          "department": "LEO",
-          "timestamp": "2026-09-11T08:49:32.630Z"
-        },
-        {
-          "action": "REVISION_ADDED (1.1 -> 1.2)",
-          "actorName": "Inspector Vikram Sharma",
-          "department": "LEO",
-          "timestamp": "2026-09-11T08:50:53.214Z"
-        },
-        {
-          "action": "REVISION_ADDED (1.2 -> 1.3)",
-          "actorName": "Inspector Vikram Sharma",
-          "department": "LEO",
-          "timestamp": "2026-09-11T08:51:25.951Z"
-        },
-        {
-          "action": "REVISION_ADDED (1.3 -> 1.4)",
-          "actorName": "Inspector Vikram Sharma",
-          "department": "LEO",
-          "timestamp": "2026-09-11T08:51:52.451Z"
-        },
-        {
-          "action": "REVISION_ADDED (1.4 -> 1.5)",
-          "actorName": "Inspector Vikram Sharma",
-          "department": "LEO",
-          "timestamp": "2026-09-11T08:52:24.464Z"
-        },
-        {
-          "action": "REVISION_ADDED (1.5 -> 1.6)",
-          "actorName": "Inspector Vikram Sharma",
-          "department": "LEO",
-          "timestamp": "2026-09-11T08:53:31.300Z"
-        },
-        {
-          "action": "REVISION_ADDED (1.6 -> 1.7)",
-          "actorName": "Inspector Vikram Sharma",
-          "department": "LEO",
-          "timestamp": "2026-09-11T09:00:56.377Z"
-        },
-        {
-          "action": "REVISION_ADDED (1.7 -> 1.8)",
-          "actorName": "Inspector Vikram Sharma",
-          "department": "LEO",
-          "timestamp": "2026-09-11T10:53:18.843Z"
-        },
-        {
-          "action": "REVISION_ADDED (1.8 -> 1.9)",
-          "actorName": "Inspector Vikram Sharma",
-          "department": "LEO",
-          "timestamp": "2026-09-11T11:38:51.562Z"
-        },
-        {
-          "action": "REVISION_ADDED (1.9 -> 1.10)",
-          "actorName": "Inspector Vikram Sharma",
-          "department": "LEO",
-          "timestamp": "2026-09-11T11:49:59.373Z"
-        },
-        {
-          "action": "REVISION_ADDED (1.10 -> 1.11)",
-          "actorName": "Inspector Vikram Sharma",
-          "department": "LEO",
-          "timestamp": "2026-09-11T11:51:23.987Z"
-        },
-        {
-          "action": "REVISION_ADDED (1.11 -> 1.12)",
-          "actorName": "Inspector Vikram Sharma",
-          "department": "LEO",
-          "timestamp": "2026-09-11T11:52:32.898Z"
-        },
-        {
-          "action": "PKI_DIGITAL_SIGNATURE_APPLIED",
-          "actorName": "Inspector Vikram Sharma",
-          "department": "LEO",
-          "timestamp": "2026-09-12T13:34:04.049Z",
-          "details": {
-            "manifestId": "MANIFEST-bad4305b5388f486",
-            "signatureId": "SIG-360109d5859c150e",
-            "provider": "local-dev-v1"
-          }
-        },
-        {
-          "action": "PKI_SIGNATURE_REVOKED",
-          "actorName": "Anil Gupta",
-          "timestamp": "2026-09-12T13:34:04.062Z",
-          "details": {
-            "signatureId": "SIG-360109d5859c150e",
-            "reason": "Security Audit Key Compromise Simulation"
-          }
-        },
-        {
-          "action": "REVISION_ADDED (1.12 -> 1.13)",
-          "actorName": "Inspector Vikram Sharma",
-          "department": "LEO",
-          "timestamp": "2026-09-12T14:20:40.224Z"
-        },
-        {
-          "action": "REVISION_ADDED (1.13 -> 1.14)",
-          "actorName": "Inspector Vikram Sharma",
-          "department": "LEO",
-          "timestamp": "2026-09-12T14:26:28.132Z"
-        },
-        {
-          "action": "REVISION_ADDED (1.14 -> 1.15)",
-          "actorName": "Inspector Vikram Sharma",
-          "department": "LEO",
-          "timestamp": "2026-09-12T14:45:24.940Z"
-        },
-        {
-          "action": "PKI_DIGITAL_SIGNATURE_APPLIED",
-          "actorName": "Inspector Vikram Sharma",
-          "department": "Special Crime Branch - Central Police",
-          "timestamp": "2026-09-12T14:48:32.464Z",
-          "details": {
-            "manifestId": "MANIFEST-78830332f72fd934",
-            "signatureId": "SIG-4c1490aa3837bf8f",
-            "provider": "local-dev-v1"
-          }
-        },
-        {
-          "action": "REVISION_ADDED (1.15 -> 1.16)",
-          "actorName": "Inspector Vikram Sharma",
-          "department": "LEO",
-          "timestamp": "2026-09-12T14:53:42.125Z"
-        },
-        {
-          "action": "REVISION_ADDED (1.16 -> 1.17)",
-          "actorName": "Inspector Vikram Sharma",
-          "department": "LEO",
-          "timestamp": "2026-09-12T15:21:48.697Z"
+          "action": "DOCUMENT_FILED_AND_VERIFIED",
+          "actorName": "Advocate Rajesh Verma",
+          "department": "PROS",
+          "timestamp": "2026-09-01T09:00:00.000Z"
         }
       ],
-      "payloadHash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
-      "fileSize": 378,
+      "payloadHash": "53574f524e205749544e4553532053544154454d454e542028556e6465722053",
+      "fileSize": 710,
       "encryptionMetadata": {
         "algorithm": "AES-256-GCM",
         "kmsKeyId": "KMS-MASTER-KEY-PROD-2026",
-        "encryptedDEK": "3ac331019b842e6f3b6a383da5462b7670d38b6b1c141e811e3e425a730dc0fe3ebcdc12b14cab46bdd0d4a422f09072d4f3890f84e196957f4cfa3ae9eacfa1",
-        "dekIv": "49db20ee58f4b5b027ef45d8",
-        "dekAuthTag": "78265cf91a64943215381631bfe3bb8b",
-        "payloadIv": "d544d801f47d14db45c05b25",
-        "payloadAuthTag": "0b25ada3176b8c8e310894c232a1b771"
+        "encryptedDEK": "e5eb4ac8885339c1e664ad38e80a51a17066c888a4c1eaa814e169f77fbdabc271e83cdf2fda4dd501ecb8ebe629fae64a8d663af8d3a402412da301f25c997c",
+        "dekIv": "226f766d5ecc91be4f2ca24f",
+        "dekAuthTag": "c2037392fafccba3abd7014437fb1083",
+        "payloadIv": "88551337b039214c0e8a7944",
+        "payloadAuthTag": "5d33e03ef88d9f05d911fccfcc86df27"
       },
       "signature": {
         "signedBy": "Inspector Vikram Sharma",
@@ -718,41 +585,43 @@
           }
         }
       ],
-      "currentFileId": "DOC-8891-003_v1_17"
+      "currentFileId": "DOC-8891-003_v1_17",
+      "mimeType": "text/plain",
+      "originalFileName": "DOC-8891-003_Eyewitness_Sworn_Statement___Security_Guard_Ramesh_Chand.txt"
     },
     {
       "id": "DOC-8891-004",
-      "title": "Restricted Judicial Interception Order & Note",
+      "title": "Restricted Judicial Interception Order & Electronic Surveillance Warrant",
       "caseId": "CASE-2026-8891",
-      "caseTitle": "State vs. Cyber Syndicate (Financial Fraud & Homicide)",
+      "caseTitle": "Case CASE-2026-8891",
       "category": "COURT_FILING",
       "clearanceLevel": 4,
-      "authorId": "USR-JUD-404",
+      "authorId": "USR-AUD-505",
       "authorName": "Justice P. K. Mukherjee",
       "authorRole": "JUDICIAL_MAGISTRATE",
       "department": "JUD",
-      "dateCreated": "2026-08-18T11:00:00Z",
+      "dateCreated": "2026-09-03T18:00:00.000Z",
       "version": "1.0",
-      "status": "SIGNED_PKI",
-      "extractedText": "In the Special Sessions Court of Judicature.\n\nJudicial order authorizing confidential wiretap on secondary offshore communications of suspected accomplices. Disclosure strictly restricted to presiding Magistrate (Level 4) and Chief Auditor (Level 4). Any unauthorized access or leak will invoke contempt of court proceedings.",
+      "status": "VERIFIED_PKI",
+      "extractedText": "Confidential Judicial Interception Warrant authorizing 60-day electronic surveillance of suspect Sameer Verma and offshore communications.",
       "chainOfCustody": [
         {
-          "action": "JUDICIAL_ORDER_ISSUED",
+          "action": "DOCUMENT_FILED_AND_VERIFIED",
           "actorName": "Justice P. K. Mukherjee",
           "department": "JUD",
-          "timestamp": "2026-08-18T11:00:00Z"
+          "timestamp": "2026-09-03T18:00:00.000Z"
         }
       ],
-      "payloadHash": "1b5c3cf906b86b0b8dda5e76291659f39ef5a73a1021d07bfa96bcf5d3814a9b",
-      "fileSize": 325,
+      "payloadHash": "436f6e666964656e7469616c204a7564696369616c20496e7465726365707469",
+      "fileSize": 138,
       "encryptionMetadata": {
         "algorithm": "AES-256-GCM",
         "kmsKeyId": "KMS-MASTER-KEY-PROD-2026",
-        "encryptedDEK": "3654b567ea2623474106db312eb6d231c48b23b0c2cce0b94dd0bab80c1c94a519e37364c71a44b64537e98b2ca462daef8bb08b7bbf81c0e704f48110f7c42a",
-        "dekIv": "3f3f3f98629996d4af839555",
-        "dekAuthTag": "13f1d5498b1d94450543d6bded4d25c8",
-        "payloadIv": "24fb5c34900921e5df4dd30a",
-        "payloadAuthTag": "24bf304c23e643677a778d446429cb2d"
+        "encryptedDEK": "e5eb4ac8885339c1e664ad38e80a51a17066c888a4c1eaa814e169f77fbdabc271e83cdf2fda4dd501ecb8ebe629fae64a8d663af8d3a402412da301f25c997c",
+        "dekIv": "226f766d5ecc91be4f2ca24f",
+        "dekAuthTag": "c2037392fafccba3abd7014437fb1083",
+        "payloadIv": "88551337b039214c0e8a7944",
+        "payloadAuthTag": "5d33e03ef88d9f05d911fccfcc86df27"
       },
       "signature": {
         "signedBy": "Justice P. K. Mukherjee",
@@ -768,7 +637,9 @@
           "authorId": "USR-JUD-404",
           "timestamp": "2026-08-18T11:00:00Z"
         }
-      }
+      },
+      "mimeType": "text/plain",
+      "originalFileName": "DOC-8891-004_Restricted_Judicial_Interception_Order___Electronic_Surveillance_Warrant.txt"
     },
     {
       "id": "DOC-2026-8891-7125",
@@ -1783,6 +1654,642 @@
           "actorName": "Inspector Vikram Sharma",
           "department": "LEO",
           "timestamp": "2026-09-12T20:57:12.844Z"
+        }
+      ]
+    },
+    {
+      "id": "DOC-8891-001",
+      "title": "First Information Report (FIR #00492/2026)",
+      "caseId": "CASE-2026-8891",
+      "caseTitle": "Case CASE-2026-8891",
+      "category": "FIR",
+      "clearanceLevel": 2,
+      "authorId": "USR-AUD-505",
+      "authorName": "Inspector Vikram Sharma",
+      "authorRole": "POLICE_INVESTIGATOR",
+      "department": "LEO",
+      "dateCreated": "2026-09-01T02:45:00.000Z",
+      "version": "1.0",
+      "status": "VERIFIED_PKI",
+      "extractedText": "FIR No: 00492/2026 | Police Station: Special Crime Branch. Details homicide of Rajesh Kumar and crypto robbery at Tech Vault Facility.",
+      "mimeType": "text/plain",
+      "originalFileName": "DOC-8891-001_First_Information_Report__FIR__00492_2026_.txt",
+      "payloadHash": "464952204e6f3a2030303439322f32303236207c20506f6c6963652053746174",
+      "fileSize": 134,
+      "encryptionMetadata": {
+        "algorithm": "AES-256-GCM",
+        "kmsKeyId": "KMS-MASTER-KEY-PROD-2026",
+        "encryptedDEK": "e5eb4ac8885339c1e664ad38e80a51a17066c888a4c1eaa814e169f77fbdabc271e83cdf2fda4dd501ecb8ebe629fae64a8d663af8d3a402412da301f25c997c",
+        "dekIv": "226f766d5ecc91be4f2ca24f",
+        "dekAuthTag": "c2037392fafccba3abd7014437fb1083",
+        "payloadIv": "88551337b039214c0e8a7944",
+        "payloadAuthTag": "5d33e03ef88d9f05d911fccfcc86df27"
+      },
+      "chainOfCustody": [
+        {
+          "action": "DOCUMENT_FILED_AND_VERIFIED",
+          "actorName": "Inspector Vikram Sharma",
+          "department": "LEO",
+          "timestamp": "2026-09-01T02:45:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "DOC-8891-005",
+      "title": "Police Interrogation Brief & Suspect Vehicle Tracking Log",
+      "caseId": "CASE-2026-8891",
+      "caseTitle": "Case CASE-2026-8891",
+      "category": "WITNESS_STATEMENT",
+      "clearanceLevel": 2,
+      "authorId": "USR-POL-101",
+      "authorName": "Inspector Vikram Sharma",
+      "authorRole": "POLICE_INVESTIGATOR",
+      "department": "LEO",
+      "dateCreated": "2026-09-02T10:30:00.000Z",
+      "version": "1.0",
+      "status": "VERIFIED_PKI",
+      "extractedText": "POLICE INVESTIGATION & INTERROGATION BRIEF\nCase ID: CASE-2026-8891 | Investigating Officer: Inspector Vikram Sharma\n\n1. SUSPECT TRACKING LOG:\nAutomatic Number Plate Recognition (ANPR) cameras located at Cyber Park Expressway Exit 4 captured dark grey sedan (#DL-09-CB-4491) passing at 02:31 AM, traveling towards the western toll plaza. Cell tower triangulation logs for mobile number registered under suspect Sameer Verma (+91 98210-44910) showed active handoffs matching the vehicle trajectory between 02:15 AM and 03:10 AM.\n\n2. WITNESS INTERROGATION - FACILITY GUARD:\nSecurity Guard Ramesh Chand (ID #SG-441) was interrogated at 06:00 AM. Guard Chand stated under sworn oath that at 02:10 AM he observed suspect Sameer Verma bypass the secondary biometric gate using a master override keycard. Guard Chand confirmed suspect Verma had a distinct facial scar across his left cheek and carried a heavy pelican case upon exiting.\n\n3. INVESTIGATIVE SUMMARY & NEXT STEPS:\nPhysical evidence recovered from suspect residence during search warrant execution includes one Glock-17 9mm pistol (Serial #GL-88392) hidden beneath bedroom floorboards and an encrypted laptop containing wallet backup files. Requesting immediate forensic ballistics matching and DNA profiling.",
+      "mimeType": "text/plain",
+      "originalFileName": "DOC-8891-005_Police_Interrogation_Brief___Suspect_Vehicle_Tracking_Log.txt",
+      "payloadHash": "504f4c49434520494e5645535449474154494f4e202620494e544552524f4741",
+      "fileSize": 1263,
+      "encryptionMetadata": {
+        "algorithm": "AES-256-GCM",
+        "kmsKeyId": "KMS-MASTER-KEY-PROD-2026",
+        "encryptedDEK": "e5eb4ac8885339c1e664ad38e80a51a17066c888a4c1eaa814e169f77fbdabc271e83cdf2fda4dd501ecb8ebe629fae64a8d663af8d3a402412da301f25c997c",
+        "dekIv": "226f766d5ecc91be4f2ca24f",
+        "dekAuthTag": "c2037392fafccba3abd7014437fb1083",
+        "payloadIv": "88551337b039214c0e8a7944",
+        "payloadAuthTag": "5d33e03ef88d9f05d911fccfcc86df27"
+      },
+      "chainOfCustody": [
+        {
+          "action": "DOCUMENT_FILED_AND_VERIFIED",
+          "actorName": "Inspector Vikram Sharma",
+          "department": "LEO",
+          "timestamp": "2026-09-02T10:30:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "DOC-4412-001",
+      "title": "Narcotics Seizure Inventory & Tactical Raid Arrest Memo",
+      "caseId": "CASE-2026-4412",
+      "caseTitle": "Case CASE-2026-4412",
+      "category": "FORENSIC_REPORT",
+      "clearanceLevel": 3,
+      "authorId": "USR-POL-101",
+      "authorName": "Inspector Vikram Sharma",
+      "authorRole": "POLICE_INVESTIGATOR",
+      "department": "LEO",
+      "dateCreated": "2026-09-05T14:20:00.000Z",
+      "version": "1.0",
+      "status": "VERIFIED_PKI",
+      "extractedText": "TACTICAL RAID & SEIZURE MEMORANDUM\nCase ID: CASE-2026-4412 | Location: International Docking Terminal 3, Hangar 9\n\n1. SEIZURE SUMMARY:\nJoint tactical operation conducted by Special Crime Branch resulted in the interception of a commercial shipping container (ID #CONT-8891-X). Physical inventory confirmed the seizure of 45.4 kilograms of high-purity contraband MDMA base packaged in vacuum-sealed industrial pouches.\n\n2. RECOVERED WEAPONRY & ARRESTS:\nTwo unregistered automatic submachine guns (Serials #SMG-991A, #SMG-991B) loaded with 30-round high-capacity magazines were seized from two armed suspects arrested on site. Suspects identified as Carlos Mendez and Rajiv Kapoor. Chemical purity analysis confirmed 94.2% pharmaceutical-grade purity.",
+      "mimeType": "text/plain",
+      "originalFileName": "DOC-4412-001_Narcotics_Seizure_Inventory___Tactical_Raid_Arrest_Memo.txt",
+      "payloadHash": "544143544943414c20524149442026205345495a555245204d454d4f52414e44",
+      "fileSize": 749,
+      "encryptionMetadata": {
+        "algorithm": "AES-256-GCM",
+        "kmsKeyId": "KMS-MASTER-KEY-PROD-2026",
+        "encryptedDEK": "e5eb4ac8885339c1e664ad38e80a51a17066c888a4c1eaa814e169f77fbdabc271e83cdf2fda4dd501ecb8ebe629fae64a8d663af8d3a402412da301f25c997c",
+        "dekIv": "226f766d5ecc91be4f2ca24f",
+        "dekAuthTag": "c2037392fafccba3abd7014437fb1083",
+        "payloadIv": "88551337b039214c0e8a7944",
+        "payloadAuthTag": "5d33e03ef88d9f05d911fccfcc86df27"
+      },
+      "chainOfCustody": [
+        {
+          "action": "DOCUMENT_FILED_AND_VERIFIED",
+          "actorName": "Inspector Vikram Sharma",
+          "department": "LEO",
+          "timestamp": "2026-09-05T14:20:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "DOC-8891-002",
+      "title": "Forensic Ballistics & Microscopic Striation Comparison Report",
+      "caseId": "CASE-2026-8891",
+      "caseTitle": "Case CASE-2026-8891",
+      "category": "FORENSIC_REPORT",
+      "clearanceLevel": 3,
+      "authorId": "USR-JUD-404",
+      "authorName": "Dr. Sunita Rao",
+      "authorRole": "FORENSIC_SPECIALIST",
+      "department": "FOR",
+      "dateCreated": "2026-09-02T16:00:00.000Z",
+      "version": "1.0",
+      "status": "VERIFIED_PKI",
+      "extractedText": "STATE CENTRAL FORENSIC SCIENCE LABORATORY - BALLISTICS DIVISION\nLab Report Ref: FSL-BAL-2026-99182 | Lead Analyst: Dr. Sunita Rao\n\nMicroscopic comparison confirms with 100% scientific certainty that Exhibit B1 cartridge casing was fired exclusively from Glock-17 pistol Serial #GL-88392 seized from suspect Sameer Verma's residence.",
+      "mimeType": "text/plain",
+      "originalFileName": "DOC-8891-002_Forensic_Ballistics___Microscopic_Striation_Comparison_Report.txt",
+      "payloadHash": "53544154452043454e5452414c20464f52454e53494320534349454e4345204c",
+      "fileSize": 332,
+      "encryptionMetadata": {
+        "algorithm": "AES-256-GCM",
+        "kmsKeyId": "KMS-MASTER-KEY-PROD-2026",
+        "encryptedDEK": "e5eb4ac8885339c1e664ad38e80a51a17066c888a4c1eaa814e169f77fbdabc271e83cdf2fda4dd501ecb8ebe629fae64a8d663af8d3a402412da301f25c997c",
+        "dekIv": "226f766d5ecc91be4f2ca24f",
+        "dekAuthTag": "c2037392fafccba3abd7014437fb1083",
+        "payloadIv": "88551337b039214c0e8a7944",
+        "payloadAuthTag": "5d33e03ef88d9f05d911fccfcc86df27"
+      },
+      "chainOfCustody": [
+        {
+          "action": "DOCUMENT_FILED_AND_VERIFIED",
+          "actorName": "Dr. Sunita Rao",
+          "department": "FOR",
+          "timestamp": "2026-09-02T16:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "DOC-8891-006",
+      "title": "DNA Profile & Touch Epigenetic Analysis Report",
+      "caseId": "CASE-2026-8891",
+      "caseTitle": "Case CASE-2026-8891",
+      "category": "FORENSIC_REPORT",
+      "clearanceLevel": 3,
+      "authorId": "USR-FOR-202",
+      "authorName": "Dr. Sunita Rao",
+      "authorRole": "FORENSIC_SPECIALIST",
+      "department": "FOR",
+      "dateCreated": "2026-09-03T11:15:00.000Z",
+      "version": "1.0",
+      "status": "VERIFIED_PKI",
+      "extractedText": "FORENSIC BIOLOGY & DNA TYPING REPORT\nLab Ref: FSL-DNA-2026-4412 | Forensic Analyst: Dr. Sunita Rao\n\n1. TOUCH DNA EXTRACTION (EXHIBIT B2):\nTouch DNA swabs collected from the manual safety catch and slide serrations of seized Glock-17 pistol (Serial #GL-88392) were amplified using 15 Short Tandem Repeat (STR) genetic markers.\n\n2. STR PROFILE MATCH RESULTS:\nThe extracted DNA profile yielded a complete 15-loci male match corresponding exactly to suspect Sameer Verma (Reference Sample #DNA-SV992).\n- Loci Match Count: 15 out of 15 fully concordant markers (D3S1358, vWA, FGA, D8S1179, D21S11, D18S51, D5S818, D13S317, D7S820, TPOX, TH01, CSF1PO, D16S539, D2S1338, D19S433).\n- Random Match Probability (RMP): 1 in 4.8 billion in the general population.\n- Epigenetic analysis confirmed fresh epithelial cell deposition within 18 hours of seizure.",
+      "mimeType": "text/plain",
+      "originalFileName": "DOC-8891-006_DNA_Profile___Touch_Epigenetic_Analysis_Report.txt",
+      "payloadHash": "464f52454e5349432042494f4c4f4759202620444e4120545950494e47205245",
+      "fileSize": 844,
+      "encryptionMetadata": {
+        "algorithm": "AES-256-GCM",
+        "kmsKeyId": "KMS-MASTER-KEY-PROD-2026",
+        "encryptedDEK": "e5eb4ac8885339c1e664ad38e80a51a17066c888a4c1eaa814e169f77fbdabc271e83cdf2fda4dd501ecb8ebe629fae64a8d663af8d3a402412da301f25c997c",
+        "dekIv": "226f766d5ecc91be4f2ca24f",
+        "dekAuthTag": "c2037392fafccba3abd7014437fb1083",
+        "payloadIv": "88551337b039214c0e8a7944",
+        "payloadAuthTag": "5d33e03ef88d9f05d911fccfcc86df27"
+      },
+      "chainOfCustody": [
+        {
+          "action": "DOCUMENT_FILED_AND_VERIFIED",
+          "actorName": "Dr. Sunita Rao",
+          "department": "FOR",
+          "timestamp": "2026-09-03T11:15:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "DOC-8891-007",
+      "title": "Encrypted Cold Wallet Hardware & Digital Memory Dump Forensics",
+      "caseId": "CASE-2026-8891",
+      "caseTitle": "Case CASE-2026-8891",
+      "category": "FORENSIC_REPORT",
+      "clearanceLevel": 3,
+      "authorId": "USR-FOR-202",
+      "authorName": "Dr. Sunita Rao",
+      "authorRole": "FORENSIC_SPECIALIST",
+      "department": "FOR",
+      "dateCreated": "2026-09-04T09:45:00.000Z",
+      "version": "1.0",
+      "status": "VERIFIED_PKI",
+      "extractedText": "DIGITAL FORENSICS & MEMORY DUMP ANALYSIS REPORT\nLab Ref: FSL-DIG-2026-1102 | Digital Examiner: Dr. Sunita Rao\n\n1. VOLATILE MEMORY FORENSICS:\nVolatile RAM image extracted from suspect Sameer Verma's seized laptop (Serial #LT-99410) revealed an active unallocated memory page containing an unencrypted AES-256 private key fragment.\n\n2. CRYPTO SIPHONING BLOCKCHAIN TRAIL:\nReconstructed transaction logs mapped the illicit transfer of $4,250,000 USD equivalent in cryptocurrency from Tech Vault Master Address (0x742d35Cc6634C0532925a3b844Bc454e4438f44e) to an offshore mixer wallet (0x8891F44e991823901A7e829C1102Aa4438f) executed at 02:33 AM (18 minutes post-incident). VPN IP logs confirm execution via an exit node matching suspect Verma's personal VPN account.",
+      "mimeType": "text/plain",
+      "originalFileName": "DOC-8891-007_Encrypted_Cold_Wallet_Hardware___Digital_Memory_Dump_Forensics.txt",
+      "payloadHash": "4449474954414c20464f52454e534943532026204d454d4f52592044554d5020",
+      "fileSize": 761,
+      "encryptionMetadata": {
+        "algorithm": "AES-256-GCM",
+        "kmsKeyId": "KMS-MASTER-KEY-PROD-2026",
+        "encryptedDEK": "e5eb4ac8885339c1e664ad38e80a51a17066c888a4c1eaa814e169f77fbdabc271e83cdf2fda4dd501ecb8ebe629fae64a8d663af8d3a402412da301f25c997c",
+        "dekIv": "226f766d5ecc91be4f2ca24f",
+        "dekAuthTag": "c2037392fafccba3abd7014437fb1083",
+        "payloadIv": "88551337b039214c0e8a7944",
+        "payloadAuthTag": "5d33e03ef88d9f05d911fccfcc86df27"
+      },
+      "chainOfCustody": [
+        {
+          "action": "DOCUMENT_FILED_AND_VERIFIED",
+          "actorName": "Dr. Sunita Rao",
+          "department": "FOR",
+          "timestamp": "2026-09-04T09:45:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "DOC-8891-008",
+      "title": "Formal Charge Sheet & Summary of Evidence (Section 173 Cr.P.C.)",
+      "caseId": "CASE-2026-8891",
+      "caseTitle": "Case CASE-2026-8891",
+      "category": "COURT_FILING",
+      "clearanceLevel": 3,
+      "authorId": "USR-JUD-404",
+      "authorName": "Advocate Rajesh Verma",
+      "authorRole": "PUBLIC_PROSECUTOR",
+      "department": "PROS",
+      "dateCreated": "2026-09-06T11:00:00.000Z",
+      "version": "1.0",
+      "status": "VERIFIED_PKI",
+      "extractedText": "IN THE COURT OF THE SPECIAL SESSIONS JUDGE, CYBER PARK\nProsecution establishes unbroken chain of physical, ballistics, DNA, and memory dump digital evidence against suspect Sameer Verma for premeditated murder and $4.2M crypto robbery.",
+      "mimeType": "text/plain",
+      "originalFileName": "DOC-8891-008_Formal_Charge_Sheet___Summary_of_Evidence__Section_173_Cr_P_C__.txt",
+      "payloadHash": "494e2054484520434f555254204f4620544845205350454349414c2053455353",
+      "fileSize": 235,
+      "encryptionMetadata": {
+        "algorithm": "AES-256-GCM",
+        "kmsKeyId": "KMS-MASTER-KEY-PROD-2026",
+        "encryptedDEK": "e5eb4ac8885339c1e664ad38e80a51a17066c888a4c1eaa814e169f77fbdabc271e83cdf2fda4dd501ecb8ebe629fae64a8d663af8d3a402412da301f25c997c",
+        "dekIv": "226f766d5ecc91be4f2ca24f",
+        "dekAuthTag": "c2037392fafccba3abd7014437fb1083",
+        "payloadIv": "88551337b039214c0e8a7944",
+        "payloadAuthTag": "5d33e03ef88d9f05d911fccfcc86df27"
+      },
+      "chainOfCustody": [
+        {
+          "action": "DOCUMENT_FILED_AND_VERIFIED",
+          "actorName": "Advocate Rajesh Verma",
+          "department": "PROS",
+          "timestamp": "2026-09-06T11:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "DOC-8891-009",
+      "title": "Prosecution Motion Opposing High Court Bail Application",
+      "caseId": "CASE-2026-8891",
+      "caseTitle": "Case CASE-2026-8891",
+      "category": "COURT_FILING",
+      "clearanceLevel": 3,
+      "authorId": "USR-PRO-303",
+      "authorName": "Advocate Rajesh Verma",
+      "authorRole": "PUBLIC_PROSECUTOR",
+      "department": "PROS",
+      "dateCreated": "2026-09-07T14:30:00.000Z",
+      "version": "1.0",
+      "status": "VERIFIED_PKI",
+      "extractedText": "IN THE HIGH COURT OF JUDICATURE\nBail Application No. 8891/2026 | State Response Filed by Senior Prosecutor Rajesh Verma\n\n1. OPPOSITION TO BAIL:\nThe State strongly opposes the grant of bail to accused Sameer Verma on the following compelling legal grounds:\n- Severe Flight Risk: Accused holds active possession of $4.2M in siphoned cryptocurrency transferred to offshore mixer wallets, providing immense financial resources to abscond.\n- Threat of Witness Tampering: Key eyewitness Security Guard Ramesh Chand has received anonymous threatening calls since suspect's arrest.\n- Immutable Chain of Evidence: Overwhelming forensic proof including 100% ballistics and DNA match anchored on the SākshyaChain audit ledger.",
+      "mimeType": "text/plain",
+      "originalFileName": "DOC-8891-009_Prosecution_Motion_Opposing_High_Court_Bail_Application.txt",
+      "payloadHash": "494e20544845204849474820434f555254204f46204a5544494341545552450a",
+      "fileSize": 716,
+      "encryptionMetadata": {
+        "algorithm": "AES-256-GCM",
+        "kmsKeyId": "KMS-MASTER-KEY-PROD-2026",
+        "encryptedDEK": "e5eb4ac8885339c1e664ad38e80a51a17066c888a4c1eaa814e169f77fbdabc271e83cdf2fda4dd501ecb8ebe629fae64a8d663af8d3a402412da301f25c997c",
+        "dekIv": "226f766d5ecc91be4f2ca24f",
+        "dekAuthTag": "c2037392fafccba3abd7014437fb1083",
+        "payloadIv": "88551337b039214c0e8a7944",
+        "payloadAuthTag": "5d33e03ef88d9f05d911fccfcc86df27"
+      },
+      "chainOfCustody": [
+        {
+          "action": "DOCUMENT_FILED_AND_VERIFIED",
+          "actorName": "Advocate Rajesh Verma",
+          "department": "PROS",
+          "timestamp": "2026-09-07T14:30:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "DOC-8891-010",
+      "title": "Judicial Cognizance Order & Remand Hearing Proceedings",
+      "caseId": "CASE-2026-8891",
+      "caseTitle": "Case CASE-2026-8891",
+      "category": "COURT_FILING",
+      "clearanceLevel": 4,
+      "authorId": "USR-JUD-404",
+      "authorName": "Justice P. K. Mukherjee",
+      "authorRole": "JUDICIAL_MAGISTRATE",
+      "department": "JUD",
+      "dateCreated": "2026-09-06T15:30:00.000Z",
+      "version": "1.0",
+      "status": "VERIFIED_PKI",
+      "extractedText": "ORDER OF COGNIZANCE & JUDICIAL REMAND\nSpecial Sessions Court | Presiding Magistrate: Justice P. K. Mukherjee\n\n1. COGNIZANCE TAKEN:\nFormal judicial cognizance is hereby taken of Charge Sheet #00492/2026 filed against accused Sameer Verma under IPC Sections 302, 392, and IT Act Section 66D. Prima facie evidence including microscopic ballistics striation match and 15-loci DNA match is deemed sufficient to initiate trial.\n\n2. REMAND & CHAIN OF CUSTODY DIRECTIVE:\nAccused Sameer Verma is remanded to high-security judicial custody until trial commencement. All physical exhibits (Exhibits B1, B2, GL-88392) and digital vault records must remain locked and cross-verified on the SākshyaChain audit ledger.",
+      "mimeType": "text/plain",
+      "originalFileName": "DOC-8891-010_Judicial_Cognizance_Order___Remand_Hearing_Proceedings.txt",
+      "payloadHash": "4f52444552204f4620434f474e495a414e43452026204a5544494349414c2052",
+      "fileSize": 704,
+      "encryptionMetadata": {
+        "algorithm": "AES-256-GCM",
+        "kmsKeyId": "KMS-MASTER-KEY-PROD-2026",
+        "encryptedDEK": "e5eb4ac8885339c1e664ad38e80a51a17066c888a4c1eaa814e169f77fbdabc271e83cdf2fda4dd501ecb8ebe629fae64a8d663af8d3a402412da301f25c997c",
+        "dekIv": "226f766d5ecc91be4f2ca24f",
+        "dekAuthTag": "c2037392fafccba3abd7014437fb1083",
+        "payloadIv": "88551337b039214c0e8a7944",
+        "payloadAuthTag": "5d33e03ef88d9f05d911fccfcc86df27"
+      },
+      "chainOfCustody": [
+        {
+          "action": "DOCUMENT_FILED_AND_VERIFIED",
+          "actorName": "Justice P. K. Mukherjee",
+          "department": "JUD",
+          "timestamp": "2026-09-06T15:30:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "DOC-8891-011",
+      "title": "National Digital Evidence & Immutable Audit DAG Compliance Certificate",
+      "caseId": "CASE-2026-8891",
+      "caseTitle": "Case CASE-2026-8891",
+      "category": "COURT_FILING",
+      "clearanceLevel": 4,
+      "authorId": "USR-AUD-505",
+      "authorName": "Anil Gupta",
+      "authorRole": "COMPLIANCE_AUDITOR",
+      "department": "AUD",
+      "dateCreated": "2026-09-08T10:00:00.000Z",
+      "version": "1.0",
+      "status": "VERIFIED_PKI",
+      "extractedText": "NATIONAL DIGITAL EVIDENCE OVERSIGHT BOARD - COMPLIANCE AUDIT CERTIFICATE\nCertificate ID: CERT-AUD-2026-8891 | Lead Security Auditor: Anil Gupta\n\n1. AUDIT DAG CHAIN VERIFICATION:\nVerification executed across all 167 mined audit blocks associated with Case #CASE-2026-8891.\n- SHA-256 Canonical Hash Chain Integrity: 100% Verified (Zero broken links or recalculated hashes).\n- RSA-2048 Digital Signatures: Validated for Chief Investigator Sharma, Forensic Analyst Dr. Rao, and Magistrate Justice Mukherjee.\n- Hyperledger Fabric Anchor Verification: Merkle Root Hash #991823901A successfully anchored to ledger node.\n\n2. AUDIT CONCLUSION:\nAll digital evidence, forensic reports, and chain of custody logs satisfy Section 65B Indian Evidence Act / BSA requirements for court admissibility.",
+      "mimeType": "text/plain",
+      "originalFileName": "DOC-8891-011_National_Digital_Evidence___Immutable_Audit_DAG_Compliance_Certificate.txt",
+      "payloadHash": "4e4154494f4e414c204449474954414c2045564944454e4345204f5645525349",
+      "fileSize": 784,
+      "encryptionMetadata": {
+        "algorithm": "AES-256-GCM",
+        "kmsKeyId": "KMS-MASTER-KEY-PROD-2026",
+        "encryptedDEK": "e5eb4ac8885339c1e664ad38e80a51a17066c888a4c1eaa814e169f77fbdabc271e83cdf2fda4dd501ecb8ebe629fae64a8d663af8d3a402412da301f25c997c",
+        "dekIv": "226f766d5ecc91be4f2ca24f",
+        "dekAuthTag": "c2037392fafccba3abd7014437fb1083",
+        "payloadIv": "88551337b039214c0e8a7944",
+        "payloadAuthTag": "5d33e03ef88d9f05d911fccfcc86df27"
+      },
+      "chainOfCustody": [
+        {
+          "action": "DOCUMENT_FILED_AND_VERIFIED",
+          "actorName": "Anil Gupta",
+          "department": "AUD",
+          "timestamp": "2026-09-08T10:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "DOC-8891-012",
+      "title": "Zero-Trust PKI Key Lifecycle & Multi-Agency Access Audit Log",
+      "caseId": "CASE-2026-8891",
+      "caseTitle": "Case CASE-2026-8891",
+      "category": "COURT_FILING",
+      "clearanceLevel": 4,
+      "authorId": "USR-AUD-505",
+      "authorName": "Anil Gupta",
+      "authorRole": "COMPLIANCE_AUDITOR",
+      "department": "AUD",
+      "dateCreated": "2026-09-08T11:30:00.000Z",
+      "version": "1.0",
+      "status": "VERIFIED_PKI",
+      "extractedText": "ZERO-TRUST SYSTEM SECURITY & IAM ACCESS AUDIT REPORT\nAudit Log Ref: AUD-IAM-2026-004 | Compliance Auditor: Anil Gupta\n\n1. MULTI-AGENCY IAM VERIFICATION:\nAudited PKI key pairs, MFA OTP verification logs, and IP allowlist enforcement records.\n- IP Allowlist Compliance: 100% of API requests originated from verified local network subnets.\n- Break-Glass Audit: Zero unauthorized emergency access grants detected. 100% compliance with Judicial Order #DOC-8891-004.",
+      "mimeType": "text/plain",
+      "originalFileName": "DOC-8891-012_Zero_Trust_PKI_Key_Lifecycle___Multi_Agency_Access_Audit_Log.txt",
+      "payloadHash": "5a45524f2d54525553542053595354454d20534543555249545920262049414d",
+      "fileSize": 460,
+      "encryptionMetadata": {
+        "algorithm": "AES-256-GCM",
+        "kmsKeyId": "KMS-MASTER-KEY-PROD-2026",
+        "encryptedDEK": "e5eb4ac8885339c1e664ad38e80a51a17066c888a4c1eaa814e169f77fbdabc271e83cdf2fda4dd501ecb8ebe629fae64a8d663af8d3a402412da301f25c997c",
+        "dekIv": "226f766d5ecc91be4f2ca24f",
+        "dekAuthTag": "c2037392fafccba3abd7014437fb1083",
+        "payloadIv": "88551337b039214c0e8a7944",
+        "payloadAuthTag": "5d33e03ef88d9f05d911fccfcc86df27"
+      },
+      "chainOfCustody": [
+        {
+          "action": "DOCUMENT_FILED_AND_VERIFIED",
+          "actorName": "Anil Gupta",
+          "department": "AUD",
+          "timestamp": "2026-09-08T11:30:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "DOC-2026-8891-8245",
+      "title": "Screenshot 2026-06-11 233758",
+      "caseId": "CASE-2026-8891",
+      "caseTitle": "Case CASE-2026-8891",
+      "category": "FIR",
+      "clearanceLevel": 2,
+      "authorId": "USR-POL-101",
+      "authorName": "Inspector Vikram Sharma",
+      "authorRole": "POLICE_INVESTIGATOR",
+      "department": "LEO",
+      "dateCreated": "2026-09-12T22:01:18.252Z",
+      "version": "1.0",
+      "status": "VERIFIED",
+      "extractedText": "[PDF Attachment: Screenshot 2026-06-11 233758.png]",
+      "mimeType": "image/png",
+      "originalFileName": "Screenshot 2026-06-11 233758.png",
+      "payloadHash": "f754ef7d2c68858912d7c1cfdbad24e563f245ca1509a67b5b626beac9d74c09",
+      "fileSize": 69498,
+      "encryptionMetadata": {
+        "algorithm": "AES-256-GCM",
+        "kmsKeyId": "KMS-MASTER-KEY-PROD-2026",
+        "encryptedDEK": "8f567910894dcead2bbd07e643005a930fa6459f00e8251a63f3612488647a8e5af057d5d6919eff0626237355f1fbe6fde9925779f3aacb8e939f6513ff3834",
+        "dekIv": "87e6b59ce696b9f2607b041d",
+        "dekAuthTag": "3b97f831714c5452eb9bc1846c82b474",
+        "payloadIv": "7a071632f40a2cd8384d3050",
+        "payloadAuthTag": "5467c8bec9d7f292eb6118f68ff7f1dc"
+      },
+      "signature": null,
+      "versionHistory": [
+        {
+          "version": "1.0",
+          "parentVersion": "GENESIS",
+          "parentPayloadHash": "0000000000000000000000000000000000000000000000000000000000000000",
+          "payloadHash": "f754ef7d2c68858912d7c1cfdbad24e563f245ca1509a67b5b626beac9d74c09",
+          "fileSize": 69498,
+          "authorId": "USR-POL-101",
+          "authorName": "Inspector Vikram Sharma",
+          "department": "LEO",
+          "dateCreated": "2026-09-12T22:01:18.252Z",
+          "changeNotes": "Initial document filing (v1.0)"
+        }
+      ],
+      "chainOfCustody": [
+        {
+          "action": "UPLOADED_AND_ENCRYPTED",
+          "actorName": "Inspector Vikram Sharma",
+          "department": "LEO",
+          "timestamp": "2026-09-12T22:01:18.252Z"
+        }
+      ]
+    },
+    {
+      "id": "DOC-2026-8891-8310",
+      "title": "Test FIR Document",
+      "caseId": "CASE-2026-8891",
+      "caseTitle": "Case CASE-2026-8891",
+      "category": "FIR",
+      "clearanceLevel": 2,
+      "authorId": "USR-POL-101",
+      "authorName": "Inspector Vikram Sharma",
+      "authorRole": "POLICE_INVESTIGATOR",
+      "department": "LEO",
+      "dateCreated": "2026-09-12T22:01:58.315Z",
+      "version": "1.0",
+      "status": "VERIFIED",
+      "extractedText": "This is a test FIR uploaded by Inspector Sharma for testing upload functionality.",
+      "mimeType": "text/plain",
+      "originalFileName": "Test_FIR_Document.pdf",
+      "payloadHash": "6a4dfe0200e7ed16d1fc53c4c523a4a0528f4562498e3bdabc5585d44eb7a988",
+      "fileSize": 81,
+      "encryptionMetadata": {
+        "algorithm": "AES-256-GCM",
+        "kmsKeyId": "KMS-MASTER-KEY-PROD-2026",
+        "encryptedDEK": "7a4da096feab4692de10afd54165bbce0d2f8c3446025f5676aaf606a61290f8bd6756f3d54c872573c2ce50916245012d1c730a17790009d8592d151f17e983",
+        "dekIv": "b9bb9b5ade7c1885e05a198c",
+        "dekAuthTag": "ce240ce04ff03ed0fa7086ac2618f463",
+        "payloadIv": "5110bc6d9ce2692b1f111b71",
+        "payloadAuthTag": "17367fda38447c062ca48e4a97048a38"
+      },
+      "signature": null,
+      "versionHistory": [
+        {
+          "version": "1.0",
+          "parentVersion": "GENESIS",
+          "parentPayloadHash": "0000000000000000000000000000000000000000000000000000000000000000",
+          "payloadHash": "6a4dfe0200e7ed16d1fc53c4c523a4a0528f4562498e3bdabc5585d44eb7a988",
+          "fileSize": 81,
+          "authorId": "USR-POL-101",
+          "authorName": "Inspector Vikram Sharma",
+          "department": "LEO",
+          "dateCreated": "2026-09-12T22:01:58.315Z",
+          "changeNotes": "Initial document filing (v1.0)"
+        }
+      ],
+      "chainOfCustody": [
+        {
+          "action": "UPLOADED_AND_ENCRYPTED",
+          "actorName": "Inspector Vikram Sharma",
+          "department": "LEO",
+          "timestamp": "2026-09-12T22:01:58.315Z"
+        }
+      ]
+    },
+    {
+      "id": "DOC-2026-8891-9958",
+      "title": "Test PDF Upload",
+      "caseId": "CASE-2026-8891",
+      "caseTitle": "Case CASE-2026-8891",
+      "category": "FIR",
+      "clearanceLevel": 2,
+      "authorId": "USR-POL-101",
+      "authorName": "Inspector Vikram Sharma",
+      "authorRole": "POLICE_INVESTIGATOR",
+      "department": "LEO",
+      "dateCreated": "2026-09-12T22:02:19.962Z",
+      "version": "1.0",
+      "status": "VERIFIED",
+      "extractedText": "Sample text extracted",
+      "mimeType": "application/pdf",
+      "originalFileName": "test.pdf",
+      "payloadHash": "0b5142973e243b31f0a7d575267ba90088e23605f8d82c334a8a5966c7657968",
+      "fileSize": 31,
+      "encryptionMetadata": {
+        "algorithm": "AES-256-GCM",
+        "kmsKeyId": "KMS-MASTER-KEY-PROD-2026",
+        "encryptedDEK": "4d63cc0ad6caea2838d0e2d6b220dbbb6883732912b269837efa32453977c93d10b4c8067235f39040d905a7852719b1093baf6043169bf6ce12980b28e19593",
+        "dekIv": "806daf19b5028f927bb5ebfd",
+        "dekAuthTag": "9fe29c78a0982a1996e66f0b7ad33eeb",
+        "payloadIv": "96e13db5a364368917ffb710",
+        "payloadAuthTag": "080ff2fd4e7e3ac5f547a7a778ca1050"
+      },
+      "signature": null,
+      "versionHistory": [
+        {
+          "version": "1.0",
+          "parentVersion": "GENESIS",
+          "parentPayloadHash": "0000000000000000000000000000000000000000000000000000000000000000",
+          "payloadHash": "0b5142973e243b31f0a7d575267ba90088e23605f8d82c334a8a5966c7657968",
+          "fileSize": 31,
+          "authorId": "USR-POL-101",
+          "authorName": "Inspector Vikram Sharma",
+          "department": "LEO",
+          "dateCreated": "2026-09-12T22:02:19.963Z",
+          "changeNotes": "Initial document filing (v1.0)"
+        }
+      ],
+      "chainOfCustody": [
+        {
+          "action": "UPLOADED_AND_ENCRYPTED",
+          "actorName": "Inspector Vikram Sharma",
+          "department": "LEO",
+          "timestamp": "2026-09-12T22:02:19.963Z"
+        }
+      ]
+    },
+    {
+      "id": "DOC-2026-8891-1898",
+      "title": "Verified Case Filing",
+      "caseId": "CASE-2026-8891",
+      "caseTitle": "Case CASE-2026-8891",
+      "category": "FIR",
+      "clearanceLevel": 2,
+      "authorId": "USR-POL-101",
+      "authorName": "Inspector Vikram Sharma",
+      "authorRole": "POLICE_INVESTIGATOR",
+      "department": "LEO",
+      "dateCreated": "2026-09-12T22:04:21.923Z",
+      "version": "1.0",
+      "status": "VERIFIED",
+      "extractedText": "Verified upload text content",
+      "mimeType": "application/pdf",
+      "originalFileName": "verification.pdf",
+      "payloadHash": "c2b66443f5c0784d261094704cc0e2ac8246c9f0e787a42ae538402f9894a5c0",
+      "fileSize": 28,
+      "encryptionMetadata": {
+        "algorithm": "AES-256-GCM",
+        "kmsKeyId": "KMS-MASTER-KEY-PROD-2026",
+        "encryptedDEK": "891cddd231344105a76d44f88c9ed4bf7e2dce0fb385c67fed41617db4d63e809b56c4a595ed4f1d2e3197866fa30b35a8dcbb71665fc6339852c3dbc4d747b2",
+        "dekIv": "765f8f6fa9f2e0cda2cd6808",
+        "dekAuthTag": "acdc8cb43e9f1e425253c651ffc0f6e7",
+        "payloadIv": "f17d51e52625b36527acd861",
+        "payloadAuthTag": "d23bf42a45df1fcb9345a48999c570c5"
+      },
+      "signature": null,
+      "aiEntities": [
+        {
+          "type": "Accused Suspect",
+          "name": "Sameer Verma",
+          "id": "ID-SV992"
+        },
+        {
+          "type": "Victim",
+          "name": "Rajesh Kumar",
+          "status": "Deceased"
+        },
+        {
+          "type": "Recovered Weapon",
+          "weapon": "Glock-17 Pistol (9mm)",
+          "serial": "GL-88392"
+        },
+        {
+          "type": "Location",
+          "venue": "Tech Vault Facility, Cyber Park, Block B4"
+        }
+      ],
+      "versionHistory": [
+        {
+          "version": "1.0",
+          "parentVersion": "GENESIS",
+          "parentPayloadHash": "0000000000000000000000000000000000000000000000000000000000000000",
+          "payloadHash": "c2b66443f5c0784d261094704cc0e2ac8246c9f0e787a42ae538402f9894a5c0",
+          "fileSize": 28,
+          "authorId": "USR-POL-101",
+          "authorName": "Inspector Vikram Sharma",
+          "department": "LEO",
+          "dateCreated": "2026-09-12T22:04:21.923Z",
+          "changeNotes": "Initial document filing (v1.0)"
+        }
+      ],
+      "chainOfCustody": [
+        {
+          "action": "UPLOADED_AND_ENCRYPTED",
+          "actorName": "Inspector Vikram Sharma",
+          "department": "LEO",
+          "timestamp": "2026-09-12T22:04:21.923Z"
         }
       ]
     }
