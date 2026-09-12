@@ -1,0 +1,1044 @@
+{
+  "users": [
+    {
+      "id": "USR-POL-101",
+      "name": "Inspector Vikram Sharma",
+      "username": "sharma_leo",
+      "role": "POLICE_INVESTIGATOR",
+      "roleTitle": "Chief Investigating Officer",
+      "department": "LEO",
+      "departmentName": "Special Crime Branch - Central Police",
+      "clearanceLevel": 3,
+      "publicKey": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuyvQOIfb5b4FjaSWgnN3\nnxWK8kD5SMwJbczq2eb7NzATO1qZeQO6zof6B5byRAZoMR0FlnykGl6rqvXQ2EMq\n4gNY/3uja7VktBQSVbsDrjqqCSZ+FOFydtyw+gdD+IwnYYDDKijQ+1GafTj5JU00\ns2T5BrPtrPSbrXhPA854y0mdN9ZNg2HiOu9pQEfEm5EgFvT/tmbGJBV3q4cHv7QG\nrUtgPDSBKJhI02Pct8N6uFwyMKHG2gJ6ARBs3c3zpKia3j9OGd+swmPXMSyo+3xE\n3MyuwBpLG4rTaRE0zx/2HgZOgnWG9DR5ssXRbVCRsTLYvZHyTdp0QnbSWub63QCn\nmwIDAQAB\n-----END PUBLIC KEY-----\n",
+      "privateKey": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC7K9A4h9vlvgWN\npJaCc3efFYryQPlIzAltzOrZ5vs3MBM7Wpl5A7rOh/oHlvJEBmgxHQWWfKQaXquq\n9dDYQyriA1j/e6NrtWS0FBJVuwOuOqoJJn4U4XJ23LD6B0P4jCdhgMMqKND7UZp9\nOPklTTSzZPkGs+2s9JuteE8DznjLSZ031k2DYeI672lAR8SbkSAW9P+2ZsYkFXer\nhwe/tAatS2A8NIEomEjTY9y3w3q4XDIwocbaAnoBEGzdzfOkqJreP04Z36zCY9cx\nLKj7fETczK7AGksbitNpETTPH/YeBk6CdYb0NHmyxdFtUJGxMti9kfJN2nRCdtJa\n5vrdAKebAgMBAAECggEADo8ov2T4sBpuYHy3hRvfPQgrdTmkSnXYm+pkhaD9KedQ\nRP3V/KmoxnehoCUtNikQwhVBrIQzLaaZ5Y6rzqQMOhAhmZ9FRdO9KsbO6vfvoDC0\nWPQzZYNokyIKlYBVg11qPiA1I4U7mvkCMpBpIkOAVcivwvDhtuJAw9HHxQIyt46h\nnvK+MOhQUwnxMaFhidEvo6Y4I1fTqLZO4LAk+iWY9UDKNxTdofTC+sxXL2YUPbEo\nLmjUcagkWNyW1ecPxgbnRqGksfyRSr1v4avQoMY2WGPYYpoj8tykm3vNGI/HnHr4\niT6/k3o8oD6Ju/AShlxfF0z2Lgj1PfHlnR+weh1YxQKBgQDyTolN7GGvSfOXLX2Z\n04wNPh0EInVr+GpuG8EO5KZmNm/Ok5s36Dv7mgjJEAYZPRFLNKCLjBnmTrhD28YY\nh5oKpiIirZ7oWd7GygOjL10zLYWFywTyl4Gvh/CDfaylhSQBbsRDFH9jCsMbVzG/\nf5C5A2K8vZrDlDnGivYWv5vDxwKBgQDFv6CNnSb0h0vOJPkYXd/Bgu/p486VvkNE\nVToiJzqzNhTeX0TX2kpk3XVkO9njjmOBviUPjqjXrJKUB69wdslZOriPMsY7KlbQ\n7DfYzE4d5iw6yYS72qOvj6eQcws0mKdlLcZD1mBXZ3s5zK3ETcKgGXYAAbu0c6lH\nSQ77pKWVjQKBgQDawkz0LRWETB+/vTJITtWCnzFTKkkY0Y5FGomSCJyyazNGLb1V\nHDYLUWXdILpgzuFuJHVNh49afnedzC1suAA63QK0jEuLOpgGoRvnmDtsmQyTXld5\nLY/ICdL649ubFDkNkhNe/IKFyJGdfXtMiL8ASi46eHPhX1FKDuteXl8iwQKBgGsN\nhYaEuC0S/ZfY7j0hvNuO3gC5wgHQ4auhk/ofUKjqMzv7SVKtqy6VsVKVEC0fzYDU\nhk24xnETzLp0uqZguDolDvr+2s/26M7rwoQMfpGzJOiiZcgo4gpN88HAdiWAKscc\nk8Pvz3Ih5FTzGHM4QY/YmMgCKDLVlqOvynuys62VAoGBAI2uem8vD6MnxuPyPRnx\na37HE2DwKmOFB26GBjukuqdPeJz4rStBD1gvPa+HQTpfrbrxJEj5jgSmtnqToGWK\nns95HpTa2vKd4JhqqfLAKitoyxJbyLn25RPpr0mOPWIIuuHob5KywjEVBHv3S7Z6\nA/LK4MaogAmpolHmmHrVeocL\n-----END PRIVATE KEY-----\n",
+      "assignedCases": [
+        "CASE-2026-8891",
+        "CASE-2026-4412",
+        "CASE-2026-1102"
+      ]
+    },
+    {
+      "id": "USR-FOR-202",
+      "name": "Dr. Sunita Rao",
+      "username": "drao_forensic",
+      "role": "FORENSIC_SPECIALIST",
+      "roleTitle": "Senior Forensic Analyst & Ballistics Expert",
+      "department": "FOR",
+      "departmentName": "State Central Forensic Science Laboratory",
+      "clearanceLevel": 3,
+      "publicKey": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzAzoZRwp+f0hXBXbuPhr\nInptNmvZ33o4qwXmWtqL2Aa+IA+pwW/zSXZkdE7/cI0IvM24ntdWwewH+Iz1h7zp\nROFYu1vvl2Gi3hfghi8ktg1wCOYBNOMAsroDIm91yzRw0OufyN9RHF0u1nF77xch\n4iXgQ6x5P10vfOvkcjTGDk2bJOh7jNjokBNTY68eg5o5P/2Z2iQiDD0wLTUgPvJM\nw9VLxliLixo1GC/Vi8lJoVrIPu3UFEx8mxMRogZj3nYmEUM9IltlUzQuun6fgHr6\n2cIwMoDmRCyhHmG95s9YhXc9PPgQSY3hptd4rYj1en4QTVBV/jzSHZ5GqZ/jsuzy\npQIDAQAB\n-----END PUBLIC KEY-----\n",
+      "privateKey": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDMDOhlHCn5/SFc\nFdu4+Gsiem02a9nfejirBeZa2ovYBr4gD6nBb/NJdmR0Tv9wjQi8zbie11bB7Af4\njPWHvOlE4Vi7W++XYaLeF+CGLyS2DXAI5gE04wCyugMib3XLNHDQ65/I31EcXS7W\ncXvvFyHiJeBDrHk/XS986+RyNMYOTZsk6HuM2OiQE1Njrx6Dmjk//ZnaJCIMPTAt\nNSA+8kzD1UvGWIuLGjUYL9WLyUmhWsg+7dQUTHybExGiBmPediYRQz0iW2VTNC66\nfp+AevrZwjAygOZELKEeYb3mz1iFdz08+BBJjeGm13itiPV6fhBNUFX+PNIdnkap\nn+Oy7PKlAgMBAAECggEAKx+tO7Usj+c11irOcXSa28II87/uX0MK1+YazWezt1eR\ndeApjbaVsZhiWYxagtRjnNdTZcp3zOsPsjFEMMg1enevk4U2CQW68HoWWvV6qjkD\nzPWjGqTBAIS8ZdotiGEQWK77aW38y+RLokmAmkKGyC8eCt9YDpKolxuZf6N0mg/e\n5WGydbJqn7am6IZSKRT/3HwaL5YpQ6pltZQskdqFN1JC9bWtYPC3X5ZzoUPbme+9\nJ+tPMgjl+I2dmr4R/CXz85Ts+Bbb223dYpA3dPbDenfxRBTXxQxgPePYxaHZvwlF\nOQzdjXmAa72RrYsW+1Q0z5XCm8313rWI8eca/LjA4QKBgQDzjHyHeFQOdH9WPlG2\nw4fhP5N0dTrUluWJI5fFG92R6q5yC1Yf+KTI/1xqQPzltb4VIf8/AFcQcni3U9Jx\nB/ogYtEm1BFPZKT/mnUypyS++3jbFd1qQO/4xBKGqWuuhF/SZ/6dqzy1ecoW6yWJ\nYdGt9VVPlm+gCJkkBqHOPdYccQKBgQDWe3m3jypvn89rQXR1ogPkGozmfiTBlOF7\nsfX2D8+JgrTvHbAo2vA31JbrgV60dHkb2DGqIhGb7dWY7cX/a7fSh2JIfLQfxy1P\ncbPUY0y+bbUaX0cBzfKQFF4oB1LyyJRBrGSl0cz7w6lyAP6wX9koJ03VvQHehFYR\n5GTcblajdQKBgQCekgOqeG/SEYuu7VhqtJhN0gUBuCobrDu6tI/maCQ1EyWNX1At\n9Mfljk3vaGzAazpdrAryTBhjvwRV6J+FtHnoiC5BJ6Y1mQPM4BYaarUEG9suWegV\nfD5CK/cb8kcIE2wIJGmk4o7eYXNwxJ1l+2h36NoovXvkKHT8/cxv6db0IQKBgBwU\nZkcF00Rx47HjC+Aqqd+/KhszAJTnbO3Iyq7AOyeBmTaE6H8wyqpEhs2mTkPJy+E9\nWKMxeqSzandvCbD65UIGv3NGAD740JHKDQUNSwrTShZ9ysoNsGf0gq8y5kUqxV4j\nt7mN0gxT/WcTgkSNB90d6C7HY+tB4BLPl/TT7TvRAoGBAId1nH64W9bfx7I1wUjg\nOCT1sQrHNqEvR7ccduk44EEgZMxWechNGg8+aporoVQZ4DVAojDCVceG/hSfW/Pb\nsJHhBg/C8acLIbS0N9vBze7MKTTx/diN0ejKQNCeCQs7EMJmMjF7GtfKCiS4VQ2F\n9s48icrYo1eO9U8gskhDbkXp\n-----END PRIVATE KEY-----\n",
+      "assignedCases": [
+        "CASE-2026-8891",
+        "CASE-2026-4412"
+      ]
+    },
+    {
+      "id": "USR-PRO-303",
+      "name": "Advocate Rajesh Verma",
+      "username": "verma_prosecutor",
+      "role": "PUBLIC_PROSECUTOR",
+      "roleTitle": "Senior Public Prosecutor",
+      "department": "PROS",
+      "departmentName": "Directorate of Prosecution - High Court Division",
+      "clearanceLevel": 3,
+      "publicKey": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA5+dJDYAJ4BTIg/pLepAo\nVao28bvxlkKwh3ph5+3bDu2xD6VPzQoKQdLUEeZaBcKHsB8Nqa1ANXfe1ETsbTG9\nbz9otvVoopCxfWsBDALvHNyRU+QAwLJ6HFEqAxbuNxkqKQKDLkz7N8mgZtm2PY4G\nYxsyTmnfDsWqUZPaKX0TBY/gRfQFueCVBQj4zg9rX1d5upDTZY3YZg4mBP6FOZix\nL3iAeQ1FyGpqFN+nR4g9akSLN8DU3GNRach0p1tQinav+Y89WU/dyXmAaEQrU7ke\n//Z9UpNrNkyoyOUzKM34Bd+ZJP4pVgBEQsX2rjIqLEDY1//oy1u6/M/KZGL35hYd\nCQIDAQAB\n-----END PUBLIC KEY-----\n",
+      "privateKey": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDn50kNgAngFMiD\n+kt6kChVqjbxu/GWQrCHemHn7dsO7bEPpU/NCgpB0tQR5loFwoewHw2prUA1d97U\nROxtMb1vP2i29WiikLF9awEMAu8c3JFT5ADAsnocUSoDFu43GSopAoMuTPs3yaBm\n2bY9jgZjGzJOad8OxapRk9opfRMFj+BF9AW54JUFCPjOD2tfV3m6kNNljdhmDiYE\n/oU5mLEveIB5DUXIamoU36dHiD1qRIs3wNTcY1FpyHSnW1CKdq/5jz1ZT93JeYBo\nRCtTuR7/9n1Sk2s2TKjI5TMozfgF35kk/ilWAERCxfauMiosQNjX/+jLW7r8z8pk\nYvfmFh0JAgMBAAECggEAEVIuG6sHkcwbmff08UeZK6TWC8Is7js28jeK3obeiMPq\nKLABQOBSGc6Edn3NFYcNGXOIUrcVB6lXZGVtf05qxsdmq9uyoAnMqAB5CIujjnVP\nCYQLJlluU3UgfTCWRFlF0+BTKf8n+Ge/6k6ylPBpu7dJT6AKwBC1gvhXICguZojP\nHB/5UpMZecqc8KZ5Yc3QIPtjD3gYU6LyXkq0LrasuTP1bA6XineCfT51Z3LU539k\no/78s+IZIUVYU0rShyJs0glCrzVhAqMxk+3tUwfvacWxzp0FGc7umSI1ucvqFike\nTt23F5aygAitqfPAD7QdpXckPxSvhkrI/ch/HfC4bQKBgQD89wfyrL0q9VdYZfwq\n8EwEG59JMgTPzM2bqWOlLnx2wDC93YtAvMcLhOmsrkprIzyPHyEQ+qOVTZp2JIHu\nspJZEReIL1mrB86B0AdSbUFKkQMGAEeZup4qBaBn5neGFWho5XwS/mYWeuHmgpIB\n7+uy2HzjoFQqG0M+K225SdtRfwKBgQDqr5CiNxyc5qKUJ6ykDCN3xpxlZA9YoQe+\nif1hWuzFWGPqkABksic3MdOjKSdrVlbKf0Cz4qYA3O0c97pg9N4eTBdw8URfaxqJ\nEvSOy7rnvyvC0vV9IpBMPT0CRs1F2RPZfG81tIwbH9jjG89UWgdc1B2GOoNtykKV\nSuxOidRFdwKBgAahmy27ZYIYyF9i3QdrITMCXlyW2RVxcvpfqGMOIukiBKUVh678\nw+MDavTB5OWGGPJPiJhfWaZyUFhEgLt3Jur6zbkeNKWNINa6U1bP0mRYBNJFc5sO\nD1NermPK4Ns8+G23hlchIB/6vK1EQvuWBIG9txhofYxVBqA8lzXCP+OVAoGAct+y\n7SQK1mYyKFDvOXFTnxpRjXOX62sPDl4e75uBD+v/JF6OQrvNZD/4dwH68JhXbVEy\ni5qiZQO+8JH14eWaH7xhMQB31jjnyTbFDGx+tVcnBXsbfMABX8AN7+JWMh1akPdO\nvDv+5HwHPstrBb/3oKGXPg/AK2p4gvkkiCEBDWsCgYBBlZuDxM4aPiWOuBu6LNqs\nxovnGnyHwzFh6gKlTN5no4vFJKPwM7FENafDmHToc2cwKnG3A2PlrVfSzurMkR9w\ngcWjbMeTjS288ZfRWNuVTiWLJghuOWFNbLY7D4h9msphpFbkKYRxZhhHOSUe10Kl\nR3zKD9khdIDf9LqiH2xOfg==\n-----END PRIVATE KEY-----\n",
+      "assignedCases": [
+        "CASE-2026-8891",
+        "CASE-2026-1102"
+      ]
+    },
+    {
+      "id": "USR-JUD-404",
+      "name": "Justice P. K. Mukherjee",
+      "username": "mukherjee_magistrate",
+      "role": "JUDICIAL_MAGISTRATE",
+      "roleTitle": "Special Sessions Court Magistrate",
+      "department": "JUD",
+      "departmentName": "High Court of Judicature / Sessions Court",
+      "clearanceLevel": 4,
+      "publicKey": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsKQTkxJqAiqPnobfCI87\nUY534IOoVGXZ8wGQRZ/9f8dgKLymtwLSvA3N1polTqNq0DL2w2ipyr6U5pQR1ZiY\nup+BMo6hffMuYLo/+1OmwaMWI8tIBXQ30G4vaS/rUSvNIP1/X/FvgLsszvUszPNN\ns0BzweiRlZpabwxyp1cCjzH4BwPHsrU+e/Aa8y1AOq6b1lu/F2IzaOweQxXR9T6m\nMGldwhqmrEAd/qWtHba2EMQOh88RZSU6CeytHdH+JO00f7kOe6BxkjGMlaYlatNc\nDcx6dvTyk3pOIiK52Vnpn2yUzxB9wGjh2JCjJifjmzw6i2GsTUhHsQJ+xapP8CBz\nLQIDAQAB\n-----END PUBLIC KEY-----\n",
+      "privateKey": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCwpBOTEmoCKo+e\nht8IjztRjnfgg6hUZdnzAZBFn/1/x2AovKa3AtK8Dc3WmiVOo2rQMvbDaKnKvpTm\nlBHVmJi6n4EyjqF98y5guj/7U6bBoxYjy0gFdDfQbi9pL+tRK80g/X9f8W+AuyzO\n9SzM802zQHPB6JGVmlpvDHKnVwKPMfgHA8eytT578BrzLUA6rpvWW78XYjNo7B5D\nFdH1PqYwaV3CGqasQB3+pa0dtrYQxA6HzxFlJToJ7K0d0f4k7TR/uQ57oHGSMYyV\npiVq01wNzHp29PKTek4iIrnZWemfbJTPEH3AaOHYkKMmJ+ObPDqLYaxNSEexAn7F\nqk/wIHMtAgMBAAECggEAIZhrMqcna1cN7rAnHjkjpozKpvRTYQ3oCGxNNLjLnXBd\njRHoQVlznBmiAwVZQB4blBKFVUAEPw/FQR97Tt0RezkX+PYgp9RHB1WVEqdjyWNL\ntC4W+haTAPzb3o0jG9KRVotwHN7N/rVavdfql+ZUalnBSmmBuura9VDwQ3xse7BL\nnVaDjsVzj2qGvZxj8mBRV+KjEXRJ+3la56SaYspS8wsq3/PG1KwpYWsQV/FNCEH4\nLGsNBdhQh1XI8WuYaVR+lCxGvm/z6sed58hnhV0pyQgeDwsQcYGEiddOnbq041KH\ntO0aShacnR0fRgkiFDjU1psABYblY2UX8Ef2K0lxIQKBgQDmiKlzvIFCgKbHt7fD\nFZqOZ1GTol1fTj3ODOt2AdxzANWnfRKwQ3xPL7kY3ymrtaQsBpwhiOVdlgvERUiM\nlnmprv5PDGv6lq1JxbLMzJYnA+MXQO+laSRp3g6ii0T/7Uw6D4NwKcs9fulf8TNM\n+DofdYItwdD2GulA1y/SP7vRfQKBgQDEJ1wwV6hBV51dYBi8j8zh9dAJdtwnVzXw\nz6NRrwm55kNWQCEtg7378Ivo+Z8QN+v8YAEh+dvaM1x5Aqukssu8VxA64splxuBP\nWl9fHO0NpGcpk8FPP6Jyhw6g879bqZLoCuZWyxU+KDkY5QhNiJZmzSEsXDBEoYSu\nbCzTiL3XcQKBgQCs4x6ZsmwJ8KujKc+BWWlQlIFkQ6bcu7O0HJJVLK4j/SM9+ZmT\nYPkP9c1Nrsb0hEN71PUwXRcOaWGnrwHqlUrmi1si80DjbC7HHaGq319YIR0kqklO\n9pwdXTACjImRmWfKPyomauGF2/CvSBdeCOamAx0+rZTFjIcTXo35klyLjQKBgBcG\ne8bc805AR6OnXR/9TVKU9Ue3IR6pGRbceNJk1qJwyiS8wGhEV6/US8gcTTStK9Fj\nP57KYqlZcBhwXM+ngUzpd2lCJ/oMf1YxSJK0pYr9anKx+nYgBSSmf+wa0LKk1C7S\n4Lj9e8/hDtrCP9hCGU2V9LftVmkoAJgs8JIgMhCxAoGBAIGP7MYx/8zncLFS4e5c\nCNKvo1DukPXOgcfh8lOdza8PahpPhAiFjqgzi97vYP9Ue1EY28bc6CaMfDhM7eb8\nkTdLQJItSceBDHlSbYRc9LQS9nr/YAkOl7EX70Yzt/MxGl9kYBi4OKiW9NtFhH0c\nVhKMOzBfqy6Sc6WX6JvBAErN\n-----END PRIVATE KEY-----\n",
+      "assignedCases": [
+        "CASE-2026-8891",
+        "CASE-2026-4412",
+        "CASE-2026-1102"
+      ]
+    },
+    {
+      "id": "USR-AUD-505",
+      "name": "Anil Gupta",
+      "username": "gupta_auditor",
+      "role": "COMPLIANCE_AUDITOR",
+      "roleTitle": "Principal Information Security Auditor",
+      "department": "AUD",
+      "departmentName": "National Digital Evidence & Judicial Oversight Board",
+      "clearanceLevel": 4,
+      "publicKey": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyC/CDVWco2dlvRY1wWfE\nGqhHLkw7xG1IL7WUuYDWqbXQoANjcMxnmJJJ3cFCayU6kqmMJ15XhMDwHXlwuUBI\nLioDDXYIVddBXn4BQr/L/P2Ag60kw6X3k1CYPdwk0/wtypglSmar2KzE7MySe3Fl\nBJD9I/+Vpgz6Bdgjx9sR9SQ6HVYjWlLLNWBBf9nkI1PDdp7IpLyYUiYTpl7ZPmr0\nUdkBj8af3LMNLOdTdN8Q/stZelbmh9r9JiSEke1hJ7Kh/OJoz3yrGhPMYkdm759D\nbGC5Voc4rzFSpxvwJ43ctqKoxsFwLdM3HLllfv3A2iLdF0k/jX/RFo1HMIm1I6xu\nQQIDAQAB\n-----END PUBLIC KEY-----\n",
+      "privateKey": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDIL8INVZyjZ2W9\nFjXBZ8QaqEcuTDvEbUgvtZS5gNaptdCgA2NwzGeYkkndwUJrJTqSqYwnXleEwPAd\neXC5QEguKgMNdghV10FefgFCv8v8/YCDrSTDpfeTUJg93CTT/C3KmCVKZqvYrMTs\nzJJ7cWUEkP0j/5WmDPoF2CPH2xH1JDodViNaUss1YEF/2eQjU8N2nsikvJhSJhOm\nXtk+avRR2QGPxp/csw0s51N03xD+y1l6VuaH2v0mJISR7WEnsqH84mjPfKsaE8xi\nR2bvn0NsYLlWhzivMVKnG/Anjdy2oqjGwXAt0zccuWV+/cDaIt0XST+Nf9EWjUcw\nibUjrG5BAgMBAAECggEAFiG9jPbZlfEw/MovUD4WHrJbCEHSW8GPOQMUubuGQAYD\nViV5wXc/vszxkKw0mR7pDlzjS1jxSRKBmWibL0ftkvj/FGZnvoHJTtaUcho9Ra+L\nHUOvrFe1etpusmwbwDoBoAPZH5QhTJexP9LQIQik1+/lpKy1kUGfBLVkI0zTe+v+\nmpmwjyF1xURwn+vbJqOErw4bHdJwW8AxIgDW6kBbH/YfD5/4LrRghRJSyvmle3EG\n0R8pJJQsb74Blxmsoa+Mj05XqbM1IChbQlbtugMg6atqPEt+oTvibhMBBkO7kUN/\nuNchtgbSGDzoXaUtaig4ZwRFUETrFXKhyCPRF0sL7wKBgQD5vzrZBrqGxzBkZqu9\ntduQsnY/4pmkXaTeZNDyM8PzZxdzdbOoZVNSNlQw9eC/WjmFJ6eYr4hLIMKTnRtc\nO+thi5+d1Kegub2xM6hW7AAF4XFlrvBE2lMriChO7JGIRq0Z73NOWggrh/sqzMZN\n2EsGjTrje6BkqK21DtwlVNO2kwKBgQDNMt4AOTNutxHsYmy9Gi90lnIgEkSnUAyC\nd8XNEbWQmieKeLppwpObm4vzDUvbav7SAOQv6P0aOAiOdr7X4JbbAjKGAnx3+1b1\nBC4+h/tasu/lO97/ZQ7sWN0VlngxbFXWw/vOXexuEVMZIO3C/Na9mp7tenc73qV1\ncyaVlLhYWwKBgEhOQx1eQ1aOCMaoqwRLyHvGD1JDqrPZoMf6bDwTHKI1sKZu50rT\nuyHMNOfP5/e+iXSxnGYqO810eKEAFVHIz0b4g4fQb4+q9u58xDoWLZOGR6xmz40/\noGC0FOd0ulW4EJm3p6yBiGgCAIfNrYQQIPiOnwQJYNCDvXb0DGyKeJkdAoGANlOc\nUQTT6CER3rqkPWCcZcqbBoCvqnhYB4a8WLGyl0ko5NFX0T5RpCYHZF8F0V6/fkv8\nHe8aa4GgSk+H8VGlvvAS/kXUPFPPzui/cZDA7F9pghBa1tUjoVFZnyiKQ9OB2m1i\n0l0thmqRzJpaOICGPgacwxTkUnZ86d6FvZ51O/cCgYARLNzTV2hUjFHmtPAr5P09\napqIdfv0pZVYgvn6VM81gEE8KPQreMu8PxVq6pP0XBfTiF3wtkFYVjT7Qyn25nLF\n7H8K5Da4JqEO5nQr7g2nG8JA+e02tHgoZQ4VjvKE+sUMfIt8aDgP3zfLxD6MWvDt\n6gUQ7fPA+U3rGBFNYewTSA==\n-----END PRIVATE KEY-----\n",
+      "assignedCases": [
+        "CASE-2026-8891",
+        "CASE-2026-4412",
+        "CASE-2026-1102"
+      ]
+    }
+  ],
+  "cases": [
+    {
+      "id": "CASE-2026-8891",
+      "title": "State vs. Cyber Syndicate (Financial Fraud & Homicide)",
+      "firNumber": "FIR-2026-00492",
+      "status": "UNDER_TRIAL",
+      "leadInvestigator": "Inspector Vikram Sharma",
+      "prosecutor": "Advocate Rajesh Verma",
+      "presidingJudge": "Justice P. K. Mukherjee",
+      "dateFiled": "2026-08-14",
+      "description": "Multi-million financial crypto siphoning with linked homicide of key whistleblower witness.",
+      "clearanceRequired": 3,
+      "departmentsAccess": [
+        "LEO",
+        "FOR",
+        "PROS",
+        "JUD",
+        "AUD"
+      ]
+    },
+    {
+      "id": "CASE-2026-4412",
+      "title": "State Narcotics Operation - Seizure & Ballistics Case",
+      "firNumber": "FIR-2026-00311",
+      "status": "INVESTIGATION_IN_PROGRESS",
+      "leadInvestigator": "Inspector Vikram Sharma",
+      "prosecutor": "Advocate Rajesh Verma",
+      "presidingJudge": "Justice P. K. Mukherjee",
+      "dateFiled": "2026-07-22",
+      "description": "Illegal firearms trafficking ring and seizure of prohibited contraband.",
+      "clearanceRequired": 3,
+      "departmentsAccess": [
+        "LEO",
+        "FOR",
+        "PROS",
+        "JUD",
+        "AUD"
+      ]
+    },
+    {
+      "id": "CASE-2026-1102",
+      "title": "Commercial Complex Armed Robbery & Heist",
+      "firNumber": "FIR-2026-00108",
+      "status": "CHARGE_SHEET_FILED",
+      "leadInvestigator": "Inspector Vikram Sharma",
+      "prosecutor": "Advocate Rajesh Verma",
+      "presidingJudge": "Justice P. K. Mukherjee",
+      "dateFiled": "2026-05-10",
+      "description": "Armed burglary at Central Tech Vault, recovery of forensic fingerprints and stolen bonds.",
+      "clearanceRequired": 2,
+      "departmentsAccess": [
+        "LEO",
+        "PROS",
+        "JUD",
+        "AUD"
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "id": "DOC-8891-003",
+      "title": "Eyewitness Sworn Statement - Security Guard",
+      "caseId": "CASE-2026-8891",
+      "caseTitle": "State vs. Cyber Syndicate (Financial Fraud & Homicide)",
+      "category": "WITNESS_STATEMENT",
+      "clearanceLevel": 2,
+      "authorId": "USR-POL-101",
+      "authorName": "Inspector Vikram Sharma",
+      "authorRole": "POLICE_INVESTIGATOR",
+      "department": "LEO",
+      "dateCreated": "2026-08-15T09:10:00Z",
+      "version": "1.16",
+      "status": "SIGNED_PKI",
+      "extractedText": "Updated witness statement details with supplemental vehicle descriptions.",
+      "chainOfCustody": [
+        {
+          "action": "DEPOSITION_RECORDED",
+          "actorName": "Inspector Vikram Sharma",
+          "department": "LEO",
+          "timestamp": "2026-08-15T09:10:00Z"
+        },
+        {
+          "action": "REVISION_ADDED (1.0 -> 1.1)",
+          "actorName": "Inspector Vikram Sharma",
+          "department": "LEO",
+          "timestamp": "2026-09-11T08:49:32.630Z"
+        },
+        {
+          "action": "REVISION_ADDED (1.1 -> 1.2)",
+          "actorName": "Inspector Vikram Sharma",
+          "department": "LEO",
+          "timestamp": "2026-09-11T08:50:53.214Z"
+        },
+        {
+          "action": "REVISION_ADDED (1.2 -> 1.3)",
+          "actorName": "Inspector Vikram Sharma",
+          "department": "LEO",
+          "timestamp": "2026-09-11T08:51:25.951Z"
+        },
+        {
+          "action": "REVISION_ADDED (1.3 -> 1.4)",
+          "actorName": "Inspector Vikram Sharma",
+          "department": "LEO",
+          "timestamp": "2026-09-11T08:51:52.451Z"
+        },
+        {
+          "action": "REVISION_ADDED (1.4 -> 1.5)",
+          "actorName": "Inspector Vikram Sharma",
+          "department": "LEO",
+          "timestamp": "2026-09-11T08:52:24.464Z"
+        },
+        {
+          "action": "REVISION_ADDED (1.5 -> 1.6)",
+          "actorName": "Inspector Vikram Sharma",
+          "department": "LEO",
+          "timestamp": "2026-09-11T08:53:31.300Z"
+        },
+        {
+          "action": "REVISION_ADDED (1.6 -> 1.7)",
+          "actorName": "Inspector Vikram Sharma",
+          "department": "LEO",
+          "timestamp": "2026-09-11T09:00:56.377Z"
+        },
+        {
+          "action": "REVISION_ADDED (1.7 -> 1.8)",
+          "actorName": "Inspector Vikram Sharma",
+          "department": "LEO",
+          "timestamp": "2026-09-11T10:53:18.843Z"
+        },
+        {
+          "action": "REVISION_ADDED (1.8 -> 1.9)",
+          "actorName": "Inspector Vikram Sharma",
+          "department": "LEO",
+          "timestamp": "2026-09-11T11:38:51.562Z"
+        },
+        {
+          "action": "REVISION_ADDED (1.9 -> 1.10)",
+          "actorName": "Inspector Vikram Sharma",
+          "department": "LEO",
+          "timestamp": "2026-09-11T11:49:59.373Z"
+        },
+        {
+          "action": "REVISION_ADDED (1.10 -> 1.11)",
+          "actorName": "Inspector Vikram Sharma",
+          "department": "LEO",
+          "timestamp": "2026-09-11T11:51:23.987Z"
+        },
+        {
+          "action": "REVISION_ADDED (1.11 -> 1.12)",
+          "actorName": "Inspector Vikram Sharma",
+          "department": "LEO",
+          "timestamp": "2026-09-11T11:52:32.898Z"
+        },
+        {
+          "action": "PKI_DIGITAL_SIGNATURE_APPLIED",
+          "actorName": "Inspector Vikram Sharma",
+          "department": "LEO",
+          "timestamp": "2026-09-12T13:34:04.049Z",
+          "details": {
+            "manifestId": "MANIFEST-bad4305b5388f486",
+            "signatureId": "SIG-360109d5859c150e",
+            "provider": "local-dev-v1"
+          }
+        },
+        {
+          "action": "PKI_SIGNATURE_REVOKED",
+          "actorName": "Anil Gupta",
+          "timestamp": "2026-09-12T13:34:04.062Z",
+          "details": {
+            "signatureId": "SIG-360109d5859c150e",
+            "reason": "Security Audit Key Compromise Simulation"
+          }
+        },
+        {
+          "action": "REVISION_ADDED (1.12 -> 1.13)",
+          "actorName": "Inspector Vikram Sharma",
+          "department": "LEO",
+          "timestamp": "2026-09-12T14:20:40.224Z"
+        },
+        {
+          "action": "REVISION_ADDED (1.13 -> 1.14)",
+          "actorName": "Inspector Vikram Sharma",
+          "department": "LEO",
+          "timestamp": "2026-09-12T14:26:28.132Z"
+        },
+        {
+          "action": "REVISION_ADDED (1.14 -> 1.15)",
+          "actorName": "Inspector Vikram Sharma",
+          "department": "LEO",
+          "timestamp": "2026-09-12T14:45:24.940Z"
+        },
+        {
+          "action": "PKI_DIGITAL_SIGNATURE_APPLIED",
+          "actorName": "Inspector Vikram Sharma",
+          "department": "Special Crime Branch - Central Police",
+          "timestamp": "2026-09-12T14:48:32.464Z",
+          "details": {
+            "manifestId": "MANIFEST-78830332f72fd934",
+            "signatureId": "SIG-4c1490aa3837bf8f",
+            "provider": "local-dev-v1"
+          }
+        },
+        {
+          "action": "REVISION_ADDED (1.15 -> 1.16)",
+          "actorName": "Inspector Vikram Sharma",
+          "department": "LEO",
+          "timestamp": "2026-09-12T14:53:42.125Z"
+        }
+      ],
+      "payloadHash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+      "fileSize": 378,
+      "encryptionMetadata": {
+        "algorithm": "AES-256-GCM",
+        "kmsKeyId": "KMS-MASTER-KEY-PROD-2026",
+        "encryptedDEK": "8de5f0aac0599c40d2a8e20fe71e428f5ce221b315f52ff10120671b71cd68dc983557e1f5b8bf8459023c39933bf241dd8218d0de0b6689eb449c9b712179b4",
+        "dekIv": "9e1bbd0be66c07cc2a72934e",
+        "dekAuthTag": "3f9844e5b0220965b84cb5f79a589a5c",
+        "payloadIv": "9c0ec28b4c5006a1f771e07c",
+        "payloadAuthTag": "0d86d2311ccf3945ab3d6194a43a4c73"
+      },
+      "signature": {
+        "signedBy": "Inspector Vikram Sharma",
+        "signerRole": "Chief Investigating Officer",
+        "signerDepartment": "Special Crime Branch - Central Police",
+        "signatureBase64": "kJFGvJUfGzsbvgIhjxLoYZxSaW6PNVAhmJFriq/9BRuFB8B6DFQmc52zgvhEx7Jg31YzuaITYzlR1BUbHcBiOggdtxDXTL2yC3N2fiGHg0gbEb3PJVUqWi7zRMj5j/MYWdliNm8qlFPw8YtdnN3LCEEf4Mb8K9PAQPhztJmLB7ZOmrlaNfqnejNikqYGqjfwakkvf2irAajm+M7wgLDu/ijF7yhT88AUIXwPwGTRWRu8tQ+0ISMorzKTrpTKuHL4ZmPhcOCfHUo3P8mE7ZOOZgsO6qPj4dNBSvdJSwG1CBn5Dm+nEz/RtjujiZXI/8SRihh4GncIjnn3wiClR0xyqw==",
+        "dateSigned": "2026-09-12T14:48:32.464Z",
+        "manifestId": "MANIFEST-78830332f72fd934",
+        "signatureId": "SIG-4c1490aa3837bf8f",
+        "signatureProvider": "local-dev-v1",
+        "manifest": {
+          "manifestId": "MANIFEST-78830332f72fd934",
+          "documentId": "DOC-8891-003",
+          "versionId": "v1.15.0",
+          "sha256": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+          "signerId": "USR-POL-101",
+          "metadata": {
+            "docTitle": "Eyewitness Sworn Statement - Security Guard",
+            "caseId": "CASE-2026-8891",
+            "signerName": "Inspector Vikram Sharma",
+            "signerRole": "Chief Investigating Officer",
+            "signerDepartment": "Special Crime Branch - Central Police"
+          },
+          "timestamp": "2026-09-12T14:48:32.429Z"
+        }
+      },
+      "versionHistory": [
+        {
+          "version": "1.0",
+          "parentVersion": "GENESIS",
+          "parentPayloadHash": "0000000000000000000000000000000000000000000000000000000000000000",
+          "payloadHash": "cadb9587906ebe388ffd212cb3921bbffa52e95ef092dded2cfe0ff1d43bc7b4",
+          "fileSize": 378,
+          "authorId": "USR-POL-101",
+          "authorName": "Inspector Vikram Sharma",
+          "department": "LEO",
+          "dateCreated": "2026-08-15T09:10:00Z",
+          "changeNotes": "Initial document filing (v1.0)"
+        },
+        {
+          "version": "1.1",
+          "parentVersion": "1.0",
+          "parentPayloadHash": "cadb9587906ebe388ffd212cb3921bbffa52e95ef092dded2cfe0ff1d43bc7b4",
+          "payloadHash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+          "fileSize": 73,
+          "authorId": "USR-POL-101",
+          "authorName": "Inspector Vikram Sharma",
+          "department": "LEO",
+          "dateCreated": "2026-09-11T08:49:32.630Z",
+          "changeNotes": "Added vehicle license plate info",
+          "encryptionMetadata": {
+            "algorithm": "AES-256-GCM",
+            "kmsKeyId": "KMS-MASTER-KEY-PROD-2026",
+            "encryptedDEK": "76f265f36b493de3e7872696870570838891f8ad6b49c3b1f7a264011241ea68d9e3c7e1da19989079720c0b4579bd8aeca0abc4099115e46c592ba31b39b5b4",
+            "dekIv": "c84d6f01ceb511e80623da4a",
+            "dekAuthTag": "0dcd404697b861f867f9bad57bdaacb5",
+            "payloadIv": "c0784587df218ca9a6357d05",
+            "payloadAuthTag": "0405d9e3b5ed6b75e570e151329fa218"
+          }
+        },
+        {
+          "version": "1.2",
+          "parentVersion": "1.1",
+          "parentPayloadHash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+          "payloadHash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+          "fileSize": 73,
+          "authorId": "USR-POL-101",
+          "authorName": "Inspector Vikram Sharma",
+          "department": "LEO",
+          "dateCreated": "2026-09-11T08:50:53.214Z",
+          "changeNotes": "Added vehicle license plate info",
+          "encryptionMetadata": {
+            "algorithm": "AES-256-GCM",
+            "kmsKeyId": "KMS-MASTER-KEY-PROD-2026",
+            "encryptedDEK": "02f9ef6f6f7a63bcd9e0103b32ea62ff3fb95522f9867f9f69d27790c01683dfa19461515528ebbb7443dac0efc3d5aa2ee7174e9876933a3da37c8abff3dffb",
+            "dekIv": "449ae1083bf9047c00f50547",
+            "dekAuthTag": "a1d6401c8cb51d36ac210a1ea1b8d046",
+            "payloadIv": "72c981b33a769898f1fc4244",
+            "payloadAuthTag": "3c4223d61334e410f0f3b6f21d6eba5c"
+          }
+        },
+        {
+          "version": "1.3",
+          "parentVersion": "1.2",
+          "parentPayloadHash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+          "payloadHash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+          "fileSize": 73,
+          "authorId": "USR-POL-101",
+          "authorName": "Inspector Vikram Sharma",
+          "department": "LEO",
+          "dateCreated": "2026-09-11T08:51:25.951Z",
+          "changeNotes": "Added vehicle license plate info",
+          "encryptionMetadata": {
+            "algorithm": "AES-256-GCM",
+            "kmsKeyId": "KMS-MASTER-KEY-PROD-2026",
+            "encryptedDEK": "8a646285ebf04d71207da9f2059e41a8d9ea10e9f83816b3e2503d3fd672b5e63f66dc8f1b2193e118a5bfa98006bf2531a7b102989aef91dafc7f47c66e9934",
+            "dekIv": "6ac87364a40c8a9d5bc21ee2",
+            "dekAuthTag": "30be16154893a82ed89bc9e653aad410",
+            "payloadIv": "852f1bf7d702a74b724b38e6",
+            "payloadAuthTag": "8fdda51065a4e73da1635703bdb0ae4c"
+          }
+        },
+        {
+          "version": "1.4",
+          "parentVersion": "1.3",
+          "parentPayloadHash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+          "payloadHash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+          "fileSize": 73,
+          "authorId": "USR-POL-101",
+          "authorName": "Inspector Vikram Sharma",
+          "department": "LEO",
+          "dateCreated": "2026-09-11T08:51:52.451Z",
+          "changeNotes": "Added vehicle license plate info",
+          "encryptionMetadata": {
+            "algorithm": "AES-256-GCM",
+            "kmsKeyId": "KMS-MASTER-KEY-PROD-2026",
+            "encryptedDEK": "31b594c0226a7a3ec6ae95ac26ccf009d7fd0d1c2a12829975fb7d8ac8a215ab4627be469bf144aea8f6e4a66e29cae7993c0fdddd9105dfc5adc551a9f6fe99",
+            "dekIv": "706821f79917d1e3af5e92cb",
+            "dekAuthTag": "77217cd277ce9d017b579b846602b6a4",
+            "payloadIv": "287c032dd54400a34bccc8e5",
+            "payloadAuthTag": "d532c3661bbc4eeef000dbf470c63ae1"
+          }
+        },
+        {
+          "version": "1.5",
+          "parentVersion": "1.4",
+          "parentPayloadHash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+          "payloadHash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+          "fileSize": 73,
+          "authorId": "USR-POL-101",
+          "authorName": "Inspector Vikram Sharma",
+          "department": "LEO",
+          "dateCreated": "2026-09-11T08:52:24.464Z",
+          "changeNotes": "Added vehicle license plate info",
+          "encryptionMetadata": {
+            "algorithm": "AES-256-GCM",
+            "kmsKeyId": "KMS-MASTER-KEY-PROD-2026",
+            "encryptedDEK": "48515036df65dddc19727c8c82f7e90a6995829cffbab7f511ac256e939fa9910e0b98e693d343e081fa04d3ad1957c19e5dcad15083727c5d3750bc18241b6b",
+            "dekIv": "27d1a4b8fb79db9f4989074d",
+            "dekAuthTag": "69711a68d7b89624def75e1804d72e25",
+            "payloadIv": "4b800c3e2b7583f30348cebb",
+            "payloadAuthTag": "897b4c8b4fc5ee52c8ec41d929e20ad2"
+          }
+        },
+        {
+          "version": "1.6",
+          "fileId": "DOC-8891-003_v1_6",
+          "parentVersion": "1.5",
+          "parentPayloadHash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+          "payloadHash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+          "fileSize": 73,
+          "authorId": "USR-POL-101",
+          "authorName": "Inspector Vikram Sharma",
+          "department": "LEO",
+          "dateCreated": "2026-09-11T08:53:31.300Z",
+          "changeNotes": "Added vehicle license plate info",
+          "encryptionMetadata": {
+            "algorithm": "AES-256-GCM",
+            "kmsKeyId": "KMS-MASTER-KEY-PROD-2026",
+            "encryptedDEK": "64920e3b8a0e1fdf79a3aa7a3cb79bac6bb44d1692a79601b505ade316fe2569b8c6f24fff38b5544cedd965787eb557f694411cb032c2b20fd2e174cb5b8510",
+            "dekIv": "f9aaa3b8a88c1267931df8c5",
+            "dekAuthTag": "c62d80de4dfcf4c33e3d6e681139bd28",
+            "payloadIv": "b0e913104936d60e6aeb0cc4",
+            "payloadAuthTag": "a054657c90647afcfaf227e950d7e2a6"
+          }
+        },
+        {
+          "version": "1.7",
+          "fileId": "DOC-8891-003_v1_7",
+          "parentVersion": "1.6",
+          "parentPayloadHash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+          "payloadHash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+          "fileSize": 73,
+          "authorId": "USR-POL-101",
+          "authorName": "Inspector Vikram Sharma",
+          "department": "LEO",
+          "dateCreated": "2026-09-11T09:00:56.377Z",
+          "changeNotes": "Added vehicle license plate info",
+          "encryptionMetadata": {
+            "algorithm": "AES-256-GCM",
+            "kmsKeyId": "KMS-MASTER-KEY-PROD-2026",
+            "encryptedDEK": "c74e4141961b6064818c45f864a85d092f3fe247202c9660b1ab3e6a59bae659a7bfd6af13816cd8b545ea48971ef1ab2bab233537b806f4867affa52ffe20bf",
+            "dekIv": "d7e8240ac019ec940dbb5c0f",
+            "dekAuthTag": "b91fe0b7dbb6a67d97120c757f7e7dc7",
+            "payloadIv": "4b2b436c9267a0f402f5a258",
+            "payloadAuthTag": "683e8b0b655ab4a275978bc872ef4820"
+          }
+        },
+        {
+          "version": "1.8",
+          "fileId": "DOC-8891-003_v1_8",
+          "parentVersion": "1.7",
+          "parentPayloadHash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+          "payloadHash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+          "fileSize": 73,
+          "authorId": "USR-POL-101",
+          "authorName": "Inspector Vikram Sharma",
+          "department": "LEO",
+          "dateCreated": "2026-09-11T10:53:18.843Z",
+          "changeNotes": "Added vehicle license plate info",
+          "encryptionMetadata": {
+            "algorithm": "AES-256-GCM",
+            "kmsKeyId": "KMS-MASTER-KEY-PROD-2026",
+            "encryptedDEK": "eedacb970b55eff969bd5e2e9890688fb4a7e5fa0b5032edf056a59a6a665e5814e39df0c65ffd769181b3e7b437cd0ec091ff2bb72eca4857f50ffc53fd5a3a",
+            "dekIv": "e4da8764821eb74a29da7470",
+            "dekAuthTag": "bb530a0002056d1d0dbf1dbcf0b9d530",
+            "payloadIv": "bcb46585d2acc6686a24b829",
+            "payloadAuthTag": "125fab202538d3d73d711430e34816cc"
+          }
+        },
+        {
+          "version": "1.9",
+          "fileId": "DOC-8891-003_v1_9",
+          "parentVersion": "1.8",
+          "parentPayloadHash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+          "payloadHash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+          "fileSize": 73,
+          "authorId": "USR-POL-101",
+          "authorName": "Inspector Vikram Sharma",
+          "department": "LEO",
+          "dateCreated": "2026-09-11T11:38:51.562Z",
+          "changeNotes": "Added vehicle license plate info",
+          "encryptionMetadata": {
+            "algorithm": "AES-256-GCM",
+            "kmsKeyId": "KMS-MASTER-KEY-PROD-2026",
+            "encryptedDEK": "d072ed56d19ae1ca05a0e4ce186d5b2da5307ade74101fb2e966473930a36e886302cb8a9ebbb10dce1be124f682ca263bc4f20b8ce58ef5c140918ea052bb1d",
+            "dekIv": "482a0694cae0d97aa89365a7",
+            "dekAuthTag": "c56ce28359421ca2a1ded5442318e61e",
+            "payloadIv": "a66352a44fe40dffca665d23",
+            "payloadAuthTag": "f4404a3ee53d7f95885d34c0ebcc8d09"
+          }
+        },
+        {
+          "version": "1.10",
+          "fileId": "DOC-8891-003_v1_10",
+          "parentVersion": "1.9",
+          "parentPayloadHash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+          "payloadHash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+          "fileSize": 73,
+          "authorId": "USR-POL-101",
+          "authorName": "Inspector Vikram Sharma",
+          "department": "LEO",
+          "dateCreated": "2026-09-11T11:49:59.373Z",
+          "changeNotes": "Added vehicle license plate info",
+          "encryptionMetadata": {
+            "algorithm": "AES-256-GCM",
+            "kmsKeyId": "KMS-MASTER-KEY-PROD-2026",
+            "encryptedDEK": "570c20c7648f1a9fd2aed0a81a9b124a0e6ad1f2966f2e06de151d1992c085abc91ffc384e64a26ba8512ad258547b73a2ed7623a4fa8cb7d29c0a597e29c6c5",
+            "dekIv": "1bfa01ee0d2f7d978124cb37",
+            "dekAuthTag": "a67c2ec1a9c8514f34ea63d14bf9ad25",
+            "payloadIv": "532b493906f74d957ebc0da4",
+            "payloadAuthTag": "b7656c3e4eedd58d93ade571a97aeeb1"
+          }
+        },
+        {
+          "version": "1.11",
+          "fileId": "DOC-8891-003_v1_11",
+          "parentVersion": "1.10",
+          "parentPayloadHash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+          "payloadHash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+          "fileSize": 73,
+          "authorId": "USR-POL-101",
+          "authorName": "Inspector Vikram Sharma",
+          "department": "LEO",
+          "dateCreated": "2026-09-11T11:51:23.987Z",
+          "changeNotes": "Added vehicle license plate info",
+          "encryptionMetadata": {
+            "algorithm": "AES-256-GCM",
+            "kmsKeyId": "KMS-MASTER-KEY-PROD-2026",
+            "encryptedDEK": "3863d310b842a5bbe7e49baf0e4e7707f94193f8bc4de1d5eb07647afb55e737046dacfdf6aa19a86fa8f7edc9b8d5f0166ab40873c81c3c0aec8994d6b1d180",
+            "dekIv": "d8563fcfde87799c9b097f9e",
+            "dekAuthTag": "2d4fde14b5546c0d1491caf5ab7e5b3a",
+            "payloadIv": "8f30241602ae786b2555df16",
+            "payloadAuthTag": "e44ae37aa5d411e92ff8bf86d25fecdd"
+          }
+        },
+        {
+          "version": "1.12",
+          "fileId": "DOC-8891-003_v1_12",
+          "parentVersion": "1.11",
+          "parentPayloadHash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+          "payloadHash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+          "fileSize": 73,
+          "authorId": "USR-POL-101",
+          "authorName": "Inspector Vikram Sharma",
+          "department": "LEO",
+          "dateCreated": "2026-09-11T11:52:32.898Z",
+          "changeNotes": "Added vehicle license plate info",
+          "encryptionMetadata": {
+            "algorithm": "AES-256-GCM",
+            "kmsKeyId": "KMS-MASTER-KEY-PROD-2026",
+            "encryptedDEK": "512c4047173106c36ed019f6d47d9b013fa5577cfc06fc2b83984fadb029359fe431d66be796a565fa6d3d4cb4e1e61cecdd9f4a8200cb277b3c4b3389a17a23",
+            "dekIv": "4da5eb8212c2c38ad0006b2e",
+            "dekAuthTag": "80f732d250b052d5ea6ac3befb358996",
+            "payloadIv": "7d9e196c6e9fb3b0bd518867",
+            "payloadAuthTag": "8caad4863ae8d4072a946789dcf49a5c"
+          }
+        },
+        {
+          "version": "1.13",
+          "fileId": "DOC-8891-003_v1_13",
+          "parentVersion": "1.12",
+          "parentPayloadHash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+          "payloadHash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+          "fileSize": 73,
+          "authorId": "USR-POL-101",
+          "authorName": "Inspector Vikram Sharma",
+          "department": "LEO",
+          "dateCreated": "2026-09-12T14:20:40.224Z",
+          "changeNotes": "Added vehicle license plate info",
+          "encryptionMetadata": {
+            "algorithm": "AES-256-GCM",
+            "kmsKeyId": "KMS-MASTER-KEY-PROD-2026",
+            "encryptedDEK": "53b1fd36283852a98e103724ec0d665d2379d63bfbab12741fabdc41e0e56f40a5cad18df10492ee1352fa8b4dff98043d80e4f6897e7b47af2611bafb9e480c",
+            "dekIv": "dbfa1940d46ac3944b422d43",
+            "dekAuthTag": "c3ec52c9d310b1750be03b81a83af456",
+            "payloadIv": "b942ffa727c429a0813adb0b",
+            "payloadAuthTag": "4710320089af43a8e1392dac50d66453"
+          }
+        },
+        {
+          "version": "1.14",
+          "fileId": "DOC-8891-003_v1_14",
+          "parentVersion": "1.13",
+          "parentPayloadHash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+          "payloadHash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+          "fileSize": 73,
+          "authorId": "USR-POL-101",
+          "authorName": "Inspector Vikram Sharma",
+          "department": "LEO",
+          "dateCreated": "2026-09-12T14:26:28.132Z",
+          "changeNotes": "Added vehicle license plate info",
+          "encryptionMetadata": {
+            "algorithm": "AES-256-GCM",
+            "kmsKeyId": "KMS-MASTER-KEY-PROD-2026",
+            "encryptedDEK": "ea1ab465634e9228554627e2e309d4fbe779ea58e7a450956215c4b0f79e961cda5922ef12dd70c5694d1a865c12b87613d1147228919b92fc999327e6c665fb",
+            "dekIv": "f7b0531978c42910d284225a",
+            "dekAuthTag": "de486a5218622887d4595d61b6fed72d",
+            "payloadIv": "ce7d3ce34501dd727d9d528b",
+            "payloadAuthTag": "3240f7af8c23cde32c18c4a77e011178"
+          }
+        },
+        {
+          "version": "1.15",
+          "fileId": "DOC-8891-003_v1_15",
+          "parentVersion": "1.14",
+          "parentPayloadHash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+          "payloadHash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+          "fileSize": 73,
+          "authorId": "USR-POL-101",
+          "authorName": "Inspector Vikram Sharma",
+          "department": "LEO",
+          "dateCreated": "2026-09-12T14:45:24.940Z",
+          "changeNotes": "Added vehicle license plate info",
+          "encryptionMetadata": {
+            "algorithm": "AES-256-GCM",
+            "kmsKeyId": "KMS-MASTER-KEY-PROD-2026",
+            "encryptedDEK": "6c3b49bee4731367d0852df6d4447bfabb171db0aecf5931ffe31d8a1012ff11b249252f67355f8b130eaf7243071b40849ce154971ad1513a5bfdfd78aa2fe7",
+            "dekIv": "4533305e319e52d5c971bb76",
+            "dekAuthTag": "1489a5c1cc9971b7b77b3c8b9840a800",
+            "payloadIv": "0aad40a0aa6f6d00d79e068c",
+            "payloadAuthTag": "258efc8d88d66212ebb555e47fc9f889"
+          }
+        },
+        {
+          "version": "1.16",
+          "fileId": "DOC-8891-003_v1_16",
+          "parentVersion": "1.15",
+          "parentPayloadHash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+          "payloadHash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+          "fileSize": 73,
+          "authorId": "USR-POL-101",
+          "authorName": "Inspector Vikram Sharma",
+          "department": "LEO",
+          "dateCreated": "2026-09-12T14:53:42.125Z",
+          "changeNotes": "Added vehicle license plate info",
+          "encryptionMetadata": {
+            "algorithm": "AES-256-GCM",
+            "kmsKeyId": "KMS-MASTER-KEY-PROD-2026",
+            "encryptedDEK": "8de5f0aac0599c40d2a8e20fe71e428f5ce221b315f52ff10120671b71cd68dc983557e1f5b8bf8459023c39933bf241dd8218d0de0b6689eb449c9b712179b4",
+            "dekIv": "9e1bbd0be66c07cc2a72934e",
+            "dekAuthTag": "3f9844e5b0220965b84cb5f79a589a5c",
+            "payloadIv": "9c0ec28b4c5006a1f771e07c",
+            "payloadAuthTag": "0d86d2311ccf3945ab3d6194a43a4c73"
+          }
+        }
+      ],
+      "currentFileId": "DOC-8891-003_v1_16"
+    },
+    {
+      "id": "DOC-8891-004",
+      "title": "Restricted Judicial Interception Order & Note",
+      "caseId": "CASE-2026-8891",
+      "caseTitle": "State vs. Cyber Syndicate (Financial Fraud & Homicide)",
+      "category": "COURT_FILING",
+      "clearanceLevel": 4,
+      "authorId": "USR-JUD-404",
+      "authorName": "Justice P. K. Mukherjee",
+      "authorRole": "JUDICIAL_MAGISTRATE",
+      "department": "JUD",
+      "dateCreated": "2026-08-18T11:00:00Z",
+      "version": "1.0",
+      "status": "SIGNED_PKI",
+      "extractedText": "In the Special Sessions Court of Judicature.\n\nJudicial order authorizing confidential wiretap on secondary offshore communications of suspected accomplices. Disclosure strictly restricted to presiding Magistrate (Level 4) and Chief Auditor (Level 4). Any unauthorized access or leak will invoke contempt of court proceedings.",
+      "chainOfCustody": [
+        {
+          "action": "JUDICIAL_ORDER_ISSUED",
+          "actorName": "Justice P. K. Mukherjee",
+          "department": "JUD",
+          "timestamp": "2026-08-18T11:00:00Z"
+        }
+      ],
+      "payloadHash": "1b5c3cf906b86b0b8dda5e76291659f39ef5a73a1021d07bfa96bcf5d3814a9b",
+      "fileSize": 325,
+      "encryptionMetadata": {
+        "algorithm": "AES-256-GCM",
+        "kmsKeyId": "KMS-MASTER-KEY-PROD-2026",
+        "encryptedDEK": "3654b567ea2623474106db312eb6d231c48b23b0c2cce0b94dd0bab80c1c94a519e37364c71a44b64537e98b2ca462daef8bb08b7bbf81c0e704f48110f7c42a",
+        "dekIv": "3f3f3f98629996d4af839555",
+        "dekAuthTag": "13f1d5498b1d94450543d6bded4d25c8",
+        "payloadIv": "24fb5c34900921e5df4dd30a",
+        "payloadAuthTag": "24bf304c23e643677a778d446429cb2d"
+      },
+      "signature": {
+        "signedBy": "Justice P. K. Mukherjee",
+        "signerRole": "Special Sessions Court Magistrate",
+        "publicKeyPem": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsKQTkxJqAiqPnobfCI87\nUY534IOoVGXZ8wGQRZ/9f8dgKLymtwLSvA3N1polTqNq0DL2w2ipyr6U5pQR1ZiY\nup+BMo6hffMuYLo/+1OmwaMWI8tIBXQ30G4vaS/rUSvNIP1/X/FvgLsszvUszPNN\ns0BzweiRlZpabwxyp1cCjzH4BwPHsrU+e/Aa8y1AOq6b1lu/F2IzaOweQxXR9T6m\nMGldwhqmrEAd/qWtHba2EMQOh88RZSU6CeytHdH+JO00f7kOe6BxkjGMlaYlatNc\nDcx6dvTyk3pOIiK52Vnpn2yUzxB9wGjh2JCjJifjmzw6i2GsTUhHsQJ+xapP8CBz\nLQIDAQAB\n-----END PUBLIC KEY-----\n",
+        "signatureBase64": "h//2LbKIXo9B8f0iSVUIczajD3xE03ArTArMn9n3H+l8mv1Scf62A2LzhqFFEip8LZfed24IGSvM0Z0+ZuoKCy1PPRSJHwLuuJwsmlNiJBs47k6sB8QmJcFa7m6QCuPOx57fGCI4uNilZP1UZb63OjhZEtvF4c1IcdTssW1TSBwO/Cx/Y1LnOulGNITD65LERgLVwH2Oiu+GWHv47NJuvbZ5hUcaQ8+pCM96zoOwMAnvcXRsDm1aYTBIU1Qk9FNjGYWfzMGiUhO4BZzYO4MPuUKlTRO5Q1Fr+1I4DvCgTVhY+yYMS6mZ77yIwq11Aj6YgXK1jHKXe5rUBES8wOqnhw==",
+        "dateSigned": "2026-08-18T11:00:00Z",
+        "manifest": {
+          "docId": "DOC-8891-004",
+          "title": "Restricted Judicial Interception Order & Note",
+          "caseId": "CASE-2026-8891",
+          "payloadHash": "1b5c3cf906b86b0b8dda5e76291659f39ef5a73a1021d07bfa96bcf5d3814a9b",
+          "authorId": "USR-JUD-404",
+          "timestamp": "2026-08-18T11:00:00Z"
+        }
+      }
+    },
+    {
+      "id": "DOC-2026-8891-7125",
+      "title": "west bengal vs abc",
+      "caseId": "CASE-2026-8891",
+      "caseTitle": "Case CASE-2026-8891",
+      "category": "FIR",
+      "clearanceLevel": 2,
+      "authorId": "USR-POL-101",
+      "authorName": "Inspector Vikram Sharma",
+      "authorRole": "POLICE_INVESTIGATOR",
+      "department": "LEO",
+      "dateCreated": "2026-09-11T08:36:17.140Z",
+      "version": "1.0",
+      "status": "SIGNED_PKI",
+      "extractedText": "kefgmndfklnvfdkjsvh",
+      "payloadHash": "994d84c7950526eba1f988d7a44ea8b505d0482fc2f32bef70721607efb15d98",
+      "fileSize": 19,
+      "encryptionMetadata": {
+        "algorithm": "AES-256-GCM",
+        "kmsKeyId": "KMS-MASTER-KEY-PROD-2026",
+        "encryptedDEK": "6beb96ad9c54ec31f08701664a353e6511d3b9d5b9ab351c5d6639ee00dafecf99bfccf4e4325794b613596dd4960eb7e91007f9535b962ed0f841d9d1f24989",
+        "dekIv": "9809635e4cbe217066a9724c",
+        "dekAuthTag": "43e04e693f62e8e307ec7e0ac2be16b0",
+        "payloadIv": "6d4da477811efc7039602323",
+        "payloadAuthTag": "034909357daa36698ef5f4250a5537d8"
+      },
+      "signature": {
+        "signedBy": "Inspector Vikram Sharma",
+        "signerRole": "Chief Investigating Officer",
+        "signerDepartment": "Special Crime Branch - Central Police",
+        "signatureBase64": "BhBlRJE9G8xgvoAD7NEyOAFG++7ARpEyQUxr2WyicLppv9Qclq+FlO9rbqtZNvv9QsmzmnaoA1CnsPj24i3T9HO+WK228oYLXto3ULFFdorOipP0mM+CRknXHcSfEjTAC9BjrbQGDhF8ZWc15lQ6oauLWxtUNpJxzIp0T/mbAkRv/uuzRYSj2Xk3dce3FNXnEj03cNlAKZOMY+KPx/MSPuGPcsnAyv0qxYgDJEiWjP3S/QemttZoZH+IaiR1lwMhSnjFjRVYld2KJ3IRQFHEDiTt4q6kC5UKr55Er0A5GZktelrda3jInHFvo3EKmy2KARisL8yt69I/BC2RtW9W+A==",
+        "dateSigned": "2026-09-12T14:48:40.357Z",
+        "manifestId": "MANIFEST-21c09e50876e2503",
+        "signatureId": "SIG-413b84d45b72f2e9",
+        "signatureProvider": "local-dev-v1",
+        "manifest": {
+          "manifestId": "MANIFEST-21c09e50876e2503",
+          "documentId": "DOC-2026-8891-7125",
+          "versionId": "v1.0.0",
+          "sha256": "994d84c7950526eba1f988d7a44ea8b505d0482fc2f32bef70721607efb15d98",
+          "signerId": "USR-POL-101",
+          "metadata": {
+            "docTitle": "west bengal vs abc",
+            "caseId": "CASE-2026-8891",
+            "signerName": "Inspector Vikram Sharma",
+            "signerRole": "Chief Investigating Officer",
+            "signerDepartment": "Special Crime Branch - Central Police"
+          },
+          "timestamp": "2026-09-12T14:48:40.330Z"
+        }
+      },
+      "chainOfCustody": [
+        {
+          "action": "UPLOADED_AND_ENCRYPTED",
+          "actorName": "Inspector Vikram Sharma",
+          "department": "LEO",
+          "timestamp": "2026-09-11T08:36:17.141Z"
+        },
+        {
+          "action": "PKI_DIGITAL_SIGNATURE_APPLIED",
+          "actorName": "Inspector Vikram Sharma",
+          "department": "Special Crime Branch - Central Police",
+          "timestamp": "2026-09-12T14:48:40.357Z",
+          "details": {
+            "manifestId": "MANIFEST-21c09e50876e2503",
+            "signatureId": "SIG-413b84d45b72f2e9",
+            "provider": "local-dev-v1"
+          }
+        }
+      ]
+    },
+    {
+      "id": "DOC-2026-8891-8418",
+      "title": "dflkkljxnkjnbgjdfhnbgfd",
+      "caseId": "CASE-2026-8891",
+      "caseTitle": "Case CASE-2026-8891",
+      "category": "FIR",
+      "clearanceLevel": 3,
+      "authorId": "USR-POL-101",
+      "authorName": "Inspector Vikram Sharma",
+      "authorRole": "POLICE_INVESTIGATOR",
+      "department": "LEO",
+      "dateCreated": "2026-09-12T14:51:28.425Z",
+      "version": "1.0",
+      "status": "VERIFIED",
+      "extractedText": "[PDF Attachment: SIH_2026_All_226_Problem_Statements_Master_Catalogue.pdf]",
+      "payloadHash": "8f7d11b14418677178c4536aa8356701a3922defb48b263b9737cf50d93e3b6a",
+      "fileSize": 74,
+      "encryptionMetadata": {
+        "algorithm": "AES-256-GCM",
+        "kmsKeyId": "KMS-MASTER-KEY-PROD-2026",
+        "encryptedDEK": "d397821273d98498999295ce9193861f378759faa555e7b2c61170436b4286ad2350d392f74a6329615e858d8bdcd2e84d17c005d965f5882faa7c109163a6d8",
+        "dekIv": "3071099288413c75ab4d183a",
+        "dekAuthTag": "44bb3d6013b22d5887c55e8f753bb807",
+        "payloadIv": "0a37a81fd473d61a17de108b",
+        "payloadAuthTag": "d37b6b5595c515a9c991398dda8f0576"
+      },
+      "signature": null,
+      "aiEntities": [
+        {
+          "type": "Accused Suspect",
+          "name": "Sameer Verma",
+          "id": "ID-SV992"
+        },
+        {
+          "type": "Victim",
+          "name": "Rajesh Kumar",
+          "status": "Deceased"
+        },
+        {
+          "type": "Recovered Weapon",
+          "weapon": "Glock-17 Pistol (9mm)",
+          "serial": "GL-88392"
+        },
+        {
+          "type": "Location",
+          "venue": "Tech Vault Facility, Cyber Park, Block B4"
+        }
+      ],
+      "versionHistory": [
+        {
+          "version": "1.0",
+          "parentVersion": "GENESIS",
+          "parentPayloadHash": "0000000000000000000000000000000000000000000000000000000000000000",
+          "payloadHash": "8f7d11b14418677178c4536aa8356701a3922defb48b263b9737cf50d93e3b6a",
+          "fileSize": 74,
+          "authorId": "USR-POL-101",
+          "authorName": "Inspector Vikram Sharma",
+          "department": "LEO",
+          "dateCreated": "2026-09-12T14:51:28.425Z",
+          "changeNotes": "Initial document filing (v1.0)"
+        }
+      ],
+      "chainOfCustody": [
+        {
+          "action": "UPLOADED_AND_ENCRYPTED",
+          "actorName": "Inspector Vikram Sharma",
+          "department": "LEO",
+          "timestamp": "2026-09-12T14:51:28.425Z"
+        }
+      ]
+    },
+    {
+      "id": "DOC-2026-8891-5771",
+      "title": "dsfdsfds",
+      "caseId": "CASE-2026-8891",
+      "caseTitle": "Case CASE-2026-8891",
+      "category": "FIR",
+      "clearanceLevel": 2,
+      "authorId": "USR-POL-101",
+      "authorName": "Inspector Vikram Sharma",
+      "authorRole": "POLICE_INVESTIGATOR",
+      "department": "LEO",
+      "dateCreated": "2026-09-12T14:52:55.775Z",
+      "version": "1.0",
+      "status": "VERIFIED",
+      "extractedText": "[PDF Attachment: Teal White Geometric Internship Certificate.pdf]",
+      "payloadHash": "2574b1ea109f8c2851f41ed115a683de21ca5d1c2b557b143cd1dda36cca9c17",
+      "fileSize": 65,
+      "encryptionMetadata": {
+        "algorithm": "AES-256-GCM",
+        "kmsKeyId": "KMS-MASTER-KEY-PROD-2026",
+        "encryptedDEK": "f5f9a8fceaafcba79f89407d96da5865e54c12d69d46129a351a0e345793b5d5961e8c6076093396700212f201b1c2875f51678abaa2bf928196e4dcdf55f9fe",
+        "dekIv": "35019a6b0f28a52d8bbf61c5",
+        "dekAuthTag": "5a2ea59bed49d17b5d9c8cb043ce273f",
+        "payloadIv": "710b909dd38cf00f70c7121c",
+        "payloadAuthTag": "54cc82f4411c6d38cf3e8c4b23135c32"
+      },
+      "signature": null,
+      "aiEntities": [
+        {
+          "type": "Accused Suspect",
+          "name": "Sameer Verma",
+          "id": "ID-SV992"
+        },
+        {
+          "type": "Victim",
+          "name": "Rajesh Kumar",
+          "status": "Deceased"
+        },
+        {
+          "type": "Recovered Weapon",
+          "weapon": "Glock-17 Pistol (9mm)",
+          "serial": "GL-88392"
+        },
+        {
+          "type": "Location",
+          "venue": "Tech Vault Facility, Cyber Park, Block B4"
+        }
+      ],
+      "versionHistory": [
+        {
+          "version": "1.0",
+          "parentVersion": "GENESIS",
+          "parentPayloadHash": "0000000000000000000000000000000000000000000000000000000000000000",
+          "payloadHash": "2574b1ea109f8c2851f41ed115a683de21ca5d1c2b557b143cd1dda36cca9c17",
+          "fileSize": 65,
+          "authorId": "USR-POL-101",
+          "authorName": "Inspector Vikram Sharma",
+          "department": "LEO",
+          "dateCreated": "2026-09-12T14:52:55.775Z",
+          "changeNotes": "Initial document filing (v1.0)"
+        }
+      ],
+      "chainOfCustody": [
+        {
+          "action": "UPLOADED_AND_ENCRYPTED",
+          "actorName": "Inspector Vikram Sharma",
+          "department": "LEO",
+          "timestamp": "2026-09-12T14:52:55.775Z"
+        }
+      ]
+    }
+  ],
+  "transferRequests": [
+    {
+      "id": "TRF-9001",
+      "caseId": "CASE-2026-8891",
+      "documentId": "DOC-8891-002",
+      "documentTitle": "Forensic Ballistics & DNA Fingerprint Analysis",
+      "requestedBy": "USR-PRO-303",
+      "requestedByName": "Advocate Rajesh Verma",
+      "fromDepartment": "FOR",
+      "toDepartment": "PROS",
+      "status": "APPROVED",
+      "dateRequested": "2026-09-01T10:15:00Z",
+      "dateApproved": "2026-09-01T11:30:00Z",
+      "approvedBy": "USR-FOR-202"
+    }
+  ],
+  "manifests": [
+    {
+      "manifestId": "MANIFEST-bad4305b5388f486",
+      "documentId": "DOC-8891-003",
+      "versionId": "v1.0",
+      "sha256": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+      "signerId": "USR-POL-101",
+      "metadata": {
+        "docTitle": "Eyewitness Sworn Statement - Security Guard",
+        "caseId": "CASE-2026-8891",
+        "signerName": "Inspector Vikram Sharma",
+        "signerRole": "Chief Investigating Officer"
+      },
+      "timestamp": "2026-09-12T13:34:03.841Z",
+      "signatureId": "SIG-360109d5859c150e",
+      "signature": "Vfi9WA7GaqAgnvTsI0liW9e93WuilXOCCU3f4ODXvfdooXU2ZOmZj+IRaKtp2m8P2B4UWrsvYGsaToKSwHMY4kKALubrhxu/7flEvDrFjsORGm8o225LW+UoVL9Jx6RYRPlX6dl9zkeDbNRjkJm3PsGywPhnDOkq5tlsq+LMfdpczQXZHv/SC/yJPp4g2zeUQTZQ5cpmxIXcYA4kR24HfhFR9QSXu7kqFMZGqZWM4h9OUa0Ol06gut5gdHjAeaMIy0e9uVCz24G1At5D1oT/I5VvY56YpE5F2e4xGhSenKAGXcZN+MZsScC6Ov1/QBdOOHj+SDgNTr6tYuAldATEsQ==",
+      "signatureProvider": "local-dev-v1",
+      "signedAt": "2026-09-12T13:34:04.049Z",
+      "status": "REVOKED"
+    },
+    {
+      "manifestId": "MANIFEST-78830332f72fd934",
+      "documentId": "DOC-8891-003",
+      "versionId": "v1.15.0",
+      "sha256": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+      "signerId": "USR-POL-101",
+      "metadata": {
+        "docTitle": "Eyewitness Sworn Statement - Security Guard",
+        "caseId": "CASE-2026-8891",
+        "signerName": "Inspector Vikram Sharma",
+        "signerRole": "Chief Investigating Officer",
+        "signerDepartment": "Special Crime Branch - Central Police"
+      },
+      "timestamp": "2026-09-12T14:48:32.429Z",
+      "signatureId": "SIG-4c1490aa3837bf8f",
+      "signature": "kJFGvJUfGzsbvgIhjxLoYZxSaW6PNVAhmJFriq/9BRuFB8B6DFQmc52zgvhEx7Jg31YzuaITYzlR1BUbHcBiOggdtxDXTL2yC3N2fiGHg0gbEb3PJVUqWi7zRMj5j/MYWdliNm8qlFPw8YtdnN3LCEEf4Mb8K9PAQPhztJmLB7ZOmrlaNfqnejNikqYGqjfwakkvf2irAajm+M7wgLDu/ijF7yhT88AUIXwPwGTRWRu8tQ+0ISMorzKTrpTKuHL4ZmPhcOCfHUo3P8mE7ZOOZgsO6qPj4dNBSvdJSwG1CBn5Dm+nEz/RtjujiZXI/8SRihh4GncIjnn3wiClR0xyqw==",
+      "signatureProvider": "local-dev-v1",
+      "signedAt": "2026-09-12T14:48:32.464Z",
+      "status": "ACTIVE"
+    },
+    {
+      "manifestId": "MANIFEST-21c09e50876e2503",
+      "documentId": "DOC-2026-8891-7125",
+      "versionId": "v1.0.0",
+      "sha256": "994d84c7950526eba1f988d7a44ea8b505d0482fc2f32bef70721607efb15d98",
+      "signerId": "USR-POL-101",
+      "metadata": {
+        "docTitle": "west bengal vs abc",
+        "caseId": "CASE-2026-8891",
+        "signerName": "Inspector Vikram Sharma",
+        "signerRole": "Chief Investigating Officer",
+        "signerDepartment": "Special Crime Branch - Central Police"
+      },
+      "timestamp": "2026-09-12T14:48:40.330Z",
+      "signatureId": "SIG-413b84d45b72f2e9",
+      "signature": "BhBlRJE9G8xgvoAD7NEyOAFG++7ARpEyQUxr2WyicLppv9Qclq+FlO9rbqtZNvv9QsmzmnaoA1CnsPj24i3T9HO+WK228oYLXto3ULFFdorOipP0mM+CRknXHcSfEjTAC9BjrbQGDhF8ZWc15lQ6oauLWxtUNpJxzIp0T/mbAkRv/uuzRYSj2Xk3dce3FNXnEj03cNlAKZOMY+KPx/MSPuGPcsnAyv0qxYgDJEiWjP3S/QemttZoZH+IaiR1lwMhSnjFjRVYld2KJ3IRQFHEDiTt4q6kC5UKr55Er0A5GZktelrda3jInHFvo3EKmy2KARisL8yt69I/BC2RtW9W+A==",
+      "signatureProvider": "local-dev-v1",
+      "signedAt": "2026-09-12T14:48:40.357Z",
+      "status": "ACTIVE"
+    }
+  ],
+  "revocations": [
+    {
+      "signatureId": "SIG-360109d5859c150e",
+      "reason": "Security Audit Key Compromise Simulation",
+      "revokedBy": "Anil Gupta",
+      "revokedAt": "2026-09-12T13:34:04.062Z"
+    }
+  ]
+}
