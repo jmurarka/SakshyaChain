@@ -2511,6 +2511,79 @@
           "timestamp": "2026-09-12T22:14:41.534Z"
         }
       ]
+    },
+    {
+      "id": "DOC-2026-8891-8074",
+      "title": "Screenshot 2026-06-27 222916",
+      "caseId": "CASE-2026-8891",
+      "caseTitle": "Case CASE-2026-8891",
+      "category": "FIR",
+      "clearanceLevel": 2,
+      "authorId": "USR-POL-101",
+      "authorName": "Inspector Vikram Sharma",
+      "authorRole": "POLICE_INVESTIGATOR",
+      "department": "LEO",
+      "dateCreated": "2026-09-12T23:27:58.112Z",
+      "version": "1.0",
+      "status": "VERIFIED",
+      "extractedText": "[PDF Attachment: Screenshot 2026-06-27 222916.png]",
+      "mimeType": "image/png",
+      "originalFileName": "Screenshot 2026-06-27 222916.png",
+      "payloadHash": "8ed42438db45613b8b337e8b97a77d7fd0dc28f1e521acd88472bd958076e0b1",
+      "fileSize": 51076,
+      "encryptionMetadata": {
+        "algorithm": "AES-256-GCM",
+        "kmsKeyId": "KMS-MASTER-KEY-PROD-2026",
+        "encryptedDEK": "31437e008f8443a17cfe3d88d0e979db1b7f0c955520b7b49d1ae0a3b8cae0885d9cb67f19fd5459c1cea2c330cf9eefa28bd967bfb340698fe5c0c79111dc8f",
+        "dekIv": "751037763d14a3749be44262",
+        "dekAuthTag": "f9e35ce5c187ab01afcd693abccb42ae",
+        "payloadIv": "efdcee580ff212557d30dfe8",
+        "payloadAuthTag": "4267a8401151bf42e7b2946a9efdc727"
+      },
+      "signature": null,
+      "aiEntities": [
+        {
+          "type": "Accused Suspect",
+          "name": "Sameer Verma",
+          "id": "ID-SV992"
+        },
+        {
+          "type": "Victim",
+          "name": "Rajesh Kumar",
+          "status": "Deceased"
+        },
+        {
+          "type": "Recovered Weapon",
+          "weapon": "Glock-17 Pistol (9mm)",
+          "serial": "GL-88392"
+        },
+        {
+          "type": "Location",
+          "venue": "Tech Vault Facility, Cyber Park, Block B4"
+        }
+      ],
+      "versionHistory": [
+        {
+          "version": "1.0",
+          "parentVersion": "GENESIS",
+          "parentPayloadHash": "0000000000000000000000000000000000000000000000000000000000000000",
+          "payloadHash": "8ed42438db45613b8b337e8b97a77d7fd0dc28f1e521acd88472bd958076e0b1",
+          "fileSize": 51076,
+          "authorId": "USR-POL-101",
+          "authorName": "Inspector Vikram Sharma",
+          "department": "LEO",
+          "dateCreated": "2026-09-12T23:27:58.112Z",
+          "changeNotes": "Initial document filing (v1.0)"
+        }
+      ],
+      "chainOfCustody": [
+        {
+          "action": "UPLOADED_AND_ENCRYPTED",
+          "actorName": "Inspector Vikram Sharma",
+          "department": "LEO",
+          "timestamp": "2026-09-12T23:27:58.112Z"
+        }
+      ]
     }
   ],
   "transferRequests": [

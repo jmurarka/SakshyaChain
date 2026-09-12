@@ -4706,5 +4706,102 @@
       "clientIp": "::1"
     },
     "event_hash": "6f2eb1692c74a31d7f899cad8579797af09367de9b214ea14136ae5bc3f003fe"
+  },
+  {
+    "event_id": "4be3c591-0b75-4138-b90d-ca041bf931f4",
+    "document_id": "SYSTEM_AUTH",
+    "case_id": "SYSTEM_AUTH",
+    "version_id": "v1.0",
+    "action": "LOGIN",
+    "user_id": "USR-POL-101",
+    "user_role": "POLICE_INVESTIGATOR",
+    "timestamp": "2026-09-12T22:29:57.238Z",
+    "data_hash": "DIRECT_AUTHENTICATED",
+    "parent_hashes": [
+      "6f2eb1692c74a31d7f899cad8579797af09367de9b214ea14136ae5bc3f003fe"
+    ],
+    "metadata": {
+      "username": "sharma_leo",
+      "department": "LEO"
+    },
+    "event_hash": "d6bbbff0dabdb1ad17cfbbd19adeb00f3cfb9856cf3b42dd56faef04b38614aa"
+  },
+  {
+    "event_id": "82619cd7-ceda-4ae7-92bc-152ff2c908c7",
+    "document_id": "SYSTEM_AUTH",
+    "case_id": "SYSTEM_AUTH",
+    "version_id": "v1.0",
+    "action": "LOGIN",
+    "user_id": "USR-POL-101",
+    "user_role": "POLICE_INVESTIGATOR",
+    "timestamp": "2026-09-12T22:29:57.267Z",
+    "data_hash": "DIRECT_AUTHENTICATED",
+    "parent_hashes": [
+      "d6bbbff0dabdb1ad17cfbbd19adeb00f3cfb9856cf3b42dd56faef04b38614aa"
+    ],
+    "metadata": {
+      "username": "sharma_leo",
+      "department": "LEO"
+    },
+    "event_hash": "5a655a37a6b3fad3586275167ccb52d977945c3ad2e3f42f3f1d4f8b0cbdbb66"
+  },
+  {
+    "event_id": "f6a3e203-76f0-489c-808d-fa6b57df62c2",
+    "document_id": "SYSTEM_AUTH",
+    "case_id": "SYSTEM_AUTH",
+    "version_id": "v1.0",
+    "action": "LOGIN",
+    "user_id": "USR-POL-101",
+    "user_role": "POLICE_INVESTIGATOR",
+    "timestamp": "2026-09-12T23:27:45.982Z",
+    "data_hash": "DIRECT_AUTHENTICATED",
+    "parent_hashes": [
+      "5a655a37a6b3fad3586275167ccb52d977945c3ad2e3f42f3f1d4f8b0cbdbb66"
+    ],
+    "metadata": {
+      "username": "sharma_leo",
+      "department": "LEO"
+    },
+    "event_hash": "8792d486eeb726daa92fd8eae4be450b75b885944e2a8924a36569711c66b7dd"
+  },
+  {
+    "event_id": "e86ef8ee-344d-444e-a45b-f96b49540d64",
+    "document_id": "SYSTEM_AUTH",
+    "case_id": "SYSTEM_AUTH",
+    "version_id": "v1.0",
+    "action": "LOGIN",
+    "user_id": "USR-POL-101",
+    "user_role": "POLICE_INVESTIGATOR",
+    "timestamp": "2026-09-12T23:27:45.998Z",
+    "data_hash": "DIRECT_AUTHENTICATED",
+    "parent_hashes": [
+      "8792d486eeb726daa92fd8eae4be450b75b885944e2a8924a36569711c66b7dd"
+    ],
+    "metadata": {
+      "username": "sharma_leo",
+      "department": "LEO"
+    },
+    "event_hash": "b832f5b8894994bf92134bd34f244049fce1631bdd44b7a3d21b203fe1944a62"
+  },
+  {
+    "event_id": "16198b83-0f9f-43a4-9540-2f4af559b640",
+    "document_id": "DOC-2026-8891-8074",
+    "case_id": "CASE-2026-8891",
+    "version_id": "1.0",
+    "action": "UPLOAD",
+    "user_id": "USR-POL-101",
+    "user_role": "POLICE_INVESTIGATOR",
+    "timestamp": "2026-09-12T23:27:58.122Z",
+    "data_hash": "8ed42438db45613b8b337e8b97a77d7fd0dc28f1e521acd88472bd958076e0b1",
+    "parent_hashes": [
+      "b832f5b8894994bf92134bd34f244049fce1631bdd44b7a3d21b203fe1944a62"
+    ],
+    "metadata": {
+      "title": "Screenshot 2026-06-27 222916",
+      "category": "FIR",
+      "clearanceLevel": 2,
+      "encryptionAlgorithm": "AES-256-GCM"
+    },
+    "event_hash": "d212ebf9c8db18a860dafb0f379b7a5b38048b03e98a737a4c8006e2de5236b6"
   }
 ]

@@ -22,10 +22,15 @@ export function AuthProvider({ children }) {
 
   // Verify active JWT token on startup
   const verifyToken = async () => {
-    if (!token) {
-      setLoading(false);
-      // Auto login as default Police Inspector for smooth initial load
-      await loginAsUser('USR-POL-101');
+    const existingToken = localStorage.getItem('sakshya_jwt_token');
+    if (!existingToken) {
+      try {
+        await loginAsUser('USR-POL-101');
+      } catch (err) {
+        console.error('Auto-login failed on startup:', err);
+      } finally {
+        setLoading(false);
+      }
       return;
     }
 
@@ -37,7 +42,11 @@ export function AuthProvider({ children }) {
       console.warn('JWT invalid or expired, falling back to default user login...');
       localStorage.removeItem('sakshya_jwt_token');
       setToken(null);
-      await loginAsUser('USR-POL-101');
+      try {
+        await loginAsUser('USR-POL-101');
+      } catch (fallbackErr) {
+        console.error('Fallback auto-login failed:', fallbackErr);
+      }
     } finally {
       setLoading(false);
     }
@@ -88,7 +97,16 @@ export function AuthProvider({ children }) {
         refreshPersonas: fetchPersonas
       }}
     >
-      {children}
+      {loading ? (
+        <div className="min-h-screen bg-slate-900 text-white flex flex-col items-center justify-center font-sans space-y-4">
+          <div className="w-12 h-12 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
+          <div className="text-sm font-semibold tracking-wide text-slate-300 font-mono">
+            Initializing SākshyaChain Security Context...
+          </div>
+        </div>
+      ) : (
+        children
+      )}
     </AuthContext.Provider>
   );
 }
