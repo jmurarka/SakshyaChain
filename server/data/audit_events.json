@@ -3714,5 +3714,102 @@
       "encryptionAlgorithm": "AES-256-GCM"
     },
     "event_hash": "18de9f3ebc1fe6e68f48cfab7e1164a202a5e0c0812e6a7bf5757d55c2d2322a"
+  },
+  {
+    "event_id": "e32a901a-a17f-48a6-90b8-174cc201c64f",
+    "document_id": "RAG_INDEX",
+    "case_id": "CASE-2026-4412",
+    "version_id": "v1.0",
+    "action": "AI_QUERY",
+    "user_id": "USR-POL-101",
+    "user_role": "POLICE_INVESTIGATOR",
+    "timestamp": "2026-09-12T21:00:07.924Z",
+    "data_hash": "Based on verified case files und",
+    "parent_hashes": [
+      "18de9f3ebc1fe6e68f48cfab7e1164a202a5e0c0812e6a7bf5757d55c2d2322a"
+    ],
+    "metadata": {
+      "query": "Who is the suspect identified in the CCTV and bullet forensic report?",
+      "resultsCount": 1,
+      "engine": "SākshyaChain Local RAG Engine (Fallback)",
+      "clientIp": "::1"
+    },
+    "event_hash": "5b89ab1d00a5fcf728e6585f5beca301e4f77cb1d5465ed2e5fafec54b184966"
+  },
+  {
+    "event_id": "96fdd149-8790-4d20-a81d-a42296edbf23",
+    "document_id": "SYSTEM_AUTH",
+    "case_id": "SYSTEM_AUTH",
+    "version_id": "v1.0",
+    "action": "LOGIN",
+    "user_id": "USR-POL-101",
+    "user_role": "POLICE_INVESTIGATOR",
+    "timestamp": "2026-09-12T21:07:37.757Z",
+    "data_hash": "DIRECT_AUTHENTICATED",
+    "parent_hashes": [
+      "5b89ab1d00a5fcf728e6585f5beca301e4f77cb1d5465ed2e5fafec54b184966"
+    ],
+    "metadata": {
+      "username": "sharma_leo",
+      "department": "LEO"
+    },
+    "event_hash": "2721e8439ef6be4dbcd94ed7b5b45d7e56bb6a7f19356fbbaa191635d16a15be"
+  },
+  {
+    "event_id": "e6c23998-6792-4cba-a9d2-4db18bc87a42",
+    "document_id": "SYSTEM_AUTH",
+    "case_id": "SYSTEM_AUTH",
+    "version_id": "v1.0",
+    "action": "LOGIN",
+    "user_id": "USR-POL-101",
+    "user_role": "POLICE_INVESTIGATOR",
+    "timestamp": "2026-09-12T21:07:37.782Z",
+    "data_hash": "DIRECT_AUTHENTICATED",
+    "parent_hashes": [
+      "2721e8439ef6be4dbcd94ed7b5b45d7e56bb6a7f19356fbbaa191635d16a15be"
+    ],
+    "metadata": {
+      "username": "sharma_leo",
+      "department": "LEO"
+    },
+    "event_hash": "084dacc5bcd693b59a35a3b2813b24058a37f075654524d8b301a0a38177c7ec"
+  },
+  {
+    "event_id": "e0b2415f-d7df-4387-ba8a-35e01610800f",
+    "document_id": "SYSTEM_AUTH",
+    "case_id": "SYSTEM_AUTH",
+    "version_id": "v1.0",
+    "action": "LOGIN",
+    "user_id": "USR-POL-101",
+    "user_role": "POLICE_INVESTIGATOR",
+    "timestamp": "2026-09-12T21:14:22.381Z",
+    "data_hash": "DIRECT_AUTHENTICATED",
+    "parent_hashes": [
+      "084dacc5bcd693b59a35a3b2813b24058a37f075654524d8b301a0a38177c7ec"
+    ],
+    "metadata": {
+      "username": "sharma_leo",
+      "department": "LEO"
+    },
+    "event_hash": "eb789693caad3b40fb4d30292750921db70705238f3eef16d3f1ce8f13da2d03"
+  },
+  {
+    "event_id": "3c55a04e-4ecb-4c0d-9f02-b55537a2d1d2",
+    "document_id": "SYSTEM_AUTH",
+    "case_id": "SYSTEM_AUTH",
+    "version_id": "v1.0",
+    "action": "LOGIN",
+    "user_id": "USR-POL-101",
+    "user_role": "POLICE_INVESTIGATOR",
+    "timestamp": "2026-09-12T21:14:22.397Z",
+    "data_hash": "DIRECT_AUTHENTICATED",
+    "parent_hashes": [
+      "eb789693caad3b40fb4d30292750921db70705238f3eef16d3f1ce8f13da2d03"
+    ],
+    "metadata": {
+      "username": "sharma_leo",
+      "department": "LEO"
+    },
+    "event_hash": "509faeceacff2433c7ffe3741f3661bd66f49f7a9ff3dea6fa0f2623b221e799"
   }
 ]

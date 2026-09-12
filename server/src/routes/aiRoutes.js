@@ -71,7 +71,7 @@ router.post('/rag-search', authenticateToken, async (req, res) => {
 });
 
 // POST /api/ai/summarize - Auto Legal Brief Summarizer
-router.post('/summarize', authenticateToken, (req, res) => {
+router.post('/summarize', authenticateToken, async (req, res) => {
   const { docId } = req.body;
   const doc = dbService.getDocumentById(docId);
 
@@ -84,7 +84,7 @@ router.post('/summarize', authenticateToken, (req, res) => {
     return res.status(403).json({ error: 'FORBIDDEN_CLEARANCE', message: 'Insufficient clearance for AI summary' });
   }
 
-  const summary = ragEngine.generateDocumentSummary(doc.extractedText, doc.category);
+  const summary = await ragEngine.generateDocumentSummary(doc.extractedText, doc.category);
 
   // Record AI_QUERY event on Audit DAG
   ledgerService.createEvent({
