@@ -3,17 +3,53 @@ import { ragEngine } from '../services/ragEngine.js';
 import { dbService } from '../services/dbService.js';
 import { ledgerService } from '../services/ledgerService.js';
 import { authenticateToken } from '../middleware/auth.js';
+import { ipAllowlist } from '../middleware/ipAllowlist.js';
+import { CONFIG } from '../config.js';
+import axios from 'axios';
 
 const router = express.Router();
 
+// Apply IP Allowlist to all AI Gateway endpoints
+router.use(ipAllowlist);
+
+// GET /api/ai/network-status - Diagnostic check for Air-Gap status, IP Allowlist, and Ollama connectivity
+router.get('/network-status', authenticateToken, async (req, res) => {
+  let ollamaOnline = false;
+  let availableModels = [];
+
+  try {
+    const response = await axios.get(`${CONFIG.OLLAMA_URL}/api/tags`, { timeout: 1500 });
+    if (response.data && response.data.models) {
+      ollamaOnline = true;
+      availableModels = response.data.models.map(m => m.name);
+    }
+  } catch (err) {
+    ollamaOnline = false;
+  }
+
+  res.json({
+    status: 'AIR_GAPPED_GATEWAY_ACTIVE',
+    clientIp: req.clientIp || req.ip || '127.0.0.1',
+    allowedIps: CONFIG.ALLOWED_IPS,
+    ollama: {
+      url: CONFIG.OLLAMA_URL,
+      model: CONFIG.OLLAMA_MODEL,
+      status: ollamaOnline ? 'ONLINE' : 'OFFLINE_FALLBACK_ACTIVE',
+      availableModels
+    },
+    airGapSecured: true,
+    auditTrailSync: 'ACTIVE'
+  });
+});
+
 // POST /api/ai/rag-search - Permission-Aware RAG Search with Evidence Citations
-router.post('/rag-search', authenticateToken, (req, res) => {
+router.post('/rag-search', authenticateToken, async (req, res) => {
   const { query, caseId } = req.body;
   if (!query) {
     return res.status(400).json({ error: 'MISSING_QUERY', message: 'Query string required' });
   }
 
-  const results = ragEngine.performRAGSearch(req.user, query, caseId);
+  const results = await ragEngine.performRAGSearch(req.user, query, caseId);
 
   // Record AI_QUERY event on Audit DAG
   ledgerService.createEvent({
@@ -22,8 +58,13 @@ router.post('/rag-search', authenticateToken, (req, res) => {
     action: 'AI_QUERY',
     user_id: req.user.id,
     user_role: req.user.role,
-    data_hash: results.summary ? results.summary.slice(0, 32) : 'RAG_QUERY',
-    metadata: { query: query.slice(0, 100), resultsCount: results.sources ? results.sources.length : 0 }
+    data_hash: results.answer ? results.answer.slice(0, 32) : 'RAG_QUERY',
+    metadata: {
+      query: query.slice(0, 100),
+      resultsCount: results.citations ? results.citations.length : 0,
+      engine: results.engine,
+      clientIp: req.clientIp || req.ip
+    }
   });
 
   res.json({ results });

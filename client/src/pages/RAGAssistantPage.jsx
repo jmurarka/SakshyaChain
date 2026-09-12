@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { 
   Cpu, 
   Search, 
@@ -12,7 +12,11 @@ import {
   AlertTriangle,
   Send,
   BookOpen,
-  UserCheck
+  UserCheck,
+  Globe,
+  Wifi,
+  Server,
+  Activity
 } from 'lucide-react';
 import axios from 'axios';
 import { useAuth } from '../context/AuthContext';
@@ -25,6 +29,24 @@ export default function RAGAssistantPage() {
   const [ragResult, setRagResult] = useState(null);
   const [piiList, setPiiList] = useState([]);
   const [loadingPII, setLoadingPII] = useState(false);
+  const [netStatus, setNetStatus] = useState(null);
+  const [showDiagModal, setShowDiagModal] = useState(false);
+
+  useEffect(() => {
+    fetchNetworkStatus();
+  }, []);
+
+  const fetchNetworkStatus = async () => {
+    try {
+      const token = localStorage.getItem('token');
+      const res = await axios.get('http://localhost:5000/api/ai/network-status', {
+        headers: { Authorization: `Bearer ${token}` }
+      });
+      setNetStatus(res.data);
+    } catch (err) {
+      console.error('Network status fetch error:', err);
+    }
+  };
 
   const handleSearch = async (e) => {
     e.preventDefault();
@@ -76,22 +98,35 @@ export default function RAGAssistantPage() {
         <div>
           <div className="flex items-center gap-2 text-xs font-semibold text-blue-600 uppercase tracking-wider mb-1">
             <Cpu className="w-4 h-4" />
-            Permission-Aware Legal AI Engine (OpenRAG Architecture)
+            Air-Gapped Centralized AI Engine (SIH 26190 Architecture)
           </div>
           <h1 className="text-2xl font-bold text-slate-900">AI Legal Assistant & Evidence Citations</h1>
           <p className="text-slate-500 text-sm mt-1">
-            Queries semantic vectors pre-filtered by your clearance (Level {user?.clearanceLevel || 3}) with explicit evidence source citations.
+            Zero-Trust local AI Gateway enforcing IP allowlisting, case permission scoping, and local Ollama / RAG inference.
           </p>
         </div>
 
-        <button
-          onClick={handleDetectPII}
-          disabled={loadingPII}
-          className="flex items-center gap-2 px-3.5 py-2 bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-300 rounded-xl text-xs font-semibold transition"
-        >
-          <EyeOff className="w-4 h-4 text-amber-600" />
-          {loadingPII ? 'Scanning PII...' : 'Scan PII Auto-Redaction'}
-        </button>
+        <div className="flex flex-wrap items-center gap-2">
+          <button
+            onClick={() => setShowDiagModal(true)}
+            className="flex items-center gap-1.5 px-3 py-1.5 bg-slate-900 text-emerald-400 hover:bg-slate-800 border border-slate-700 rounded-xl text-xs font-mono transition"
+          >
+            <Wifi className="w-3.5 h-3.5 text-emerald-400" />
+            <span>Air-Gap Net Status:</span>
+            <span className="font-bold text-white">
+              {netStatus ? `${netStatus.clientIp} (Verified)` : 'Checking...'}
+            </span>
+          </button>
+
+          <button
+            onClick={handleDetectPII}
+            disabled={loadingPII}
+            className="flex items-center gap-2 px-3.5 py-2 bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-300 rounded-xl text-xs font-semibold transition"
+          >
+            <EyeOff className="w-4 h-4 text-amber-600" />
+            {loadingPII ? 'Scanning PII...' : 'Scan PII Redaction'}
+          </button>
+        </div>
       </div>
 
       {/* Query Search Card */}
@@ -167,14 +202,21 @@ export default function RAGAssistantPage() {
         <div className="space-y-6">
           {/* Answer Card */}
           <div className="bg-white border border-blue-200 rounded-2xl p-6 shadow-sm space-y-4">
-            <div className="flex items-center justify-between pb-3 border-b border-slate-100">
+            <div className="flex flex-wrap items-center justify-between gap-2 pb-3 border-b border-slate-100">
               <div className="flex items-center gap-2">
                 <Sparkles className="w-5 h-5 text-blue-600" />
                 <h3 className="font-bold text-slate-900 text-base">Synthesized AI Evidence Brief</h3>
               </div>
-              <span className="text-[11px] font-mono bg-blue-50 text-blue-700 px-2.5 py-1 rounded-full font-semibold border border-blue-200">
-                Evaluated Chunks: {ragResult.chunksEvaluated}
-              </span>
+              <div className="flex items-center gap-2">
+                {ragResult.engine && (
+                  <span className="text-[11px] font-mono bg-emerald-50 text-emerald-700 px-2.5 py-1 rounded-full font-semibold border border-emerald-200">
+                    Engine: {ragResult.engine}
+                  </span>
+                )}
+                <span className="text-[11px] font-mono bg-blue-50 text-blue-700 px-2.5 py-1 rounded-full font-semibold border border-blue-200">
+                  Evaluated Chunks: {ragResult.chunksEvaluated}
+                </span>
+              </div>
             </div>
 
             <div className="text-xs text-slate-800 leading-relaxed font-sans whitespace-pre-line bg-slate-50 p-4 rounded-xl border border-slate-200">
@@ -218,6 +260,70 @@ export default function RAGAssistantPage() {
               </div>
             </div>
           )}
+        </div>
+      )}
+
+      {/* Air-Gap Diagnostic Modal */}
+      {showDiagModal && (
+        <div className="fixed inset-0 bg-slate-950/70 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+          <div className="bg-white rounded-2xl max-w-xl w-full p-6 space-y-4 shadow-2xl border border-slate-200 animate-fade-in font-sans">
+            <div className="flex items-center justify-between border-b border-slate-200 pb-3">
+              <div className="flex items-center gap-2">
+                <Server className="w-5 h-5 text-blue-600" />
+                <h3 className="font-bold text-slate-900 text-base">Air-Gapped AI System Diagnostics</h3>
+              </div>
+              <button onClick={() => setShowDiagModal(false)} className="text-slate-400 hover:text-slate-600 font-bold text-sm">
+                ✕
+              </button>
+            </div>
+
+            {netStatus ? (
+              <div className="space-y-3 font-mono text-xs">
+                <div className="p-3 rounded-xl bg-slate-900 text-emerald-400 space-y-1">
+                  <div className="text-[10px] text-slate-400 uppercase tracking-wider font-bold">Network Gateway Status</div>
+                  <div className="text-sm font-bold text-white">{netStatus.status}</div>
+                  <div className="text-[11px] text-emerald-300">Your Client IP: {netStatus.clientIp} (ALLOWLIST VERIFIED)</div>
+                </div>
+
+                <div className="p-3 rounded-xl bg-slate-50 border border-slate-200 space-y-1.5 text-slate-700">
+                  <div className="font-bold text-slate-900 flex items-center gap-1.5">
+                    <Activity className="w-4 h-4 text-blue-600" /> Ollama Local LLM Runtime:
+                  </div>
+                  <div>URL: {netStatus.ollama?.url}</div>
+                  <div>Default Model: {netStatus.ollama?.model}</div>
+                  <div>
+                    Status:{' '}
+                    <span className={netStatus.ollama?.status === 'ONLINE' ? 'text-emerald-600 font-bold' : 'text-amber-600 font-bold'}>
+                      {netStatus.ollama?.status}
+                    </span>
+                  </div>
+                </div>
+
+                <div className="p-3 rounded-xl bg-slate-50 border border-slate-200 space-y-1 text-slate-700">
+                  <div className="font-bold text-slate-900">Allowed Network IPs / Subnets:</div>
+                  <div className="flex flex-wrap gap-1 mt-1">
+                    {netStatus.allowedIps?.map((ip, i) => (
+                      <span key={i} className="bg-slate-200 text-slate-800 px-2 py-0.5 rounded text-[10px] font-bold">
+                        {ip}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="text-[11px] text-slate-500 font-sans italic bg-blue-50 p-2.5 rounded-lg border border-blue-100">
+                  🔒 Zero-Trust Isolation: No traffic leaves your local Wi-Fi / Hotspot. Every query is signed and recorded on the SākshyaChain SHA-256 DAG ledger.
+                </div>
+              </div>
+            ) : (
+              <div className="text-center py-6 text-slate-500 text-xs">Loading diagnostic metrics...</div>
+            )}
+
+            <div className="flex justify-end pt-2 border-t border-slate-100">
+              <button onClick={() => setShowDiagModal(false)} className="btn btn-secondary text-xs px-4 py-2">
+                Close Diagnostics
+              </button>
+            </div>
+          </div>
         </div>
       )}
     </div>

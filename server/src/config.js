@@ -22,5 +22,8 @@ export const CONFIG = {
   DB_FILE: path.join(__dirname, '../data/db.json'),
   LEDGER_FILE: path.join(__dirname, '../data/ledger.json'),
   SUPABASE_URL: process.env.SUPABASE_URL || 'https://gksffenmjzibtiqcuhxp.supabase.co',
-  SUPABASE_KEY: process.env.SUPABASE_KEY || ''
+  SUPABASE_KEY: process.env.SUPABASE_KEY || '',
+  OLLAMA_URL: process.env.OLLAMA_URL || 'http://localhost:11434',
+  OLLAMA_MODEL: process.env.OLLAMA_MODEL || 'llama3.1',
+  ALLOWED_IPS: process.env.ALLOWED_IPS ? process.env.ALLOWED_IPS.split(',').map(ip => ip.trim()) : ['127.0.0.1', '::1', 'localhost', '192.168.*', '10.*']
 };

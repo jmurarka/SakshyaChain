@@ -1,4 +1,6 @@
 import { dbService } from './dbService.js';
+import { CONFIG } from '../config.js';
+import axios from 'axios';
 
 class RAGEngine {
   constructor() {
@@ -109,9 +111,9 @@ class RAGEngine {
   }
 
   /**
-   * Permission-Aware RAG Search Engine with Evidence Citations
+   * Permission-Aware RAG Search Engine with Evidence Citations & Ollama Fallback
    */
-  performRAGSearch(user, query, targetCaseId = null) {
+  async performRAGSearch(user, query, targetCaseId = null) {
     const queryTerms = query.toLowerCase().split(/\s+/).filter(t => t.length > 2);
     
     // 1. STRICT SERVER-SIDE CLEARANCE & CASE AUTHORIZATION FILTER
@@ -149,7 +151,8 @@ class RAGEngine {
         answer: `No relevant legal evidence found matching query "${query}" under your current security clearance (Level ${user.clearanceLevel}) and department scope (${user.department}).`,
         citations: [],
         chunksEvaluated: accessibleChunks.length,
-        securityFilteredCount: this.chunks.length - accessibleChunks.length
+        securityFilteredCount: this.chunks.length - accessibleChunks.length,
+        engine: 'Permission Guard'
       };
     }
 
@@ -165,21 +168,42 @@ class RAGEngine {
       citationTag: `[Doc #${item.chunk.docId}, Page ${item.chunk.pageNumber}, Para ${item.chunk.paragraphIndex}]`
     }));
 
-    // Build intelligent answer from top matched evidence
-    const mainEvidence = topResults[0].chunk.content;
-    const secondaryEvidence = topResults[1] ? topResults[1].chunk.content : '';
+    let synthesizedAnswer = '';
+    let usedEngine = 'SākshyaChain Local RAG Engine (Fallback)';
 
-    const synthesizedAnswer = `Based on verified case files under your Clearance Level ${user.clearanceLevel} authorization:\n\n` +
-      `1. Primary Findings: ${mainEvidence} ${citations[0].citationTag}\n\n` +
-      (secondaryEvidence ? `2. Supporting Analysis: ${secondaryEvidence} ${citations[1].citationTag}\n\n` : '') +
-      `All cited documents are cryptographically verified and anchored on the SākshyaChain audit ledger.`;
+    try {
+      const contextText = citations.map(c => `${c.citationTag} (${c.docTitle}): ${c.snippet}`).join('\n\n');
+      const prompt = `Context:\n${contextText}\n\nQuestion: ${query}\n\nAnswer with citations:`;
+
+      const ollamaRes = await axios.post(`${CONFIG.OLLAMA_URL}/api/generate`, {
+        model: CONFIG.OLLAMA_MODEL || 'llama3.1',
+        prompt,
+        stream: false
+      }, { timeout: 3000 });
+
+      if (ollamaRes.data && ollamaRes.data.response) {
+        synthesizedAnswer = ollamaRes.data.response;
+        usedEngine = `Ollama Local LLM (${CONFIG.OLLAMA_MODEL})`;
+      } else {
+        throw new Error('No Ollama response body');
+      }
+    } catch (err) {
+      const mainEvidence = topResults[0].chunk.content;
+      const secondaryEvidence = topResults[1] ? topResults[1].chunk.content : '';
+
+      synthesizedAnswer = `Based on verified case files under your Clearance Level ${user.clearanceLevel} authorization:\n\n` +
+        `1. Primary Findings: ${mainEvidence} ${citations[0].citationTag}\n\n` +
+        (secondaryEvidence ? `2. Supporting Analysis: ${secondaryEvidence} ${citations[1].citationTag}\n\n` : '') +
+        `All cited documents are cryptographically verified and anchored on the SākshyaChain audit ledger.`;
+    }
 
     return {
       query,
       answer: synthesizedAnswer,
       citations,
       chunksEvaluated: accessibleChunks.length,
-      securityFilteredCount: this.chunks.length - accessibleChunks.length
+      securityFilteredCount: this.chunks.length - accessibleChunks.length,
+      engine: usedEngine
     };
   }
 
