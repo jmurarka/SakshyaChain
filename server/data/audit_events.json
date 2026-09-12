@@ -3912,5 +3912,165 @@
       "clientIp": "::1"
     },
     "event_hash": "556d3c9948d506ffa4d1a49f82c2d0613022aef9e8e2353974ea2dc8e39f154f"
+  },
+  {
+    "event_id": "5e20ecc1-fd20-4dac-8b22-6437d4075625",
+    "document_id": "RAG_INDEX",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "AI_QUERY",
+    "user_id": "USR-POL-101",
+    "user_role": "POLICE_INVESTIGATOR",
+    "timestamp": "2026-09-12T21:25:09.527Z",
+    "data_hash": "Based on verified case files und",
+    "parent_hashes": [
+      "556d3c9948d506ffa4d1a49f82c2d0613022aef9e8e2353974ea2dc8e39f154f"
+    ],
+    "metadata": {
+      "query": "Who is the suspect identified in the CCTV and bullet forensic report?",
+      "resultsCount": 4,
+      "engine": "SākshyaChain Local RAG Engine (Fallback)",
+      "clientIp": "::1"
+    },
+    "event_hash": "031b0a4f8a1cc01fdb499f64296f62e96d9a84c21481b8777d18665e1592ae5e"
+  },
+  {
+    "event_id": "fb19c839-7b62-4893-9495-4317960931ea",
+    "document_id": "RAG_INDEX",
+    "case_id": "CASE-2026-4412",
+    "version_id": "v1.0",
+    "action": "AI_QUERY",
+    "user_id": "USR-POL-101",
+    "user_role": "POLICE_INVESTIGATOR",
+    "timestamp": "2026-09-12T21:25:22.639Z",
+    "data_hash": "No relevant legal evidence found",
+    "parent_hashes": [
+      "031b0a4f8a1cc01fdb499f64296f62e96d9a84c21481b8777d18665e1592ae5e"
+    ],
+    "metadata": {
+      "query": "Who is the suspect identified in the CCTV ",
+      "resultsCount": 0,
+      "engine": "Permission Guard",
+      "clientIp": "::1"
+    },
+    "event_hash": "7c408e03c1a01cc98d47d2a7cfccfbd41d41bdfa2ce686ea962ffc36b493ac48"
+  },
+  {
+    "event_id": "db5d97ab-4bb1-47a4-be2f-af1cfc0fba47",
+    "document_id": "SYSTEM_AUTH",
+    "case_id": "SYSTEM_AUTH",
+    "version_id": "v1.0",
+    "action": "LOGIN",
+    "user_id": "USR-POL-101",
+    "user_role": "POLICE_INVESTIGATOR",
+    "timestamp": "2026-09-12T21:32:09.512Z",
+    "data_hash": "DIRECT_AUTHENTICATED",
+    "parent_hashes": [
+      "7c408e03c1a01cc98d47d2a7cfccfbd41d41bdfa2ce686ea962ffc36b493ac48"
+    ],
+    "metadata": {
+      "username": "sharma_leo",
+      "department": "LEO"
+    },
+    "event_hash": "fd16053ef2f73645ddc06317335fee79493dc70c9fcb0c69a74021bc235336f4"
+  },
+  {
+    "event_id": "283cc362-284f-439d-bb1c-b6b06b75a128",
+    "document_id": "RAG_INDEX",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "AI_QUERY",
+    "user_id": "USR-POL-101",
+    "user_role": "POLICE_INVESTIGATOR",
+    "timestamp": "2026-09-12T21:32:09.599Z",
+    "data_hash": "No relevant legal evidence found",
+    "parent_hashes": [
+      "fd16053ef2f73645ddc06317335fee79493dc70c9fcb0c69a74021bc235336f4"
+    ],
+    "metadata": {
+      "query": "wiretap order offshore communications",
+      "resultsCount": 0,
+      "engine": "Permission Guard",
+      "clientIp": "::1"
+    },
+    "event_hash": "70af549d6b5514adab3d72d4f2e501d2dd06bdaee090f6e00e22e54cf417e029"
+  },
+  {
+    "event_id": "e3eefe81-d58e-4e06-ab47-7c94b3e457b1",
+    "document_id": "USER_PERMISSIONS",
+    "case_id": "SYSTEM_ADMIN",
+    "version_id": "v1.0",
+    "action": "BREAK_GLASS",
+    "user_id": "USR-POL-101",
+    "user_role": "POLICE_INVESTIGATOR",
+    "timestamp": "2026-09-12T21:32:09.614Z",
+    "data_hash": "USER_UPDATE_USR-POL-101",
+    "parent_hashes": [
+      "70af549d6b5514adab3d72d4f2e501d2dd06bdaee090f6e00e22e54cf417e029"
+    ],
+    "metadata": {
+      "targetUserId": "USR-POL-101",
+      "newClearanceLevel": 4
+    },
+    "event_hash": "30e93464dc078e4b84d1b63e07951d70db8a70ff5d5a1c901815fe6cd74330cf"
+  },
+  {
+    "event_id": "f8553927-976a-47c9-8d92-58dbf71464e3",
+    "document_id": "SYSTEM_AUTH",
+    "case_id": "SYSTEM_AUTH",
+    "version_id": "v1.0",
+    "action": "LOGIN",
+    "user_id": "USR-POL-101",
+    "user_role": "POLICE_INVESTIGATOR",
+    "timestamp": "2026-09-12T21:32:09.627Z",
+    "data_hash": "DIRECT_AUTHENTICATED",
+    "parent_hashes": [
+      "30e93464dc078e4b84d1b63e07951d70db8a70ff5d5a1c901815fe6cd74330cf"
+    ],
+    "metadata": {
+      "username": "sharma_leo",
+      "department": "LEO"
+    },
+    "event_hash": "572a34f025aebf6aa295106c58eb2907874ad08f2d65daaac5a6082734f4b36a"
+  },
+  {
+    "event_id": "a5641ad6-4cdd-4e15-9c2f-2da9dd912ae5",
+    "document_id": "RAG_INDEX",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "AI_QUERY",
+    "user_id": "USR-POL-101",
+    "user_role": "POLICE_INVESTIGATOR",
+    "timestamp": "2026-09-12T21:32:09.671Z",
+    "data_hash": "Based on verified case files und",
+    "parent_hashes": [
+      "572a34f025aebf6aa295106c58eb2907874ad08f2d65daaac5a6082734f4b36a"
+    ],
+    "metadata": {
+      "query": "wiretap order offshore communications",
+      "resultsCount": 3,
+      "engine": "SākshyaChain Local RAG Engine (Fallback)",
+      "clientIp": "::1"
+    },
+    "event_hash": "4de12965b4f7c0728ebb96590f93c2dbd6054492dad9df9389abf2c9ff1a3d9c"
+  },
+  {
+    "event_id": "2974e81b-0aa8-4659-bbe9-474b7f858c08",
+    "document_id": "USER_PERMISSIONS",
+    "case_id": "SYSTEM_ADMIN",
+    "version_id": "v1.0",
+    "action": "BREAK_GLASS",
+    "user_id": "USR-POL-101",
+    "user_role": "POLICE_INVESTIGATOR",
+    "timestamp": "2026-09-12T21:32:09.691Z",
+    "data_hash": "USER_UPDATE_USR-POL-101",
+    "parent_hashes": [
+      "4de12965b4f7c0728ebb96590f93c2dbd6054492dad9df9389abf2c9ff1a3d9c"
+    ],
+    "metadata": {
+      "targetUserId": "USR-POL-101",
+      "newClearanceLevel": 3
+    },
+    "event_hash": "962f3700bf1b2e5058c5a341906368d7ac5c7980dfcca5bace0b8cc58e1e7435"
   }
 ]

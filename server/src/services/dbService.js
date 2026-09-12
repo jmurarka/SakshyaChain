@@ -190,6 +190,26 @@ class DBService {
     return db.users.map(({ privateKey, ...rest }) => rest);
   }
 
+  updateUser(userId, updates) {
+    const db = this.readDB();
+    const userIndex = db.users.findIndex(u => u.id === userId);
+    if (userIndex === -1) return null;
+
+    if (updates.clearanceLevel !== undefined) {
+      db.users[userIndex].clearanceLevel = parseInt(updates.clearanceLevel, 10);
+    }
+    if (updates.assignedCases !== undefined) {
+      db.users[userIndex].assignedCases = updates.assignedCases;
+    }
+    if (updates.department !== undefined) {
+      db.users[userIndex].department = updates.department;
+    }
+
+    this.writeDB(db);
+    const { privateKey, ...sanitizedUser } = db.users[userIndex];
+    return sanitizedUser;
+  }
+
   getUserWithPrivateKey(userId) {
     const db = this.readDB();
     return db.users.find(u => u.id === userId);

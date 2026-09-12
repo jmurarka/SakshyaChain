@@ -133,4 +133,29 @@ router.get('/me', authenticateToken, (req, res) => {
   res.json({ user: userPublic });
 });
 
+// PATCH /api/auth/users/:id - Update User Security Clearance Level or Assigned Cases
+router.patch('/users/:id', authenticateToken, (req, res) => {
+  const updatedUser = dbService.updateUser(req.params.id, req.body);
+  if (!updatedUser) {
+    return res.status(404).json({ error: 'USER_NOT_FOUND', message: 'User not found' });
+  }
+
+  // Record Admin Access Permission Update on Audit DAG
+  ledgerService.createEvent({
+    document_id: 'USER_PERMISSIONS',
+    case_id: 'SYSTEM_ADMIN',
+    action: 'BREAK_GLASS',
+    user_id: req.user.id,
+    user_role: req.user.role,
+    data_hash: `USER_UPDATE_${req.params.id}`,
+    metadata: {
+      targetUserId: req.params.id,
+      newClearanceLevel: req.body.clearanceLevel,
+      assignedCases: req.body.assignedCases
+    }
+  });
+
+  res.json({ message: 'User clearance and case permissions updated successfully', user: updatedUser });
+});
+
 export default router;
