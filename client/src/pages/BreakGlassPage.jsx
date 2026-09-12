@@ -12,7 +12,7 @@ import {
   Flame,
   ArrowRight
 } from 'lucide-react';
-import axios from 'axios';
+import api from '../services/api';
 import { useAuth } from '../context/AuthContext';
 
 export default function BreakGlassPage() {
@@ -47,7 +47,7 @@ export default function BreakGlassPage() {
     setMessage(null);
 
     try {
-      const res = await axios.post('http://localhost:5000/api/break-glass/request', {
+      const res = await api.post('/break-glass/request', {
         docId,
         justification: reason,
         userId: user?.id || 'officer_42'

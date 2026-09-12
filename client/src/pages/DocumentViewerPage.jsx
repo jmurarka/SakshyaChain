@@ -7,7 +7,7 @@ import { ArrowLeft, Lock, Key, ShieldCheck, Download, CheckCircle2, AlertTriangl
 export default function DocumentViewerPage({ doc: propDoc, navigateTo: propNavigateTo }) {
   const { id: routeDocId } = useParams();
   const navigate = useNavigate();
-  const { user } = useAuth();
+  const { user, isBoss } = useAuth();
 
   const [doc, setDoc] = useState(propDoc || null);
   const [verifying, setVerifying] = useState(false);
@@ -64,6 +64,20 @@ export default function DocumentViewerPage({ doc: propDoc, navigateTo: propNavig
     }
   };
 
+  const handleVerifyIntegrity = async () => {
+    setVerifying(true);
+    try {
+      const res = await api.get(`/documents/${activeDoc.id}`);
+      if (res.data && res.data.document) {
+        setVerifyStatus('VERIFIED');
+      }
+    } catch (err) {
+      setVerifyStatus('FAILED');
+    } finally {
+      setVerifying(false);
+    }
+  };
+
   const isPdfContent = (activeDoc.extractedText || '').trim().startsWith('%PDF-') ||
     activeDoc.mimeType === 'application/pdf' ||
     (activeDoc.extractedText || '').startsWith('[PDF');
@@ -94,19 +108,23 @@ export default function DocumentViewerPage({ doc: propDoc, navigateTo: propNavig
             <Download className="w-4 h-4" />
             Download Decrypted PDF
           </button>
-          <button
-            onClick={handleVerifyIntegrity}
-            disabled={verifying}
-            className="btn btn-success text-xs flex items-center gap-2"
-          >
-            <RefreshCw className={`w-4 h-4 ${verifying ? 'animate-spin' : ''}`} />
-            {verifying ? 'Scanning SHA-256 Digest...' : 'Verify Integrity'}
-          </button>
+
+          {/* Signature / Integrity Verification Option: BOSS PRIVILEGE */}
+          {isBoss && (
+            <button
+              onClick={handleVerifyIntegrity}
+              disabled={verifying}
+              className="btn btn-success text-xs flex items-center gap-2"
+            >
+              <RefreshCw className={`w-4 h-4 ${verifying ? 'animate-spin' : ''}`} />
+              {verifying ? 'Scanning SHA-256 Digest...' : 'Verify Integrity (Boss Only)'}
+            </button>
+          )}
         </div>
       </div>
 
       {/* Integrity Toast Alert */}
-      {verifyStatus && (
+      {verifyStatus && isBoss && (
         <div className={`p-4 rounded-xl border flex items-center justify-between text-xs font-mono font-semibold ${
           verifyStatus === 'VERIFIED'
             ? 'bg-emerald-50 border-emerald-300 text-emerald-900'
@@ -196,9 +214,11 @@ export default function DocumentViewerPage({ doc: propDoc, navigateTo: propNavig
               <button onClick={handleDownload} className="btn btn-primary text-xs w-full py-1.5 flex items-center justify-center gap-1.5">
                 <Download className="w-4 h-4" /> Download Decrypted File
               </button>
-              <button onClick={() => navigate('/audit')} className="btn btn-secondary text-xs w-full py-1.5">
-                View Git-Style Audit DAG ➔
-              </button>
+              {isBoss && (
+                <button onClick={() => navigate('/audit')} className="btn btn-secondary text-xs w-full py-1.5">
+                  View Git-Style Audit DAG ➔
+                </button>
+              )}
             </div>
           </div>
         </div>

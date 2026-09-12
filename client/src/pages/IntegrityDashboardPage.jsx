@@ -12,7 +12,7 @@ import {
   HardDrive,
   Cpu
 } from 'lucide-react';
-import axios from 'axios';
+import api from '../services/api';
 
 export default function IntegrityDashboardPage() {
   const [ledgerData, setLedgerData] = useState([]);
@@ -28,12 +28,12 @@ export default function IntegrityDashboardPage() {
   const fetchIntegrity = async () => {
     setLoading(true);
     try {
-      const res = await axios.get('http://localhost:5000/api/ledger/verify');
+      const res = await api.get('/ledger/verify');
       if (res.data) {
         setScanResult(res.data);
       }
-      const docsRes = await axios.get('http://localhost:5000/api/documents');
-      if (docsRes.data.success) {
+      const docsRes = await api.get('/documents');
+      if (docsRes.data.documents) {
         setLedgerData(docsRes.data.documents || []);
       }
     } catch (err) {
@@ -46,7 +46,7 @@ export default function IntegrityDashboardPage() {
   const handleRunScan = async () => {
     setIsScanning(true);
     try {
-      const res = await axios.get('http://localhost:5000/api/ledger/verify');
+      const res = await api.get('/ledger/verify');
       setTimeout(() => {
         setScanResult(res.data);
         setIsScanning(false);
@@ -58,7 +58,7 @@ export default function IntegrityDashboardPage() {
 
   const handleSimulateTamper = async () => {
     try {
-      const res = await axios.post('http://localhost:5000/api/ledger/tamper-test');
+      const res = await api.post('/ledger/tamper-test');
       if (res.data.success) {
         setTamperSimulated(true);
         handleRunScan();

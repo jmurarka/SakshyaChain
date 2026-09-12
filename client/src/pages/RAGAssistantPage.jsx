@@ -14,7 +14,7 @@ import {
   BookOpen,
   UserCheck
 } from 'lucide-react';
-import axios from 'axios';
+import api from '../services/api';
 import { useAuth } from '../context/AuthContext';
 
 export default function RAGAssistantPage() {
@@ -33,12 +33,7 @@ export default function RAGAssistantPage() {
     setRagResult(null);
 
     try {
-      const token = localStorage.getItem('token');
-      const res = await axios.post(
-        'http://localhost:5000/api/ai/rag-search',
-        { query, caseId },
-        { headers: { Authorization: `Bearer ${token}` } }
-      );
+      const res = await api.post('/ai/rag-search', { query, caseId });
 
       if (res.data.results) {
         setRagResult(res.data.results);
@@ -53,12 +48,7 @@ export default function RAGAssistantPage() {
   const handleDetectPII = async () => {
     setLoadingPII(true);
     try {
-      const token = localStorage.getItem('token');
-      const res = await axios.post(
-        'http://localhost:5000/api/ai/detect-pii',
-        { docId: 'DOC-8891-001' },
-        { headers: { Authorization: `Bearer ${token}` } }
-      );
+      const res = await api.post('/ai/detect-pii', { docId: 'DOC-8891-001' });
       if (res.data.piiList) {
         setPiiList(res.data.piiList);
       }

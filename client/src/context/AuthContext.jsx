@@ -23,9 +23,8 @@ export function AuthProvider({ children }) {
   // Verify active JWT token on startup
   const verifyToken = async () => {
     if (!token) {
+      setUser(null);
       setLoading(false);
-      // Auto login as default Police Inspector for smooth initial load
-      await loginAsUser('USR-POL-101');
       return;
     }
 
@@ -34,10 +33,10 @@ export function AuthProvider({ children }) {
       setUser(res.data.user);
       setError(null);
     } catch (err) {
-      console.warn('JWT invalid or expired, falling back to default user login...');
+      console.warn('JWT invalid or expired, returning to login screen...');
       localStorage.removeItem('sakshya_jwt_token');
       setToken(null);
-      await loginAsUser('USR-POL-101');
+      setUser(null);
     } finally {
       setLoading(false);
     }
@@ -70,6 +69,9 @@ export function AuthProvider({ children }) {
     setUser(null);
   };
 
+  const isBoss = user && (user.clearanceLevel >= 4 || user.role === 'JUDICIAL_MAGISTRATE' || user.role === 'COMPLIANCE_AUDITOR' || user.role === 'ADMIN');
+  const isEmployee = user && !isBoss;
+
   useEffect(() => {
     fetchPersonas();
     verifyToken();
@@ -83,6 +85,8 @@ export function AuthProvider({ children }) {
         allUsers,
         loading,
         error,
+        isBoss,
+        isEmployee,
         loginAsUser,
         logout,
         refreshPersonas: fetchPersonas

@@ -12,7 +12,7 @@ export default function CaseDetailPage({ caseId: propCaseId, navigateTo: propNav
   const navigate = useNavigate();
   const caseId = propCaseId || routeCaseId || 'CASE-2026-8891';
 
-  const { user } = useAuth();
+  const { user, isBoss } = useAuth();
   const [activeTab, setActiveTab] = useState('documents');
   const [caseObj, setCaseObj] = useState(null);
   const [documents, setDocuments] = useState([]);
@@ -67,7 +67,7 @@ export default function CaseDetailPage({ caseId: propCaseId, navigateTo: propNav
         <div className="pt-3 border-t border-slate-200 grid grid-cols-1 md:grid-cols-3 gap-3 text-xs text-slate-600">
           <div>Lead Investigator: <strong className="text-slate-900">{caseObj?.leadInvestigator}</strong></div>
           <div>Public Prosecutor: <strong className="text-slate-900">{caseObj?.prosecutor}</strong></div>
-          <div>Presiding Magistrate: <strong className="text-slate-900">{caseObj?.presidingJudge}</strong></div>
+          <div>Presiding Magistrate: {isBoss ? <strong className="text-rose-700">{caseObj?.presidingJudge}</strong> : <span className="font-mono text-slate-400 italic">[RESTRICTED - BOSS EYES ONLY]</span>}</div>
         </div>
       </div>
 
@@ -87,12 +87,14 @@ export default function CaseDetailPage({ caseId: propCaseId, navigateTo: propNav
           Overview & Jurisdiction
         </button>
 
-        <button
-          onClick={() => navigate('/audit')}
-          className="px-4 py-2 rounded-lg text-slate-600 hover:bg-slate-100 flex items-center gap-1.5"
-        >
-          <Lock className="w-3.5 h-3.5 text-blue-600" /> Audit DAG Graph ➔
-        </button>
+        {isBoss && (
+          <button
+            onClick={() => navigate('/audit')}
+            className="px-4 py-2 rounded-lg text-slate-600 hover:bg-slate-100 flex items-center gap-1.5"
+          >
+            <Lock className="w-3.5 h-3.5 text-rose-600" /> Audit DAG Graph ➔
+          </button>
+        )}
       </div>
 
       {/* Tab Content */}
@@ -132,12 +134,15 @@ export default function CaseDetailPage({ caseId: propCaseId, navigateTo: propNav
 
                   <div className="flex items-center gap-2">
                     <button onClick={() => setSelectedDocViewer(doc)} className="btn btn-secondary py-1 px-2.5 text-xs flex items-center gap-1">
-                      <Eye className="w-3.5 h-3.5 text-blue-600" /> View & Verify
+                      <Eye className="w-3.5 h-3.5 text-blue-600" /> {isBoss ? 'View & Verify' : 'View File'}
                     </button>
 
-                    <button onClick={() => setSelectedDocSigner(doc)} className="btn btn-secondary py-1 px-2.5 text-xs flex items-center gap-1">
-                      <Key className="w-3.5 h-3.5 text-indigo-600" /> Apply Signature
-                    </button>
+                    {/* Signature Option: STRICTLY BOSS ROLE PRIVILEGE */}
+                    {isBoss && (
+                      <button onClick={() => setSelectedDocSigner(doc)} className="btn btn-secondary py-1 px-2.5 text-xs flex items-center gap-1 border-rose-300 text-rose-700 hover:bg-rose-50">
+                        <Key className="w-3.5 h-3.5 text-rose-600" /> Apply Signature
+                      </button>
+                    )}
                   </div>
                 </div>
               </div>

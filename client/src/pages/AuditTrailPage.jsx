@@ -16,7 +16,7 @@ import {
   Key,
   AlertTriangle
 } from 'lucide-react';
-import axios from 'axios';
+import api from '../services/api';
 import { useAuth } from '../context/AuthContext';
 
 export default function AuditTrailPage() {
@@ -36,8 +36,8 @@ export default function AuditTrailPage() {
   const fetchLedger = async () => {
     setLoading(true);
     try {
-      const res = await axios.get('http://localhost:5000/api/ledger');
-      if (res.data.success) {
+      const res = await api.get('/ledger');
+      if (res.data.chain) {
         setLedger(res.data.chain || []);
         if (res.data.chain && res.data.chain.length > 0) {
           setSelectedBlock(res.data.chain[res.data.chain.length - 1]);
@@ -54,7 +54,7 @@ export default function AuditTrailPage() {
     setIsVerifying(true);
     setVerificationResult(null);
     try {
-      const res = await axios.get('http://localhost:5000/api/ledger/verify');
+      const res = await api.get('/ledger/verify');
       setTimeout(() => {
         setVerificationResult(res.data);
         setIsVerifying(false);

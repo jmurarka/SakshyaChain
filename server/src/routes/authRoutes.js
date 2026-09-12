@@ -1,4 +1,6 @@
 import express from 'express';
+import jwt from 'jsonwebtoken';
+import { CONFIG } from '../config.js';
 import { dbService } from '../services/dbService.js';
 import { generateMFAOTP, verifyMFAOTP, issueTokens, refreshAccessToken } from '../services/authService.js';
 import { authenticateToken } from '../middleware/auth.js';
@@ -63,20 +65,41 @@ router.post('/refresh', (req, res) => {
   }
 });
 
-// POST /api/auth/login - Legacy direct login helper for instant testing
-router.post('/login', (req, res) => {
+// POST /api/auth/login - Persona authentication & switching with strict Clearance Level Hierarchy guard
+router.post('/login', async (req, res) => {
   const { userId, username } = req.body;
-  let user;
-  if (userId) user = dbService.getUserById(userId);
-  else if (username) user = dbService.getUserByUsername(username);
+  let targetUser;
+  if (userId) targetUser = dbService.getUserById(userId);
+  else if (username) targetUser = dbService.getUserByUsername(username);
 
-  if (!user) {
+  if (!targetUser) {
     return res.status(404).json({ error: 'USER_NOT_FOUND', message: 'User not found in system directory' });
   }
 
-  const tokenRes = issueTokens(user);
+  // Strict Clearance Level Hierarchy Rule:
+  // Lower clearance level users CANNOT switch up to higher clearance level personas.
+  const authHeader = req.headers.authorization;
+  if (authHeader && authHeader.startsWith('Bearer ')) {
+    try {
+      const callerToken = authHeader.split(' ')[1];
+      const callerPayload = jwt.verify(callerToken, CONFIG.JWT_SECRET);
+      
+      if (callerPayload && callerPayload.clearanceLevel) {
+        if (targetUser.clearanceLevel > callerPayload.clearanceLevel) {
+          return res.status(403).json({
+            error: 'FORBIDDEN_CLEARANCE_PRIVILEGE_ESCALATION',
+            message: `Access Denied: Level ${callerPayload.clearanceLevel} persona cannot switch up to higher Level ${targetUser.clearanceLevel} persona (${targetUser.name}). Privilege escalation prohibited!`
+          });
+        }
+      }
+    } catch (err) {
+      console.warn('[Auth Middleware Warning] Token check failed:', err.message);
+    }
+  }
+
+  const tokenRes = issueTokens(targetUser);
   res.json({
-    message: `Successfully authenticated as ${user.name}`,
+    message: `Successfully authenticated as ${targetUser.name}`,
     token: tokenRes.accessToken,
     ...tokenRes
   });

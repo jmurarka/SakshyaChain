@@ -4,7 +4,7 @@ import { useAuth } from '../context/AuthContext';
 import { X, Lock, Key, ShieldCheck, FileText, Clock, CheckCircle2, AlertTriangle, Download, GitCommit, FilePlus, ExternalLink, ShieldAlert, Cpu } from 'lucide-react';
 
 export default function DocumentViewerModal({ doc, isOpen, onClose }) {
-  const { user } = useAuth();
+  const { user, isBoss } = useAuth();
   const [activeTab, setActiveTab] = useState('preview');
   const [verifyResult, setVerifyResult] = useState(null);
   const [verifying, setVerifying] = useState(false);
@@ -167,14 +167,19 @@ export default function DocumentViewerModal({ doc, isOpen, onClose }) {
           >
             <Lock className="w-3.5 h-3.5" /> AES-256 Envelope Metadata
           </button>
-          <button
-            onClick={() => setActiveTab('pki')}
-            className={`px-3 py-1.5 rounded-lg flex items-center gap-1.5 transition-all ${
-              activeTab === 'pki' ? 'bg-blue-600 text-white' : 'text-slate-400 hover:bg-slate-800'
-            }`}
-          >
-            <Key className="w-3.5 h-3.5 text-indigo-400" /> KMS Signature & Manifest
-          </button>
+
+          {/* Signature Verification & PKI Stamping: BOSS ROLE PRIVILEGE ONLY */}
+          {isBoss && (
+            <button
+              onClick={() => setActiveTab('pki')}
+              className={`px-3 py-1.5 rounded-lg flex items-center gap-1.5 transition-all ${
+                activeTab === 'pki' ? 'bg-rose-600 text-white' : 'text-rose-400 hover:bg-slate-800 border border-rose-500/30'
+              }`}
+            >
+              <Key className="w-3.5 h-3.5 text-rose-300" /> KMS Signature & Manifest (Boss Only)
+            </button>
+          )}
+
           <button
             onClick={() => setActiveTab('custody')}
             className={`px-3 py-1.5 rounded-lg flex items-center gap-1.5 transition-all ${

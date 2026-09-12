@@ -5,7 +5,7 @@ import { useAuth } from '../context/AuthContext';
 import { Database, FileText, Bell, ShieldCheck, ArrowRight, Clock, Lock, AlertTriangle, Plus, ChevronRight } from 'lucide-react';
 
 export default function DashboardPage({ navigateTo: propNavigateTo }) {
-  const { user } = useAuth();
+  const { user, isBoss } = useAuth();
   const navigate = useNavigate();
   const [cases, setCases] = useState([]);
   const [documents, setDocuments] = useState([]);
@@ -38,14 +38,19 @@ export default function DashboardPage({ navigateTo: propNavigateTo }) {
   return (
     <div className="space-y-6">
       {/* Welcome Banner */}
-      <div className="white-card p-6 border border-slate-200 bg-gradient-to-r from-blue-50/50 via-white to-white flex flex-wrap items-center justify-between gap-4">
+      <div className="white-card p-6 border border-slate-200 bg-gradient-to-r from-blue-50/40 via-white to-white flex flex-wrap items-center justify-between gap-4">
         <div>
           <div className="flex items-center gap-2">
             <h2 className="text-xl font-bold text-slate-900 font-mono">Welcome back, {user ? user.name : 'Officer'}</h2>
-            <span className="badge badge-info font-mono text-xs">{user ? user.roleTitle : 'Investigator'}</span>
+            <span className="badge badge-info font-mono text-xs">
+              {user ? user.roleTitle : 'Investigator'}
+            </span>
           </div>
           <p className="text-xs text-slate-500 mt-1">
             Department: <strong className="text-blue-700">{user ? user.departmentName : 'Special Crime Branch'}</strong> • Security Clearance Level {user ? user.clearanceLevel : 1}
+            <span className="ml-2 font-mono text-[10px] text-blue-700 bg-blue-50 px-1.5 py-0.5 rounded border border-blue-200">
+              {isBoss ? 'Executive Boss Portal (L4)' : 'Field Officer Portal (L3/L2)'}
+            </span>
           </p>
         </div>
 
@@ -66,7 +71,7 @@ export default function DashboardPage({ navigateTo: propNavigateTo }) {
           </div>
           <div>
             <div className="text-2xl font-bold text-slate-900 font-mono">{cases.length || 3}</div>
-            <div className="text-xs text-slate-500 font-medium">Active Cases</div>
+            <div className="text-xs text-slate-500 font-medium">Assigned Cases</div>
           </div>
         </div>
 
@@ -80,23 +85,29 @@ export default function DashboardPage({ navigateTo: propNavigateTo }) {
           </div>
         </div>
 
-        <div onClick={() => handleNavigate('/alerts')} className="white-card p-5 border border-slate-200 white-card-hover cursor-pointer flex items-center gap-4">
+        <div
+          onClick={() => isBoss ? handleNavigate('/alerts') : handleNavigate('/cases')}
+          className={`white-card p-5 border border-slate-200 flex items-center gap-4 ${isBoss ? 'white-card-hover cursor-pointer' : 'cursor-default'}`}
+        >
           <div className="w-12 h-12 rounded-xl bg-amber-50 border border-amber-200 flex items-center justify-center text-amber-600">
             <Bell className="w-6 h-6" />
           </div>
           <div>
-            <div className="text-2xl font-bold text-slate-900 font-mono">3</div>
-            <div className="text-xs text-slate-500 font-medium">Active Alerts</div>
+            <div className="text-2xl font-bold text-slate-900 font-mono">{isBoss ? '3' : '0'}</div>
+            <div className="text-xs text-slate-500 font-medium">{isBoss ? 'Active Alerts' : 'System Alerts (Boss Only)'}</div>
           </div>
         </div>
 
-        <div onClick={() => handleNavigate('/integrity')} className="white-card p-5 border border-slate-200 white-card-hover cursor-pointer flex items-center gap-4">
+        <div
+          onClick={() => isBoss ? handleNavigate('/integrity') : handleNavigate('/cases')}
+          className={`white-card p-5 border border-slate-200 flex items-center gap-4 ${isBoss ? 'white-card-hover cursor-pointer' : 'cursor-default'}`}
+        >
           <div className="w-12 h-12 rounded-xl bg-indigo-50 border border-indigo-200 flex items-center justify-center text-indigo-600">
             <ShieldCheck className="w-6 h-6" />
           </div>
           <div>
             <div className="text-xl font-bold text-emerald-700 font-mono">100% OK</div>
-            <div className="text-xs text-slate-500 font-medium">System Integrity</div>
+            <div className="text-xs text-slate-500 font-medium">{isBoss ? 'Integrity Scanner' : 'SHA-256 Vault Status'}</div>
           </div>
         </div>
       </div>

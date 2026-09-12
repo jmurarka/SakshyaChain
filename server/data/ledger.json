@@ -2717,5 +2717,217 @@
     "previousBlockHash": "34b305fe7bce88b6ff68c07cd93087d73d400bf423292fe326623d6496b9e34d",
     "blockHash": "4599260a8796414882c3e9cd20f0e22eb1471dd61127b57a29f93da7c4da7315",
     "gitCommitHash": "be9e04c40f09512246b78b238dcae1200baa4639"
+  },
+  {
+    "blockHeight": 162,
+    "timestamp": "2026-09-12T18:11:17.819Z",
+    "action": "MFA_OTP_GENERATED",
+    "actorId": "USR-AUD-505",
+    "actorName": "Anil Gupta",
+    "caseId": "AUTH-MFA",
+    "docId": "MFA-SESSION",
+    "docHash": "286127dcf6f05f3bd3fe766bb2e4589b8ceb0ccf34b72a90937c611df9ea021c",
+    "details": {
+      "ttlSeconds": 120
+    },
+    "previousBlockHash": "4599260a8796414882c3e9cd20f0e22eb1471dd61127b57a29f93da7c4da7315",
+    "blockHash": "0e2d187b22fc907e943ee5bc2475fc5ee6242eae9f3f6b696c7a911967344cde",
+    "gitCommitHash": "fd7f23dfbe1b9d1c640b99d095af440bdd2e5b2f"
+  },
+  {
+    "blockHeight": 163,
+    "timestamp": "2026-09-12T18:11:19.599Z",
+    "action": "MFA_OTP_VERIFIED",
+    "actorId": "USR-AUD-505",
+    "actorName": "Anil Gupta",
+    "caseId": "AUTH-MFA",
+    "docId": "MFA-SUCCESS",
+    "docHash": "VERIFIED",
+    "details": {
+      "authStatus": "MFA_SUCCESS"
+    },
+    "previousBlockHash": "0e2d187b22fc907e943ee5bc2475fc5ee6242eae9f3f6b696c7a911967344cde",
+    "blockHash": "1dc0874b796ad21c173745681acce4b601f6426b5c964f41eae1155a353db2ff",
+    "gitCommitHash": "2d288e91260725171468d93b462e6afc2b614de1"
+  },
+  {
+    "blockHeight": 164,
+    "timestamp": "2026-09-12T18:21:50.912Z",
+    "action": "EMERGENCY_ACCESS_REQUESTED",
+    "actorId": "USR-AUD-505",
+    "actorName": "Anil Gupta",
+    "caseId": "CASE-2026-8891",
+    "docId": "BREAK-GLASS",
+    "docHash": "EMERGENCY_REQ",
+    "details": {
+      "requestId": "BG-REQ-10901",
+      "reason": "dcasdsd"
+    },
+    "previousBlockHash": "1dc0874b796ad21c173745681acce4b601f6426b5c964f41eae1155a353db2ff",
+    "blockHash": "da0a3ce7c61e39251aefe6a1c8b69f16344c3181bde1dceaa250bdb8974b2dd4",
+    "gitCommitHash": "1b9a64535568731045e694ca47bcca0883dff39c"
+  },
+  {
+    "blockHeight": 165,
+    "timestamp": "2026-09-12T18:21:54.812Z",
+    "action": "EMERGENCY_ACCESS_GRANTED",
+    "actorId": "USR-AUD-505",
+    "actorName": "Anil Gupta",
+    "caseId": "CASE-2026-8891",
+    "docId": "BREAK-GLASS",
+    "docHash": "GRANT_ACTIVE",
+    "details": {
+      "requestId": "BG-REQ-10901",
+      "approvedBy": "Anil Gupta",
+      "durationMinutes": 30,
+      "expiresAt": "2026-09-12T18:51:54.809Z"
+    },
+    "previousBlockHash": "da0a3ce7c61e39251aefe6a1c8b69f16344c3181bde1dceaa250bdb8974b2dd4",
+    "blockHash": "bc3535cfdb9840eb76b470e360ab7323b9e2f41f2d9de906f530f93da6664d6a",
+    "gitCommitHash": "91b0504c471ec763a7f6f5ab43c36b15bf36cf67"
+  },
+  {
+    "blockHeight": 166,
+    "timestamp": "2026-09-12T18:27:35.599Z",
+    "action": "MFA_OTP_GENERATED",
+    "actorId": "USR-PRO-303",
+    "actorName": "Advocate Rajesh Verma",
+    "caseId": "AUTH-MFA",
+    "docId": "MFA-SESSION",
+    "docHash": "edef861dbb55b56bfbf82ef5d0f6265587c36eb91acc93588c76bb35b0aa5761",
+    "details": {
+      "ttlSeconds": 120
+    },
+    "previousBlockHash": "bc3535cfdb9840eb76b470e360ab7323b9e2f41f2d9de906f530f93da6664d6a",
+    "blockHash": "54c8ba6f6010fa2b14e4f95f1ead073d237159eae161398354431961d20cff3e",
+    "gitCommitHash": "dc6327488895e2e2bfe4d678cf65a316e2d4d4da"
+  },
+  {
+    "blockHeight": 167,
+    "timestamp": "2026-09-12T18:28:26.915Z",
+    "action": "MFA_OTP_VERIFIED",
+    "actorId": "USR-PRO-303",
+    "actorName": "Advocate Rajesh Verma",
+    "caseId": "AUTH-MFA",
+    "docId": "MFA-SUCCESS",
+    "docHash": "VERIFIED",
+    "details": {
+      "authStatus": "MFA_SUCCESS"
+    },
+    "previousBlockHash": "54c8ba6f6010fa2b14e4f95f1ead073d237159eae161398354431961d20cff3e",
+    "blockHash": "e06e770326a01c924aae5dfec51d18f8d8187f2b8e56045154022b916057891e",
+    "gitCommitHash": "e2bbe3930590160afac598b029beea4e298cd0c5"
+  },
+  {
+    "blockHeight": 168,
+    "timestamp": "2026-09-12T18:29:25.485Z",
+    "action": "SYSTEM_AUDIT_EXECUTED",
+    "actorId": "USR-JUD-404",
+    "actorName": "Justice P. K. Mukherjee",
+    "caseId": "SYSTEM",
+    "docId": "SYSTEM",
+    "docHash": "AUDIT_CHECK",
+    "details": {
+      "auditStatus": "VERIFIED_OK"
+    },
+    "previousBlockHash": "e06e770326a01c924aae5dfec51d18f8d8187f2b8e56045154022b916057891e",
+    "blockHash": "33c6c5382f2859347bbcf0e09499ef940c2902d9509a607cccd04b14e2967600",
+    "gitCommitHash": "18722a3a819f075e6bd94ddab915e4cb706e48a6"
+  },
+  {
+    "blockHeight": 169,
+    "timestamp": "2026-09-12T18:29:25.921Z",
+    "action": "SYSTEM_AUDIT_EXECUTED",
+    "actorId": "USR-JUD-404",
+    "actorName": "Justice P. K. Mukherjee",
+    "caseId": "SYSTEM",
+    "docId": "SYSTEM",
+    "docHash": "AUDIT_CHECK",
+    "details": {
+      "auditStatus": "VERIFIED_OK"
+    },
+    "previousBlockHash": "33c6c5382f2859347bbcf0e09499ef940c2902d9509a607cccd04b14e2967600",
+    "blockHash": "24c0e2a50b3dd3ea8a0679dc2a5f439ed7bd57db01d615a9ea45d61baa8a97e2",
+    "gitCommitHash": "ca562335fbdcb648ede780da5fc3c2f010446cd7"
+  },
+  {
+    "blockHeight": 170,
+    "timestamp": "2026-09-12T18:29:26.823Z",
+    "action": "SYSTEM_AUDIT_EXECUTED",
+    "actorId": "USR-JUD-404",
+    "actorName": "Justice P. K. Mukherjee",
+    "caseId": "SYSTEM",
+    "docId": "SYSTEM",
+    "docHash": "AUDIT_CHECK",
+    "details": {
+      "auditStatus": "VERIFIED_OK"
+    },
+    "previousBlockHash": "24c0e2a50b3dd3ea8a0679dc2a5f439ed7bd57db01d615a9ea45d61baa8a97e2",
+    "blockHash": "ed7655de068c7271c69a69b1cc4f00b808c82d4cda727b1012d73c87f9b06451",
+    "gitCommitHash": "f5df6dccff28585c027b2c064643d9de18a0437e"
+  },
+  {
+    "blockHeight": 171,
+    "timestamp": "2026-09-12T18:29:27.279Z",
+    "action": "SYSTEM_AUDIT_EXECUTED",
+    "actorId": "USR-JUD-404",
+    "actorName": "Justice P. K. Mukherjee",
+    "caseId": "SYSTEM",
+    "docId": "SYSTEM",
+    "docHash": "AUDIT_CHECK",
+    "details": {
+      "auditStatus": "VERIFIED_OK"
+    },
+    "previousBlockHash": "ed7655de068c7271c69a69b1cc4f00b808c82d4cda727b1012d73c87f9b06451",
+    "blockHash": "a39acfea2f8b86542e171174b885bf18b14f639b8df0cfdba035ad088c8dfb79",
+    "gitCommitHash": "c1d39ba41992ad6ddcbf82eb5ee4314256e74379"
+  },
+  {
+    "blockHeight": 172,
+    "timestamp": "2026-09-12T18:31:18.950Z",
+    "action": "SYSTEM_AUDIT_EXECUTED",
+    "actorId": "USR-JUD-404",
+    "actorName": "Justice P. K. Mukherjee",
+    "caseId": "SYSTEM",
+    "docId": "SYSTEM",
+    "docHash": "AUDIT_CHECK",
+    "details": {
+      "auditStatus": "VERIFIED_OK"
+    },
+    "previousBlockHash": "a39acfea2f8b86542e171174b885bf18b14f639b8df0cfdba035ad088c8dfb79",
+    "blockHash": "1eb2d7803e3b4f26788358688aef21b398dc0a00192d40dde347732191bc29ad",
+    "gitCommitHash": "17ff26d4b30acffcc3ec316b2884317b47d12e5d"
+  },
+  {
+    "blockHeight": 173,
+    "timestamp": "2026-09-12T18:31:19.451Z",
+    "action": "SYSTEM_AUDIT_EXECUTED",
+    "actorId": "USR-JUD-404",
+    "actorName": "Justice P. K. Mukherjee",
+    "caseId": "SYSTEM",
+    "docId": "SYSTEM",
+    "docHash": "AUDIT_CHECK",
+    "details": {
+      "auditStatus": "VERIFIED_OK"
+    },
+    "previousBlockHash": "1eb2d7803e3b4f26788358688aef21b398dc0a00192d40dde347732191bc29ad",
+    "blockHash": "d07cf1bf14a5801a7af3116aa27fbef1b3bdad7d969f5ff38192067e3f293e8a",
+    "gitCommitHash": "0f3131eca56bb0f8a6fa598c9a926c3ff088cb1a"
+  },
+  {
+    "blockHeight": 174,
+    "timestamp": "2026-09-12T18:31:29.918Z",
+    "action": "SYSTEM_AUDIT_EXECUTED",
+    "actorId": "USR-JUD-404",
+    "actorName": "Justice P. K. Mukherjee",
+    "caseId": "SYSTEM",
+    "docId": "SYSTEM",
+    "docHash": "AUDIT_CHECK",
+    "details": {
+      "auditStatus": "VERIFIED_OK"
+    },
+    "previousBlockHash": "d07cf1bf14a5801a7af3116aa27fbef1b3bdad7d969f5ff38192067e3f293e8a",
+    "blockHash": "9e3bbc7d2f96d3926b5ae85af6d0ce8d893b0d64de6d632833fff66283640904",
+    "gitCommitHash": "2a0d9b38b307a21ca869cbd63f6737a75c193f01"
   }
 ]
