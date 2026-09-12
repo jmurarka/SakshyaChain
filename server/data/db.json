@@ -854,7 +854,7 @@
       "department": "LEO",
       "dateCreated": "2026-09-12T14:51:28.425Z",
       "version": "1.0",
-      "status": "VERIFIED",
+      "status": "SIGNED_PKI",
       "extractedText": "[PDF Attachment: SIH_2026_All_226_Problem_Statements_Master_Catalogue.pdf]",
       "payloadHash": "8f7d11b14418677178c4536aa8356701a3922defb48b263b9737cf50d93e3b6a",
       "fileSize": 74,
@@ -867,7 +867,31 @@
         "payloadIv": "0a37a81fd473d61a17de108b",
         "payloadAuthTag": "d37b6b5595c515a9c991398dda8f0576"
       },
-      "signature": null,
+      "signature": {
+        "signedBy": "Inspector Vikram Sharma",
+        "signerRole": "Chief Investigating Officer",
+        "signerDepartment": "Special Crime Branch - Central Police",
+        "signatureBase64": "dLuwWnGBFE9zIUJdfB7sNpem9gfg6LICuVC1PMRo1DlX1UDxlOAK2q+KBpv6+AKJn7wdGeO1zdpKrd2B+R+W/R6yGMkIeBVsMhbvNnj87k54PhP7xTepcy72bLG0i6N1aZFjFiRrOwZhbTRrkxn/EIRTKE3zUU5/w71FRtBUpO/VLK2fyRwfpxaRU+egsYGPkz77qJgson2SKk4ilrmGrsM1IKRofD+4op3giK3VHjX7GOtC3tk9NeWE5ZqOeE685qahI/2mG56QRWd76RnrHJnbU28liCDuXOrxIuyuQ0N2/oM/yP3LT/kt8GsilblcpysDC8/uUJu37tiU3bk85Q==",
+        "dateSigned": "2026-09-12T17:23:45.066Z",
+        "manifestId": "MANIFEST-2a324c80bfab94bf",
+        "signatureId": "SIG-16f84f09790b689a",
+        "signatureProvider": "local-dev-v1",
+        "manifest": {
+          "manifestId": "MANIFEST-2a324c80bfab94bf",
+          "documentId": "DOC-2026-8891-8418",
+          "versionId": "v1.0.0",
+          "sha256": "8f7d11b14418677178c4536aa8356701a3922defb48b263b9737cf50d93e3b6a",
+          "signerId": "USR-POL-101",
+          "metadata": {
+            "docTitle": "dflkkljxnkjnbgjdfhnbgfd",
+            "caseId": "CASE-2026-8891",
+            "signerName": "Inspector Vikram Sharma",
+            "signerRole": "Chief Investigating Officer",
+            "signerDepartment": "Special Crime Branch - Central Police"
+          },
+          "timestamp": "2026-09-12T17:23:45.006Z"
+        }
+      },
       "aiEntities": [
         {
           "type": "Accused Suspect",
@@ -909,6 +933,17 @@
           "actorName": "Inspector Vikram Sharma",
           "department": "LEO",
           "timestamp": "2026-09-12T14:51:28.425Z"
+        },
+        {
+          "action": "PKI_DIGITAL_SIGNATURE_APPLIED",
+          "actorName": "Inspector Vikram Sharma",
+          "department": "Special Crime Branch - Central Police",
+          "timestamp": "2026-09-12T17:23:45.066Z",
+          "details": {
+            "manifestId": "MANIFEST-2a324c80bfab94bf",
+            "signatureId": "SIG-16f84f09790b689a",
+            "provider": "local-dev-v1"
+          }
         }
       ]
     },
@@ -980,6 +1015,183 @@
           "actorName": "Inspector Vikram Sharma",
           "department": "LEO",
           "timestamp": "2026-09-12T14:52:55.775Z"
+        }
+      ]
+    },
+    {
+      "id": "DOC-2026-8891-0096",
+      "title": "klm km",
+      "caseId": "CASE-2026-8891",
+      "caseTitle": "Case CASE-2026-8891",
+      "category": "FIR",
+      "clearanceLevel": 2,
+      "authorId": "USR-POL-101",
+      "authorName": "Inspector Vikram Sharma",
+      "authorRole": "POLICE_INVESTIGATOR",
+      "department": "LEO",
+      "dateCreated": "2026-09-12T17:18:00.113Z",
+      "version": "1.0",
+      "status": "SIGNED_PKI",
+      "extractedText": "[PDF Attachment: Introduction to Large Language Models (LLMs) (1).pdf]",
+      "payloadHash": "be56c551df3ae930b94c2dd012965dcbceaa3be93e364f14b991c139af8a93cd",
+      "fileSize": 70,
+      "encryptionMetadata": {
+        "algorithm": "AES-256-GCM",
+        "kmsKeyId": "KMS-MASTER-KEY-PROD-2026",
+        "encryptedDEK": "170a7d10024c3202bd15cfac2dd04c537cf9f7dd79cc50fc49740fd90ed9c0fb67f9e4394bc44c59e2d42e526dbce04e971e644c1e22668ec3ce28254b01f722",
+        "dekIv": "dd6d665ac84ef4723e81023b",
+        "dekAuthTag": "a0ea981b0e26273fad24122f5445c941",
+        "payloadIv": "b16ffb0ef74c2f85578c80cd",
+        "payloadAuthTag": "33ca770208f5be220d26c7e1533e1989"
+      },
+      "signature": {
+        "signedBy": "Inspector Vikram Sharma",
+        "signerRole": "Chief Investigating Officer",
+        "signerDepartment": "Special Crime Branch - Central Police",
+        "signatureBase64": "EQ7pbmISAy9DTJ+3KU128WMU/hBWh1fC1GZfygfcfTYhkET392C0rTXoYi05XAarjcgy0WhoJCovErRdsuKZ/qcX8pTWj5njXgLlMcFJqKZYcXZZRFqVkp5BgLkFajyHTHd7p+6sVNfid51IMdvZsfX0wK+9OtdZ2moCz2kUT0BSaxcQ4gT9TlJI3DIIfcN65pZbr7dYKXWHRm8myEe8svlhCF8RnU8OGScSfVL3NF+jCH3uPUbCtJFm5Zzl0UN5RnUXHqDsHY6wRser+fqGRiXRJufgCcPAOp0dJ9FaSI8QsO2+Ah/MtfmO033KikyqSbQl4wCUyNsKeel9m/hgcQ==",
+        "dateSigned": "2026-09-12T17:18:30.077Z",
+        "manifestId": "MANIFEST-1d9c7edcea6ac10e",
+        "signatureId": "SIG-7f30d0c10b46744e",
+        "signatureProvider": "local-dev-v1",
+        "manifest": {
+          "manifestId": "MANIFEST-1d9c7edcea6ac10e",
+          "documentId": "DOC-2026-8891-0096",
+          "versionId": "v1.0.0",
+          "sha256": "be56c551df3ae930b94c2dd012965dcbceaa3be93e364f14b991c139af8a93cd",
+          "signerId": "USR-POL-101",
+          "metadata": {
+            "docTitle": "klm km",
+            "caseId": "CASE-2026-8891",
+            "signerName": "Inspector Vikram Sharma",
+            "signerRole": "Chief Investigating Officer",
+            "signerDepartment": "Special Crime Branch - Central Police"
+          },
+          "timestamp": "2026-09-12T17:18:30.046Z"
+        }
+      },
+      "aiEntities": [
+        {
+          "type": "Accused Suspect",
+          "name": "Sameer Verma",
+          "id": "ID-SV992"
+        },
+        {
+          "type": "Victim",
+          "name": "Rajesh Kumar",
+          "status": "Deceased"
+        },
+        {
+          "type": "Recovered Weapon",
+          "weapon": "Glock-17 Pistol (9mm)",
+          "serial": "GL-88392"
+        },
+        {
+          "type": "Location",
+          "venue": "Tech Vault Facility, Cyber Park, Block B4"
+        }
+      ],
+      "versionHistory": [
+        {
+          "version": "1.0",
+          "parentVersion": "GENESIS",
+          "parentPayloadHash": "0000000000000000000000000000000000000000000000000000000000000000",
+          "payloadHash": "be56c551df3ae930b94c2dd012965dcbceaa3be93e364f14b991c139af8a93cd",
+          "fileSize": 70,
+          "authorId": "USR-POL-101",
+          "authorName": "Inspector Vikram Sharma",
+          "department": "LEO",
+          "dateCreated": "2026-09-12T17:18:00.114Z",
+          "changeNotes": "Initial document filing (v1.0)"
+        }
+      ],
+      "chainOfCustody": [
+        {
+          "action": "UPLOADED_AND_ENCRYPTED",
+          "actorName": "Inspector Vikram Sharma",
+          "department": "LEO",
+          "timestamp": "2026-09-12T17:18:00.114Z"
+        },
+        {
+          "action": "PKI_DIGITAL_SIGNATURE_APPLIED",
+          "actorName": "Inspector Vikram Sharma",
+          "department": "Special Crime Branch - Central Police",
+          "timestamp": "2026-09-12T17:18:30.077Z",
+          "details": {
+            "manifestId": "MANIFEST-1d9c7edcea6ac10e",
+            "signatureId": "SIG-7f30d0c10b46744e",
+            "provider": "local-dev-v1"
+          }
+        }
+      ]
+    },
+    {
+      "id": "DOC-2026-8891-4413",
+      "title": "dfgdfg",
+      "caseId": "CASE-2026-8891",
+      "caseTitle": "Case CASE-2026-8891",
+      "category": "FIR",
+      "clearanceLevel": 4,
+      "authorId": "USR-JUD-404",
+      "authorName": "Justice P. K. Mukherjee",
+      "authorRole": "JUDICIAL_MAGISTRATE",
+      "department": "JUD",
+      "dateCreated": "2026-09-12T17:22:14.441Z",
+      "version": "1.0",
+      "status": "VERIFIED",
+      "extractedText": "[PDF Attachment: VII-Physics-Lesson Plan 6-Electricity and Magnetism 2 (1).pdf]",
+      "payloadHash": "b6d62835efcb7f1e7e999418839fd762e289b7e96faac58e630f50c6bfd46a6d",
+      "fileSize": 79,
+      "encryptionMetadata": {
+        "algorithm": "AES-256-GCM",
+        "kmsKeyId": "KMS-MASTER-KEY-PROD-2026",
+        "encryptedDEK": "8467a29e56ab158d42b192fc98bf28dc6866a0848936efc6e0c711826a588685438201d539e1e6873925edcbbf14e61b41c5d914f3efd659e001838b33908225",
+        "dekIv": "4dd7396350d8fe3ee0753a2b",
+        "dekAuthTag": "76cd3e7af950c76728c0b49f9114ef68",
+        "payloadIv": "df4386292486f26f4f0fcd0f",
+        "payloadAuthTag": "64b6f83bb3cb1b19ab25dcd2ab52773b"
+      },
+      "signature": null,
+      "aiEntities": [
+        {
+          "type": "Accused Suspect",
+          "name": "Sameer Verma",
+          "id": "ID-SV992"
+        },
+        {
+          "type": "Victim",
+          "name": "Rajesh Kumar",
+          "status": "Deceased"
+        },
+        {
+          "type": "Recovered Weapon",
+          "weapon": "Glock-17 Pistol (9mm)",
+          "serial": "GL-88392"
+        },
+        {
+          "type": "Location",
+          "venue": "Tech Vault Facility, Cyber Park, Block B4"
+        }
+      ],
+      "versionHistory": [
+        {
+          "version": "1.0",
+          "parentVersion": "GENESIS",
+          "parentPayloadHash": "0000000000000000000000000000000000000000000000000000000000000000",
+          "payloadHash": "b6d62835efcb7f1e7e999418839fd762e289b7e96faac58e630f50c6bfd46a6d",
+          "fileSize": 79,
+          "authorId": "USR-JUD-404",
+          "authorName": "Justice P. K. Mukherjee",
+          "department": "JUD",
+          "dateCreated": "2026-09-12T17:22:14.442Z",
+          "changeNotes": "Initial document filing (v1.0)"
+        }
+      ],
+      "chainOfCustody": [
+        {
+          "action": "UPLOADED_AND_ENCRYPTED",
+          "actorName": "Justice P. K. Mukherjee",
+          "department": "JUD",
+          "timestamp": "2026-09-12T17:22:14.442Z"
         }
       ]
     }
@@ -1058,6 +1270,46 @@
       "signature": "BhBlRJE9G8xgvoAD7NEyOAFG++7ARpEyQUxr2WyicLppv9Qclq+FlO9rbqtZNvv9QsmzmnaoA1CnsPj24i3T9HO+WK228oYLXto3ULFFdorOipP0mM+CRknXHcSfEjTAC9BjrbQGDhF8ZWc15lQ6oauLWxtUNpJxzIp0T/mbAkRv/uuzRYSj2Xk3dce3FNXnEj03cNlAKZOMY+KPx/MSPuGPcsnAyv0qxYgDJEiWjP3S/QemttZoZH+IaiR1lwMhSnjFjRVYld2KJ3IRQFHEDiTt4q6kC5UKr55Er0A5GZktelrda3jInHFvo3EKmy2KARisL8yt69I/BC2RtW9W+A==",
       "signatureProvider": "local-dev-v1",
       "signedAt": "2026-09-12T14:48:40.357Z",
+      "status": "ACTIVE"
+    },
+    {
+      "manifestId": "MANIFEST-1d9c7edcea6ac10e",
+      "documentId": "DOC-2026-8891-0096",
+      "versionId": "v1.0.0",
+      "sha256": "be56c551df3ae930b94c2dd012965dcbceaa3be93e364f14b991c139af8a93cd",
+      "signerId": "USR-POL-101",
+      "metadata": {
+        "docTitle": "klm km",
+        "caseId": "CASE-2026-8891",
+        "signerName": "Inspector Vikram Sharma",
+        "signerRole": "Chief Investigating Officer",
+        "signerDepartment": "Special Crime Branch - Central Police"
+      },
+      "timestamp": "2026-09-12T17:18:30.046Z",
+      "signatureId": "SIG-7f30d0c10b46744e",
+      "signature": "EQ7pbmISAy9DTJ+3KU128WMU/hBWh1fC1GZfygfcfTYhkET392C0rTXoYi05XAarjcgy0WhoJCovErRdsuKZ/qcX8pTWj5njXgLlMcFJqKZYcXZZRFqVkp5BgLkFajyHTHd7p+6sVNfid51IMdvZsfX0wK+9OtdZ2moCz2kUT0BSaxcQ4gT9TlJI3DIIfcN65pZbr7dYKXWHRm8myEe8svlhCF8RnU8OGScSfVL3NF+jCH3uPUbCtJFm5Zzl0UN5RnUXHqDsHY6wRser+fqGRiXRJufgCcPAOp0dJ9FaSI8QsO2+Ah/MtfmO033KikyqSbQl4wCUyNsKeel9m/hgcQ==",
+      "signatureProvider": "local-dev-v1",
+      "signedAt": "2026-09-12T17:18:30.077Z",
+      "status": "ACTIVE"
+    },
+    {
+      "manifestId": "MANIFEST-2a324c80bfab94bf",
+      "documentId": "DOC-2026-8891-8418",
+      "versionId": "v1.0.0",
+      "sha256": "8f7d11b14418677178c4536aa8356701a3922defb48b263b9737cf50d93e3b6a",
+      "signerId": "USR-POL-101",
+      "metadata": {
+        "docTitle": "dflkkljxnkjnbgjdfhnbgfd",
+        "caseId": "CASE-2026-8891",
+        "signerName": "Inspector Vikram Sharma",
+        "signerRole": "Chief Investigating Officer",
+        "signerDepartment": "Special Crime Branch - Central Police"
+      },
+      "timestamp": "2026-09-12T17:23:45.006Z",
+      "signatureId": "SIG-16f84f09790b689a",
+      "signature": "dLuwWnGBFE9zIUJdfB7sNpem9gfg6LICuVC1PMRo1DlX1UDxlOAK2q+KBpv6+AKJn7wdGeO1zdpKrd2B+R+W/R6yGMkIeBVsMhbvNnj87k54PhP7xTepcy72bLG0i6N1aZFjFiRrOwZhbTRrkxn/EIRTKE3zUU5/w71FRtBUpO/VLK2fyRwfpxaRU+egsYGPkz77qJgson2SKk4ilrmGrsM1IKRofD+4op3giK3VHjX7GOtC3tk9NeWE5ZqOeE685qahI/2mG56QRWd76RnrHJnbU28liCDuXOrxIuyuQ0N2/oM/yP3LT/kt8GsilblcpysDC8/uUJu37tiU3bk85Q==",
+      "signatureProvider": "local-dev-v1",
+      "signedAt": "2026-09-12T17:23:45.066Z",
       "status": "ACTIVE"
     }
   ],

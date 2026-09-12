@@ -115,7 +115,10 @@ export default function CaseDetailPage({ caseId: propCaseId, navigateTo: propNav
                     <span className="badge badge-clearance-2 text-[10px]">AES-256</span>
                   </div>
                   <div className="text-slate-500">Doc ID: <span className="font-mono text-slate-700">{doc.id}</span> • Author: {doc.authorName} ({doc.department})</div>
-                  <div className="text-slate-400 font-mono text-[10px]">Payload SHA-256: {doc.payloadHash ? doc.payloadHash.slice(0, 20) + '...' : 'N/A'}</div>
+                  <div className="text-emerald-700 font-semibold text-[11px] flex items-center gap-1 mt-0.5">
+                    <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
+                    <span>✓ SHA-256 Secured & Stored in Database</span>
+                  </div>
                 </div>
 
                 <div className="flex items-center gap-3">

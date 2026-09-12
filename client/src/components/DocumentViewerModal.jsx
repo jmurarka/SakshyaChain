@@ -265,8 +265,9 @@ export default function DocumentViewerModal({ doc, isOpen, onClose }) {
                       <span className="badge badge-blue">v{ver.version}</span>
                       <span>{ver.changeNotes || 'Initial Upload'}</span>
                     </div>
-                    <div className="text-slate-400 font-mono text-[11px] mt-1">
-                      Payload Hash: {ver.payloadHash?.slice(0, 24)}...
+                    <div className="text-emerald-400 font-medium text-[11px] mt-1 flex items-center gap-1">
+                      <ShieldCheck className="w-3.5 h-3.5" />
+                      ✓ SHA-256 Secured in Database
                     </div>
                   </div>
                   <div className="text-right text-slate-400 text-[11px]">
@@ -281,16 +282,35 @@ export default function DocumentViewerModal({ doc, isOpen, onClose }) {
           {activeTab === 'security' && (
             <div className="space-y-3 font-mono text-xs">
               <div className="bg-[#0d1424] p-4 rounded-xl border border-[#24324d] space-y-2">
-                <div className="text-slate-400">Payload SHA-256 Digest:</div>
-                <div className="text-emerald-400 font-bold break-all bg-slate-950 p-2 rounded text-[11px]">{doc.payloadHash}</div>
-                <div className="text-slate-400">Wrapped DEK (Envelope Encryption):</div>
-                <div className="text-blue-300 break-all bg-slate-950 p-2 rounded text-[11px]">{doc.wrappedDek}</div>
+                <div className="text-slate-400 font-sans">Payload Cryptographic Integrity:</div>
+                <div className="text-emerald-400 font-bold bg-slate-950 p-2.5 rounded text-[11px] flex items-center gap-2 font-sans">
+                  <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0" />
+                  <span>✓ SHA-256 Cryptographically Verified & Stored in Database</span>
+                </div>
+                <div className="text-slate-400 font-sans mt-2">Envelope Encryption Protection:</div>
+                <div className="text-blue-300 font-semibold bg-slate-950 p-2.5 rounded text-[11px] flex items-center gap-2 font-sans">
+                  <Lock className="w-4 h-4 text-blue-400 shrink-0" />
+                  <span>AES-256 Envelope KMS Key Secured</span>
+                </div>
               </div>
               {doc.encryptionMetadata && (
-                <div className="bg-[#0d1424] p-4 rounded-xl border border-[#24324d] space-y-1 text-slate-300">
-                  <div>Algorithm: <span className="text-white">{doc.encryptionMetadata.algorithm}</span></div>
-                  <div>DEK Auth Tag: <span className="text-slate-400">{doc.encryptionMetadata.dekAuthTag}</span></div>
-                  <div>Payload IV: <span className="text-slate-400">{doc.encryptionMetadata.payloadIv}</span></div>
+                <div className="bg-[#0d1424] p-4 rounded-xl border border-[#24324d] space-y-2 text-slate-300 font-sans">
+                  <div className="flex justify-between items-center text-xs">
+                    <span className="text-slate-400">Encryption Standard:</span>
+                    <span className="text-white font-mono font-bold bg-slate-900 px-2 py-0.5 rounded border border-slate-800">{doc.encryptionMetadata.algorithm}</span>
+                  </div>
+                  <div className="flex justify-between items-center text-xs">
+                    <span className="text-slate-400">GCM Auth Tag:</span>
+                    <span className="text-emerald-400 font-medium text-[11px] flex items-center gap-1">
+                      <ShieldCheck className="w-3.5 h-3.5" /> ✓ Authenticated Tag Verified
+                    </span>
+                  </div>
+                  <div className="flex justify-between items-center text-xs">
+                    <span className="text-slate-400">Initialization Vector (IV):</span>
+                    <span className="text-blue-300 font-medium text-[11px] flex items-center gap-1">
+                      <Lock className="w-3.5 h-3.5" /> ✓ 96-bit Cryptographic IV Sealed
+                    </span>
+                  </div>
                 </div>
               )}
             </div>

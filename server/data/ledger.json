@@ -2577,5 +2577,145 @@
     "previousBlockHash": "83e20e1b87b8d2e00326d676716074b486c45073a17bf012cfdb38675e179acd",
     "blockHash": "ec95f77c948fe040a01d99ac852790eba5eaf6f30f2c8fbbad773bb9b05285b1",
     "gitCommitHash": "6d0305202fe7605af6cdcd77a3151362edbfacd4"
+  },
+  {
+    "blockHeight": 154,
+    "timestamp": "2026-09-12T15:24:28.871Z",
+    "action": "DOCUMENT_DOWNLOADED",
+    "actorId": "USR-POL-101",
+    "actorName": "Inspector Vikram Sharma",
+    "caseId": "CASE-2026-8891",
+    "docId": "DOC-2026-8891-8418",
+    "docHash": "8f7d11b14418677178c4536aa8356701a3922defb48b263b9737cf50d93e3b6a",
+    "details": {
+      "downloaderRole": "POLICE_INVESTIGATOR"
+    },
+    "previousBlockHash": "ec95f77c948fe040a01d99ac852790eba5eaf6f30f2c8fbbad773bb9b05285b1",
+    "blockHash": "fb1e30052c92aeeb67464516c6b11679cfea8b5bc91b83427da2b7bd6a84cc6a",
+    "gitCommitHash": "3fd9f03d4171b70fe6d121d57b02db3a7827478c"
+  },
+  {
+    "blockHeight": 155,
+    "timestamp": "2026-09-12T17:14:44.538Z",
+    "action": "DOCUMENT_DOWNLOADED",
+    "actorId": "USR-POL-101",
+    "actorName": "Inspector Vikram Sharma",
+    "caseId": "CASE-2026-8891",
+    "docId": "DOC-2026-8891-8418",
+    "docHash": "8f7d11b14418677178c4536aa8356701a3922defb48b263b9737cf50d93e3b6a",
+    "details": {
+      "downloaderRole": "POLICE_INVESTIGATOR"
+    },
+    "previousBlockHash": "fb1e30052c92aeeb67464516c6b11679cfea8b5bc91b83427da2b7bd6a84cc6a",
+    "blockHash": "b7a9313ced4d1f4899a7ebbf479c2787d570e4252d99ee9ab87a0fca871ed5e3",
+    "gitCommitHash": "663235d7c3875a66f88b20f21bdfc5fdec8c2191"
+  },
+  {
+    "blockHeight": 156,
+    "timestamp": "2026-09-12T17:14:45.682Z",
+    "action": "DOCUMENT_DOWNLOADED",
+    "actorId": "USR-POL-101",
+    "actorName": "Inspector Vikram Sharma",
+    "caseId": "CASE-2026-8891",
+    "docId": "DOC-2026-8891-8418",
+    "docHash": "8f7d11b14418677178c4536aa8356701a3922defb48b263b9737cf50d93e3b6a",
+    "details": {
+      "downloaderRole": "POLICE_INVESTIGATOR"
+    },
+    "previousBlockHash": "b7a9313ced4d1f4899a7ebbf479c2787d570e4252d99ee9ab87a0fca871ed5e3",
+    "blockHash": "8a5b3e864b6aa892e0582e24083139b755ac23926bbf6fdb1829c4913beadc54",
+    "gitCommitHash": "be2cbc2baa78645ec6b3eb28d428e8be01164289"
+  },
+  {
+    "blockHeight": 157,
+    "timestamp": "2026-09-12T17:18:00.133Z",
+    "action": "DOCUMENT_UPLOADED",
+    "actorId": "USR-POL-101",
+    "actorName": "Inspector Vikram Sharma",
+    "caseId": "CASE-2026-8891",
+    "docId": "DOC-2026-8891-0096",
+    "docHash": "be56c551df3ae930b94c2dd012965dcbceaa3be93e364f14b991c139af8a93cd",
+    "details": {
+      "title": "klm km",
+      "category": "FIR",
+      "clearanceLevel": 2,
+      "encryptionAlgorithm": "AES-256-GCM"
+    },
+    "previousBlockHash": "8a5b3e864b6aa892e0582e24083139b755ac23926bbf6fdb1829c4913beadc54",
+    "blockHash": "4d47a6fcdf61e83fa1430cfdc928854ec143fcad4d39ed59fa5994e8c1790745",
+    "gitCommitHash": "50d1aa73b0c4578c392f9036a23624beb20b935b"
+  },
+  {
+    "blockHeight": 158,
+    "timestamp": "2026-09-12T17:18:30.116Z",
+    "action": "PKI_SIGNATURE_APPLIED",
+    "actorId": "USR-POL-101",
+    "actorName": "Inspector Vikram Sharma",
+    "caseId": "CASE-2026-8891",
+    "docId": "DOC-2026-8891-0096",
+    "docHash": "be56c551df3ae930b94c2dd012965dcbceaa3be93e364f14b991c139af8a93cd",
+    "details": {
+      "manifestId": "MANIFEST-1d9c7edcea6ac10e",
+      "signatureId": "SIG-7f30d0c10b46744e",
+      "provider": "local-dev-v1",
+      "versionId": "v1.0.0"
+    },
+    "previousBlockHash": "4d47a6fcdf61e83fa1430cfdc928854ec143fcad4d39ed59fa5994e8c1790745",
+    "blockHash": "31a5fa4fc8dfdff18cc4556a86a59836e58bd7402fc41b904b687b4296da9837",
+    "gitCommitHash": "a92159c05853c1e73b9ba3a27f5116e3192d62d4"
+  },
+  {
+    "blockHeight": 159,
+    "timestamp": "2026-09-12T17:18:41.364Z",
+    "action": "DOCUMENT_DOWNLOADED",
+    "actorId": "USR-POL-101",
+    "actorName": "Inspector Vikram Sharma",
+    "caseId": "CASE-2026-8891",
+    "docId": "DOC-2026-8891-0096",
+    "docHash": "be56c551df3ae930b94c2dd012965dcbceaa3be93e364f14b991c139af8a93cd",
+    "details": {
+      "downloaderRole": "POLICE_INVESTIGATOR"
+    },
+    "previousBlockHash": "31a5fa4fc8dfdff18cc4556a86a59836e58bd7402fc41b904b687b4296da9837",
+    "blockHash": "7d54897c86f84898c5fdf5f331856a49b6d7bc47e9958572c7fbfa0ad7c70c8a",
+    "gitCommitHash": "77418d37b948553d26b5e1d9a2d99ab59f1619e6"
+  },
+  {
+    "blockHeight": 160,
+    "timestamp": "2026-09-12T17:22:14.451Z",
+    "action": "DOCUMENT_UPLOADED",
+    "actorId": "USR-JUD-404",
+    "actorName": "Justice P. K. Mukherjee",
+    "caseId": "CASE-2026-8891",
+    "docId": "DOC-2026-8891-4413",
+    "docHash": "b6d62835efcb7f1e7e999418839fd762e289b7e96faac58e630f50c6bfd46a6d",
+    "details": {
+      "title": "dfgdfg",
+      "category": "FIR",
+      "clearanceLevel": 4,
+      "encryptionAlgorithm": "AES-256-GCM"
+    },
+    "previousBlockHash": "7d54897c86f84898c5fdf5f331856a49b6d7bc47e9958572c7fbfa0ad7c70c8a",
+    "blockHash": "34b305fe7bce88b6ff68c07cd93087d73d400bf423292fe326623d6496b9e34d",
+    "gitCommitHash": "cdc6c4d16a5157e6ebf20e5b406af750bd4b2325"
+  },
+  {
+    "blockHeight": 161,
+    "timestamp": "2026-09-12T17:23:45.091Z",
+    "action": "PKI_SIGNATURE_APPLIED",
+    "actorId": "USR-POL-101",
+    "actorName": "Inspector Vikram Sharma",
+    "caseId": "CASE-2026-8891",
+    "docId": "DOC-2026-8891-8418",
+    "docHash": "8f7d11b14418677178c4536aa8356701a3922defb48b263b9737cf50d93e3b6a",
+    "details": {
+      "manifestId": "MANIFEST-2a324c80bfab94bf",
+      "signatureId": "SIG-16f84f09790b689a",
+      "provider": "local-dev-v1",
+      "versionId": "v1.0.0"
+    },
+    "previousBlockHash": "34b305fe7bce88b6ff68c07cd93087d73d400bf423292fe326623d6496b9e34d",
+    "blockHash": "4599260a8796414882c3e9cd20f0e22eb1471dd61127b57a29f93da7c4da7315",
+    "gitCommitHash": "be9e04c40f09512246b78b238dcae1200baa4639"
   }
 ]

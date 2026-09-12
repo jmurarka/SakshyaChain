@@ -19,5 +19,5 @@ export const CONFIG = {
   DB_FILE: path.join(__dirname, '../data/db.json'),
   LEDGER_FILE: path.join(__dirname, '../data/ledger.json'),
   SUPABASE_URL: process.env.SUPABASE_URL || 'https://gksffenmjzibtiqcuhxp.supabase.co',
-  SUPABASE_KEY: process.env.SUPABASE_KEY || process.env.SUPABASE_ANON_KEY || 'sb_publishable_Zmj3nBPCOw232xy'
+  SUPABASE_KEY: process.env.SUPABASE_KEY || process.env.SUPABASE_ANON_KEY || 'sb_publishable_zmj3nBPCOw232xyCqUw0lg_Y19a6ae_'
 };

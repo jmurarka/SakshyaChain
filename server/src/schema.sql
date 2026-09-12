@@ -1,7 +1,15 @@
 -- SakshyaChain Supabase PostgreSQL Database Schema
 
+-- Drop existing tables to clear any mismatched old schema
+DROP TABLE IF EXISTS manifests CASCADE;
+DROP TABLE IF EXISTS revocations CASCADE;
+DROP TABLE IF EXISTS ledger_blocks CASCADE;
+DROP TABLE IF EXISTS documents CASCADE;
+DROP TABLE IF EXISTS cases CASCADE;
+DROP TABLE IF EXISTS users CASCADE;
+
 -- 1. Users Table
-CREATE TABLE IF NOT EXISTS users (
+CREATE TABLE users (
   id VARCHAR(64) PRIMARY KEY,
   name VARCHAR(255) NOT NULL,
   username VARCHAR(255) UNIQUE NOT NULL,
@@ -17,9 +25,10 @@ CREATE TABLE IF NOT EXISTS users (
 );
 
 -- 2. Cases Table
-CREATE TABLE IF NOT EXISTS cases (
+CREATE TABLE cases (
   id VARCHAR(64) PRIMARY KEY,
   title VARCHAR(255) NOT NULL,
+  
   fir_number VARCHAR(100),
   status VARCHAR(100) NOT NULL DEFAULT 'UNDER_TRIAL',
   lead_investigator VARCHAR(255),
@@ -33,7 +42,7 @@ CREATE TABLE IF NOT EXISTS cases (
 );
 
 -- 3. Documents Table
-CREATE TABLE IF NOT EXISTS documents (
+CREATE TABLE documents (
   id VARCHAR(64) PRIMARY KEY,
   title VARCHAR(255) NOT NULL,
   case_id VARCHAR(64) NOT NULL REFERENCES cases(id) ON DELETE CASCADE,
@@ -61,7 +70,7 @@ CREATE TABLE IF NOT EXISTS documents (
 );
 
 -- 4. Manifests (PKI Signatures) Table
-CREATE TABLE IF NOT EXISTS manifests (
+CREATE TABLE manifests (
   manifest_id VARCHAR(64) PRIMARY KEY,
   document_id VARCHAR(64) NOT NULL REFERENCES documents(id) ON DELETE CASCADE,
   version_id VARCHAR(20) NOT NULL,
@@ -76,7 +85,7 @@ CREATE TABLE IF NOT EXISTS manifests (
 );
 
 -- 5. Revocations Table
-CREATE TABLE IF NOT EXISTS revocations (
+CREATE TABLE revocations (
   signature_id VARCHAR(64) PRIMARY KEY,
   reason TEXT NOT NULL,
   revoked_by VARCHAR(255) NOT NULL,
@@ -84,7 +93,7 @@ CREATE TABLE IF NOT EXISTS revocations (
 );
 
 -- 6. Audit Ledger Blocks Table
-CREATE TABLE IF NOT EXISTS ledger_blocks (
+CREATE TABLE ledger_blocks (
   block_index INT PRIMARY KEY,
   action VARCHAR(100) NOT NULL,
   actor_id VARCHAR(64) NOT NULL,
@@ -98,3 +107,12 @@ CREATE TABLE IF NOT EXISTS ledger_blocks (
   nonce BIGINT DEFAULT 0,
   details JSONB
 );
+
+-- 7. Disable Row Level Security (RLS) for seamless API backend write access
+ALTER TABLE users DISABLE ROW LEVEL SECURITY;
+ALTER TABLE cases DISABLE ROW LEVEL SECURITY;
+ALTER TABLE documents DISABLE ROW LEVEL SECURITY;
+ALTER TABLE manifests DISABLE ROW LEVEL SECURITY;
+ALTER TABLE revocations DISABLE ROW LEVEL SECURITY;
+ALTER TABLE ledger_blocks DISABLE ROW LEVEL SECURITY;
+

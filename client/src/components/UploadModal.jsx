@@ -23,11 +23,16 @@ export default function UploadModal({ isOpen, onClose, onUploaded }) {
       if (!title) {
         setTitle(file.name.replace(/\.[^/.]+$/, ''));
       }
-      const reader = new FileReader();
-      reader.onload = (event) => {
-        setTextContent(event.target.result || `File payload: ${file.name}`);
-      };
-      reader.readAsText(file);
+      const isText = file.type.startsWith('text/') || /\.(txt|json|md|csv)$/i.test(file.name);
+      if (isText) {
+        const reader = new FileReader();
+        reader.onload = (event) => {
+          setTextContent(event.target.result || '');
+        };
+        reader.readAsText(file);
+      } else {
+        setTextContent(`[PDF Attachment: ${file.name}]`);
+      }
     }
   };
 

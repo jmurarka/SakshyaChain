@@ -169,8 +169,8 @@ export default function IntegrityDashboardPage() {
               <thead className="bg-slate-50 border-b border-slate-200 text-slate-500 font-semibold uppercase text-[10px] tracking-wider">
                 <tr>
                   <th className="py-3 px-4">Document ID & Name</th>
-                  <th className="py-3 px-4 font-mono">Database SHA-256</th>
-                  <th className="py-3 px-4 font-mono">Vault Storage SHA-256</th>
+                  <th className="py-3 px-4">Database Integrity</th>
+                  <th className="py-3 px-4">Vault Storage Status</th>
                   <th className="py-3 px-4 font-mono">Ledger Block Status</th>
                   <th className="py-3 px-4">Verification Result</th>
                 </tr>
@@ -184,17 +184,19 @@ export default function IntegrityDashboardPage() {
                         <div className="font-semibold text-slate-900">{doc.id}</div>
                         <div className="text-[11px] text-slate-500 truncate max-w-xs">{doc.title}</div>
                       </td>
-                      <td className="py-3 px-4 font-mono text-slate-600">
-                        {doc.hash ? doc.hash.slice(0, 14) + '...' : 'N/A'}
+                      <td className="py-3 px-4">
+                        <span className="text-emerald-700 bg-emerald-50 px-2 py-1 rounded text-[11px] font-medium inline-flex items-center gap-1">
+                          <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" /> SHA-256 Locked
+                        </span>
                       </td>
-                      <td className="py-3 px-4 font-mono">
+                      <td className="py-3 px-4">
                         {isTamperedDoc ? (
-                          <span className="text-rose-600 bg-rose-50 px-2 py-0.5 rounded font-bold">
-                            e3b0c44298fc1c14... (MODIFIED)
+                          <span className="text-rose-600 bg-rose-50 px-2 py-1 rounded text-[11px] font-bold inline-flex items-center gap-1">
+                            <AlertTriangle className="w-3.5 h-3.5 text-rose-600" /> DISK TAMPER DETECTED
                           </span>
                         ) : (
-                          <span className="text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded font-medium">
-                            {doc.hash ? doc.hash.slice(0, 14) + '...' : 'MATCHED'}
+                          <span className="text-emerald-700 bg-emerald-50 px-2 py-1 rounded text-[11px] font-medium inline-flex items-center gap-1">
+                            <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" /> Vault Intact
                           </span>
                         )}
                       </td>

@@ -5,6 +5,7 @@ import { storageService } from '../services/storageService.js';
 import { ledgerService } from '../services/ledgerService.js';
 import { ragEngine } from '../services/ragEngine.js';
 import { versionService } from '../services/versionService.js';
+import { wrapTextInPDFBuffer } from '../services/cryptoService.js';
 import { authenticateToken } from '../middleware/auth.js';
 
 const router = express.Router();
@@ -227,12 +228,23 @@ router.get('/:id/download', authenticateToken, (req, res) => {
       details: { downloaderRole: req.user.role }
     });
 
-    const contentType = doc.mimeType || (doc.title?.endsWith('.pdf') || doc.originalFileName?.endsWith('.pdf') ? 'application/pdf' : 'application/octet-stream');
-    const filename = doc.originalFileName || `${doc.id}_v${doc.version}_decrypted.pdf`;
+    let filename = doc.originalFileName || `${doc.title ? doc.title.replace(/[^a-zA-Z0-9_-]/g, '_') : doc.id}.pdf`;
+    if (!/\.(pdf|txt|docx|json)$/i.test(filename)) {
+      filename += '.pdf';
+    }
+
+    let finalBuffer = decryptedBuffer;
+    const isPdfBinary = decryptedBuffer.length >= 5 && decryptedBuffer.toString('utf-8', 0, 5) === '%PDF-';
+
+    if (!isPdfBinary && (doc.mimeType === 'application/pdf' || filename.endsWith('.pdf'))) {
+      finalBuffer = wrapTextInPDFBuffer(doc.title || doc.id, decryptedBuffer.toString('utf-8'));
+    }
+
+    const contentType = filename.endsWith('.txt') ? 'text/plain; charset=utf-8' : 'application/pdf';
 
     res.setHeader('Content-Type', contentType);
     res.setHeader('Content-Disposition', `attachment; filename="${filename}"`);
-    res.send(decryptedBuffer);
+    res.send(finalBuffer);
   } catch (err) {
     res.status(500).json({ error: 'DECRYPTION_FAILED', message: err.message });
   }
