@@ -47,7 +47,14 @@ export function AuthProvider({ children }) {
     setLoading(true);
     setError(null);
     try {
-      const res = await api.post('/auth/login', { userId });
+      // Clear any previous token from localStorage so fresh login is not treated as a privilege escalation switch
+      localStorage.removeItem('sakshya_jwt_token');
+      setToken(null);
+      setUser(null);
+
+      const res = await api.post('/auth/login', { userId }, {
+        headers: { Authorization: '' }
+      });
       const { token: jwtToken, user: userObj } = res.data;
 
       localStorage.setItem('sakshya_jwt_token', jwtToken);

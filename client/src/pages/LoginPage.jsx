@@ -1,57 +1,47 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
-import { ShieldCheck, Lock, UserCheck, Key, ArrowRight, EyeOff, Award, Users, CheckCircle2 } from 'lucide-react';
+import { ShieldCheck, UserCheck, Key, ArrowRight, EyeOff, Award, Users, CheckCircle2 } from 'lucide-react';
 
 export default function LoginPage({ navigateTo: propNavigateTo }) {
   const navigate = useNavigate();
   const { allUsers, loginAsUser } = useAuth();
 
-  const [bossUserId, setBossUserId] = useState('USR-JUD-404');
-  const [employeeUserId, setEmployeeUserId] = useState('USR-POL-101');
-  const [authenticating, setAuthenticating] = useState(false);
+  const [authenticatingBoss, setAuthenticatingBoss] = useState(false);
+  const [authenticatingEmployee, setAuthenticatingEmployee] = useState(false);
   const [authError, setAuthError] = useState(null);
 
-  const handleBossLogin = async (e) => {
-    e.preventDefault();
-    setAuthenticating(true);
+  // Default Boss (Level 4 Magistrate) and Employee (Level 3 Officer)
+  const defaultBossId = 'USR-JUD-404';
+  const defaultEmployeeId = 'USR-POL-101';
+
+  const handleBossLogin = async (userId = defaultBossId) => {
+    setAuthenticatingBoss(true);
     setAuthError(null);
     try {
-      await loginAsUser(bossUserId);
+      await loginAsUser(userId);
       if (propNavigateTo) return propNavigateTo('dashboard');
       navigate('/dashboard');
     } catch (err) {
       setAuthError(`Boss Portal Login Failed: ${err.message}`);
     } finally {
-      setAuthenticating(false);
+      setAuthenticatingBoss(false);
     }
   };
 
-  const handleEmployeeLogin = async (e) => {
-    e.preventDefault();
-    setAuthenticating(true);
+  const handleEmployeeLogin = async (userId = defaultEmployeeId) => {
+    setAuthenticatingEmployee(true);
     setAuthError(null);
     try {
-      await loginAsUser(employeeUserId);
+      await loginAsUser(userId);
       if (propNavigateTo) return propNavigateTo('dashboard');
       navigate('/dashboard');
     } catch (err) {
       setAuthError(`Employee Portal Login Failed: ${err.message}`);
     } finally {
-      setAuthenticating(false);
+      setAuthenticatingEmployee(false);
     }
   };
-
-  const bossUsers = allUsers.filter(u => u.clearanceLevel >= 4) || [
-    { id: 'USR-JUD-404', name: 'Justice P. K. Mukherjee', roleTitle: 'Special Sessions Court Magistrate', departmentName: 'Sessions Court' },
-    { id: 'USR-AUD-505', name: 'Anil Gupta', roleTitle: 'Principal Information Security Auditor', departmentName: 'Judicial Oversight Board' }
-  ];
-
-  const employeeUsers = allUsers.filter(u => u.clearanceLevel < 4) || [
-    { id: 'USR-POL-101', name: 'Inspector Vikram Sharma', roleTitle: 'Chief Investigating Officer', departmentName: 'Special Crime Branch' },
-    { id: 'USR-FOR-202', name: 'Dr. Sunita Rao', roleTitle: 'Senior Forensic Analyst', departmentName: 'Forensic Science Laboratory' },
-    { id: 'USR-PRO-303', name: 'Advocate Rajesh Verma', roleTitle: 'Senior Public Prosecutor', departmentName: 'Directorate of Prosecution' }
-  ];
 
   return (
     <div className="min-h-screen bg-[#F8FAFC] text-slate-800 flex flex-col justify-center py-12 px-4 sm:px-6 lg:px-8 font-sans">
@@ -62,7 +52,7 @@ export default function LoginPage({ navigateTo: propNavigateTo }) {
         </div>
         <div>
           <h1 className="text-2xl font-extrabold text-slate-900 tracking-tight font-mono">SākshyaChain Portal Gateway</h1>
-          <p className="text-xs text-slate-500 mt-1">Multi-Tenant Legal & Investigation Digital Vault • Role Gateway</p>
+          <p className="text-xs text-slate-500 mt-1">Multi-Tenant Legal & Investigation Digital Vault • Direct Role Gateway</p>
         </div>
       </div>
 
@@ -72,10 +62,10 @@ export default function LoginPage({ navigateTo: propNavigateTo }) {
         </div>
       )}
 
-      {/* Dual Portal Selection Cards (Matching Blue Boxes) */}
+      {/* Dual Portal Direct Authentication Cards (Blue Boxes) */}
       <div className="max-w-4xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-6">
         
-        {/* Card 1: Boss / Executive Portal (Blue Box) */}
+        {/* Card 1: Boss / Executive Portal */}
         <div className="bg-white border-2 border-blue-200 hover:border-blue-500 rounded-2xl p-6 shadow-sm flex flex-col justify-between space-y-6 transition-all">
           <div className="space-y-4">
             <div className="flex items-center justify-between">
@@ -106,32 +96,21 @@ export default function LoginPage({ navigateTo: propNavigateTo }) {
               </ul>
             </div>
 
-            <form onSubmit={handleBossLogin} className="space-y-4 pt-2">
-              <div>
-                <label className="block text-xs font-semibold text-slate-700 mb-1.5">Select Boss / Magistrate Persona:</label>
-                <select
-                  value={bossUserId}
-                  onChange={(e) => setBossUserId(e.target.value)}
-                  className="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-xl p-2.5 text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-blue-500"
-                >
-                  {bossUsers.map(u => (
-                    <option key={u.id} value={u.id}>
-                      {u.name} ({u.roleTitle} • Level {u.clearanceLevel || 4})
-                    </option>
-                  ))}
-                </select>
-              </div>
+            <div className="p-3 bg-slate-50 rounded-xl border border-slate-100">
+              <div className="text-xs font-bold text-slate-800">Authenticating Persona:</div>
+              <div className="text-xs text-blue-700 font-semibold mt-0.5">Justice P. K. Mukherjee</div>
+              <div className="text-[11px] text-slate-500">Special Sessions Court Magistrate (Level 4)</div>
+            </div>
 
-              <button
-                type="submit"
-                disabled={authenticating}
-                className="btn btn-primary w-full py-2.5 text-xs font-bold flex items-center justify-center gap-2"
-              >
-                <Key className="w-4 h-4" />
-                <span>{authenticating ? 'Authenticating...' : 'Enter Boss Portal'}</span>
-                <ArrowRight className="w-4 h-4" />
-              </button>
-            </form>
+            <button
+              onClick={() => handleBossLogin(defaultBossId)}
+              disabled={authenticatingBoss}
+              className="btn btn-primary w-full py-3 text-xs font-bold flex items-center justify-center gap-2 shadow-sm"
+            >
+              <Key className="w-4 h-4" />
+              <span>{authenticatingBoss ? 'Authenticating Boss...' : 'Enter Boss Portal'}</span>
+              <ArrowRight className="w-4 h-4" />
+            </button>
           </div>
 
           <div className="text-[10px] text-slate-400 font-mono text-center pt-2 border-t border-slate-100">
@@ -139,7 +118,7 @@ export default function LoginPage({ navigateTo: propNavigateTo }) {
           </div>
         </div>
 
-        {/* Card 2: Employee / Field Officer Portal (Blue Box) */}
+        {/* Card 2: Employee / Field Officer Portal */}
         <div className="bg-white border-2 border-blue-200 hover:border-blue-500 rounded-2xl p-6 shadow-sm flex flex-col justify-between space-y-6 transition-all">
           <div className="space-y-4">
             <div className="flex items-center justify-between">
@@ -170,32 +149,21 @@ export default function LoginPage({ navigateTo: propNavigateTo }) {
               </ul>
             </div>
 
-            <form onSubmit={handleEmployeeLogin} className="space-y-4 pt-2">
-              <div>
-                <label className="block text-xs font-semibold text-slate-700 mb-1.5">Select Employee / Officer Persona:</label>
-                <select
-                  value={employeeUserId}
-                  onChange={(e) => setEmployeeUserId(e.target.value)}
-                  className="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-xl p-2.5 text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-blue-500"
-                >
-                  {employeeUsers.map(u => (
-                    <option key={u.id} value={u.id}>
-                      {u.name} ({u.roleTitle} • Level {u.clearanceLevel || 3})
-                    </option>
-                  ))}
-                </select>
-              </div>
+            <div className="p-3 bg-slate-50 rounded-xl border border-slate-100">
+              <div className="text-xs font-bold text-slate-800">Authenticating Persona:</div>
+              <div className="text-xs text-blue-700 font-semibold mt-0.5">Inspector Vikram Sharma</div>
+              <div className="text-[11px] text-slate-500">Chief Investigating Officer (Level 3)</div>
+            </div>
 
-              <button
-                type="submit"
-                disabled={authenticating}
-                className="btn btn-primary w-full py-2.5 text-xs font-bold flex items-center justify-center gap-2"
-              >
-                <UserCheck className="w-4 h-4" />
-                <span>{authenticating ? 'Authenticating...' : 'Enter Employee Portal'}</span>
-                <ArrowRight className="w-4 h-4" />
-              </button>
-            </form>
+            <button
+              onClick={() => handleEmployeeLogin(defaultEmployeeId)}
+              disabled={authenticatingEmployee}
+              className="btn btn-primary w-full py-3 text-xs font-bold flex items-center justify-center gap-2 shadow-sm"
+            >
+              <UserCheck className="w-4 h-4" />
+              <span>{authenticatingEmployee ? 'Authenticating Employee...' : 'Enter Employee Portal'}</span>
+              <ArrowRight className="w-4 h-4" />
+            </button>
           </div>
 
           <div className="text-[10px] text-slate-400 font-mono text-center pt-2 border-t border-slate-100">
@@ -207,4 +175,3 @@ export default function LoginPage({ navigateTo: propNavigateTo }) {
     </div>
   );
 }
-
