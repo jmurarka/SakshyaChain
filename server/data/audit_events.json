@@ -3811,5 +3811,106 @@
       "department": "LEO"
     },
     "event_hash": "509faeceacff2433c7ffe3741f3661bd66f49f7a9ff3dea6fa0f2623b221e799"
+  },
+  {
+    "event_id": "19f9ffad-a39a-430d-94a0-f27539405432",
+    "document_id": "RAG_INDEX",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "AI_QUERY",
+    "user_id": "USR-POL-101",
+    "user_role": "POLICE_INVESTIGATOR",
+    "timestamp": "2026-09-12T21:20:55.935Z",
+    "data_hash": "Based on verified case files und",
+    "parent_hashes": [
+      "509faeceacff2433c7ffe3741f3661bd66f49f7a9ff3dea6fa0f2623b221e799"
+    ],
+    "metadata": {
+      "query": "Who is the suspect identified in the CCTV and bullet forensic report?",
+      "resultsCount": 4,
+      "engine": "SākshyaChain Local RAG Engine (Fallback)",
+      "clientIp": "::1"
+    },
+    "event_hash": "d91ec9853e0bffe4904eb7a3700538626a5d989e3c1212b84161430613198a30"
+  },
+  {
+    "event_id": "ef11b586-502b-4b82-89f1-c7f6e3480e3a",
+    "document_id": "SYSTEM_AUTH",
+    "case_id": "SYSTEM_AUTH",
+    "version_id": "v1.0",
+    "action": "LOGIN",
+    "user_id": "USR-POL-101",
+    "user_role": "POLICE_INVESTIGATOR",
+    "timestamp": "2026-09-12T21:24:03.367Z",
+    "data_hash": "DIRECT_AUTHENTICATED",
+    "parent_hashes": [
+      "d91ec9853e0bffe4904eb7a3700538626a5d989e3c1212b84161430613198a30"
+    ],
+    "metadata": {
+      "username": "sharma_leo",
+      "department": "LEO"
+    },
+    "event_hash": "1a7d3d2de7b531588c924dd228dfaa133e34f16da9800ebddffdb3b685dd2c63"
+  },
+  {
+    "event_id": "65906c09-438a-4073-8da0-ccb7b468d2d3",
+    "document_id": "RAG_INDEX",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "AI_QUERY",
+    "user_id": "USR-POL-101",
+    "user_role": "POLICE_INVESTIGATOR",
+    "timestamp": "2026-09-12T21:24:03.435Z",
+    "data_hash": "No relevant legal evidence found",
+    "parent_hashes": [
+      "1a7d3d2de7b531588c924dd228dfaa133e34f16da9800ebddffdb3b685dd2c63"
+    ],
+    "metadata": {
+      "query": "wiretap order offshore communications",
+      "resultsCount": 0,
+      "engine": "Permission Guard",
+      "clientIp": "::1"
+    },
+    "event_hash": "db7d2e2853e0615cbd088b48d5130838f7f451da9753da8c1545c3fed3202333"
+  },
+  {
+    "event_id": "9fc5587c-1a30-4444-99d0-bf4d830f5f88",
+    "document_id": "SYSTEM_AUTH",
+    "case_id": "SYSTEM_AUTH",
+    "version_id": "v1.0",
+    "action": "LOGIN",
+    "user_id": "USR-JUD-404",
+    "user_role": "JUDICIAL_MAGISTRATE",
+    "timestamp": "2026-09-12T21:24:03.446Z",
+    "data_hash": "DIRECT_AUTHENTICATED",
+    "parent_hashes": [
+      "db7d2e2853e0615cbd088b48d5130838f7f451da9753da8c1545c3fed3202333"
+    ],
+    "metadata": {
+      "username": "mukherjee_magistrate",
+      "department": "JUD"
+    },
+    "event_hash": "6ff856f58a4949e12a5157401008c1f86848d0382f1ae13bb6eb984723634eab"
+  },
+  {
+    "event_id": "4012d96a-4fa9-4fe9-a706-c8a89d088a94",
+    "document_id": "RAG_INDEX",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "AI_QUERY",
+    "user_id": "USR-JUD-404",
+    "user_role": "JUDICIAL_MAGISTRATE",
+    "timestamp": "2026-09-12T21:24:03.481Z",
+    "data_hash": "Based on verified case files und",
+    "parent_hashes": [
+      "6ff856f58a4949e12a5157401008c1f86848d0382f1ae13bb6eb984723634eab"
+    ],
+    "metadata": {
+      "query": "wiretap order offshore communications",
+      "resultsCount": 3,
+      "engine": "SākshyaChain Local RAG Engine (Fallback)",
+      "clientIp": "::1"
+    },
+    "event_hash": "556d3c9948d506ffa4d1a49f82c2d0613022aef9e8e2353974ea2dc8e39f154f"
   }
 ]

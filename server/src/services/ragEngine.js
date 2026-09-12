@@ -112,23 +112,57 @@ class RAGEngine {
 
   /**
    * Permission-Aware RAG Search Engine with Evidence Citations & Ollama Fallback
+   * Dynamically retrieves ONLY authorized documents for the logged-in user.
    */
   async performRAGSearch(user, query, targetCaseId = null) {
     const queryTerms = query.toLowerCase().split(/\s+/).filter(t => t.length > 2);
     
-    // 1. STRICT SERVER-SIDE CLEARANCE & CASE AUTHORIZATION FILTER
-    const accessibleChunks = this.chunks.filter(chunk => {
-      // Clearance check
+    // 1. DYNAMIC PRE-RETRIEVAL SECURITY CLEARANCE & ROLE-BASED ACCESS CONTROL (ABAC)
+    // Fetch ONLY documents the logged-in user has explicit clearance and department/case access for
+    const authorizedDocs = dbService.getDocumentsForUser(user, { caseId: targetCaseId });
+
+    // Extract chunks from all dynamically authorized database documents
+    const dynamicChunks = [];
+    authorizedDocs.forEach(doc => {
+      if (doc.extractedText) {
+        const paragraphs = doc.extractedText.split('\n\n');
+        paragraphs.forEach((p, idx) => {
+          if (p.trim().length > 0) {
+            dynamicChunks.push({
+              id: `CHK-${doc.id}-${idx + 1}`,
+              docId: doc.id,
+              docTitle: doc.title,
+              caseId: doc.caseId,
+              category: doc.category,
+              clearanceLevel: doc.clearanceLevel,
+              pageNumber: 1,
+              paragraphIndex: idx + 1,
+              content: p.trim()
+            });
+          }
+        });
+      }
+    });
+
+    // Also include seeded chunks that satisfy user clearance and department/case scope
+    const authorizedSeedChunks = this.chunks.filter(chunk => {
       if (user.clearanceLevel < chunk.clearanceLevel) return false;
-      // Case filter check
       if (targetCaseId && chunk.caseId !== targetCaseId) return false;
-      
       const parentCase = dbService.readDB().cases.find(c => c.id === chunk.caseId);
       if (!parentCase) return false;
       return parentCase.departmentsAccess.includes(user.department) || user.assignedCases.includes(chunk.caseId);
     });
 
-    // 2. Score relevance
+    // Deduplicate chunks by ID
+    const chunkMap = new Map();
+    [...dynamicChunks, ...authorizedSeedChunks].forEach(c => {
+      if (!chunkMap.has(c.id)) {
+        chunkMap.set(c.id, c);
+      }
+    });
+    const accessibleChunks = Array.from(chunkMap.values());
+
+    // 2. Score relevance on ONLY user-authorized chunks
     const scoredChunks = accessibleChunks.map(chunk => {
       let score = 0;
       const contentLower = chunk.content.toLowerCase();
