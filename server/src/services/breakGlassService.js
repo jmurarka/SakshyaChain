@@ -28,7 +28,7 @@ class BreakGlassService {
 
     emergencyGrants.set(requestId, requestObj);
 
-    // Audit Logging
+    // Audit Logging & Real-Time Alert Dispatch
     ledgerService.addBlock({
       action: 'EMERGENCY_ACCESS_REQUESTED',
       actorId: user.id,
@@ -37,6 +37,15 @@ class BreakGlassService {
       docId: 'BREAK-GLASS',
       docHash: 'EMERGENCY_REQ',
       details: { requestId, reason }
+    });
+
+    dbService.addSecurityAlert({
+      title: 'Break-Glass Emergency Protocol Triggered',
+      severity: 'HIGH',
+      category: 'EMERGENCY_ACCESS',
+      actor: `${user.username} (${user.name})`,
+      docId: caseId,
+      details: `30-minute Emergency Access requested for case ${caseId} under Justification: "${reason}".`
     });
 
     return requestObj;

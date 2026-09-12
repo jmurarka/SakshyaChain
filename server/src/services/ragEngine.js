@@ -2,33 +2,28 @@ import { dbService } from './dbService.js';
 
 class RAGEngine {
   constructor() {
-    this.chunks = [];
-    this.seedKnowledgeBase();
-  }
-
-  seedKnowledgeBase() {
     this.chunks = [
       {
         id: 'CHK-8891-01',
         docId: 'DOC-8891-001',
-        docTitle: 'First Information Report (FIR #00492/2026)',
+        docTitle: 'FIR & Crime Scene Inspection Report',
         caseId: 'CASE-2026-8891',
         category: 'FIR',
-        clearanceLevel: 2,
+        clearanceLevel: 3,
         pageNumber: 1,
-        paragraphIndex: 1,
-        content: 'Police received emergency call at 02:15 AM regarding armed intruders siphoning crypto keys at Tech Vault Facility, Cyber Park. Whistleblower Rajesh Kumar found deceased with gunshot wound near server room B4.'
+        paragraphIndex: 2,
+        content: 'Initial crime scene survey at Tech Vault Facility, Cyber Park. Officers recovered 9mm fired cartridge casings and damaged server storage rack #B4. Forced entry observed at rear security door.'
       },
       {
         id: 'CHK-8891-02',
         docId: 'DOC-8891-001',
-        docTitle: 'First Information Report (FIR #00492/2026)',
+        docTitle: 'FIR & Crime Scene Inspection Report',
         caseId: 'CASE-2026-8891',
         category: 'FIR',
-        clearanceLevel: 2,
-        pageNumber: 1,
-        paragraphIndex: 2,
-        content: 'Accused identified in preliminary CCTV as masked male suspect wearing tactical jacket, matching physical description of former sysadmin Sameer Verma (ID #SV-992). IPC Sections 302 (Murder), 392 (Robbery), and IT Act 66D applied.'
+        clearanceLevel: 3,
+        pageNumber: 2,
+        paragraphIndex: 1,
+        content: 'CCTV footage analysis indicates two suspects in dark tactical gear bypassing biometric access pad at 02:14:22 AM. Suspect #1 possessed master RFID override key.'
       },
       {
         id: 'CHK-8891-03',

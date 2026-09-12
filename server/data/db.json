@@ -1267,6 +1267,371 @@
           "timestamp": "2026-09-12T19:28:52.679Z"
         }
       ]
+    },
+    {
+      "id": "DOC-2026-8891-9252",
+      "title": "Architecture",
+      "caseId": "CASE-2026-8891",
+      "caseTitle": "Case CASE-2026-8891",
+      "category": "FIR",
+      "clearanceLevel": 2,
+      "authorId": "USR-JUD-404",
+      "authorName": "Justice P. K. Mukherjee",
+      "authorRole": "JUDICIAL_MAGISTRATE",
+      "department": "JUD",
+      "dateCreated": "2026-09-12T22:34:49.287Z",
+      "version": "1.0",
+      "status": "VERIFIED",
+      "extractedText": "[PDF Attachment: Architecture.pdf]",
+      "mimeType": "application/pdf",
+      "originalFileName": "Architecture.pdf",
+      "payloadHash": "e9facd6b66eb15d2299e549dc921db36bb11358d294018f66d7dd4cd408a1b3d",
+      "fileSize": 942710,
+      "encryptionMetadata": {
+        "algorithm": "AES-256-GCM",
+        "kmsKeyId": "KMS-MASTER-KEY-PROD-2026",
+        "encryptedDEK": "96ab1ede9e59159303846fdcca33e9dbc6547242bce61e76b2f548855f0a94708fcaaad862350b6b959960c09ebfd14c01d5ed80e214972ceb5402d1c18b1b37",
+        "dekIv": "fff08f4d8b804fd479ac0000",
+        "dekAuthTag": "35d1357af1d26dc7fb1be85cd942d679",
+        "payloadIv": "f72e079aa3568afabd01e43e",
+        "payloadAuthTag": "671afed485c7e346d6d1efacfaf9fe38"
+      },
+      "signature": null,
+      "aiEntities": [
+        {
+          "type": "Accused Suspect",
+          "name": "Sameer Verma",
+          "id": "ID-SV992"
+        },
+        {
+          "type": "Victim",
+          "name": "Rajesh Kumar",
+          "status": "Deceased"
+        },
+        {
+          "type": "Recovered Weapon",
+          "weapon": "Glock-17 Pistol (9mm)",
+          "serial": "GL-88392"
+        },
+        {
+          "type": "Location",
+          "venue": "Tech Vault Facility, Cyber Park, Block B4"
+        }
+      ],
+      "versionHistory": [
+        {
+          "version": "1.0",
+          "parentVersion": "GENESIS",
+          "parentPayloadHash": "0000000000000000000000000000000000000000000000000000000000000000",
+          "payloadHash": "e9facd6b66eb15d2299e549dc921db36bb11358d294018f66d7dd4cd408a1b3d",
+          "fileSize": 942710,
+          "authorId": "USR-JUD-404",
+          "authorName": "Justice P. K. Mukherjee",
+          "department": "JUD",
+          "dateCreated": "2026-09-12T22:34:49.288Z",
+          "changeNotes": "Initial document filing (v1.0)"
+        }
+      ],
+      "chainOfCustody": [
+        {
+          "action": "UPLOADED_AND_ENCRYPTED",
+          "actorName": "Justice P. K. Mukherjee",
+          "department": "JUD",
+          "timestamp": "2026-09-12T22:34:49.289Z"
+        }
+      ]
+    },
+    {
+      "id": "DOC-2026-8891-2267",
+      "title": "Architecture",
+      "caseId": "CASE-2026-8891",
+      "caseTitle": "Case CASE-2026-8891",
+      "category": "FIR",
+      "clearanceLevel": 2,
+      "authorId": "USR-JUD-404",
+      "authorName": "Justice P. K. Mukherjee",
+      "authorRole": "JUDICIAL_MAGISTRATE",
+      "department": "JUD",
+      "dateCreated": "2026-09-12T23:25:52.281Z",
+      "version": "1.0",
+      "status": "VERIFIED",
+      "extractedText": "[PDF Attachment: Architecture.pdf]",
+      "mimeType": "application/pdf",
+      "originalFileName": "Architecture.pdf",
+      "payloadHash": "e9facd6b66eb15d2299e549dc921db36bb11358d294018f66d7dd4cd408a1b3d",
+      "fileSize": 942710,
+      "encryptionMetadata": {
+        "algorithm": "AES-256-GCM",
+        "kmsKeyId": "KMS-MASTER-KEY-PROD-2026",
+        "encryptedDEK": "831af86ead3ffcc650889760b428154d412a3cbce705011e2bac601bb571df589401a98ebd3bbc175e45d49d78584b91f7e928f6db04dffc059c687e0dd6cc35",
+        "dekIv": "7fe735726f433f60ea300afb",
+        "dekAuthTag": "08fd2b7d85a3b4a17d5491aedff0242f",
+        "payloadIv": "c4772abce4768af3f25eef30",
+        "payloadAuthTag": "f0c183dea62c845a21b6c5a14bfd2452"
+      },
+      "signature": null,
+      "aiEntities": [
+        {
+          "type": "Accused Suspect",
+          "name": "Sameer Verma",
+          "id": "ID-SV992"
+        },
+        {
+          "type": "Victim",
+          "name": "Rajesh Kumar",
+          "status": "Deceased"
+        },
+        {
+          "type": "Recovered Weapon",
+          "weapon": "Glock-17 Pistol (9mm)",
+          "serial": "GL-88392"
+        },
+        {
+          "type": "Location",
+          "venue": "Tech Vault Facility, Cyber Park, Block B4"
+        }
+      ],
+      "versionHistory": [
+        {
+          "version": "1.0",
+          "parentVersion": "GENESIS",
+          "parentPayloadHash": "0000000000000000000000000000000000000000000000000000000000000000",
+          "payloadHash": "e9facd6b66eb15d2299e549dc921db36bb11358d294018f66d7dd4cd408a1b3d",
+          "fileSize": 942710,
+          "authorId": "USR-JUD-404",
+          "authorName": "Justice P. K. Mukherjee",
+          "department": "JUD",
+          "dateCreated": "2026-09-12T23:25:52.281Z",
+          "changeNotes": "Initial document filing (v1.0)"
+        }
+      ],
+      "chainOfCustody": [
+        {
+          "action": "UPLOADED_AND_ENCRYPTED",
+          "actorName": "Justice P. K. Mukherjee",
+          "department": "JUD",
+          "timestamp": "2026-09-12T23:25:52.281Z"
+        }
+      ]
+    },
+    {
+      "id": "DOC-2026-8891-5565",
+      "title": "Architecture",
+      "caseId": "CASE-2026-8891",
+      "caseTitle": "Case CASE-2026-8891",
+      "category": "FIR",
+      "clearanceLevel": 2,
+      "authorId": "USR-JUD-404",
+      "authorName": "Justice P. K. Mukherjee",
+      "authorRole": "JUDICIAL_MAGISTRATE",
+      "department": "JUD",
+      "dateCreated": "2026-09-12T23:27:05.575Z",
+      "version": "1.0",
+      "status": "VERIFIED",
+      "extractedText": "[PDF Attachment: Architecture.pdf]",
+      "mimeType": "application/pdf",
+      "originalFileName": "Architecture.pdf",
+      "payloadHash": "e9facd6b66eb15d2299e549dc921db36bb11358d294018f66d7dd4cd408a1b3d",
+      "fileSize": 942710,
+      "encryptionMetadata": {
+        "algorithm": "AES-256-GCM",
+        "kmsKeyId": "KMS-MASTER-KEY-PROD-2026",
+        "encryptedDEK": "0ec272488627249f743e1a4a9f5c7e98e6be2e554819cc71aaf9277d1dd1c05bcf81bec407256a5500a4e2b9beb9ef38fc980b295809fe693bbe4f32c7a5d911",
+        "dekIv": "a6a4830b825c6aeb788b7d49",
+        "dekAuthTag": "51f6ea5b0a17ecc7a7cb405ef6bceb5f",
+        "payloadIv": "4b2e993c372e52c2812a3a0d",
+        "payloadAuthTag": "0587cf1e21570925d1f0050e697a01e6"
+      },
+      "signature": null,
+      "aiEntities": [
+        {
+          "type": "Accused Suspect",
+          "name": "Sameer Verma",
+          "id": "ID-SV992"
+        },
+        {
+          "type": "Victim",
+          "name": "Rajesh Kumar",
+          "status": "Deceased"
+        },
+        {
+          "type": "Recovered Weapon",
+          "weapon": "Glock-17 Pistol (9mm)",
+          "serial": "GL-88392"
+        },
+        {
+          "type": "Location",
+          "venue": "Tech Vault Facility, Cyber Park, Block B4"
+        }
+      ],
+      "versionHistory": [
+        {
+          "version": "1.0",
+          "parentVersion": "GENESIS",
+          "parentPayloadHash": "0000000000000000000000000000000000000000000000000000000000000000",
+          "payloadHash": "e9facd6b66eb15d2299e549dc921db36bb11358d294018f66d7dd4cd408a1b3d",
+          "fileSize": 942710,
+          "authorId": "USR-JUD-404",
+          "authorName": "Justice P. K. Mukherjee",
+          "department": "JUD",
+          "dateCreated": "2026-09-12T23:27:05.575Z",
+          "changeNotes": "Initial document filing (v1.0)"
+        }
+      ],
+      "chainOfCustody": [
+        {
+          "action": "UPLOADED_AND_ENCRYPTED",
+          "actorName": "Justice P. K. Mukherjee",
+          "department": "JUD",
+          "timestamp": "2026-09-12T23:27:05.575Z"
+        }
+      ]
+    },
+    {
+      "id": "DOC-2026-8891-8366",
+      "title": "Architecture",
+      "caseId": "CASE-2026-8891",
+      "caseTitle": "Case CASE-2026-8891",
+      "category": "FIR",
+      "clearanceLevel": 2,
+      "authorId": "USR-JUD-404",
+      "authorName": "Justice P. K. Mukherjee",
+      "authorRole": "JUDICIAL_MAGISTRATE",
+      "department": "JUD",
+      "dateCreated": "2026-09-12T23:28:48.377Z",
+      "version": "1.0",
+      "status": "VERIFIED",
+      "extractedText": "[PDF Attachment: Architecture.pdf]",
+      "mimeType": "application/pdf",
+      "originalFileName": "Architecture.pdf",
+      "payloadHash": "e9facd6b66eb15d2299e549dc921db36bb11358d294018f66d7dd4cd408a1b3d",
+      "fileSize": 942710,
+      "encryptionMetadata": {
+        "algorithm": "AES-256-GCM",
+        "kmsKeyId": "KMS-MASTER-KEY-PROD-2026",
+        "encryptedDEK": "89e38080c1c4e37633c707a6ea25856633f52172cd3644258a09adade1b752e1a0845e0807cc1fbc1e0025a83fada982205aa0e0b6318ed2c0f4e4aebe8eda62",
+        "dekIv": "300ba6c4a913c6b765b38430",
+        "dekAuthTag": "d41d3adcab3a460f99c7f9c7b94474d8",
+        "payloadIv": "ee25d8046128fca3da1c949a",
+        "payloadAuthTag": "bfee0c1853739d2641a5085a22f39ac7"
+      },
+      "signature": null,
+      "aiEntities": [
+        {
+          "type": "Accused Suspect",
+          "name": "Sameer Verma",
+          "id": "ID-SV992"
+        },
+        {
+          "type": "Victim",
+          "name": "Rajesh Kumar",
+          "status": "Deceased"
+        },
+        {
+          "type": "Recovered Weapon",
+          "weapon": "Glock-17 Pistol (9mm)",
+          "serial": "GL-88392"
+        },
+        {
+          "type": "Location",
+          "venue": "Tech Vault Facility, Cyber Park, Block B4"
+        }
+      ],
+      "versionHistory": [
+        {
+          "version": "1.0",
+          "parentVersion": "GENESIS",
+          "parentPayloadHash": "0000000000000000000000000000000000000000000000000000000000000000",
+          "payloadHash": "e9facd6b66eb15d2299e549dc921db36bb11358d294018f66d7dd4cd408a1b3d",
+          "fileSize": 942710,
+          "authorId": "USR-JUD-404",
+          "authorName": "Justice P. K. Mukherjee",
+          "department": "JUD",
+          "dateCreated": "2026-09-12T23:28:48.377Z",
+          "changeNotes": "Initial document filing (v1.0)"
+        }
+      ],
+      "chainOfCustody": [
+        {
+          "action": "UPLOADED_AND_ENCRYPTED",
+          "actorName": "Justice P. K. Mukherjee",
+          "department": "JUD",
+          "timestamp": "2026-09-12T23:28:48.378Z"
+        }
+      ]
+    },
+    {
+      "id": "DOC-2026-8891-4992",
+      "title": "Architecture",
+      "caseId": "CASE-2026-8891",
+      "caseTitle": "Case CASE-2026-8891",
+      "category": "FIR",
+      "clearanceLevel": 2,
+      "authorId": "USR-JUD-404",
+      "authorName": "Justice P. K. Mukherjee",
+      "authorRole": "JUDICIAL_MAGISTRATE",
+      "department": "JUD",
+      "dateCreated": "2026-09-12T23:33:15.004Z",
+      "version": "1.0",
+      "status": "VERIFIED",
+      "extractedText": "[PDF Attachment: Architecture.pdf]",
+      "mimeType": "application/pdf",
+      "originalFileName": "Architecture.pdf",
+      "payloadHash": "e9facd6b66eb15d2299e549dc921db36bb11358d294018f66d7dd4cd408a1b3d",
+      "fileSize": 942710,
+      "encryptionMetadata": {
+        "algorithm": "AES-256-GCM",
+        "kmsKeyId": "KMS-MASTER-KEY-PROD-2026",
+        "encryptedDEK": "9416dc9a073e18a8fbdfa7c7eb134ae7703cfc1887fabe2da5f771a39f956c2271cf41db475d89f6c9712a54411a82a53f42844dc890b43fffe24f46523cc673",
+        "dekIv": "c605a70c0cd2a2c3cfe92283",
+        "dekAuthTag": "8497477aa9c052fe793c836a983b0e68",
+        "payloadIv": "66d5ed202279a1dfb9f5e5b5",
+        "payloadAuthTag": "c0029e9810c5f31eb88b4bc5a5212048"
+      },
+      "signature": null,
+      "aiEntities": [
+        {
+          "type": "Accused Suspect",
+          "name": "Sameer Verma",
+          "id": "ID-SV992"
+        },
+        {
+          "type": "Victim",
+          "name": "Rajesh Kumar",
+          "status": "Deceased"
+        },
+        {
+          "type": "Recovered Weapon",
+          "weapon": "Glock-17 Pistol (9mm)",
+          "serial": "GL-88392"
+        },
+        {
+          "type": "Location",
+          "venue": "Tech Vault Facility, Cyber Park, Block B4"
+        }
+      ],
+      "versionHistory": [
+        {
+          "version": "1.0",
+          "parentVersion": "GENESIS",
+          "parentPayloadHash": "0000000000000000000000000000000000000000000000000000000000000000",
+          "payloadHash": "e9facd6b66eb15d2299e549dc921db36bb11358d294018f66d7dd4cd408a1b3d",
+          "fileSize": 942710,
+          "authorId": "USR-JUD-404",
+          "authorName": "Justice P. K. Mukherjee",
+          "department": "JUD",
+          "dateCreated": "2026-09-12T23:33:15.004Z",
+          "changeNotes": "Initial document filing (v1.0)"
+        }
+      ],
+      "chainOfCustody": [
+        {
+          "action": "UPLOADED_AND_ENCRYPTED",
+          "actorName": "Justice P. K. Mukherjee",
+          "department": "JUD",
+          "timestamp": "2026-09-12T23:33:15.004Z"
+        }
+      ]
     }
   ],
   "transferRequests": [
@@ -1392,6 +1757,51 @@
       "reason": "Security Audit Key Compromise Simulation",
       "revokedBy": "Anil Gupta",
       "revokedAt": "2026-09-12T13:34:04.062Z"
+    }
+  ],
+  "alerts": [
+    {
+      "id": "ALT-1092",
+      "title": "Unencrypted Export Attempt Blocked",
+      "severity": "HIGH",
+      "category": "DATA_LEAK_PREVENTION",
+      "actor": "officer_42 (Inspector Vikram)",
+      "docId": "DOC-8891-002",
+      "timestamp": "2026-09-12T23:17:12.247Z",
+      "details": "Server blocked an unencrypted raw binary payload download request for classified forensic report without break-glass privilege.",
+      "status": "OPEN",
+      "resolvedBy": null,
+      "resolutionNotes": null,
+      "resolutionBlockAddress": null
+    },
+    {
+      "id": "ALT-1091",
+      "title": "Break-Glass Emergency Protocol Triggered",
+      "severity": "HIGH",
+      "category": "EMERGENCY_ACCESS",
+      "actor": "prosecutor_1 (Senior Advocate Sharma)",
+      "docId": "DOC-8891-001",
+      "timestamp": "2026-09-12T22:47:12.256Z",
+      "details": "30-minute Emergency Access granted under Justification Code: COURT_ORDER_CRIM_882. Supervisor notified.",
+      "status": "OPEN",
+      "resolvedBy": null,
+      "resolutionNotes": null,
+      "resolutionBlockAddress": null
+    },
+    {
+      "id": "ALT-1090",
+      "title": "MFA OTP Lockout Triggered",
+      "severity": "MEDIUM",
+      "category": "AUTHENTICATION",
+      "actor": "forensic_8 (Dr. Anita Roy)",
+      "docId": "N/A",
+      "timestamp": "2026-09-12T21:32:12.256Z",
+      "details": "3 consecutive invalid OTP submissions within 120 seconds. Account temporarily locked for 15 minutes.",
+      "status": "RESOLVED",
+      "resolvedBy": "Justice P. K. Mukherjee (JUDICIAL_MAGISTRATE)",
+      "resolutionNotes": "Verified identity out-of-band via biometric phone verification. Account unlocked.",
+      "resolvedAt": "2026-09-12T22:02:12.256Z",
+      "resolutionBlockAddress": "0x8f2a...99e1"
     }
   ]
 }

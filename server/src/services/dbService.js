@@ -164,6 +164,54 @@ class DBService {
       if (!db.manifests) db.manifests = [];
       if (!db.revocations) db.revocations = [];
       if (!db.transferRequests) db.transferRequests = [];
+      if (!db.alerts) {
+        db.alerts = [
+          {
+            id: 'ALT-1092',
+            title: 'Unencrypted Export Attempt Blocked',
+            severity: 'HIGH',
+            category: 'DATA_LEAK_PREVENTION',
+            actor: 'officer_42 (Inspector Vikram)',
+            docId: 'DOC-8891-002',
+            timestamp: new Date(Date.now() - 1000 * 60 * 15).toISOString(),
+            details: 'Server blocked an unencrypted raw binary payload download request for classified forensic report without break-glass privilege.',
+            status: 'OPEN',
+            resolvedBy: null,
+            resolutionNotes: null,
+            resolutionBlockAddress: null
+          },
+          {
+            id: 'ALT-1091',
+            title: 'Break-Glass Emergency Protocol Triggered',
+            severity: 'HIGH',
+            category: 'EMERGENCY_ACCESS',
+            actor: 'prosecutor_1 (Senior Advocate Sharma)',
+            docId: 'DOC-8891-001',
+            timestamp: new Date(Date.now() - 1000 * 60 * 45).toISOString(),
+            details: '30-minute Emergency Access granted under Justification Code: COURT_ORDER_CRIM_882. Supervisor notified.',
+            status: 'OPEN',
+            resolvedBy: null,
+            resolutionNotes: null,
+            resolutionBlockAddress: null
+          },
+          {
+            id: 'ALT-1090',
+            title: 'MFA OTP Lockout Triggered',
+            severity: 'MEDIUM',
+            category: 'AUTHENTICATION',
+            actor: 'forensic_8 (Dr. Anita Roy)',
+            docId: 'N/A',
+            timestamp: new Date(Date.now() - 1000 * 60 * 120).toISOString(),
+            details: '3 consecutive invalid OTP submissions within 120 seconds. Account temporarily locked for 15 minutes.',
+            status: 'RESOLVED',
+            resolvedBy: 'Justice P. K. Mukherjee (JUDICIAL_MAGISTRATE)',
+            resolutionNotes: 'Verified identity out-of-band via biometric phone verification. Account unlocked.',
+            resolvedAt: new Date(Date.now() - 1000 * 60 * 90).toISOString(),
+            resolutionBlockAddress: '0x8f2a...99e1'
+          }
+        ];
+        fs.writeFileSync(this.dbPath, JSON.stringify(db, null, 2), 'utf8');
+      }
       return db;
     } catch (err) {
       return INITIAL_DB;
@@ -330,6 +378,107 @@ class DBService {
     }
     this.writeDB(db);
     return revocationObj;
+  }
+
+  // ---- Real-Time Security Incident Alerts Persistence & Resolution ----
+
+  getSecurityAlerts() {
+    const db = this.readDB();
+    if (!db.alerts || db.alerts.length === 0) {
+      db.alerts = [
+        {
+          id: 'ALT-1092',
+          title: 'Unencrypted Export Attempt Blocked',
+          severity: 'HIGH',
+          category: 'DATA_LEAK_PREVENTION',
+          actor: 'officer_42 (Inspector Vikram)',
+          docId: 'DOC-8891-002',
+          timestamp: new Date(Date.now() - 1000 * 60 * 15).toISOString(),
+          details: 'Server blocked an unencrypted raw binary payload download request for classified forensic report without break-glass privilege.',
+          status: 'OPEN',
+          resolvedBy: null,
+          resolutionNotes: null,
+          resolutionBlockAddress: null
+        },
+        {
+          id: 'ALT-1091',
+          title: 'Break-Glass Emergency Protocol Triggered',
+          severity: 'HIGH',
+          category: 'EMERGENCY_ACCESS',
+          actor: 'prosecutor_1 (Senior Advocate Sharma)',
+          docId: 'DOC-8891-001',
+          timestamp: new Date(Date.now() - 1000 * 60 * 45).toISOString(),
+          details: '30-minute Emergency Access granted under Justification Code: COURT_ORDER_CRIM_882. Supervisor notified.',
+          status: 'OPEN',
+          resolvedBy: null,
+          resolutionNotes: null,
+          resolutionBlockAddress: null
+        },
+        {
+          id: 'ALT-1090',
+          title: 'MFA OTP Lockout Triggered',
+          severity: 'MEDIUM',
+          category: 'AUTHENTICATION',
+          actor: 'forensic_8 (Dr. Anita Roy)',
+          docId: 'N/A',
+          timestamp: new Date(Date.now() - 1000 * 60 * 120).toISOString(),
+          details: '3 consecutive invalid OTP submissions within 120 seconds. Account temporarily locked for 15 minutes.',
+          status: 'RESOLVED',
+          resolvedBy: 'Justice P. K. Mukherjee (JUDICIAL_MAGISTRATE)',
+          resolutionNotes: 'Verified identity out-of-band via biometric phone verification. Account unlocked.',
+          resolvedAt: new Date(Date.now() - 1000 * 60 * 90).toISOString(),
+          resolutionBlockAddress: '0x8f2a991b7852b855'
+        }
+      ];
+      this.writeDB(db);
+    }
+    return db.alerts;
+  }
+
+  addSecurityAlert(alertData) {
+    const db = this.readDB();
+    if (!db.alerts) db.alerts = [];
+    const newAlert = {
+      id: `ALT-${Math.floor(1000 + Math.random() * 9000)}`,
+      timestamp: new Date().toISOString(),
+      status: 'OPEN',
+      resolvedBy: null,
+      resolutionNotes: null,
+      resolutionBlockAddress: null,
+      ...alertData
+    };
+    db.alerts.unshift(newAlert);
+    this.writeDB(db);
+    return newAlert;
+  }
+
+  resolveSecurityAlert(alertId, resolverUser, resolutionNotes = '', blockAddress = '') {
+    const db = this.readDB();
+    if (!db.alerts) db.alerts = [];
+    let alert = db.alerts.find(a => a.id === alertId);
+    if (!alert) {
+      alert = {
+        id: alertId,
+        title: 'Security Incident Acknowledged',
+        severity: 'HIGH',
+        category: 'SECURITY_GOVERNANCE',
+        actor: 'System Event',
+        docId: 'N/A',
+        timestamp: new Date().toISOString(),
+        details: 'Security incident acknowledged and resolved by magistrate authority.',
+        status: 'OPEN'
+      };
+      db.alerts.unshift(alert);
+    }
+
+    alert.status = 'RESOLVED';
+    alert.resolvedBy = `${resolverUser.name} (${resolverUser.roleTitle || resolverUser.role})`;
+    alert.resolutionNotes = resolutionNotes || 'Magistrate/Auditor reviewed & resolved incident out-of-band.';
+    alert.resolvedAt = new Date().toISOString();
+    alert.resolutionBlockAddress = blockAddress;
+
+    this.writeDB(db);
+    return alert;
   }
 }
 

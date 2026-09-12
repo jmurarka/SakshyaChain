@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import api from '../services/api';
 import { useAuth } from '../context/AuthContext';
-import { FilePlus, UploadCloud, Lock, CheckCircle2, RefreshCw, ArrowLeft } from 'lucide-react';
+import { FilePlus, UploadCloud, Lock, CheckCircle2, RefreshCw, ArrowLeft, ShieldCheck } from 'lucide-react';
 
 export default function UploadPage({ navigateTo: propNavigateTo }) {
   const { user } = useAuth();
