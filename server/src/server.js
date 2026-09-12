@@ -15,13 +15,81 @@ import demoRoutes from './routes/demoRoutes.js';
 
 const app = express();
 
-// Middleware
-app.use(cors({ origin: '*' }));
+// =========================================================================
+// 1. Dynamic CORS Architecture Policy Middleware (Validated against .env)
+// =========================================================================
+const corsOptions = {
+  origin: (origin, callback) => {
+    // Allow requests without Origin header (e.g. Server-to-Server, CLI tests, Curl, Postman)
+    if (!origin) {
+      return callback(null, true);
+    }
+
+    const isAllowedOrigin = CONFIG.ALLOWED_ORIGINS.some(allowed => {
+      if (allowed === '*') return true;
+      if (origin === allowed) return true;
+      try {
+        const url = new URL(origin);
+        return allowed.includes(url.hostname) || CONFIG.ALLOWED_CLIENT_IPS.some(ipPrefix => url.hostname.startsWith(ipPrefix));
+      } catch (e) {
+        return false;
+      }
+    });
+
+    if (isAllowedOrigin) {
+      callback(null, true);
+    } else {
+      console.warn(`[CORS Policy Blocked] Unauthorized Origin '${origin}' attempted API access.`);
+      callback(new Error(`CORS Policy Violation: Origin '${origin}' is not authorized by backend security policy.`));
+    }
+  },
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With', 'X-Client-IP', 'X-Forwarded-For']
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
+
+// =========================================================================
+// 2. Client Connection IP Whitelist Firewall Middleware (.env Enforced)
+// =========================================================================
+app.use((req, res, next) => {
+  if (req.method === 'OPTIONS') return next();
+
+  // Extract client IP address from proxy headers or connection socket
+  const rawIp = req.headers['x-forwarded-for']?.split(',')[0]?.trim() ||
+                req.headers['x-client-ip'] ||
+                req.socket.remoteAddress ||
+                req.ip ||
+                '127.0.0.1';
+
+  // Normalize IPv6 mapped IPv4 strings (e.g. ::ffff:127.0.0.1 -> 127.0.0.1)
+  const cleanIp = rawIp.replace(/^::ffff:/, '');
+
+  const isIpAllowed = CONFIG.ALLOWED_CLIENT_IPS.some(allowedIp => {
+    if (allowedIp === '*') return true;
+    if (cleanIp === allowedIp || rawIp === allowedIp) return true;
+    if (allowedIp.endsWith('.') && cleanIp.startsWith(allowedIp)) return true;
+    return false;
+  });
+
+  if (!isIpAllowed && CONFIG.STRICT_CORS_ENABLED) {
+    console.warn(`[IP Firewall Blocked] Connection from IP '${cleanIp}' (${rawIp}) blocked by .env whitelist.`);
+    return res.status(403).json({
+      error: 'FORBIDDEN_CLIENT_IP_UNAUTHORIZED',
+      message: `Access Denied: Client IP '${cleanIp}' is not permitted by backend firewall security policy.`,
+      allowedIpWhitelist: CONFIG.ALLOWED_CLIENT_IPS
+    });
+  }
+
+  req.clientIp = cleanIp;
+  next();
+});
 
 // Request logging middleware (excluding passwords/secrets)
 app.use((req, res, next) => {
-  console.log(`[REST API] ${req.method} ${req.path}`);
+  console.log(`[REST API] ${req.method} ${req.path} - Client IP: ${req.clientIp || '127.0.0.1'}`);
   next();
 });
 
@@ -40,13 +108,18 @@ app.use('/api/emergency', emergencyRoutes);
 app.use('/api/sharing', sharingRoutes);
 app.use('/api', demoRoutes);
 
-// Health Endpoint
+// Health & CORS Security Status Endpoint
 app.get('/api/health', (req, res) => {
   res.json({
     status: 'ONLINE',
     system: 'SākshyaChain Secure DMS REST API Backend',
     timestamp: new Date().toISOString(),
-    version: '2.0.0-MVP'
+    version: '2.0.0-MVP',
+    corsArchitecture: {
+      strictMode: CONFIG.STRICT_CORS_ENABLED,
+      allowedOrigins: CONFIG.ALLOWED_ORIGINS,
+      allowedClientIps: CONFIG.ALLOWED_CLIENT_IPS
+    }
   });
 });
 
