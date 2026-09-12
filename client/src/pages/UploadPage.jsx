@@ -52,11 +52,12 @@ export default function UploadPage({ navigateTo: propNavigateTo }) {
     setUploadProgress(1); // Uploading
     setUploadedResult(null);
 
-    try {
-      setTimeout(() => setUploadProgress(2), 300); // Encrypting
-      setTimeout(() => setUploadProgress(3), 600); // Hashing
-      setTimeout(() => setUploadProgress(4), 900); // Vault Stored
+    const timerIds = [];
+    timerIds.push(setTimeout(() => setUploadProgress(2), 200)); // Encrypting
+    timerIds.push(setTimeout(() => setUploadProgress(3), 400)); // Hashing
+    timerIds.push(setTimeout(() => setUploadProgress(4), 600)); // Vault Stored
 
+    try {
       let res;
       if (selectedFile) {
         const formData = new FormData();
@@ -77,12 +78,15 @@ export default function UploadPage({ navigateTo: propNavigateTo }) {
         });
       }
 
+      timerIds.forEach(id => clearTimeout(id));
       setUploadProgress(5);
       setIsUploading(false);
       setUploadedResult(res.data);
       window.scrollTo({ top: 0, behavior: 'smooth' });
     } catch (err) {
-      alert(`Upload error: ${err.response?.data?.message || err.message}`);
+      timerIds.forEach(id => clearTimeout(id));
+      const msg = err.response?.data?.message || err.message;
+      alert(`Upload Error: ${msg}`);
       setIsUploading(false);
       setUploadProgress(0);
     }

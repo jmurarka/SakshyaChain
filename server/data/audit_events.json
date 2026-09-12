@@ -3655,5 +3655,43 @@
       "encryptionAlgorithm": "AES-256-GCM"
     },
     "event_hash": "d340a25cddec2f6d7c4906364e08781c5c0403a9e0aff3522f3f1f77dd6b3936"
+  },
+  {
+    "event_id": "c80da4ec-1bc7-4a60-a0b1-b1c7bebcaa9a",
+    "document_id": "SYSTEM_AUTH",
+    "case_id": "SYSTEM_AUTH",
+    "version_id": "v1.0",
+    "action": "LOGIN",
+    "user_id": "USR-POL-101",
+    "user_role": "POLICE_INVESTIGATOR",
+    "timestamp": "2026-09-12T20:56:15.593Z",
+    "data_hash": "DIRECT_AUTHENTICATED",
+    "parent_hashes": [
+      "d340a25cddec2f6d7c4906364e08781c5c0403a9e0aff3522f3f1f77dd6b3936"
+    ],
+    "metadata": {
+      "username": "sharma_leo",
+      "department": "LEO"
+    },
+    "event_hash": "5acc4e12969e89d1142c5886ef1098f59a0d6a33e0295ce599975cc1880e6e54"
+  },
+  {
+    "event_id": "856ac194-3f30-4fb8-8ab6-90a95c829ef6",
+    "document_id": "SYSTEM_AUTH",
+    "case_id": "SYSTEM_AUTH",
+    "version_id": "v1.0",
+    "action": "LOGIN",
+    "user_id": "USR-POL-101",
+    "user_role": "POLICE_INVESTIGATOR",
+    "timestamp": "2026-09-12T20:56:15.604Z",
+    "data_hash": "DIRECT_AUTHENTICATED",
+    "parent_hashes": [
+      "5acc4e12969e89d1142c5886ef1098f59a0d6a33e0295ce599975cc1880e6e54"
+    ],
+    "metadata": {
+      "username": "sharma_leo",
+      "department": "LEO"
+    },
+    "event_hash": "028a1f61910a2ee0c916060149a12003428bcf362f9e860b97082474d2cea96c"
   }
 ]
