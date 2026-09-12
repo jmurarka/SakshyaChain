@@ -3693,5 +3693,26 @@
       "department": "LEO"
     },
     "event_hash": "028a1f61910a2ee0c916060149a12003428bcf362f9e860b97082474d2cea96c"
+  },
+  {
+    "event_id": "2cdb6861-e002-4ef9-a7ff-843abd258b1e",
+    "document_id": "DOC-2026-8891-2841",
+    "case_id": "CASE-2026-8891",
+    "version_id": "1.0",
+    "action": "UPLOAD",
+    "user_id": "USR-POL-101",
+    "user_role": "POLICE_INVESTIGATOR",
+    "timestamp": "2026-09-12T20:57:12.851Z",
+    "data_hash": "665e9ff273dd22b6fb95e6233049856d1d28831437cd285812bb078ba287e03d",
+    "parent_hashes": [
+      "028a1f61910a2ee0c916060149a12003428bcf362f9e860b97082474d2cea96c"
+    ],
+    "metadata": {
+      "title": "Screenshot 2026-06-11 224139",
+      "category": "FIR",
+      "clearanceLevel": 1,
+      "encryptionAlgorithm": "AES-256-GCM"
+    },
+    "event_hash": "18de9f3ebc1fe6e68f48cfab7e1164a202a5e0c0812e6a7bf5757d55c2d2322a"
   }
 ]
