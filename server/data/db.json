@@ -1194,6 +1194,79 @@
           "timestamp": "2026-09-12T17:22:14.442Z"
         }
       ]
+    },
+    {
+      "id": "DOC-2026-8891-2640",
+      "title": "agnirva certificate",
+      "caseId": "CASE-2026-8891",
+      "caseTitle": "Case CASE-2026-8891",
+      "category": "FIR",
+      "clearanceLevel": 2,
+      "authorId": "USR-JUD-404",
+      "authorName": "Justice P. K. Mukherjee",
+      "authorRole": "JUDICIAL_MAGISTRATE",
+      "department": "JUD",
+      "dateCreated": "2026-09-12T19:28:52.678Z",
+      "version": "1.0",
+      "status": "VERIFIED",
+      "extractedText": "[PDF Attachment: agnirva certificate.pdf]",
+      "mimeType": "application/pdf",
+      "originalFileName": "agnirva certificate.pdf",
+      "payloadHash": "e458e712099006cd18bd8bae55f946121d17419707072bb804efd346926a5e57",
+      "fileSize": 178723,
+      "encryptionMetadata": {
+        "algorithm": "AES-256-GCM",
+        "kmsKeyId": "KMS-MASTER-KEY-PROD-2026",
+        "encryptedDEK": "e08f54e8fac526730bda1bf4976a0c3733a623d7c5e7263dca4c2b57419cbe0984e0af48f6f1be11872dc7365f1dda259c573a083e52681b6e71f0d5adc3a90b",
+        "dekIv": "97ca4fe8fe494beb8fac37d9",
+        "dekAuthTag": "9ecd00ebb0c6b67e320a25a12ccc146e",
+        "payloadIv": "cae5358ca576f2c52723b89c",
+        "payloadAuthTag": "d86a098ec4688a9b9d7079bc0c1a9647"
+      },
+      "signature": null,
+      "aiEntities": [
+        {
+          "type": "Accused Suspect",
+          "name": "Sameer Verma",
+          "id": "ID-SV992"
+        },
+        {
+          "type": "Victim",
+          "name": "Rajesh Kumar",
+          "status": "Deceased"
+        },
+        {
+          "type": "Recovered Weapon",
+          "weapon": "Glock-17 Pistol (9mm)",
+          "serial": "GL-88392"
+        },
+        {
+          "type": "Location",
+          "venue": "Tech Vault Facility, Cyber Park, Block B4"
+        }
+      ],
+      "versionHistory": [
+        {
+          "version": "1.0",
+          "parentVersion": "GENESIS",
+          "parentPayloadHash": "0000000000000000000000000000000000000000000000000000000000000000",
+          "payloadHash": "e458e712099006cd18bd8bae55f946121d17419707072bb804efd346926a5e57",
+          "fileSize": 178723,
+          "authorId": "USR-JUD-404",
+          "authorName": "Justice P. K. Mukherjee",
+          "department": "JUD",
+          "dateCreated": "2026-09-12T19:28:52.679Z",
+          "changeNotes": "Initial document filing (v1.0)"
+        }
+      ],
+      "chainOfCustody": [
+        {
+          "action": "UPLOADED_AND_ENCRYPTED",
+          "actorName": "Justice P. K. Mukherjee",
+          "department": "JUD",
+          "timestamp": "2026-09-12T19:28:52.679Z"
+        }
+      ]
     }
   ],
   "transferRequests": [

@@ -2929,5 +2929,24 @@
     "previousBlockHash": "d07cf1bf14a5801a7af3116aa27fbef1b3bdad7d969f5ff38192067e3f293e8a",
     "blockHash": "9e3bbc7d2f96d3926b5ae85af6d0ce8d893b0d64de6d632833fff66283640904",
     "gitCommitHash": "2a0d9b38b307a21ca869cbd63f6737a75c193f01"
+  },
+  {
+    "blockHeight": 175,
+    "timestamp": "2026-09-12T19:28:52.727Z",
+    "action": "DOCUMENT_UPLOADED",
+    "actorId": "USR-JUD-404",
+    "actorName": "Justice P. K. Mukherjee",
+    "caseId": "CASE-2026-8891",
+    "docId": "DOC-2026-8891-2640",
+    "docHash": "e458e712099006cd18bd8bae55f946121d17419707072bb804efd346926a5e57",
+    "details": {
+      "title": "agnirva certificate",
+      "category": "FIR",
+      "clearanceLevel": 2,
+      "encryptionAlgorithm": "AES-256-GCM"
+    },
+    "previousBlockHash": "9e3bbc7d2f96d3926b5ae85af6d0ce8d893b0d64de6d632833fff66283640904",
+    "blockHash": "0b312192f7c6e10d04942348048319348d62c175811144a8a28eaa39936ccdb5",
+    "gitCommitHash": "455fc5e512e1bada7b124a9c65aada4a6348e7bb"
   }
 ]
