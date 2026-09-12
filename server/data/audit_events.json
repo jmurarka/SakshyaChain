@@ -1,0 +1,3542 @@
+[
+  {
+    "event_id": "evt-1",
+    "document_id": "DOC-8891-003",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "DOCUMENT_UPLOADED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T07:20:54.676Z",
+    "data_hash": "cadb9587906ebe388ffd212cb3921bbffa52e95ef092dded2cfe0ff1d43bc7b4",
+    "parent_hashes": [],
+    "event_hash": "3b92b0e5e558ddad4fa56b08407b0ff9170240bea784ed7264f36ccc58a0c6e9",
+    "metadata": {
+      "title": "Eyewitness Sworn Statement - Security Guard",
+      "category": "WITNESS_STATEMENT",
+      "clearanceLevel": 2,
+      "encryptionAlgorithm": "AES-256-GCM"
+    }
+  },
+  {
+    "event_id": "evt-2",
+    "document_id": "DOC-8891-003",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "DOCUMENT_UPLOADED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T07:20:54.708Z",
+    "data_hash": "cadb9587906ebe388ffd212cb3921bbffa52e95ef092dded2cfe0ff1d43bc7b4",
+    "parent_hashes": [
+      "3b92b0e5e558ddad4fa56b08407b0ff9170240bea784ed7264f36ccc58a0c6e9"
+    ],
+    "event_hash": "04f15d0c1625800a8443a6be9849278fe45ee50f1e5d0b65f3ebc92225cc3765",
+    "metadata": {
+      "title": "Eyewitness Sworn Statement - Security Guard",
+      "category": "WITNESS_STATEMENT",
+      "clearanceLevel": 2,
+      "encryptionAlgorithm": "AES-256-GCM"
+    }
+  },
+  {
+    "event_id": "evt-3",
+    "document_id": "DOC-8891-004",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "DOCUMENT_UPLOADED",
+    "user_id": "USR-JUD-404",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T07:20:54.764Z",
+    "data_hash": "1b5c3cf906b86b0b8dda5e76291659f39ef5a73a1021d07bfa96bcf5d3814a9b",
+    "parent_hashes": [
+      "04f15d0c1625800a8443a6be9849278fe45ee50f1e5d0b65f3ebc92225cc3765"
+    ],
+    "event_hash": "a5af001b36dae36addf06c9651c6800743574b5892e3c5907a6aaccae660edf1",
+    "metadata": {
+      "title": "Restricted Judicial Interception Order & Note",
+      "category": "COURT_FILING",
+      "clearanceLevel": 4,
+      "encryptionAlgorithm": "AES-256-GCM"
+    }
+  },
+  {
+    "event_id": "evt-4",
+    "document_id": "DOC-8891-004",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "DOCUMENT_UPLOADED",
+    "user_id": "USR-JUD-404",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T07:20:54.816Z",
+    "data_hash": "1b5c3cf906b86b0b8dda5e76291659f39ef5a73a1021d07bfa96bcf5d3814a9b",
+    "parent_hashes": [
+      "a5af001b36dae36addf06c9651c6800743574b5892e3c5907a6aaccae660edf1"
+    ],
+    "event_hash": "5bcdc5f4a073cf8222bb882b5c06982f6fedcda5a972ebf9a00c8ff7c7fd59ca",
+    "metadata": {
+      "title": "Restricted Judicial Interception Order & Note",
+      "category": "COURT_FILING",
+      "clearanceLevel": 4,
+      "encryptionAlgorithm": "AES-256-GCM"
+    }
+  },
+  {
+    "event_id": "evt-5",
+    "document_id": "DOC-8891-004",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "DOCUMENT_VIEWED",
+    "user_id": "USR-JUD-404",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T07:23:43.044Z",
+    "data_hash": "1b5c3cf906b86b0b8dda5e76291659f39ef5a73a1021d07bfa96bcf5d3814a9b",
+    "parent_hashes": [
+      "5bcdc5f4a073cf8222bb882b5c06982f6fedcda5a972ebf9a00c8ff7c7fd59ca"
+    ],
+    "event_hash": "c22bc6c18a6e106eceb4c2d42056a8e2a4d3a95038a168eef09e9bc41941df24",
+    "metadata": {
+      "viewerRole": "JUDICIAL_MAGISTRATE",
+      "viewerDept": "JUD"
+    }
+  },
+  {
+    "event_id": "evt-6",
+    "document_id": "SYSTEM",
+    "case_id": "SYSTEM",
+    "version_id": "v1.0",
+    "action": "SYSTEM_AUDIT_EXECUTED",
+    "user_id": "USR-JUD-404",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T07:23:43.102Z",
+    "data_hash": "CORRUPTED_K",
+    "parent_hashes": [
+      "c22bc6c18a6e106eceb4c2d42056a8e2a4d3a95038a168eef09e9bc41941df24"
+    ],
+    "event_hash": "68de2d9d7936f899a50473be6fbfb5eb2160d7e32aa27133af6837e9afe4b6d2",
+    "metadata": {
+      "auditStatus": "TAMPER_ALERT"
+    }
+  },
+  {
+    "event_id": "evt-7",
+    "document_id": "DOC-2026-8891-7125",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "DOCUMENT_UPLOADED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T08:36:17.147Z",
+    "data_hash": "994d84c7950526eba1f988d7a44ea8b505d0482fc2f32bef70721607efb15d98",
+    "parent_hashes": [
+      "68de2d9d7936f899a50473be6fbfb5eb2160d7e32aa27133af6837e9afe4b6d2"
+    ],
+    "event_hash": "057474a462623babf340545aa6d4c94e8be77161c175fd297401b7157c5560a6",
+    "metadata": {
+      "title": "west bengal vs abc",
+      "category": "FIR",
+      "clearanceLevel": 2,
+      "encryptionAlgorithm": "AES-256-GCM"
+    }
+  },
+  {
+    "event_id": "evt-8",
+    "document_id": "DOC-8891-004",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "DOCUMENT_VIEWED",
+    "user_id": "USR-JUD-404",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T08:36:56.135Z",
+    "data_hash": "1b5c3cf906b86b0b8dda5e76291659f39ef5a73a1021d07bfa96bcf5d3814a9b",
+    "parent_hashes": [
+      "057474a462623babf340545aa6d4c94e8be77161c175fd297401b7157c5560a6"
+    ],
+    "event_hash": "29d9b27ca741d51598db32d8f458f302194f61fc61ab42a3ca047e42c26b003e",
+    "metadata": {
+      "viewerRole": "JUDICIAL_MAGISTRATE",
+      "viewerDept": "JUD"
+    }
+  },
+  {
+    "event_id": "evt-9",
+    "document_id": "SYSTEM",
+    "case_id": "SYSTEM",
+    "version_id": "v1.0",
+    "action": "SYSTEM_AUDIT_EXECUTED",
+    "user_id": "USR-JUD-404",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T08:36:56.143Z",
+    "data_hash": "AUDIT_CHECK",
+    "parent_hashes": [
+      "29d9b27ca741d51598db32d8f458f302194f61fc61ab42a3ca047e42c26b003e"
+    ],
+    "event_hash": "c6d9d14e0f04de6c731c44b56eb01cfe3b148fb0009c85f56f7dd2c08079ac34",
+    "metadata": {
+      "auditStatus": "TAMPER_ALERT"
+    }
+  },
+  {
+    "event_id": "evt-10",
+    "document_id": "MFA-SESSION",
+    "case_id": "AUTH-MFA",
+    "version_id": "v1.0",
+    "action": "MFA_OTP_GENERATED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T08:47:52.718Z",
+    "data_hash": "bc84033984d823a414c9859a95271b74bfff5f466c4777129358514c471a4b43",
+    "parent_hashes": [
+      "c6d9d14e0f04de6c731c44b56eb01cfe3b148fb0009c85f56f7dd2c08079ac34"
+    ],
+    "event_hash": "5b5b0b96f14aaf5debc8afa722107f11d9be2b5aaf9aac9a15bbb2eebe7c91de",
+    "metadata": {
+      "ttlSeconds": 120
+    }
+  },
+  {
+    "event_id": "evt-11",
+    "document_id": "MFA-SUCCESS",
+    "case_id": "AUTH-MFA",
+    "version_id": "v1.0",
+    "action": "MFA_OTP_VERIFIED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T08:47:52.729Z",
+    "data_hash": "VERIFIED",
+    "parent_hashes": [
+      "5b5b0b96f14aaf5debc8afa722107f11d9be2b5aaf9aac9a15bbb2eebe7c91de"
+    ],
+    "event_hash": "fbf853039b1c623248cc048762a3dd5a90c3770a0f22ee314c4095cc0be3733c",
+    "metadata": {
+      "authStatus": "MFA_SUCCESS"
+    }
+  },
+  {
+    "event_id": "evt-12",
+    "document_id": "BREAK-GLASS",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "EMERGENCY_ACCESS_REQUESTED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T08:47:52.807Z",
+    "data_hash": "EMERGENCY_REQ",
+    "parent_hashes": [
+      "fbf853039b1c623248cc048762a3dd5a90c3770a0f22ee314c4095cc0be3733c"
+    ],
+    "event_hash": "0da0c5c3b4be9fcf20078a9aea085fc532dd2dbdf00fa2e16911ad4f29a2b79c",
+    "metadata": {
+      "requestId": "BG-REQ-72802",
+      "reason": "Urgent homicide lead wiretap inspection required during active hostage situation."
+    }
+  },
+  {
+    "event_id": "evt-13",
+    "document_id": "BREAK-GLASS",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "EMERGENCY_ACCESS_GRANTED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T08:47:52.818Z",
+    "data_hash": "GRANT_ACTIVE",
+    "parent_hashes": [
+      "0da0c5c3b4be9fcf20078a9aea085fc532dd2dbdf00fa2e16911ad4f29a2b79c"
+    ],
+    "event_hash": "ab7e4fc5e46bcffd6c694065210d66570fc29771bd808969f4b91715fc1c66b5",
+    "metadata": {
+      "requestId": "BG-REQ-72802",
+      "approvedBy": "Inspector Vikram Sharma",
+      "durationMinutes": 30,
+      "expiresAt": "2026-09-11T09:17:52.817Z"
+    }
+  },
+  {
+    "event_id": "evt-14",
+    "document_id": "MFA-SESSION",
+    "case_id": "AUTH-MFA",
+    "version_id": "v1.0",
+    "action": "MFA_OTP_GENERATED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T08:48:24.138Z",
+    "data_hash": "7ae55ddbcc0e6b8da82dc39220f3af355f71792abd3316eee23ad666f410df96",
+    "parent_hashes": [
+      "ab7e4fc5e46bcffd6c694065210d66570fc29771bd808969f4b91715fc1c66b5"
+    ],
+    "event_hash": "bbdfbde456826343edd659115caf926d70cd36aae9150231c21ad8b7b0f7f3f5",
+    "metadata": {
+      "ttlSeconds": 120
+    }
+  },
+  {
+    "event_id": "evt-15",
+    "document_id": "MFA-SUCCESS",
+    "case_id": "AUTH-MFA",
+    "version_id": "v1.0",
+    "action": "MFA_OTP_VERIFIED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T08:48:24.148Z",
+    "data_hash": "VERIFIED",
+    "parent_hashes": [
+      "bbdfbde456826343edd659115caf926d70cd36aae9150231c21ad8b7b0f7f3f5"
+    ],
+    "event_hash": "7c8915dc426e84a66a67671b8a3eaf1081540c34e6ee55e2f1251765e2d7e2fe",
+    "metadata": {
+      "authStatus": "MFA_SUCCESS"
+    }
+  },
+  {
+    "event_id": "evt-16",
+    "document_id": "BREAK-GLASS",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "EMERGENCY_ACCESS_REQUESTED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T08:48:24.163Z",
+    "data_hash": "EMERGENCY_REQ",
+    "parent_hashes": [
+      "7c8915dc426e84a66a67671b8a3eaf1081540c34e6ee55e2f1251765e2d7e2fe"
+    ],
+    "event_hash": "66f0a0906cdc6b2c393e45ec22f16286a01785acf6fa8acd279bf39f51ebdd76",
+    "metadata": {
+      "requestId": "BG-REQ-04162",
+      "reason": "Urgent homicide lead wiretap inspection required during active hostage situation."
+    }
+  },
+  {
+    "event_id": "evt-17",
+    "document_id": "BREAK-GLASS",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "EMERGENCY_ACCESS_GRANTED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T08:48:24.170Z",
+    "data_hash": "GRANT_ACTIVE",
+    "parent_hashes": [
+      "66f0a0906cdc6b2c393e45ec22f16286a01785acf6fa8acd279bf39f51ebdd76"
+    ],
+    "event_hash": "601d926689a7a989fd7891f99db0d19999299af6a0799bf3746e3d8620202d8e",
+    "metadata": {
+      "requestId": "BG-REQ-04162",
+      "approvedBy": "Inspector Vikram Sharma",
+      "durationMinutes": 30,
+      "expiresAt": "2026-09-11T09:18:24.169Z"
+    }
+  },
+  {
+    "event_id": "evt-18",
+    "document_id": "MFA-SESSION",
+    "case_id": "AUTH-MFA",
+    "version_id": "v1.0",
+    "action": "MFA_OTP_GENERATED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T08:49:32.610Z",
+    "data_hash": "bbbb67dcf1948432d38639e2c79e41c9676066e9e162d796958ed71b46263036",
+    "parent_hashes": [
+      "601d926689a7a989fd7891f99db0d19999299af6a0799bf3746e3d8620202d8e"
+    ],
+    "event_hash": "18ab3463f70207af0e5966f6e82396bd30cecbb542c0691570ee5297bec29ade",
+    "metadata": {
+      "ttlSeconds": 120
+    }
+  },
+  {
+    "event_id": "evt-19",
+    "document_id": "MFA-SUCCESS",
+    "case_id": "AUTH-MFA",
+    "version_id": "v1.0",
+    "action": "MFA_OTP_VERIFIED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T08:49:32.615Z",
+    "data_hash": "VERIFIED",
+    "parent_hashes": [
+      "18ab3463f70207af0e5966f6e82396bd30cecbb542c0691570ee5297bec29ade"
+    ],
+    "event_hash": "24f04dc89a922809498203fccee0d671227b76d792c24b3d266310c355f683d0",
+    "metadata": {
+      "authStatus": "MFA_SUCCESS"
+    }
+  },
+  {
+    "event_id": "evt-20",
+    "document_id": "DOC-8891-003",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "DOCUMENT_VERSION_CREATED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T08:49:32.633Z",
+    "data_hash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+    "parent_hashes": [
+      "24f04dc89a922809498203fccee0d671227b76d792c24b3d266310c355f683d0"
+    ],
+    "event_hash": "b988eced1b109ec62971545b93c7d171eb74a3271e336e781776db571f70a9e6",
+    "metadata": {
+      "previousVersion": "1.0",
+      "newVersion": "1.1",
+      "parentHash": "cadb9587906ebe388ffd212cb3921bbffa52e95ef092dded2cfe0ff1d43bc7b4",
+      "changeNotes": "Added vehicle license plate info"
+    }
+  },
+  {
+    "event_id": "evt-21",
+    "document_id": "BREAK-GLASS",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "EMERGENCY_ACCESS_REQUESTED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T08:49:32.643Z",
+    "data_hash": "EMERGENCY_REQ",
+    "parent_hashes": [
+      "b988eced1b109ec62971545b93c7d171eb74a3271e336e781776db571f70a9e6"
+    ],
+    "event_hash": "5cdc97cccdc8a8e137453343b6a387f028ab3dc92cf57355d9c6c518e6d45033",
+    "metadata": {
+      "requestId": "BG-REQ-72642",
+      "reason": "Urgent homicide lead wiretap inspection required during active hostage situation."
+    }
+  },
+  {
+    "event_id": "evt-22",
+    "document_id": "BREAK-GLASS",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "EMERGENCY_ACCESS_GRANTED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T08:49:32.650Z",
+    "data_hash": "GRANT_ACTIVE",
+    "parent_hashes": [
+      "5cdc97cccdc8a8e137453343b6a387f028ab3dc92cf57355d9c6c518e6d45033"
+    ],
+    "event_hash": "92d07bfe9fe28bf86385890a9a1ebc69e6c9bbe60d5993e99ca45c4189d963e8",
+    "metadata": {
+      "requestId": "BG-REQ-72642",
+      "approvedBy": "Inspector Vikram Sharma",
+      "durationMinutes": 30,
+      "expiresAt": "2026-09-11T09:19:32.649Z"
+    }
+  },
+  {
+    "event_id": "evt-23",
+    "document_id": "DOC-8891-003",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "CONTROLLED_LINK_CREATED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T08:49:32.658Z",
+    "data_hash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+    "parent_hashes": [
+      "92d07bfe9fe28bf86385890a9a1ebc69e6c9bbe60d5993e99ca45c4189d963e8"
+    ],
+    "event_hash": "cdc2ecb0ebc4cb1534fa684f464f0c9989daa54f926b11a3073ae936b8c7b613",
+    "metadata": {
+      "recipientEmail": "defense.counsel@highcourt.gov.in",
+      "policy": "VIEW_ONLY_NO_DOWNLOAD",
+      "expiresAtHours": 24
+    }
+  },
+  {
+    "event_id": "evt-24",
+    "document_id": "MFA-SESSION",
+    "case_id": "AUTH-MFA",
+    "version_id": "v1.0",
+    "action": "MFA_OTP_GENERATED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T08:50:53.202Z",
+    "data_hash": "e1be683e7ce30cff9609b635a78941bf47b27abcbf8805b9e0be32bd289c4d0b",
+    "parent_hashes": [
+      "cdc2ecb0ebc4cb1534fa684f464f0c9989daa54f926b11a3073ae936b8c7b613"
+    ],
+    "event_hash": "ab089bf76c3d0147601534875652435587c88da72fdacc6c101ec3319d31cf98",
+    "metadata": {
+      "ttlSeconds": 120
+    }
+  },
+  {
+    "event_id": "evt-25",
+    "document_id": "MFA-SUCCESS",
+    "case_id": "AUTH-MFA",
+    "version_id": "v1.0",
+    "action": "MFA_OTP_VERIFIED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T08:50:53.206Z",
+    "data_hash": "VERIFIED",
+    "parent_hashes": [
+      "ab089bf76c3d0147601534875652435587c88da72fdacc6c101ec3319d31cf98"
+    ],
+    "event_hash": "df260e4e7f5e1ecef197fdc1c284d15a0c267f0196df5d44cb37da86c2b958bd",
+    "metadata": {
+      "authStatus": "MFA_SUCCESS"
+    }
+  },
+  {
+    "event_id": "evt-26",
+    "document_id": "DOC-8891-003",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "DOCUMENT_VERSION_CREATED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T08:50:53.216Z",
+    "data_hash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+    "parent_hashes": [
+      "df260e4e7f5e1ecef197fdc1c284d15a0c267f0196df5d44cb37da86c2b958bd"
+    ],
+    "event_hash": "34e3310532f3dd1e025a9ce5b8f312963420a3e080f72bcba643160ba503b9bd",
+    "metadata": {
+      "previousVersion": "1.1",
+      "newVersion": "1.2",
+      "parentHash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+      "changeNotes": "Added vehicle license plate info"
+    }
+  },
+  {
+    "event_id": "evt-27",
+    "document_id": "BREAK-GLASS",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "EMERGENCY_ACCESS_REQUESTED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T08:50:53.222Z",
+    "data_hash": "EMERGENCY_REQ",
+    "parent_hashes": [
+      "34e3310532f3dd1e025a9ce5b8f312963420a3e080f72bcba643160ba503b9bd"
+    ],
+    "event_hash": "11bfa299f5a97711115face4bde04e0ab621b16959d068639233e16bc5369102",
+    "metadata": {
+      "requestId": "BG-REQ-53222",
+      "reason": "Urgent homicide lead wiretap inspection required during active hostage situation."
+    }
+  },
+  {
+    "event_id": "evt-28",
+    "document_id": "BREAK-GLASS",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "EMERGENCY_ACCESS_GRANTED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T08:50:53.229Z",
+    "data_hash": "GRANT_ACTIVE",
+    "parent_hashes": [
+      "11bfa299f5a97711115face4bde04e0ab621b16959d068639233e16bc5369102"
+    ],
+    "event_hash": "86d2d2dda84c27a65c3eba1c051725c4e3f18b8a4aa198477fd0c74ce28ca37b",
+    "metadata": {
+      "requestId": "BG-REQ-53222",
+      "approvedBy": "Inspector Vikram Sharma",
+      "durationMinutes": 30,
+      "expiresAt": "2026-09-11T09:20:53.228Z"
+    }
+  },
+  {
+    "event_id": "evt-29",
+    "document_id": "DOC-8891-003",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "CONTROLLED_LINK_CREATED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T08:50:53.235Z",
+    "data_hash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+    "parent_hashes": [
+      "86d2d2dda84c27a65c3eba1c051725c4e3f18b8a4aa198477fd0c74ce28ca37b"
+    ],
+    "event_hash": "ccd92974f17b7a1e8257789673cce413bb5ca948831a5d0452477f520f583631",
+    "metadata": {
+      "recipientEmail": "defense.counsel@highcourt.gov.in",
+      "policy": "VIEW_ONLY_NO_DOWNLOAD",
+      "expiresAtHours": 24
+    }
+  },
+  {
+    "event_id": "evt-30",
+    "document_id": "MFA-SESSION",
+    "case_id": "AUTH-MFA",
+    "version_id": "v1.0",
+    "action": "MFA_OTP_GENERATED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T08:51:25.940Z",
+    "data_hash": "a922c02eaa31364d421752a0eac2b32eea5260289c33f57e2d13cfce0f27b0ff",
+    "parent_hashes": [
+      "ccd92974f17b7a1e8257789673cce413bb5ca948831a5d0452477f520f583631"
+    ],
+    "event_hash": "b64d16dd865111cc92b1667c4ed8cc9fbe21c197dc25aeb4df759cc15c8d93a4",
+    "metadata": {
+      "ttlSeconds": 120
+    }
+  },
+  {
+    "event_id": "evt-31",
+    "document_id": "MFA-SUCCESS",
+    "case_id": "AUTH-MFA",
+    "version_id": "v1.0",
+    "action": "MFA_OTP_VERIFIED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T08:51:25.944Z",
+    "data_hash": "VERIFIED",
+    "parent_hashes": [
+      "b64d16dd865111cc92b1667c4ed8cc9fbe21c197dc25aeb4df759cc15c8d93a4"
+    ],
+    "event_hash": "47dd6d43b5ee39a300e330d4951387a84757dc5b6b279545aab810bedf57c6f6",
+    "metadata": {
+      "authStatus": "MFA_SUCCESS"
+    }
+  },
+  {
+    "event_id": "evt-32",
+    "document_id": "DOC-8891-003",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "DOCUMENT_VERSION_CREATED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T08:51:25.953Z",
+    "data_hash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+    "parent_hashes": [
+      "47dd6d43b5ee39a300e330d4951387a84757dc5b6b279545aab810bedf57c6f6"
+    ],
+    "event_hash": "af2adf39da759b6e6322b7edb7ec80fd0aeba22e87f08fe72dfe049ff578b72a",
+    "metadata": {
+      "previousVersion": "1.2",
+      "newVersion": "1.3",
+      "parentHash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+      "changeNotes": "Added vehicle license plate info"
+    }
+  },
+  {
+    "event_id": "evt-33",
+    "document_id": "BREAK-GLASS",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "EMERGENCY_ACCESS_REQUESTED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T08:51:25.959Z",
+    "data_hash": "EMERGENCY_REQ",
+    "parent_hashes": [
+      "af2adf39da759b6e6322b7edb7ec80fd0aeba22e87f08fe72dfe049ff578b72a"
+    ],
+    "event_hash": "8e3b8cf1c816ff25f77bb570ffc11a2b9c31ab38b11bea67b2c746f137b7ca5d",
+    "metadata": {
+      "requestId": "BG-REQ-85958",
+      "reason": "Urgent homicide lead wiretap inspection required during active hostage situation."
+    }
+  },
+  {
+    "event_id": "evt-34",
+    "document_id": "BREAK-GLASS",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "EMERGENCY_ACCESS_GRANTED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T08:51:25.964Z",
+    "data_hash": "GRANT_ACTIVE",
+    "parent_hashes": [
+      "8e3b8cf1c816ff25f77bb570ffc11a2b9c31ab38b11bea67b2c746f137b7ca5d"
+    ],
+    "event_hash": "8a3652527dd3232e1a48cc60b2c705df0255931b5a315824065b90cca3cb0162",
+    "metadata": {
+      "requestId": "BG-REQ-85958",
+      "approvedBy": "Inspector Vikram Sharma",
+      "durationMinutes": 30,
+      "expiresAt": "2026-09-11T09:21:25.964Z"
+    }
+  },
+  {
+    "event_id": "evt-35",
+    "document_id": "DOC-8891-003",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "CONTROLLED_LINK_CREATED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T08:51:25.969Z",
+    "data_hash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+    "parent_hashes": [
+      "8a3652527dd3232e1a48cc60b2c705df0255931b5a315824065b90cca3cb0162"
+    ],
+    "event_hash": "480c60c45fb32d9bb3e00ddb9e91fb0730dbe36d5eb07ce0c71098ddfe3732dd",
+    "metadata": {
+      "recipientEmail": "defense.counsel@highcourt.gov.in",
+      "policy": "VIEW_ONLY_NO_DOWNLOAD",
+      "expiresAtHours": 24
+    }
+  },
+  {
+    "event_id": "evt-36",
+    "document_id": "MFA-SESSION",
+    "case_id": "AUTH-MFA",
+    "version_id": "v1.0",
+    "action": "MFA_OTP_GENERATED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T08:51:52.438Z",
+    "data_hash": "652b67e2dc10c17ec0cd3f8249347bd0ef891e588da0ccf78d98d765afed4c12",
+    "parent_hashes": [
+      "480c60c45fb32d9bb3e00ddb9e91fb0730dbe36d5eb07ce0c71098ddfe3732dd"
+    ],
+    "event_hash": "ca60588078e557f258e70c57bbb3076d8fd19e0d46e62b7e7b894f3be2442d06",
+    "metadata": {
+      "ttlSeconds": 120
+    }
+  },
+  {
+    "event_id": "evt-37",
+    "document_id": "MFA-SUCCESS",
+    "case_id": "AUTH-MFA",
+    "version_id": "v1.0",
+    "action": "MFA_OTP_VERIFIED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T08:51:52.443Z",
+    "data_hash": "VERIFIED",
+    "parent_hashes": [
+      "ca60588078e557f258e70c57bbb3076d8fd19e0d46e62b7e7b894f3be2442d06"
+    ],
+    "event_hash": "d9c758e834ae19f7f0e6d0b0378ac930a1bc01c4bfa71db75bbd5fb8baa0b0a3",
+    "metadata": {
+      "authStatus": "MFA_SUCCESS"
+    }
+  },
+  {
+    "event_id": "evt-38",
+    "document_id": "DOC-8891-003",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "DOCUMENT_VERSION_CREATED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T08:51:52.453Z",
+    "data_hash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+    "parent_hashes": [
+      "d9c758e834ae19f7f0e6d0b0378ac930a1bc01c4bfa71db75bbd5fb8baa0b0a3"
+    ],
+    "event_hash": "4d22e84b3f0ded377b4ee15bc10bb2ac628a0439dc70e62e0ccb0a6bd6ad28b5",
+    "metadata": {
+      "previousVersion": "1.3",
+      "newVersion": "1.4",
+      "parentHash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+      "changeNotes": "Added vehicle license plate info"
+    }
+  },
+  {
+    "event_id": "evt-39",
+    "document_id": "BREAK-GLASS",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "EMERGENCY_ACCESS_REQUESTED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T08:51:52.462Z",
+    "data_hash": "EMERGENCY_REQ",
+    "parent_hashes": [
+      "4d22e84b3f0ded377b4ee15bc10bb2ac628a0439dc70e62e0ccb0a6bd6ad28b5"
+    ],
+    "event_hash": "72995c95d5220a2adef4f6255066c5e2778602c60890c0eb289afe60364f48be",
+    "metadata": {
+      "requestId": "BG-REQ-12460",
+      "reason": "Urgent homicide lead wiretap inspection required during active hostage situation."
+    }
+  },
+  {
+    "event_id": "evt-40",
+    "document_id": "BREAK-GLASS",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "EMERGENCY_ACCESS_GRANTED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T08:51:52.469Z",
+    "data_hash": "GRANT_ACTIVE",
+    "parent_hashes": [
+      "72995c95d5220a2adef4f6255066c5e2778602c60890c0eb289afe60364f48be"
+    ],
+    "event_hash": "34ce82d038be5f03ab05b58a5e5b85da9329ab4bcb083d3872fadd08bd250a2d",
+    "metadata": {
+      "requestId": "BG-REQ-12460",
+      "approvedBy": "Inspector Vikram Sharma",
+      "durationMinutes": 30,
+      "expiresAt": "2026-09-11T09:21:52.468Z"
+    }
+  },
+  {
+    "event_id": "evt-41",
+    "document_id": "DOC-8891-003",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "CONTROLLED_LINK_CREATED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T08:51:52.475Z",
+    "data_hash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+    "parent_hashes": [
+      "34ce82d038be5f03ab05b58a5e5b85da9329ab4bcb083d3872fadd08bd250a2d"
+    ],
+    "event_hash": "756e1bd51bcb193a49b8eba2e1ca31d53da3455774f2213d811895b319ed68fd",
+    "metadata": {
+      "recipientEmail": "defense.counsel@highcourt.gov.in",
+      "policy": "VIEW_ONLY_NO_DOWNLOAD",
+      "expiresAtHours": 24
+    }
+  },
+  {
+    "event_id": "evt-42",
+    "document_id": "MFA-SESSION",
+    "case_id": "AUTH-MFA",
+    "version_id": "v1.0",
+    "action": "MFA_OTP_GENERATED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T08:52:24.452Z",
+    "data_hash": "af42a0a5603464d2a4d406d0f232c848931033a9b06e1082db78d79d75951c0f",
+    "parent_hashes": [
+      "756e1bd51bcb193a49b8eba2e1ca31d53da3455774f2213d811895b319ed68fd"
+    ],
+    "event_hash": "10f7394fcc4ba8f382a326f8f09be8d0cac43e1809fca4261a39f9044b344820",
+    "metadata": {
+      "ttlSeconds": 120
+    }
+  },
+  {
+    "event_id": "evt-43",
+    "document_id": "MFA-SUCCESS",
+    "case_id": "AUTH-MFA",
+    "version_id": "v1.0",
+    "action": "MFA_OTP_VERIFIED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T08:52:24.456Z",
+    "data_hash": "VERIFIED",
+    "parent_hashes": [
+      "10f7394fcc4ba8f382a326f8f09be8d0cac43e1809fca4261a39f9044b344820"
+    ],
+    "event_hash": "bc93c7f526c1c37062f919b47e1bd3dfd8626b67ccfe11ecebc2522162bf9380",
+    "metadata": {
+      "authStatus": "MFA_SUCCESS"
+    }
+  },
+  {
+    "event_id": "evt-44",
+    "document_id": "DOC-8891-003",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "DOCUMENT_VERSION_CREATED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T08:52:24.466Z",
+    "data_hash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+    "parent_hashes": [
+      "bc93c7f526c1c37062f919b47e1bd3dfd8626b67ccfe11ecebc2522162bf9380"
+    ],
+    "event_hash": "354ed4600d8283ddebc492ae98b900f033489e1b838d9bfb049d7df3a0e488cb",
+    "metadata": {
+      "previousVersion": "1.4",
+      "newVersion": "1.5",
+      "parentHash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+      "changeNotes": "Added vehicle license plate info"
+    }
+  },
+  {
+    "event_id": "evt-45",
+    "document_id": "BREAK-GLASS",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "EMERGENCY_ACCESS_REQUESTED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T08:52:24.472Z",
+    "data_hash": "EMERGENCY_REQ",
+    "parent_hashes": [
+      "354ed4600d8283ddebc492ae98b900f033489e1b838d9bfb049d7df3a0e488cb"
+    ],
+    "event_hash": "f08b4bc8d44b0fee6a9c7920288546ba6c6b95b76c6b33015f84f80e32968727",
+    "metadata": {
+      "requestId": "BG-REQ-44471",
+      "reason": "Urgent homicide lead wiretap inspection required during active hostage situation."
+    }
+  },
+  {
+    "event_id": "evt-46",
+    "document_id": "BREAK-GLASS",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "EMERGENCY_ACCESS_GRANTED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T08:52:24.478Z",
+    "data_hash": "GRANT_ACTIVE",
+    "parent_hashes": [
+      "f08b4bc8d44b0fee6a9c7920288546ba6c6b95b76c6b33015f84f80e32968727"
+    ],
+    "event_hash": "ca217173c14ed3e65a3b454b0a11dc10539448ba4d26ec0ebb92177c8cbac037",
+    "metadata": {
+      "requestId": "BG-REQ-44471",
+      "approvedBy": "Inspector Vikram Sharma",
+      "durationMinutes": 30,
+      "expiresAt": "2026-09-11T09:22:24.477Z"
+    }
+  },
+  {
+    "event_id": "evt-47",
+    "document_id": "DOC-8891-003",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "CONTROLLED_LINK_CREATED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T08:52:24.484Z",
+    "data_hash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+    "parent_hashes": [
+      "ca217173c14ed3e65a3b454b0a11dc10539448ba4d26ec0ebb92177c8cbac037"
+    ],
+    "event_hash": "259ec2d4e35d9bb993062c0857d031c43ef406f8d29756c57a6c9d357c8537b6",
+    "metadata": {
+      "recipientEmail": "defense.counsel@highcourt.gov.in",
+      "policy": "VIEW_ONLY_NO_DOWNLOAD",
+      "expiresAtHours": 24
+    }
+  },
+  {
+    "event_id": "evt-48",
+    "document_id": "MFA-SESSION",
+    "case_id": "AUTH-MFA",
+    "version_id": "v1.0",
+    "action": "MFA_OTP_GENERATED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T08:53:31.283Z",
+    "data_hash": "bb7746dd066ab6b32919b97b6ea034f5d361b6a30034a68461c55d7da9a88a0c",
+    "parent_hashes": [
+      "259ec2d4e35d9bb993062c0857d031c43ef406f8d29756c57a6c9d357c8537b6"
+    ],
+    "event_hash": "7ca3fc81bfec3ea46bd61eb6235c05fe905f07111bc4e202251edde2110fe5c2",
+    "metadata": {
+      "ttlSeconds": 120
+    }
+  },
+  {
+    "event_id": "evt-49",
+    "document_id": "MFA-SUCCESS",
+    "case_id": "AUTH-MFA",
+    "version_id": "v1.0",
+    "action": "MFA_OTP_VERIFIED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T08:53:31.287Z",
+    "data_hash": "VERIFIED",
+    "parent_hashes": [
+      "7ca3fc81bfec3ea46bd61eb6235c05fe905f07111bc4e202251edde2110fe5c2"
+    ],
+    "event_hash": "71cf2987e43776041555c9dbcfbe24c10569290cfba846459138946c2f3ae2ba",
+    "metadata": {
+      "authStatus": "MFA_SUCCESS"
+    }
+  },
+  {
+    "event_id": "evt-50",
+    "document_id": "DOC-8891-003",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "DOCUMENT_VERSION_CREATED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T08:53:31.302Z",
+    "data_hash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+    "parent_hashes": [
+      "71cf2987e43776041555c9dbcfbe24c10569290cfba846459138946c2f3ae2ba"
+    ],
+    "event_hash": "a4ab922df8d5f97d1651ada4e71de74bf439ec52153a716004e568fdf7dd0554",
+    "metadata": {
+      "previousVersion": "1.5",
+      "newVersion": "1.6",
+      "fileId": "DOC-8891-003_v1_6",
+      "parentHash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+      "changeNotes": "Added vehicle license plate info"
+    }
+  },
+  {
+    "event_id": "evt-51",
+    "document_id": "BREAK-GLASS",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "EMERGENCY_ACCESS_REQUESTED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T08:53:31.311Z",
+    "data_hash": "EMERGENCY_REQ",
+    "parent_hashes": [
+      "a4ab922df8d5f97d1651ada4e71de74bf439ec52153a716004e568fdf7dd0554"
+    ],
+    "event_hash": "3d40a43e00996345a216842c2f7542335f2ba6aa94689641692a6958f1fefcd9",
+    "metadata": {
+      "requestId": "BG-REQ-11309",
+      "reason": "Urgent homicide lead wiretap inspection required during active hostage situation."
+    }
+  },
+  {
+    "event_id": "evt-52",
+    "document_id": "BREAK-GLASS",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "EMERGENCY_ACCESS_GRANTED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T08:53:31.319Z",
+    "data_hash": "GRANT_ACTIVE",
+    "parent_hashes": [
+      "3d40a43e00996345a216842c2f7542335f2ba6aa94689641692a6958f1fefcd9"
+    ],
+    "event_hash": "6491e5df978dd7baa226d190c5e4f1014be112cdc2bce5cc79887b455bf02ce7",
+    "metadata": {
+      "requestId": "BG-REQ-11309",
+      "approvedBy": "Inspector Vikram Sharma",
+      "durationMinutes": 30,
+      "expiresAt": "2026-09-11T09:23:31.318Z"
+    }
+  },
+  {
+    "event_id": "evt-53",
+    "document_id": "DOC-8891-003",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "CONTROLLED_LINK_CREATED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T08:53:31.328Z",
+    "data_hash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+    "parent_hashes": [
+      "6491e5df978dd7baa226d190c5e4f1014be112cdc2bce5cc79887b455bf02ce7"
+    ],
+    "event_hash": "9ff823394b4c241d98ebe72497b246c992ce089c24ec6b20e8c174245625e275",
+    "metadata": {
+      "recipientEmail": "defense.counsel@highcourt.gov.in",
+      "policy": "VIEW_ONLY_NO_DOWNLOAD",
+      "expiresAtHours": 24
+    }
+  },
+  {
+    "event_id": "evt-54",
+    "document_id": "DOC-8891-003",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "CONTROLLED_LINK_ACCESSED",
+    "user_id": "RECIPIENT_GUEST",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T08:53:31.334Z",
+    "data_hash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+    "parent_hashes": [
+      "9ff823394b4c241d98ebe72497b246c992ce089c24ec6b20e8c174245625e275"
+    ],
+    "event_hash": "5016c4b0d3cdfc8fe48c081caee6e9f2651ec2f122f36717729f3d91ab35ee06",
+    "metadata": {
+      "shareToken": "SHARE-fed8cd119213b0b103169d910a02d270",
+      "policy": "VIEW_ONLY_NO_DOWNLOAD"
+    }
+  },
+  {
+    "event_id": "evt-55",
+    "document_id": "MFA-SESSION",
+    "case_id": "AUTH-MFA",
+    "version_id": "v1.0",
+    "action": "MFA_OTP_GENERATED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T09:00:56.365Z",
+    "data_hash": "35caf31744aebe47a40d2e23f4a12d84651bd02f25b46f442c7e9e4b799593e6",
+    "parent_hashes": [
+      "5016c4b0d3cdfc8fe48c081caee6e9f2651ec2f122f36717729f3d91ab35ee06"
+    ],
+    "event_hash": "4cf0352061870f2fecea40143839409c5c553fb5a824fcd05062e8dfac43b0a1",
+    "metadata": {
+      "ttlSeconds": 120
+    }
+  },
+  {
+    "event_id": "evt-56",
+    "document_id": "MFA-SUCCESS",
+    "case_id": "AUTH-MFA",
+    "version_id": "v1.0",
+    "action": "MFA_OTP_VERIFIED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T09:00:56.370Z",
+    "data_hash": "VERIFIED",
+    "parent_hashes": [
+      "4cf0352061870f2fecea40143839409c5c553fb5a824fcd05062e8dfac43b0a1"
+    ],
+    "event_hash": "f0d648fb772516bbb15ca3a6deded365320d4379cba0d90c0b72aa39b9a31e1f",
+    "metadata": {
+      "authStatus": "MFA_SUCCESS"
+    }
+  },
+  {
+    "event_id": "evt-57",
+    "document_id": "DOC-8891-003",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "DOCUMENT_VERSION_CREATED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T09:00:56.379Z",
+    "data_hash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+    "parent_hashes": [
+      "f0d648fb772516bbb15ca3a6deded365320d4379cba0d90c0b72aa39b9a31e1f"
+    ],
+    "event_hash": "e6744770b508b158f926c696065a95b64bc458f3db6fb192feeabde60312cb86",
+    "metadata": {
+      "previousVersion": "1.6",
+      "newVersion": "1.7",
+      "fileId": "DOC-8891-003_v1_7",
+      "parentHash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+      "changeNotes": "Added vehicle license plate info"
+    }
+  },
+  {
+    "event_id": "evt-58",
+    "document_id": "BREAK-GLASS",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "EMERGENCY_ACCESS_REQUESTED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T09:00:56.386Z",
+    "data_hash": "EMERGENCY_REQ",
+    "parent_hashes": [
+      "e6744770b508b158f926c696065a95b64bc458f3db6fb192feeabde60312cb86"
+    ],
+    "event_hash": "76578b791edef83914f08eb87f3415d8abbdf92c7547af494b4d2583fa9a939d",
+    "metadata": {
+      "requestId": "BG-REQ-56385",
+      "reason": "Urgent homicide lead wiretap inspection required during active hostage situation."
+    }
+  },
+  {
+    "event_id": "evt-59",
+    "document_id": "BREAK-GLASS",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "EMERGENCY_ACCESS_GRANTED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T09:00:56.392Z",
+    "data_hash": "GRANT_ACTIVE",
+    "parent_hashes": [
+      "76578b791edef83914f08eb87f3415d8abbdf92c7547af494b4d2583fa9a939d"
+    ],
+    "event_hash": "ba58d27ca546823ce80a14c9f719110af0166f0d357b5b42bb274cb9172f0444",
+    "metadata": {
+      "requestId": "BG-REQ-56385",
+      "approvedBy": "Inspector Vikram Sharma",
+      "durationMinutes": 30,
+      "expiresAt": "2026-09-11T09:30:56.391Z"
+    }
+  },
+  {
+    "event_id": "evt-60",
+    "document_id": "DOC-8891-003",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "CONTROLLED_LINK_CREATED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T09:00:56.398Z",
+    "data_hash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+    "parent_hashes": [
+      "ba58d27ca546823ce80a14c9f719110af0166f0d357b5b42bb274cb9172f0444"
+    ],
+    "event_hash": "5ade148a6a8ea13b5f117090b03f1c8a35cbe7122010f6b65f773dd598021438",
+    "metadata": {
+      "recipientEmail": "defense.counsel@highcourt.gov.in",
+      "policy": "VIEW_ONLY_NO_DOWNLOAD",
+      "expiresAtHours": 24
+    }
+  },
+  {
+    "event_id": "evt-61",
+    "document_id": "DOC-8891-003",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "CONTROLLED_LINK_ACCESSED",
+    "user_id": "RECIPIENT_GUEST",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T09:00:56.405Z",
+    "data_hash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+    "parent_hashes": [
+      "5ade148a6a8ea13b5f117090b03f1c8a35cbe7122010f6b65f773dd598021438"
+    ],
+    "event_hash": "d87b19e7efa70878056fa009f6c3b84a6714b754642e6da8a956d5003c5659c8",
+    "metadata": {
+      "shareToken": "SHARE-adf6e132384e5611850ae6ca0ebda849",
+      "policy": "VIEW_ONLY_NO_DOWNLOAD"
+    }
+  },
+  {
+    "event_id": "evt-62",
+    "document_id": "BREAK-GLASS",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "EMERGENCY_ACCESS_REQUESTED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T10:50:43.718Z",
+    "data_hash": "EMERGENCY_REQ",
+    "parent_hashes": [
+      "d87b19e7efa70878056fa009f6c3b84a6714b754642e6da8a956d5003c5659c8"
+    ],
+    "event_hash": "8b789ed43a6bf46dcea728d297b6b0f6777c4b8bac2ada026bdacb1a0c7ac415",
+    "metadata": {
+      "requestId": "BG-REQ-43704",
+      "reason": "jknjbkknb"
+    }
+  },
+  {
+    "event_id": "evt-63",
+    "document_id": "BREAK-GLASS",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "EMERGENCY_ACCESS_REQUESTED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T10:51:18.522Z",
+    "data_hash": "EMERGENCY_REQ",
+    "parent_hashes": [
+      "8b789ed43a6bf46dcea728d297b6b0f6777c4b8bac2ada026bdacb1a0c7ac415"
+    ],
+    "event_hash": "d02f25547620a1966ca8f8298bc9c72c734c43fd9e848461ee560f62a87b60fb",
+    "metadata": {
+      "requestId": "BG-REQ-78520",
+      "reason": "jknjbkknbmkdfnmgklndfklgvnfd"
+    }
+  },
+  {
+    "event_id": "evt-64",
+    "document_id": "BREAK-GLASS",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "EMERGENCY_ACCESS_GRANTED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T10:51:20.373Z",
+    "data_hash": "GRANT_ACTIVE",
+    "parent_hashes": [
+      "d02f25547620a1966ca8f8298bc9c72c734c43fd9e848461ee560f62a87b60fb"
+    ],
+    "event_hash": "cb90d9985d93cf99d991495cac1603275764414b876cdaac6c18e4a92be8ebd6",
+    "metadata": {
+      "requestId": "BG-REQ-43704",
+      "approvedBy": "Inspector Vikram Sharma",
+      "durationMinutes": 30,
+      "expiresAt": "2026-09-11T11:21:20.371Z"
+    }
+  },
+  {
+    "event_id": "evt-65",
+    "document_id": "BREAK-GLASS",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "EMERGENCY_ACCESS_GRANTED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T10:51:22.580Z",
+    "data_hash": "GRANT_ACTIVE",
+    "parent_hashes": [
+      "cb90d9985d93cf99d991495cac1603275764414b876cdaac6c18e4a92be8ebd6"
+    ],
+    "event_hash": "b6eed76fc0761540f204114594b35308ecc1c337080c5b522ca432d7157bceca",
+    "metadata": {
+      "requestId": "BG-REQ-78520",
+      "approvedBy": "Inspector Vikram Sharma",
+      "durationMinutes": 30,
+      "expiresAt": "2026-09-11T11:21:22.578Z"
+    }
+  },
+  {
+    "event_id": "evt-66",
+    "document_id": "MFA-SESSION",
+    "case_id": "AUTH-MFA",
+    "version_id": "v1.0",
+    "action": "MFA_OTP_GENERATED",
+    "user_id": "USR-JUD-404",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T10:51:57.686Z",
+    "data_hash": "ace85f57637c07c3e84acc49308c5b05febd4a457628ccd7cc3180ee3eb77e09",
+    "parent_hashes": [
+      "b6eed76fc0761540f204114594b35308ecc1c337080c5b522ca432d7157bceca"
+    ],
+    "event_hash": "f5b496f65c09dffadafbf882372047371485a68c3d60f1f808e22bbeecde40ac",
+    "metadata": {
+      "ttlSeconds": 120
+    }
+  },
+  {
+    "event_id": "evt-67",
+    "document_id": "MFA-SUCCESS",
+    "case_id": "AUTH-MFA",
+    "version_id": "v1.0",
+    "action": "MFA_OTP_VERIFIED",
+    "user_id": "USR-JUD-404",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T10:52:00.278Z",
+    "data_hash": "VERIFIED",
+    "parent_hashes": [
+      "f5b496f65c09dffadafbf882372047371485a68c3d60f1f808e22bbeecde40ac"
+    ],
+    "event_hash": "c68ba7a83665b59c31ccf2470af7f85f5fd8e75dfca87068616b79fd614b1a75",
+    "metadata": {
+      "authStatus": "MFA_SUCCESS"
+    }
+  },
+  {
+    "event_id": "evt-68",
+    "document_id": "MFA-SESSION",
+    "case_id": "AUTH-MFA",
+    "version_id": "v1.0",
+    "action": "MFA_OTP_GENERATED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T10:52:22.875Z",
+    "data_hash": "b775f347beba460d1256c153acebe33c352fe2e17d743a68cd6c7422e07dc097",
+    "parent_hashes": [
+      "c68ba7a83665b59c31ccf2470af7f85f5fd8e75dfca87068616b79fd614b1a75"
+    ],
+    "event_hash": "ae4adb2e4e29e0e9a1888e12c721d19ccb3ac4e664cfc44b457f60882e7b8989",
+    "metadata": {
+      "ttlSeconds": 120
+    }
+  },
+  {
+    "event_id": "evt-69",
+    "document_id": "MFA-SUCCESS",
+    "case_id": "AUTH-MFA",
+    "version_id": "v1.0",
+    "action": "MFA_OTP_VERIFIED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T10:52:24.445Z",
+    "data_hash": "VERIFIED",
+    "parent_hashes": [
+      "ae4adb2e4e29e0e9a1888e12c721d19ccb3ac4e664cfc44b457f60882e7b8989"
+    ],
+    "event_hash": "dbf614f720694eab34b500633992e9a251120158715e125c9920b882ba1bc2a8",
+    "metadata": {
+      "authStatus": "MFA_SUCCESS"
+    }
+  },
+  {
+    "event_id": "evt-70",
+    "document_id": "MFA-SESSION",
+    "case_id": "AUTH-MFA",
+    "version_id": "v1.0",
+    "action": "MFA_OTP_GENERATED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T10:53:18.817Z",
+    "data_hash": "d1e8306bc488b9ac50ac2160ab1c02470852d8c9a0314cde8041641713e30e59",
+    "parent_hashes": [
+      "dbf614f720694eab34b500633992e9a251120158715e125c9920b882ba1bc2a8"
+    ],
+    "event_hash": "b9a012ac95e1162a44bd4535ae53d458f486c8a1feb0ab2353126b42c828daca",
+    "metadata": {
+      "ttlSeconds": 120
+    }
+  },
+  {
+    "event_id": "evt-71",
+    "document_id": "MFA-SUCCESS",
+    "case_id": "AUTH-MFA",
+    "version_id": "v1.0",
+    "action": "MFA_OTP_VERIFIED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T10:53:18.822Z",
+    "data_hash": "VERIFIED",
+    "parent_hashes": [
+      "b9a012ac95e1162a44bd4535ae53d458f486c8a1feb0ab2353126b42c828daca"
+    ],
+    "event_hash": "73f4d1cd8b7b2abadd5cced91fbbe16ada4abfdc714270bed7d34038c2b04a37",
+    "metadata": {
+      "authStatus": "MFA_SUCCESS"
+    }
+  },
+  {
+    "event_id": "evt-72",
+    "document_id": "DOC-8891-003",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "DOCUMENT_VERSION_CREATED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T10:53:18.846Z",
+    "data_hash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+    "parent_hashes": [
+      "73f4d1cd8b7b2abadd5cced91fbbe16ada4abfdc714270bed7d34038c2b04a37"
+    ],
+    "event_hash": "a2aa1a0dc845df83528ffdadd0f5c0f968ad74a3a270e278c7274b7193cf31e6",
+    "metadata": {
+      "previousVersion": "1.7",
+      "newVersion": "1.8",
+      "fileId": "DOC-8891-003_v1_8",
+      "parentHash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+      "changeNotes": "Added vehicle license plate info"
+    }
+  },
+  {
+    "event_id": "evt-73",
+    "document_id": "BREAK-GLASS",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "EMERGENCY_ACCESS_REQUESTED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T10:53:18.854Z",
+    "data_hash": "EMERGENCY_REQ",
+    "parent_hashes": [
+      "a2aa1a0dc845df83528ffdadd0f5c0f968ad74a3a270e278c7274b7193cf31e6"
+    ],
+    "event_hash": "19abb012cad5c616efab74e2bba10acd537f298cc18419c396e0277cfb54d737",
+    "metadata": {
+      "requestId": "BG-REQ-98853",
+      "reason": "Urgent homicide lead wiretap inspection required during active hostage situation."
+    }
+  },
+  {
+    "event_id": "evt-74",
+    "document_id": "BREAK-GLASS",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "EMERGENCY_ACCESS_GRANTED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T10:53:18.861Z",
+    "data_hash": "GRANT_ACTIVE",
+    "parent_hashes": [
+      "19abb012cad5c616efab74e2bba10acd537f298cc18419c396e0277cfb54d737"
+    ],
+    "event_hash": "f8beff9e59ffa8b15548ab4a150c66edaa3a324fb3d3b2e08948efb761d126c6",
+    "metadata": {
+      "requestId": "BG-REQ-98853",
+      "approvedBy": "Inspector Vikram Sharma",
+      "durationMinutes": 30,
+      "expiresAt": "2026-09-11T11:23:18.859Z"
+    }
+  },
+  {
+    "event_id": "evt-75",
+    "document_id": "DOC-8891-003",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "CONTROLLED_LINK_CREATED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T10:53:18.867Z",
+    "data_hash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+    "parent_hashes": [
+      "f8beff9e59ffa8b15548ab4a150c66edaa3a324fb3d3b2e08948efb761d126c6"
+    ],
+    "event_hash": "f6e3984f1078297a2409a66ab90b9be75eb44dd787746c12848651afddcc0d33",
+    "metadata": {
+      "recipientEmail": "defense.counsel@highcourt.gov.in",
+      "policy": "VIEW_ONLY_NO_DOWNLOAD",
+      "expiresAtHours": 24
+    }
+  },
+  {
+    "event_id": "evt-76",
+    "document_id": "DOC-8891-003",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "CONTROLLED_LINK_ACCESSED",
+    "user_id": "RECIPIENT_GUEST",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T10:53:18.875Z",
+    "data_hash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+    "parent_hashes": [
+      "f6e3984f1078297a2409a66ab90b9be75eb44dd787746c12848651afddcc0d33"
+    ],
+    "event_hash": "7deeff39709db089da7039f72724702a3c801a4866a79af4e76b44b34eefd984",
+    "metadata": {
+      "shareToken": "SHARE-a282d09c0efaa6a7ca2015a1a3740dab",
+      "policy": "VIEW_ONLY_NO_DOWNLOAD"
+    }
+  },
+  {
+    "event_id": "evt-77",
+    "document_id": "MFA-SESSION",
+    "case_id": "AUTH-MFA",
+    "version_id": "v1.0",
+    "action": "MFA_OTP_GENERATED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T11:38:51.505Z",
+    "data_hash": "cddb2b650e944a62582381d7af1ab5c2bedc4c45ca949bb939ec24f836b0d42c",
+    "parent_hashes": [
+      "7deeff39709db089da7039f72724702a3c801a4866a79af4e76b44b34eefd984"
+    ],
+    "event_hash": "e5abf33a23f27bfc5b2e7ad2ead81686b4f872c3ad2f62a08ab326d50a7ac66b",
+    "metadata": {
+      "ttlSeconds": 120
+    }
+  },
+  {
+    "event_id": "evt-78",
+    "document_id": "MFA-SUCCESS",
+    "case_id": "AUTH-MFA",
+    "version_id": "v1.0",
+    "action": "MFA_OTP_VERIFIED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T11:38:51.519Z",
+    "data_hash": "VERIFIED",
+    "parent_hashes": [
+      "e5abf33a23f27bfc5b2e7ad2ead81686b4f872c3ad2f62a08ab326d50a7ac66b"
+    ],
+    "event_hash": "586b74d3b278bd16c1b71361ee4d7d5d1b1a628f36a13927abb4da9d48d7bc76",
+    "metadata": {
+      "authStatus": "MFA_SUCCESS"
+    }
+  },
+  {
+    "event_id": "evt-79",
+    "document_id": "DOC-8891-003",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "DOCUMENT_VERSION_CREATED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T11:38:51.565Z",
+    "data_hash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+    "parent_hashes": [
+      "586b74d3b278bd16c1b71361ee4d7d5d1b1a628f36a13927abb4da9d48d7bc76"
+    ],
+    "event_hash": "18de4a6019492eb6e288e3917ecce913137199a9145b6832447f08d252e75f32",
+    "metadata": {
+      "previousVersion": "1.8",
+      "newVersion": "1.9",
+      "fileId": "DOC-8891-003_v1_9",
+      "parentHash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+      "changeNotes": "Added vehicle license plate info"
+    }
+  },
+  {
+    "event_id": "evt-80",
+    "document_id": "BREAK-GLASS",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "EMERGENCY_ACCESS_REQUESTED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T11:38:51.577Z",
+    "data_hash": "EMERGENCY_REQ",
+    "parent_hashes": [
+      "18de4a6019492eb6e288e3917ecce913137199a9145b6832447f08d252e75f32"
+    ],
+    "event_hash": "141abef0b33e0554980a1e13b6b8609707290f3c6d4358daa14c670f4ee82625",
+    "metadata": {
+      "requestId": "BG-REQ-31576",
+      "reason": "Urgent homicide lead wiretap inspection required during active hostage situation."
+    }
+  },
+  {
+    "event_id": "evt-81",
+    "document_id": "BREAK-GLASS",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "EMERGENCY_ACCESS_GRANTED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T11:38:51.586Z",
+    "data_hash": "GRANT_ACTIVE",
+    "parent_hashes": [
+      "141abef0b33e0554980a1e13b6b8609707290f3c6d4358daa14c670f4ee82625"
+    ],
+    "event_hash": "dd0fced2c2a0b3ca7aed42d508e269e77cad3d1da0a6bdc4b4f048be8d6b95e0",
+    "metadata": {
+      "requestId": "BG-REQ-31576",
+      "approvedBy": "Inspector Vikram Sharma",
+      "durationMinutes": 30,
+      "expiresAt": "2026-09-11T12:08:51.584Z"
+    }
+  },
+  {
+    "event_id": "evt-82",
+    "document_id": "DOC-8891-003",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "CONTROLLED_LINK_CREATED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T11:38:51.595Z",
+    "data_hash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+    "parent_hashes": [
+      "dd0fced2c2a0b3ca7aed42d508e269e77cad3d1da0a6bdc4b4f048be8d6b95e0"
+    ],
+    "event_hash": "d639d357950c545f3995aa0c7cfaeacc6b969a1fe5e0e6087cc04494c04d7e0f",
+    "metadata": {
+      "recipientEmail": "defense.counsel@highcourt.gov.in",
+      "policy": "VIEW_ONLY_NO_DOWNLOAD",
+      "expiresAtHours": 24
+    }
+  },
+  {
+    "event_id": "evt-83",
+    "document_id": "DOC-8891-003",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "CONTROLLED_LINK_ACCESSED",
+    "user_id": "RECIPIENT_GUEST",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T11:38:51.604Z",
+    "data_hash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+    "parent_hashes": [
+      "d639d357950c545f3995aa0c7cfaeacc6b969a1fe5e0e6087cc04494c04d7e0f"
+    ],
+    "event_hash": "f43c750f18a34b015317bab25865c80c5e053054347e788b0c7b4a1fe58a7d0d",
+    "metadata": {
+      "shareToken": "SHARE-5850c4d57c955dba3343d8e604820a0b",
+      "policy": "VIEW_ONLY_NO_DOWNLOAD"
+    }
+  },
+  {
+    "event_id": "evt-84",
+    "document_id": "MFA-SESSION",
+    "case_id": "AUTH-MFA",
+    "version_id": "v1.0",
+    "action": "MFA_OTP_GENERATED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T11:49:59.355Z",
+    "data_hash": "2d946bb819b4926a9db379e6b4f7d4c9a0fc134075448d72de346f1102beb5a9",
+    "parent_hashes": [
+      "f43c750f18a34b015317bab25865c80c5e053054347e788b0c7b4a1fe58a7d0d"
+    ],
+    "event_hash": "0d84e0a3fa48aaac9a6474bfdeadc29bf7444888230cf5b811c22b50966945c4",
+    "metadata": {
+      "ttlSeconds": 120
+    }
+  },
+  {
+    "event_id": "evt-85",
+    "document_id": "MFA-SUCCESS",
+    "case_id": "AUTH-MFA",
+    "version_id": "v1.0",
+    "action": "MFA_OTP_VERIFIED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T11:49:59.362Z",
+    "data_hash": "VERIFIED",
+    "parent_hashes": [
+      "0d84e0a3fa48aaac9a6474bfdeadc29bf7444888230cf5b811c22b50966945c4"
+    ],
+    "event_hash": "4c1f8b7f3d69b77d17c1384de91cdf60685616a3ea14addf4bfba370d53384c4",
+    "metadata": {
+      "authStatus": "MFA_SUCCESS"
+    }
+  },
+  {
+    "event_id": "evt-86",
+    "document_id": "DOC-8891-003",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "DOCUMENT_VERSION_CREATED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T11:49:59.375Z",
+    "data_hash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+    "parent_hashes": [
+      "4c1f8b7f3d69b77d17c1384de91cdf60685616a3ea14addf4bfba370d53384c4"
+    ],
+    "event_hash": "4b5f61abc499b01ba09bf029d4fff3c1e5e19fb75d835fc4b189a39b9ab4e586",
+    "metadata": {
+      "previousVersion": "1.9",
+      "newVersion": "1.10",
+      "fileId": "DOC-8891-003_v1_10",
+      "parentHash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+      "changeNotes": "Added vehicle license plate info"
+    }
+  },
+  {
+    "event_id": "evt-87",
+    "document_id": "BREAK-GLASS",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "EMERGENCY_ACCESS_REQUESTED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T11:49:59.387Z",
+    "data_hash": "EMERGENCY_REQ",
+    "parent_hashes": [
+      "4b5f61abc499b01ba09bf029d4fff3c1e5e19fb75d835fc4b189a39b9ab4e586"
+    ],
+    "event_hash": "1583d19f8f5ccd4ce1990a0270eb4f2d1cdf7c3c6e740afdd461591c2c0a55a8",
+    "metadata": {
+      "requestId": "BG-REQ-99385",
+      "reason": "Urgent homicide lead wiretap inspection required during active hostage situation."
+    }
+  },
+  {
+    "event_id": "evt-88",
+    "document_id": "BREAK-GLASS",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "EMERGENCY_ACCESS_GRANTED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T11:49:59.393Z",
+    "data_hash": "GRANT_ACTIVE",
+    "parent_hashes": [
+      "1583d19f8f5ccd4ce1990a0270eb4f2d1cdf7c3c6e740afdd461591c2c0a55a8"
+    ],
+    "event_hash": "48afb63d976190c6f34c3c5fdfeb9462524b9e3e716474c740707881b3ddc09c",
+    "metadata": {
+      "requestId": "BG-REQ-99385",
+      "approvedBy": "Inspector Vikram Sharma",
+      "durationMinutes": 30,
+      "expiresAt": "2026-09-11T12:19:59.392Z"
+    }
+  },
+  {
+    "event_id": "evt-89",
+    "document_id": "DOC-8891-003",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "CONTROLLED_LINK_CREATED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T11:49:59.401Z",
+    "data_hash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+    "parent_hashes": [
+      "48afb63d976190c6f34c3c5fdfeb9462524b9e3e716474c740707881b3ddc09c"
+    ],
+    "event_hash": "6097eecf30c29157f408eee001c3df3173fa63c02d8a95617eed086fcee8c231",
+    "metadata": {
+      "recipientEmail": "defense.counsel@highcourt.gov.in",
+      "policy": "VIEW_ONLY_NO_DOWNLOAD",
+      "expiresAtHours": 24
+    }
+  },
+  {
+    "event_id": "evt-90",
+    "document_id": "DOC-8891-003",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "CONTROLLED_LINK_ACCESSED",
+    "user_id": "RECIPIENT_GUEST",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T11:49:59.407Z",
+    "data_hash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+    "parent_hashes": [
+      "6097eecf30c29157f408eee001c3df3173fa63c02d8a95617eed086fcee8c231"
+    ],
+    "event_hash": "682c4b8f3a295921dcaa5105442baa8804d959cf97d2f646960ea17639249b35",
+    "metadata": {
+      "shareToken": "SHARE-539f43f84dccf06fa07e473632761f95",
+      "policy": "VIEW_ONLY_NO_DOWNLOAD"
+    }
+  },
+  {
+    "event_id": "evt-91",
+    "document_id": "MFA-SESSION",
+    "case_id": "AUTH-MFA",
+    "version_id": "v1.0",
+    "action": "MFA_OTP_GENERATED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T11:51:23.975Z",
+    "data_hash": "6a85ec7af1e8bbd8503f05944a401fe43d1ed3f3d6633fee73b491ba0fa49952",
+    "parent_hashes": [
+      "682c4b8f3a295921dcaa5105442baa8804d959cf97d2f646960ea17639249b35"
+    ],
+    "event_hash": "dc90825f198a186eb889548b525edbf12c22aaf7e591c1b9c565f2d479fca0ac",
+    "metadata": {
+      "ttlSeconds": 120
+    }
+  },
+  {
+    "event_id": "evt-92",
+    "document_id": "MFA-SUCCESS",
+    "case_id": "AUTH-MFA",
+    "version_id": "v1.0",
+    "action": "MFA_OTP_VERIFIED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T11:51:23.980Z",
+    "data_hash": "VERIFIED",
+    "parent_hashes": [
+      "dc90825f198a186eb889548b525edbf12c22aaf7e591c1b9c565f2d479fca0ac"
+    ],
+    "event_hash": "b931769459ac5adf76145dacd83e413c1540912e2eeb15a51ab317b40c1e727e",
+    "metadata": {
+      "authStatus": "MFA_SUCCESS"
+    }
+  },
+  {
+    "event_id": "evt-93",
+    "document_id": "DOC-8891-003",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "DOCUMENT_VERSION_CREATED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T11:51:23.989Z",
+    "data_hash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+    "parent_hashes": [
+      "b931769459ac5adf76145dacd83e413c1540912e2eeb15a51ab317b40c1e727e"
+    ],
+    "event_hash": "84fef5cb58739f46ac03a38c6d969ba1195065a9a1bfe3b3add8ebaa3becb1fd",
+    "metadata": {
+      "previousVersion": "1.10",
+      "newVersion": "1.11",
+      "fileId": "DOC-8891-003_v1_11",
+      "parentHash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+      "changeNotes": "Added vehicle license plate info"
+    }
+  },
+  {
+    "event_id": "evt-94",
+    "document_id": "BREAK-GLASS",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "EMERGENCY_ACCESS_REQUESTED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T11:51:23.997Z",
+    "data_hash": "EMERGENCY_REQ",
+    "parent_hashes": [
+      "84fef5cb58739f46ac03a38c6d969ba1195065a9a1bfe3b3add8ebaa3becb1fd"
+    ],
+    "event_hash": "9a834887312a4ae341621b39863364a81a2da667b33b47075bc7aa450510bfad",
+    "metadata": {
+      "requestId": "BG-REQ-83995",
+      "reason": "Urgent homicide lead wiretap inspection required during active hostage situation."
+    }
+  },
+  {
+    "event_id": "evt-95",
+    "document_id": "BREAK-GLASS",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "EMERGENCY_ACCESS_GRANTED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T11:51:24.005Z",
+    "data_hash": "GRANT_ACTIVE",
+    "parent_hashes": [
+      "9a834887312a4ae341621b39863364a81a2da667b33b47075bc7aa450510bfad"
+    ],
+    "event_hash": "085d6bc2dfedabbf951ba3fa5859d91fa1d0c31e5324d0e3d6af029fb2bf200e",
+    "metadata": {
+      "requestId": "BG-REQ-83995",
+      "approvedBy": "Inspector Vikram Sharma",
+      "durationMinutes": 30,
+      "expiresAt": "2026-09-11T12:21:24.004Z"
+    }
+  },
+  {
+    "event_id": "evt-96",
+    "document_id": "DOC-8891-003",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "CONTROLLED_LINK_CREATED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T11:51:24.014Z",
+    "data_hash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+    "parent_hashes": [
+      "085d6bc2dfedabbf951ba3fa5859d91fa1d0c31e5324d0e3d6af029fb2bf200e"
+    ],
+    "event_hash": "2893878db94d231e63af97d4b5c3da3febc46f12b99d2414f5c7907623173fe8",
+    "metadata": {
+      "recipientEmail": "defense.counsel@highcourt.gov.in",
+      "policy": "VIEW_ONLY_NO_DOWNLOAD",
+      "expiresAtHours": 24
+    }
+  },
+  {
+    "event_id": "evt-97",
+    "document_id": "DOC-8891-003",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "CONTROLLED_LINK_ACCESSED",
+    "user_id": "RECIPIENT_GUEST",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T11:51:24.021Z",
+    "data_hash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+    "parent_hashes": [
+      "2893878db94d231e63af97d4b5c3da3febc46f12b99d2414f5c7907623173fe8"
+    ],
+    "event_hash": "1a4f986ccf1e66d9605f3f7a31fe67c1aaf13c0317d24c03ac27d6627d1d06f4",
+    "metadata": {
+      "shareToken": "SHARE-c83586e38642a482a68459f60f35cc85",
+      "policy": "VIEW_ONLY_NO_DOWNLOAD"
+    }
+  },
+  {
+    "event_id": "evt-98",
+    "document_id": "MFA-SESSION",
+    "case_id": "AUTH-MFA",
+    "version_id": "v1.0",
+    "action": "MFA_OTP_GENERATED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T11:52:32.885Z",
+    "data_hash": "b3b94f241b493de886f8a6999372398c8eaec890949aa31a2e6d20a628366b44",
+    "parent_hashes": [
+      "1a4f986ccf1e66d9605f3f7a31fe67c1aaf13c0317d24c03ac27d6627d1d06f4"
+    ],
+    "event_hash": "8d36b75222f946500c2378e5cec7ff11b515165b5c4d328077f440871ce0e4ce",
+    "metadata": {
+      "ttlSeconds": 120
+    }
+  },
+  {
+    "event_id": "evt-99",
+    "document_id": "MFA-SUCCESS",
+    "case_id": "AUTH-MFA",
+    "version_id": "v1.0",
+    "action": "MFA_OTP_VERIFIED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T11:52:32.890Z",
+    "data_hash": "VERIFIED",
+    "parent_hashes": [
+      "8d36b75222f946500c2378e5cec7ff11b515165b5c4d328077f440871ce0e4ce"
+    ],
+    "event_hash": "d10a90e0f23afc36d0dcd9200c5dec4aa4b8b426ff1e703737ccdb0d9d3172c2",
+    "metadata": {
+      "authStatus": "MFA_SUCCESS"
+    }
+  },
+  {
+    "event_id": "evt-100",
+    "document_id": "DOC-8891-003",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "DOCUMENT_VERSION_CREATED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T11:52:32.901Z",
+    "data_hash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+    "parent_hashes": [
+      "d10a90e0f23afc36d0dcd9200c5dec4aa4b8b426ff1e703737ccdb0d9d3172c2"
+    ],
+    "event_hash": "dfd15009901d3f27b0c303c3a4647b337ddada3677860bcd0b1bde7ae5de4f4a",
+    "metadata": {
+      "previousVersion": "1.11",
+      "newVersion": "1.12",
+      "fileId": "DOC-8891-003_v1_12",
+      "parentHash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+      "changeNotes": "Added vehicle license plate info"
+    }
+  },
+  {
+    "event_id": "evt-101",
+    "document_id": "BREAK-GLASS",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "EMERGENCY_ACCESS_REQUESTED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T11:52:32.907Z",
+    "data_hash": "EMERGENCY_REQ",
+    "parent_hashes": [
+      "dfd15009901d3f27b0c303c3a4647b337ddada3677860bcd0b1bde7ae5de4f4a"
+    ],
+    "event_hash": "fc825002799cff849fe31363ceec67739f9f6c00f9349b9f799df9dea0545102",
+    "metadata": {
+      "requestId": "BG-REQ-52906",
+      "reason": "Urgent homicide lead wiretap inspection required during active hostage situation."
+    }
+  },
+  {
+    "event_id": "evt-102",
+    "document_id": "BREAK-GLASS",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "EMERGENCY_ACCESS_GRANTED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T11:52:32.913Z",
+    "data_hash": "GRANT_ACTIVE",
+    "parent_hashes": [
+      "fc825002799cff849fe31363ceec67739f9f6c00f9349b9f799df9dea0545102"
+    ],
+    "event_hash": "94c9c1977b3cfd4085d26cd59d6c4ee91336c82ec00c8bf817153d414a76afdd",
+    "metadata": {
+      "requestId": "BG-REQ-52906",
+      "approvedBy": "Inspector Vikram Sharma",
+      "durationMinutes": 30,
+      "expiresAt": "2026-09-11T12:22:32.913Z"
+    }
+  },
+  {
+    "event_id": "evt-103",
+    "document_id": "DOC-8891-003",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "CONTROLLED_LINK_CREATED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T11:52:32.921Z",
+    "data_hash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+    "parent_hashes": [
+      "94c9c1977b3cfd4085d26cd59d6c4ee91336c82ec00c8bf817153d414a76afdd"
+    ],
+    "event_hash": "4e9a64b276f81e00d43645c31c60ef4cdce13c743bd99f5281735ea05471b0cd",
+    "metadata": {
+      "recipientEmail": "defense.counsel@highcourt.gov.in",
+      "policy": "VIEW_ONLY_NO_DOWNLOAD",
+      "expiresAtHours": 24
+    }
+  },
+  {
+    "event_id": "evt-104",
+    "document_id": "DOC-8891-003",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "CONTROLLED_LINK_ACCESSED",
+    "user_id": "RECIPIENT_GUEST",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T11:52:32.929Z",
+    "data_hash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+    "parent_hashes": [
+      "4e9a64b276f81e00d43645c31c60ef4cdce13c743bd99f5281735ea05471b0cd"
+    ],
+    "event_hash": "cb7cde8b359598399dd342a1d1446c6b2b7c23777ef7ca556795313d9944c331",
+    "metadata": {
+      "shareToken": "SHARE-6ef67ccfafc4db157633a96d4843075f",
+      "policy": "VIEW_ONLY_NO_DOWNLOAD"
+    }
+  },
+  {
+    "event_id": "evt-105",
+    "document_id": "SYSTEM",
+    "case_id": "SYSTEM",
+    "version_id": "v1.0",
+    "action": "SYSTEM_AUDIT_EXECUTED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T11:52:32.968Z",
+    "data_hash": "AUDIT_CHECK",
+    "parent_hashes": [
+      "cb7cde8b359598399dd342a1d1446c6b2b7c23777ef7ca556795313d9944c331"
+    ],
+    "event_hash": "c7b6e4e9073f914bc2ef45f0cbc2f156f852a7a30049d1fee97d706e208e7dd1",
+    "metadata": {
+      "auditStatus": "VERIFIED_OK"
+    }
+  },
+  {
+    "event_id": "evt-106",
+    "document_id": "MFA-SESSION",
+    "case_id": "AUTH-MFA",
+    "version_id": "v1.0",
+    "action": "MFA_OTP_GENERATED",
+    "user_id": "USR-PRO-303",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T15:52:33.633Z",
+    "data_hash": "c959e150788b5108014935670ae3e2702135c8f3b571d7d5d1fdcaa68f446181",
+    "parent_hashes": [
+      "c7b6e4e9073f914bc2ef45f0cbc2f156f852a7a30049d1fee97d706e208e7dd1"
+    ],
+    "event_hash": "aadbee19d0f4c6574530b1bacc95c6bc8effdfdff3d3c0d9a08decbaaffaa85b",
+    "metadata": {
+      "ttlSeconds": 120
+    }
+  },
+  {
+    "event_id": "evt-107",
+    "document_id": "MFA-SUCCESS",
+    "case_id": "AUTH-MFA",
+    "version_id": "v1.0",
+    "action": "MFA_OTP_VERIFIED",
+    "user_id": "USR-PRO-303",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-11T15:52:36.133Z",
+    "data_hash": "VERIFIED",
+    "parent_hashes": [
+      "aadbee19d0f4c6574530b1bacc95c6bc8effdfdff3d3c0d9a08decbaaffaa85b"
+    ],
+    "event_hash": "186afe50fb1d4a52e1293ae77224ab2f999f3e97b0b63e85676b1120e52dccf9",
+    "metadata": {
+      "authStatus": "MFA_SUCCESS"
+    }
+  },
+  {
+    "event_id": "evt-108",
+    "document_id": "MFA-SESSION",
+    "case_id": "AUTH-MFA",
+    "version_id": "v1.0",
+    "action": "MFA_OTP_GENERATED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-12T14:20:38.988Z",
+    "data_hash": "6dde6babd912138e570199b5c0b88587339738b01cd0656f6d41d672c8bd5b5d",
+    "parent_hashes": [
+      "186afe50fb1d4a52e1293ae77224ab2f999f3e97b0b63e85676b1120e52dccf9"
+    ],
+    "event_hash": "d52b4d63de686fd0d1462fa88e4a04023d278e802f6561c4ad8137bd1367e110",
+    "metadata": {
+      "ttlSeconds": 120
+    }
+  },
+  {
+    "event_id": "evt-109",
+    "document_id": "MFA-SUCCESS",
+    "case_id": "AUTH-MFA",
+    "version_id": "v1.0",
+    "action": "MFA_OTP_VERIFIED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-12T14:20:39.835Z",
+    "data_hash": "VERIFIED",
+    "parent_hashes": [
+      "d52b4d63de686fd0d1462fa88e4a04023d278e802f6561c4ad8137bd1367e110"
+    ],
+    "event_hash": "f9b2b7dfc70e5e8cdb9bed7c8f3f1d1c4f2455cbe142514e441050670478e36a",
+    "metadata": {
+      "authStatus": "MFA_SUCCESS"
+    }
+  },
+  {
+    "event_id": "evt-110",
+    "document_id": "DOC-8891-003",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "DOCUMENT_VERSION_CREATED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-12T14:20:40.239Z",
+    "data_hash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+    "parent_hashes": [
+      "f9b2b7dfc70e5e8cdb9bed7c8f3f1d1c4f2455cbe142514e441050670478e36a"
+    ],
+    "event_hash": "09379c40f73a1766256865dd5f33406aaa905c636d1138872354149cae32cbf9",
+    "metadata": {
+      "previousVersion": "1.12",
+      "newVersion": "1.13",
+      "fileId": "DOC-8891-003_v1_13",
+      "parentHash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+      "changeNotes": "Added vehicle license plate info"
+    }
+  },
+  {
+    "event_id": "evt-111",
+    "document_id": "BREAK-GLASS",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "EMERGENCY_ACCESS_REQUESTED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-12T14:20:40.631Z",
+    "data_hash": "EMERGENCY_REQ",
+    "parent_hashes": [
+      "09379c40f73a1766256865dd5f33406aaa905c636d1138872354149cae32cbf9"
+    ],
+    "event_hash": "e0d58a704ea52471c199d82f50e13beb89471ec670dd64a8d7952a170a853fdd",
+    "metadata": {
+      "requestId": "BG-REQ-40623",
+      "reason": "Urgent homicide lead wiretap inspection required during active hostage situation."
+    }
+  },
+  {
+    "event_id": "evt-112",
+    "document_id": "BREAK-GLASS",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "EMERGENCY_ACCESS_GRANTED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-12T14:20:41.179Z",
+    "data_hash": "GRANT_ACTIVE",
+    "parent_hashes": [
+      "e0d58a704ea52471c199d82f50e13beb89471ec670dd64a8d7952a170a853fdd"
+    ],
+    "event_hash": "0eeda6b07fd93f86156da00962d1cdde0010d01f79238f3c8d3859f68307eca1",
+    "metadata": {
+      "requestId": "BG-REQ-40623",
+      "approvedBy": "Inspector Vikram Sharma",
+      "durationMinutes": 30,
+      "expiresAt": "2026-09-12T14:50:41.176Z"
+    }
+  },
+  {
+    "event_id": "evt-113",
+    "document_id": "DOC-8891-003",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "CONTROLLED_LINK_CREATED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-12T14:20:41.533Z",
+    "data_hash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+    "parent_hashes": [
+      "0eeda6b07fd93f86156da00962d1cdde0010d01f79238f3c8d3859f68307eca1"
+    ],
+    "event_hash": "09f4d208370f2236057f0542b0a92bc22a67c9b54c450a2478e7dae8c1baa494",
+    "metadata": {
+      "recipientEmail": "defense.counsel@highcourt.gov.in",
+      "policy": "VIEW_ONLY_NO_DOWNLOAD",
+      "expiresAtHours": 24
+    }
+  },
+  {
+    "event_id": "evt-114",
+    "document_id": "DOC-8891-003",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "CONTROLLED_LINK_ACCESSED",
+    "user_id": "RECIPIENT_GUEST",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-12T14:20:41.906Z",
+    "data_hash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+    "parent_hashes": [
+      "09f4d208370f2236057f0542b0a92bc22a67c9b54c450a2478e7dae8c1baa494"
+    ],
+    "event_hash": "26566b7c705dd615ea3fd9a9ae67e7ce07eaf033ee723d9e095d42e524d9ef42",
+    "metadata": {
+      "shareToken": "SHARE-99a8ebf775fd38ba506b9f71b55132eb",
+      "policy": "VIEW_ONLY_NO_DOWNLOAD"
+    }
+  },
+  {
+    "event_id": "evt-115",
+    "document_id": "SYSTEM",
+    "case_id": "SYSTEM",
+    "version_id": "v1.0",
+    "action": "SYSTEM_AUDIT_EXECUTED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-12T14:20:42.468Z",
+    "data_hash": "AUDIT_CHECK",
+    "parent_hashes": [
+      "26566b7c705dd615ea3fd9a9ae67e7ce07eaf033ee723d9e095d42e524d9ef42"
+    ],
+    "event_hash": "be9cceb31f7e0366bde36c88206df6433ac49748b7b18ed9e9d323e7bded3ea7",
+    "metadata": {
+      "auditStatus": "VERIFIED_OK"
+    }
+  },
+  {
+    "event_id": "evt-116",
+    "document_id": "MFA-SESSION",
+    "case_id": "AUTH-MFA",
+    "version_id": "v1.0",
+    "action": "MFA_OTP_GENERATED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-12T14:26:27.397Z",
+    "data_hash": "fb03f64651f6cba989a00d04b760bc299b69702dfb35bc18d4a89b40fa6ebb68",
+    "parent_hashes": [
+      "be9cceb31f7e0366bde36c88206df6433ac49748b7b18ed9e9d323e7bded3ea7"
+    ],
+    "event_hash": "de17a136dc028544755e1a0dba5bea3c42cad60e79af21d35308e097785e0081",
+    "metadata": {
+      "ttlSeconds": 120
+    }
+  },
+  {
+    "event_id": "evt-117",
+    "document_id": "MFA-SUCCESS",
+    "case_id": "AUTH-MFA",
+    "version_id": "v1.0",
+    "action": "MFA_OTP_VERIFIED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-12T14:26:27.803Z",
+    "data_hash": "VERIFIED",
+    "parent_hashes": [
+      "de17a136dc028544755e1a0dba5bea3c42cad60e79af21d35308e097785e0081"
+    ],
+    "event_hash": "c23e00d8736d14ce929f9302c9d27bb06eafc728f967014468a839960a08a7cd",
+    "metadata": {
+      "authStatus": "MFA_SUCCESS"
+    }
+  },
+  {
+    "event_id": "evt-118",
+    "document_id": "DOC-8891-003",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "DOCUMENT_VERSION_CREATED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-12T14:26:28.138Z",
+    "data_hash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+    "parent_hashes": [
+      "c23e00d8736d14ce929f9302c9d27bb06eafc728f967014468a839960a08a7cd"
+    ],
+    "event_hash": "42151c1ec8edcb97f5808f1c25d8162a6bfcbfc01601421b192668f8328a54b4",
+    "metadata": {
+      "previousVersion": "1.13",
+      "newVersion": "1.14",
+      "fileId": "DOC-8891-003_v1_14",
+      "parentHash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+      "changeNotes": "Added vehicle license plate info"
+    }
+  },
+  {
+    "event_id": "evt-119",
+    "document_id": "BREAK-GLASS",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "EMERGENCY_ACCESS_REQUESTED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-12T14:26:28.443Z",
+    "data_hash": "EMERGENCY_REQ",
+    "parent_hashes": [
+      "42151c1ec8edcb97f5808f1c25d8162a6bfcbfc01601421b192668f8328a54b4"
+    ],
+    "event_hash": "9fc0f495f70eae1cdcc7d44a38105f6bb86ab2c65331b8da67747457f99e977b",
+    "metadata": {
+      "requestId": "BG-REQ-88442",
+      "reason": "Urgent homicide lead wiretap inspection required during active hostage situation."
+    }
+  },
+  {
+    "event_id": "evt-120",
+    "document_id": "BREAK-GLASS",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "EMERGENCY_ACCESS_GRANTED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-12T14:26:28.779Z",
+    "data_hash": "GRANT_ACTIVE",
+    "parent_hashes": [
+      "9fc0f495f70eae1cdcc7d44a38105f6bb86ab2c65331b8da67747457f99e977b"
+    ],
+    "event_hash": "18c6935e638030d6f8aacd3b3087076612349b0f66a65666dcaaebd9f11333e3",
+    "metadata": {
+      "requestId": "BG-REQ-88442",
+      "approvedBy": "Inspector Vikram Sharma",
+      "durationMinutes": 30,
+      "expiresAt": "2026-09-12T14:56:28.777Z"
+    }
+  },
+  {
+    "event_id": "evt-121",
+    "document_id": "DOC-8891-003",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "CONTROLLED_LINK_CREATED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-12T14:26:29.202Z",
+    "data_hash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+    "parent_hashes": [
+      "18c6935e638030d6f8aacd3b3087076612349b0f66a65666dcaaebd9f11333e3"
+    ],
+    "event_hash": "1050bf91b6ba5a7533d12446daaef11d120eeaf1f122954cfa4bc7c8c0303fdf",
+    "metadata": {
+      "recipientEmail": "defense.counsel@highcourt.gov.in",
+      "policy": "VIEW_ONLY_NO_DOWNLOAD",
+      "expiresAtHours": 24
+    }
+  },
+  {
+    "event_id": "evt-122",
+    "document_id": "DOC-8891-003",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "CONTROLLED_LINK_ACCESSED",
+    "user_id": "RECIPIENT_GUEST",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-12T14:26:29.545Z",
+    "data_hash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+    "parent_hashes": [
+      "1050bf91b6ba5a7533d12446daaef11d120eeaf1f122954cfa4bc7c8c0303fdf"
+    ],
+    "event_hash": "278948cce7b57459a5fe18f84f57d4f58ea5b72c98bec4a036054573b8bedd90",
+    "metadata": {
+      "shareToken": "SHARE-876d4414a671d25773287c6d8ece5d43",
+      "policy": "VIEW_ONLY_NO_DOWNLOAD"
+    }
+  },
+  {
+    "event_id": "evt-123",
+    "document_id": "SYSTEM",
+    "case_id": "SYSTEM",
+    "version_id": "v1.0",
+    "action": "SYSTEM_AUDIT_EXECUTED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-12T14:26:29.916Z",
+    "data_hash": "AUDIT_CHECK",
+    "parent_hashes": [
+      "278948cce7b57459a5fe18f84f57d4f58ea5b72c98bec4a036054573b8bedd90"
+    ],
+    "event_hash": "c4ee736a9164cd5b85d8e7ab7253bcd8a794c255a6ed0b88bc8669c16e608246",
+    "metadata": {
+      "auditStatus": "VERIFIED_OK"
+    }
+  },
+  {
+    "event_id": "evt-124",
+    "document_id": "MFA-SESSION",
+    "case_id": "AUTH-MFA",
+    "version_id": "v1.0",
+    "action": "MFA_OTP_GENERATED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-12T14:45:24.062Z",
+    "data_hash": "ff7697d49bea14f2fc16e9af03735639497afcf4475391b47e8c59b63b87c128",
+    "parent_hashes": [
+      "c4ee736a9164cd5b85d8e7ab7253bcd8a794c255a6ed0b88bc8669c16e608246"
+    ],
+    "event_hash": "efde6e61ca7bef7ce6f8158b9d8f8bc3232ddf10cb278bfcf178328c70552da7",
+    "metadata": {
+      "ttlSeconds": 120
+    }
+  },
+  {
+    "event_id": "evt-125",
+    "document_id": "MFA-SUCCESS",
+    "case_id": "AUTH-MFA",
+    "version_id": "v1.0",
+    "action": "MFA_OTP_VERIFIED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-12T14:45:24.536Z",
+    "data_hash": "VERIFIED",
+    "parent_hashes": [
+      "efde6e61ca7bef7ce6f8158b9d8f8bc3232ddf10cb278bfcf178328c70552da7"
+    ],
+    "event_hash": "210c13a0c9238a519c5b6b3b88d9e51ad3d8a360700943ea82a5e5310721a629",
+    "metadata": {
+      "authStatus": "MFA_SUCCESS"
+    }
+  },
+  {
+    "event_id": "evt-126",
+    "document_id": "DOC-8891-003",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "DOCUMENT_VERSION_CREATED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-12T14:45:24.944Z",
+    "data_hash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+    "parent_hashes": [
+      "210c13a0c9238a519c5b6b3b88d9e51ad3d8a360700943ea82a5e5310721a629"
+    ],
+    "event_hash": "9640dc1d31514f55baa7c0f30cc3372a843a337d9912902c77131b8314a6ba39",
+    "metadata": {
+      "previousVersion": "1.14",
+      "newVersion": "1.15",
+      "fileId": "DOC-8891-003_v1_15",
+      "parentHash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+      "changeNotes": "Added vehicle license plate info"
+    }
+  },
+  {
+    "event_id": "evt-127",
+    "document_id": "BREAK-GLASS",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "EMERGENCY_ACCESS_REQUESTED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-12T14:45:25.514Z",
+    "data_hash": "EMERGENCY_REQ",
+    "parent_hashes": [
+      "9640dc1d31514f55baa7c0f30cc3372a843a337d9912902c77131b8314a6ba39"
+    ],
+    "event_hash": "a8e34f6e4a152c3ae568c62e25c0c157f198ae0892b35cfea806ba1ce36fd680",
+    "metadata": {
+      "requestId": "BG-REQ-25511",
+      "reason": "Urgent homicide lead wiretap inspection required during active hostage situation."
+    }
+  },
+  {
+    "event_id": "evt-128",
+    "document_id": "BREAK-GLASS",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "EMERGENCY_ACCESS_GRANTED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-12T14:45:25.869Z",
+    "data_hash": "GRANT_ACTIVE",
+    "parent_hashes": [
+      "a8e34f6e4a152c3ae568c62e25c0c157f198ae0892b35cfea806ba1ce36fd680"
+    ],
+    "event_hash": "968e6ea2d610e1b85423ff091cebdbfdba7bdcab3ab2d5ab4d31c73cb69a6dd1",
+    "metadata": {
+      "requestId": "BG-REQ-25511",
+      "approvedBy": "Inspector Vikram Sharma",
+      "durationMinutes": 30,
+      "expiresAt": "2026-09-12T15:15:25.867Z"
+    }
+  },
+  {
+    "event_id": "evt-129",
+    "document_id": "DOC-8891-003",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "CONTROLLED_LINK_CREATED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-12T14:45:26.366Z",
+    "data_hash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+    "parent_hashes": [
+      "968e6ea2d610e1b85423ff091cebdbfdba7bdcab3ab2d5ab4d31c73cb69a6dd1"
+    ],
+    "event_hash": "3888672d53afb9a63554ab1dc315c4beff3848cac4b2eaf965bbad7b875e5407",
+    "metadata": {
+      "recipientEmail": "defense.counsel@highcourt.gov.in",
+      "policy": "VIEW_ONLY_NO_DOWNLOAD",
+      "expiresAtHours": 24
+    }
+  },
+  {
+    "event_id": "evt-130",
+    "document_id": "DOC-8891-003",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "CONTROLLED_LINK_ACCESSED",
+    "user_id": "RECIPIENT_GUEST",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-12T14:45:26.747Z",
+    "data_hash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+    "parent_hashes": [
+      "3888672d53afb9a63554ab1dc315c4beff3848cac4b2eaf965bbad7b875e5407"
+    ],
+    "event_hash": "63a5687c1debbea87abda54e3d476edc0b9a7111877576a8c7e826922fe5553e",
+    "metadata": {
+      "shareToken": "SHARE-74c4c67e4906811494412b1316d7fca5",
+      "policy": "VIEW_ONLY_NO_DOWNLOAD"
+    }
+  },
+  {
+    "event_id": "evt-131",
+    "document_id": "SYSTEM",
+    "case_id": "SYSTEM",
+    "version_id": "v1.0",
+    "action": "SYSTEM_AUDIT_EXECUTED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-12T14:45:27.134Z",
+    "data_hash": "AUDIT_CHECK",
+    "parent_hashes": [
+      "63a5687c1debbea87abda54e3d476edc0b9a7111877576a8c7e826922fe5553e"
+    ],
+    "event_hash": "74080e3d7fb57535f905cad079f3d23c36c03e00b631aa0cbc86d8cf680f2301",
+    "metadata": {
+      "auditStatus": "VERIFIED_OK"
+    }
+  },
+  {
+    "event_id": "evt-132",
+    "document_id": "DOC-8891-003",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "DOCUMENT_DOWNLOADED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-12T14:47:34.815Z",
+    "data_hash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+    "parent_hashes": [
+      "74080e3d7fb57535f905cad079f3d23c36c03e00b631aa0cbc86d8cf680f2301"
+    ],
+    "event_hash": "76ceabee4bc7ddc4e5f3c5df46c429ac158523b99f33bcae5241082ba3019207",
+    "metadata": {
+      "downloaderRole": "POLICE_INVESTIGATOR"
+    }
+  },
+  {
+    "event_id": "evt-133",
+    "document_id": "DOC-8891-003",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "PKI_SIGNATURE_APPLIED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-12T14:48:32.497Z",
+    "data_hash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+    "parent_hashes": [
+      "76ceabee4bc7ddc4e5f3c5df46c429ac158523b99f33bcae5241082ba3019207"
+    ],
+    "event_hash": "69b1043bbe3204ef231f822bd8629c5aafb01777ebd92802f2aa98d004ba45af",
+    "metadata": {
+      "manifestId": "MANIFEST-78830332f72fd934",
+      "signatureId": "SIG-4c1490aa3837bf8f",
+      "provider": "local-dev-v1",
+      "versionId": "v1.15.0"
+    }
+  },
+  {
+    "event_id": "evt-134",
+    "document_id": "DOC-2026-8891-7125",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "PKI_SIGNATURE_APPLIED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-12T14:48:40.391Z",
+    "data_hash": "994d84c7950526eba1f988d7a44ea8b505d0482fc2f32bef70721607efb15d98",
+    "parent_hashes": [
+      "69b1043bbe3204ef231f822bd8629c5aafb01777ebd92802f2aa98d004ba45af"
+    ],
+    "event_hash": "e1f753b5b45f688900053776dabddcbca4244e39cb680ca9b6f7f280ad12cef8",
+    "metadata": {
+      "manifestId": "MANIFEST-21c09e50876e2503",
+      "signatureId": "SIG-413b84d45b72f2e9",
+      "provider": "local-dev-v1",
+      "versionId": "v1.0.0"
+    }
+  },
+  {
+    "event_id": "evt-135",
+    "document_id": "DOC-2026-8891-7125",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "DOCUMENT_DOWNLOADED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-12T14:49:18.660Z",
+    "data_hash": "994d84c7950526eba1f988d7a44ea8b505d0482fc2f32bef70721607efb15d98",
+    "parent_hashes": [
+      "e1f753b5b45f688900053776dabddcbca4244e39cb680ca9b6f7f280ad12cef8"
+    ],
+    "event_hash": "0c942afa0a207dcf711a0d9e77498a3845bdb74025ecd42ca1374a46906a4b9b",
+    "metadata": {
+      "downloaderRole": "POLICE_INVESTIGATOR"
+    }
+  },
+  {
+    "event_id": "evt-136",
+    "document_id": "DOC-2026-8891-8418",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "DOCUMENT_UPLOADED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-12T14:51:28.431Z",
+    "data_hash": "8f7d11b14418677178c4536aa8356701a3922defb48b263b9737cf50d93e3b6a",
+    "parent_hashes": [
+      "0c942afa0a207dcf711a0d9e77498a3845bdb74025ecd42ca1374a46906a4b9b"
+    ],
+    "event_hash": "c8eac99dff1d74f3204634368a2cd1e59951aeb70ef49385eeedc8e52119022f",
+    "metadata": {
+      "title": "dflkkljxnkjnbgjdfhnbgfd",
+      "category": "FIR",
+      "clearanceLevel": 3,
+      "encryptionAlgorithm": "AES-256-GCM"
+    }
+  },
+  {
+    "event_id": "evt-137",
+    "document_id": "DOC-2026-8891-8418",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "DOCUMENT_DOWNLOADED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-12T14:51:37.895Z",
+    "data_hash": "8f7d11b14418677178c4536aa8356701a3922defb48b263b9737cf50d93e3b6a",
+    "parent_hashes": [
+      "c8eac99dff1d74f3204634368a2cd1e59951aeb70ef49385eeedc8e52119022f"
+    ],
+    "event_hash": "5b463d64bc1d574a1e31f0485822c7b8013b990566418aeec7b1bd928cbe2b27",
+    "metadata": {
+      "downloaderRole": "POLICE_INVESTIGATOR"
+    }
+  },
+  {
+    "event_id": "evt-138",
+    "document_id": "DOC-2026-8891-5771",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "DOCUMENT_UPLOADED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-12T14:52:55.781Z",
+    "data_hash": "2574b1ea109f8c2851f41ed115a683de21ca5d1c2b557b143cd1dda36cca9c17",
+    "parent_hashes": [
+      "5b463d64bc1d574a1e31f0485822c7b8013b990566418aeec7b1bd928cbe2b27"
+    ],
+    "event_hash": "2dadb7685da11656e13a57c4acc825b56eaf643dbf5044538d79d24e79cd1146",
+    "metadata": {
+      "title": "dsfdsfds",
+      "category": "FIR",
+      "clearanceLevel": 2,
+      "encryptionAlgorithm": "AES-256-GCM"
+    }
+  },
+  {
+    "event_id": "evt-139",
+    "document_id": "MFA-SESSION",
+    "case_id": "AUTH-MFA",
+    "version_id": "v1.0",
+    "action": "MFA_OTP_GENERATED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-12T14:53:41.451Z",
+    "data_hash": "cfa53c4fe63e317d9a15378a9f3cbf12f5d6769a1119eeaaf34bea55fea1f7e0",
+    "parent_hashes": [
+      "2dadb7685da11656e13a57c4acc825b56eaf643dbf5044538d79d24e79cd1146"
+    ],
+    "event_hash": "bad170bc6da2251bab67921e65efff2e000f115743e78c06c5e558925a77b43e",
+    "metadata": {
+      "ttlSeconds": 120
+    }
+  },
+  {
+    "event_id": "evt-140",
+    "document_id": "MFA-SUCCESS",
+    "case_id": "AUTH-MFA",
+    "version_id": "v1.0",
+    "action": "MFA_OTP_VERIFIED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-12T14:53:41.805Z",
+    "data_hash": "VERIFIED",
+    "parent_hashes": [
+      "bad170bc6da2251bab67921e65efff2e000f115743e78c06c5e558925a77b43e"
+    ],
+    "event_hash": "ad870c8b7ff4cb2cc312337c9cb52a0abe37ae80463862c0516785b30f0e77f1",
+    "metadata": {
+      "authStatus": "MFA_SUCCESS"
+    }
+  },
+  {
+    "event_id": "evt-141",
+    "document_id": "DOC-8891-003",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "DOCUMENT_VERSION_CREATED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-12T14:53:42.130Z",
+    "data_hash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+    "parent_hashes": [
+      "ad870c8b7ff4cb2cc312337c9cb52a0abe37ae80463862c0516785b30f0e77f1"
+    ],
+    "event_hash": "fc9eaa0aaa7dd273c861cd27db0da8101557e8a9c21bd3ba466cce4819faece8",
+    "metadata": {
+      "previousVersion": "1.15",
+      "newVersion": "1.16",
+      "fileId": "DOC-8891-003_v1_16",
+      "parentHash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+      "changeNotes": "Added vehicle license plate info"
+    }
+  },
+  {
+    "event_id": "evt-142",
+    "document_id": "BREAK-GLASS",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "EMERGENCY_ACCESS_REQUESTED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-12T14:53:42.457Z",
+    "data_hash": "EMERGENCY_REQ",
+    "parent_hashes": [
+      "fc9eaa0aaa7dd273c861cd27db0da8101557e8a9c21bd3ba466cce4819faece8"
+    ],
+    "event_hash": "cb3f81fe04b0706c2161e03826a7c812ed235067a2d3cf06647cfd0b79a28094",
+    "metadata": {
+      "requestId": "BG-REQ-22455",
+      "reason": "Urgent homicide lead wiretap inspection required during active hostage situation."
+    }
+  },
+  {
+    "event_id": "evt-143",
+    "document_id": "BREAK-GLASS",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "EMERGENCY_ACCESS_GRANTED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-12T14:53:42.815Z",
+    "data_hash": "GRANT_ACTIVE",
+    "parent_hashes": [
+      "cb3f81fe04b0706c2161e03826a7c812ed235067a2d3cf06647cfd0b79a28094"
+    ],
+    "event_hash": "251ed913f2fc5dfe96b2b1513e1daf54bacb7747c99f12027bd6be5fcb619b11",
+    "metadata": {
+      "requestId": "BG-REQ-22455",
+      "approvedBy": "Inspector Vikram Sharma",
+      "durationMinutes": 30,
+      "expiresAt": "2026-09-12T15:23:42.813Z"
+    }
+  },
+  {
+    "event_id": "evt-144",
+    "document_id": "DOC-8891-003",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "CONTROLLED_LINK_CREATED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-12T14:53:43.319Z",
+    "data_hash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+    "parent_hashes": [
+      "251ed913f2fc5dfe96b2b1513e1daf54bacb7747c99f12027bd6be5fcb619b11"
+    ],
+    "event_hash": "98e83ebdcc43848a242b649e11548d92da7995eb459a6c26fe565815d0371876",
+    "metadata": {
+      "recipientEmail": "defense.counsel@highcourt.gov.in",
+      "policy": "VIEW_ONLY_NO_DOWNLOAD",
+      "expiresAtHours": 24
+    }
+  },
+  {
+    "event_id": "evt-145",
+    "document_id": "DOC-8891-003",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "CONTROLLED_LINK_ACCESSED",
+    "user_id": "RECIPIENT_GUEST",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-12T14:53:43.616Z",
+    "data_hash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+    "parent_hashes": [
+      "98e83ebdcc43848a242b649e11548d92da7995eb459a6c26fe565815d0371876"
+    ],
+    "event_hash": "d15be2d8f31e964b9fbf18f511db6f429e643e93445af00147ede80d0c981552",
+    "metadata": {
+      "shareToken": "SHARE-f933c15e11e53536d08d1b0e67e094ed",
+      "policy": "VIEW_ONLY_NO_DOWNLOAD"
+    }
+  },
+  {
+    "event_id": "evt-146",
+    "document_id": "SYSTEM",
+    "case_id": "SYSTEM",
+    "version_id": "v1.0",
+    "action": "SYSTEM_AUDIT_EXECUTED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-12T14:53:43.939Z",
+    "data_hash": "AUDIT_CHECK",
+    "parent_hashes": [
+      "d15be2d8f31e964b9fbf18f511db6f429e643e93445af00147ede80d0c981552"
+    ],
+    "event_hash": "f359994bacbcb88cb6633683046af195acccb870cd378aef90d1ee2b181a7049",
+    "metadata": {
+      "auditStatus": "VERIFIED_OK"
+    }
+  },
+  {
+    "event_id": "evt-147",
+    "document_id": "MFA-SESSION",
+    "case_id": "AUTH-MFA",
+    "version_id": "v1.0",
+    "action": "MFA_OTP_GENERATED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-12T15:21:48.101Z",
+    "data_hash": "2ccd3dcfbf4621b4569fbf36d432d5cab9500c75aec2cbdf90cbdd35aa2614d3",
+    "parent_hashes": [
+      "f359994bacbcb88cb6633683046af195acccb870cd378aef90d1ee2b181a7049"
+    ],
+    "event_hash": "c1d93ebe30024b6d5d104fc707fbd9f7a1d4e80effa0648b742214ddc7cb409d",
+    "metadata": {
+      "ttlSeconds": 120
+    }
+  },
+  {
+    "event_id": "evt-148",
+    "document_id": "MFA-SUCCESS",
+    "case_id": "AUTH-MFA",
+    "version_id": "v1.0",
+    "action": "MFA_OTP_VERIFIED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-12T15:21:48.447Z",
+    "data_hash": "VERIFIED",
+    "parent_hashes": [
+      "c1d93ebe30024b6d5d104fc707fbd9f7a1d4e80effa0648b742214ddc7cb409d"
+    ],
+    "event_hash": "6e6f549db833e065fbd56240f23edda658002e3344c00c2bdf2c09de2f9861f7",
+    "metadata": {
+      "authStatus": "MFA_SUCCESS"
+    }
+  },
+  {
+    "event_id": "evt-149",
+    "document_id": "DOC-8891-003",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "DOCUMENT_VERSION_CREATED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-12T15:21:48.701Z",
+    "data_hash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+    "parent_hashes": [
+      "6e6f549db833e065fbd56240f23edda658002e3344c00c2bdf2c09de2f9861f7"
+    ],
+    "event_hash": "06211323b267df4422b52e262853df2bbac6b735f0fe87403b26bb4be8211186",
+    "metadata": {
+      "previousVersion": "1.16",
+      "newVersion": "1.17",
+      "fileId": "DOC-8891-003_v1_17",
+      "parentHash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+      "changeNotes": "Added vehicle license plate info"
+    }
+  },
+  {
+    "event_id": "evt-150",
+    "document_id": "BREAK-GLASS",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "EMERGENCY_ACCESS_REQUESTED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-12T15:21:48.962Z",
+    "data_hash": "EMERGENCY_REQ",
+    "parent_hashes": [
+      "06211323b267df4422b52e262853df2bbac6b735f0fe87403b26bb4be8211186"
+    ],
+    "event_hash": "479935688557f4498a331fb465fac8478af3829872c7ab964129cd34d9cf2a7f",
+    "metadata": {
+      "requestId": "BG-REQ-08961",
+      "reason": "Urgent homicide lead wiretap inspection required during active hostage situation."
+    }
+  },
+  {
+    "event_id": "evt-151",
+    "document_id": "BREAK-GLASS",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "EMERGENCY_ACCESS_GRANTED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-12T15:21:49.232Z",
+    "data_hash": "GRANT_ACTIVE",
+    "parent_hashes": [
+      "479935688557f4498a331fb465fac8478af3829872c7ab964129cd34d9cf2a7f"
+    ],
+    "event_hash": "e09875b8e9d929ea07d0aaae5343f05ce994f3a259d002045e081dad0130be17",
+    "metadata": {
+      "requestId": "BG-REQ-08961",
+      "approvedBy": "Inspector Vikram Sharma",
+      "durationMinutes": 30,
+      "expiresAt": "2026-09-12T15:51:49.230Z"
+    }
+  },
+  {
+    "event_id": "evt-152",
+    "document_id": "DOC-8891-003",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "CONTROLLED_LINK_CREATED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-12T15:21:49.563Z",
+    "data_hash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+    "parent_hashes": [
+      "e09875b8e9d929ea07d0aaae5343f05ce994f3a259d002045e081dad0130be17"
+    ],
+    "event_hash": "cd4f5fc6d01bfbc47df23b04b9e89f4eeb95a8e3e52d4ff51ba2b81a8edc57be",
+    "metadata": {
+      "recipientEmail": "defense.counsel@highcourt.gov.in",
+      "policy": "VIEW_ONLY_NO_DOWNLOAD",
+      "expiresAtHours": 24
+    }
+  },
+  {
+    "event_id": "evt-153",
+    "document_id": "DOC-8891-003",
+    "case_id": "CASE-2026-8891",
+    "version_id": "v1.0",
+    "action": "CONTROLLED_LINK_ACCESSED",
+    "user_id": "RECIPIENT_GUEST",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-12T15:21:49.864Z",
+    "data_hash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+    "parent_hashes": [
+      "cd4f5fc6d01bfbc47df23b04b9e89f4eeb95a8e3e52d4ff51ba2b81a8edc57be"
+    ],
+    "event_hash": "83e20e1b87b8d2e00326d676716074b486c45073a17bf012cfdb38675e179acd",
+    "metadata": {
+      "shareToken": "SHARE-3f9a46a3148c4091dbacd314b415daa8",
+      "policy": "VIEW_ONLY_NO_DOWNLOAD"
+    }
+  },
+  {
+    "event_id": "evt-154",
+    "document_id": "SYSTEM",
+    "case_id": "SYSTEM",
+    "version_id": "v1.0",
+    "action": "SYSTEM_AUDIT_EXECUTED",
+    "user_id": "USR-POL-101",
+    "user_role": "INVESTIGATOR",
+    "timestamp": "2026-09-12T15:21:50.157Z",
+    "data_hash": "AUDIT_CHECK",
+    "parent_hashes": [
+      "83e20e1b87b8d2e00326d676716074b486c45073a17bf012cfdb38675e179acd"
+    ],
+    "event_hash": "ec95f77c948fe040a01d99ac852790eba5eaf6f30f2c8fbbad773bb9b05285b1",
+    "metadata": {
+      "auditStatus": "VERIFIED_OK"
+    }
+  },
+  {
+    "event_id": "726e0409-9b40-4330-a342-9b733f4a5cef",
+    "document_id": "SYSTEM_AUTH",
+    "case_id": "SYSTEM_AUTH",
+    "version_id": "v1.0",
+    "action": "LOGIN",
+    "user_id": "USR-POL-101",
+    "user_role": "POLICE_INVESTIGATOR",
+    "timestamp": "2026-09-12T18:52:44.519Z",
+    "data_hash": "DIRECT_AUTHENTICATED",
+    "parent_hashes": [
+      "ec95f77c948fe040a01d99ac852790eba5eaf6f30f2c8fbbad773bb9b05285b1"
+    ],
+    "metadata": {
+      "username": "sharma_leo",
+      "department": "LEO"
+    },
+    "event_hash": "4814c4544986ace4e40a11cc72a8ec7250e2409bd4db625c80ee60028f0c28ab"
+  },
+  {
+    "event_id": "5ca0722b-912c-49e7-bedd-639833242094",
+    "document_id": "SYSTEM_AUTH",
+    "case_id": "SYSTEM_AUTH",
+    "version_id": "v1.0",
+    "action": "LOGIN",
+    "user_id": "USR-POL-101",
+    "user_role": "POLICE_INVESTIGATOR",
+    "timestamp": "2026-09-12T19:36:44.327Z",
+    "data_hash": "DIRECT_AUTHENTICATED",
+    "parent_hashes": [
+      "4814c4544986ace4e40a11cc72a8ec7250e2409bd4db625c80ee60028f0c28ab"
+    ],
+    "metadata": {
+      "username": "sharma_leo",
+      "department": "LEO"
+    },
+    "event_hash": "1f3f531898202e33e11f42f2c47af98ca3c4d1323d1183d3cd6fc7ccc80bf19b"
+  },
+  {
+    "event_id": "0534f416-5a6f-460e-b338-6fa2c18395c9",
+    "document_id": "SYSTEM_AUTH",
+    "case_id": "SYSTEM_AUTH",
+    "version_id": "v1.0",
+    "action": "LOGIN",
+    "user_id": "USR-POL-101",
+    "user_role": "POLICE_INVESTIGATOR",
+    "timestamp": "2026-09-12T19:36:44.342Z",
+    "data_hash": "DIRECT_AUTHENTICATED",
+    "parent_hashes": [
+      "1f3f531898202e33e11f42f2c47af98ca3c4d1323d1183d3cd6fc7ccc80bf19b"
+    ],
+    "metadata": {
+      "username": "sharma_leo",
+      "department": "LEO"
+    },
+    "event_hash": "c00e18cd68d0cba9cd14a7fafc8878dadbd9171a37618f954c2701d214e68582"
+  },
+  {
+    "event_id": "000d6113-9809-4798-a3e7-85437f3a9ead",
+    "document_id": "SYSTEM_AUTH",
+    "case_id": "SYSTEM_AUTH",
+    "version_id": "v1.0",
+    "action": "LOGIN",
+    "user_id": "USR-POL-101",
+    "user_role": "POLICE_INVESTIGATOR",
+    "timestamp": "2026-09-12T19:36:58.643Z",
+    "data_hash": "DIRECT_AUTHENTICATED",
+    "parent_hashes": [
+      "c00e18cd68d0cba9cd14a7fafc8878dadbd9171a37618f954c2701d214e68582"
+    ],
+    "metadata": {
+      "username": "sharma_leo",
+      "department": "LEO"
+    },
+    "event_hash": "1bf0f036c47940f29de9cd18cdecb45ce18fd15b79d6523d23c23957dbc8fe8b"
+  },
+  {
+    "event_id": "a8f7505c-d6fa-49cd-bb0e-caa2cfdff95a",
+    "document_id": "SYSTEM_AUTH",
+    "case_id": "SYSTEM_AUTH",
+    "version_id": "v1.0",
+    "action": "LOGIN",
+    "user_id": "USR-POL-101",
+    "user_role": "POLICE_INVESTIGATOR",
+    "timestamp": "2026-09-12T19:37:07.015Z",
+    "data_hash": "DIRECT_AUTHENTICATED",
+    "parent_hashes": [
+      "1bf0f036c47940f29de9cd18cdecb45ce18fd15b79d6523d23c23957dbc8fe8b"
+    ],
+    "metadata": {
+      "username": "sharma_leo",
+      "department": "LEO"
+    },
+    "event_hash": "99f8ddc85e036590286541ce28ef5c49d6e11257bd0384ea996d84702893d864"
+  },
+  {
+    "event_id": "31412c42-fd7b-4595-9119-99c25ba7b3a2",
+    "document_id": "SYSTEM_AUTH",
+    "case_id": "SYSTEM_AUTH",
+    "version_id": "v1.0",
+    "action": "LOGIN",
+    "user_id": "USR-POL-101",
+    "user_role": "POLICE_INVESTIGATOR",
+    "timestamp": "2026-09-12T19:37:18.123Z",
+    "data_hash": "DIRECT_AUTHENTICATED",
+    "parent_hashes": [
+      "99f8ddc85e036590286541ce28ef5c49d6e11257bd0384ea996d84702893d864"
+    ],
+    "metadata": {
+      "username": "sharma_leo",
+      "department": "LEO"
+    },
+    "event_hash": "940d5fb8f418572c701c8bd47fe404708871f21771e42f053edb346dba2b1204"
+  },
+  {
+    "event_id": "9acad415-f61b-47dd-92e9-d9ebf5de7eaa",
+    "document_id": "SYSTEM_AUTH",
+    "case_id": "SYSTEM_AUTH",
+    "version_id": "v1.0",
+    "action": "LOGIN",
+    "user_id": "USR-POL-101",
+    "user_role": "POLICE_INVESTIGATOR",
+    "timestamp": "2026-09-12T19:37:36.469Z",
+    "data_hash": "DIRECT_AUTHENTICATED",
+    "parent_hashes": [
+      "940d5fb8f418572c701c8bd47fe404708871f21771e42f053edb346dba2b1204"
+    ],
+    "metadata": {
+      "username": "sharma_leo",
+      "department": "LEO"
+    },
+    "event_hash": "93f7e37e8497501d9e13f7467d2f997a8300a249a5b2d6b6ac2bb7c21d1736fa"
+  },
+  {
+    "event_id": "05cd699a-79e8-4a33-a1ce-4c396600e4a4",
+    "document_id": "SYSTEM_AUTH",
+    "case_id": "SYSTEM_AUTH",
+    "version_id": "v1.0",
+    "action": "LOGIN",
+    "user_id": "USR-POL-101",
+    "user_role": "POLICE_INVESTIGATOR",
+    "timestamp": "2026-09-12T19:39:07.127Z",
+    "data_hash": "DIRECT_AUTHENTICATED",
+    "parent_hashes": [
+      "93f7e37e8497501d9e13f7467d2f997a8300a249a5b2d6b6ac2bb7c21d1736fa"
+    ],
+    "metadata": {
+      "username": "sharma_leo",
+      "department": "LEO"
+    },
+    "event_hash": "a5906059e0a4bbcc158190dc8e1f4d98b315273948a4a8890985be1628047923"
+  },
+  {
+    "event_id": "a50eb87e-6918-4176-a9ec-047b1778d6ea",
+    "document_id": "SYSTEM_AUTH",
+    "case_id": "SYSTEM_AUTH",
+    "version_id": "v1.0",
+    "action": "LOGIN",
+    "user_id": "USR-POL-101",
+    "user_role": "POLICE_INVESTIGATOR",
+    "timestamp": "2026-09-12T19:39:14.348Z",
+    "data_hash": "DIRECT_AUTHENTICATED",
+    "parent_hashes": [
+      "a5906059e0a4bbcc158190dc8e1f4d98b315273948a4a8890985be1628047923"
+    ],
+    "metadata": {
+      "username": "sharma_leo",
+      "department": "LEO"
+    },
+    "event_hash": "1c61cdc505ebba1ac7428f1d2c17ba5be5c3075e83c6d0dff7f09ca0062aa984"
+  },
+  {
+    "event_id": "765a9077-c7dd-4f1e-a30d-d717682be8bf",
+    "document_id": "SYSTEM_AUTH",
+    "case_id": "SYSTEM_AUTH",
+    "version_id": "v1.0",
+    "action": "LOGIN",
+    "user_id": "USR-POL-101",
+    "user_role": "POLICE_INVESTIGATOR",
+    "timestamp": "2026-09-12T19:39:14.365Z",
+    "data_hash": "DIRECT_AUTHENTICATED",
+    "parent_hashes": [
+      "1c61cdc505ebba1ac7428f1d2c17ba5be5c3075e83c6d0dff7f09ca0062aa984"
+    ],
+    "metadata": {
+      "username": "sharma_leo",
+      "department": "LEO"
+    },
+    "event_hash": "7d4e88ed9794430a05723da69d8529b98a9d190dadcc893af618da6571b42806"
+  },
+  {
+    "event_id": "251aa2c2-5e00-4dce-85db-43cd6c669d22",
+    "document_id": "SYSTEM_AUTH",
+    "case_id": "SYSTEM_AUTH",
+    "version_id": "v1.0",
+    "action": "LOGIN",
+    "user_id": "USR-POL-101",
+    "user_role": "POLICE_INVESTIGATOR",
+    "timestamp": "2026-09-12T19:41:25.958Z",
+    "data_hash": "DIRECT_AUTHENTICATED",
+    "parent_hashes": [
+      "7d4e88ed9794430a05723da69d8529b98a9d190dadcc893af618da6571b42806"
+    ],
+    "metadata": {
+      "username": "sharma_leo",
+      "department": "LEO"
+    },
+    "event_hash": "e1fdb0ec9856fd1522578f4797f89f1c8ac67dfb8468767ce7e2bfa249cef36b"
+  },
+  {
+    "event_id": "5ac7d6c7-e29e-4d50-b4c4-0de3e2adcecd",
+    "document_id": "SYSTEM_AUTH",
+    "case_id": "SYSTEM_AUTH",
+    "version_id": "v1.0",
+    "action": "LOGIN",
+    "user_id": "USR-POL-101",
+    "user_role": "POLICE_INVESTIGATOR",
+    "timestamp": "2026-09-12T19:41:25.985Z",
+    "data_hash": "DIRECT_AUTHENTICATED",
+    "parent_hashes": [
+      "e1fdb0ec9856fd1522578f4797f89f1c8ac67dfb8468767ce7e2bfa249cef36b"
+    ],
+    "metadata": {
+      "username": "sharma_leo",
+      "department": "LEO"
+    },
+    "event_hash": "2c06257c15d2bc8ddca90ff48f8dd222d2885d877a16e835ef58d69d191c919f"
+  },
+  {
+    "event_id": "1409d504-22a8-460b-bd59-640b89d10221",
+    "document_id": "SYSTEM_AUTH",
+    "case_id": "SYSTEM_AUTH",
+    "version_id": "v1.0",
+    "action": "LOGIN",
+    "user_id": "USR-POL-101",
+    "user_role": "POLICE_INVESTIGATOR",
+    "timestamp": "2026-09-12T19:43:15.548Z",
+    "data_hash": "DIRECT_AUTHENTICATED",
+    "parent_hashes": [
+      "2c06257c15d2bc8ddca90ff48f8dd222d2885d877a16e835ef58d69d191c919f"
+    ],
+    "metadata": {
+      "username": "sharma_leo",
+      "department": "LEO"
+    },
+    "event_hash": "b6121c97338f1e43c08f2d84b488b51650e2bf027e89153a42f0e5e81babfc3c"
+  },
+  {
+    "event_id": "f261f881-9aef-4181-8144-336caf1b59ed",
+    "document_id": "DOC-2026-8891-3722",
+    "case_id": "CASE-2026-8891",
+    "version_id": "1.0",
+    "action": "UPLOAD",
+    "user_id": "USR-POL-101",
+    "user_role": "POLICE_INVESTIGATOR",
+    "timestamp": "2026-09-12T19:48:33.736Z",
+    "data_hash": "45715793b8c8571554b0bfb4eccc29e2884c16481e1c7dbee78363bbe4da3dd9",
+    "parent_hashes": [
+      "b6121c97338f1e43c08f2d84b488b51650e2bf027e89153a42f0e5e81babfc3c"
+    ],
+    "metadata": {
+      "title": "Microsoft.Services.Store",
+      "category": "FIR",
+      "clearanceLevel": 2,
+      "encryptionAlgorithm": "AES-256-GCM"
+    },
+    "event_hash": "e8a6a78ca0b1f92d2e84a6608c78904d0d68db0b42f438c982a59ae325819b1b"
+  },
+  {
+    "event_id": "d32f116a-ab8e-469f-8754-4184d5d2b76b",
+    "document_id": "DOC-2026-8891-3488",
+    "case_id": "CASE-2026-8891",
+    "version_id": "1.0",
+    "action": "UPLOAD",
+    "user_id": "USR-POL-101",
+    "user_role": "POLICE_INVESTIGATOR",
+    "timestamp": "2026-09-12T19:49:23.499Z",
+    "data_hash": "d79a38076d85b375ddc8728b91ec59b6bbcbc059d67c28bb31f0eb0622a2c906",
+    "parent_hashes": [
+      "e8a6a78ca0b1f92d2e84a6608c78904d0d68db0b42f438c982a59ae325819b1b"
+    ],
+    "metadata": {
+      "title": "SIH26190_Criminally Online",
+      "category": "FIR",
+      "clearanceLevel": 2,
+      "encryptionAlgorithm": "AES-256-GCM"
+    },
+    "event_hash": "50db9b0d4a02ed8fddd843823f24adbbe5a2397ed90b2542da214a77ca1c605e"
+  },
+  {
+    "event_id": "dd1df0b3-4fc7-4149-a700-9379e47f1b34",
+    "document_id": "DOC-2026-8891-8485",
+    "case_id": "CASE-2026-8891",
+    "version_id": "1.0",
+    "action": "UPLOAD",
+    "user_id": "USR-POL-101",
+    "user_role": "POLICE_INVESTIGATOR",
+    "timestamp": "2026-09-12T19:50:08.499Z",
+    "data_hash": "09cf626735f7ebc54c49ef405a0bb7c8f1d46f4adc1a0c9b72aade587fc12692",
+    "parent_hashes": [
+      "50db9b0d4a02ed8fddd843823f24adbbe5a2397ed90b2542da214a77ca1c605e"
+    ],
+    "metadata": {
+      "title": "SPORTS_DISTRIC_LEVEL_2362001",
+      "category": "FIR",
+      "clearanceLevel": 2,
+      "encryptionAlgorithm": "AES-256-GCM"
+    },
+    "event_hash": "adbc1e5908188a839fc3c4e5e72dcd270336299b35b76a2230aac4e82752a6a4"
+  },
+  {
+    "event_id": "957e16af-3d9c-41bc-87d7-d333d1290d74",
+    "document_id": "SYSTEM_AUTH",
+    "case_id": "SYSTEM_AUTH",
+    "version_id": "v1.0",
+    "action": "LOGIN",
+    "user_id": "USR-POL-101",
+    "user_role": "POLICE_INVESTIGATOR",
+    "timestamp": "2026-09-12T19:52:07.324Z",
+    "data_hash": "DIRECT_AUTHENTICATED",
+    "parent_hashes": [
+      "adbc1e5908188a839fc3c4e5e72dcd270336299b35b76a2230aac4e82752a6a4"
+    ],
+    "metadata": {
+      "username": "sharma_leo",
+      "department": "LEO"
+    },
+    "event_hash": "0bb89d0274d34bdfe28042b41e6b3da83568dae362cda992be237da087c0f68b"
+  },
+  {
+    "event_id": "70cf3c60-871a-4b37-a942-2496c203efed",
+    "document_id": "SYSTEM_AUTH",
+    "case_id": "SYSTEM_AUTH",
+    "version_id": "v1.0",
+    "action": "LOGIN",
+    "user_id": "USR-POL-101",
+    "user_role": "POLICE_INVESTIGATOR",
+    "timestamp": "2026-09-12T19:52:07.342Z",
+    "data_hash": "DIRECT_AUTHENTICATED",
+    "parent_hashes": [
+      "0bb89d0274d34bdfe28042b41e6b3da83568dae362cda992be237da087c0f68b"
+    ],
+    "metadata": {
+      "username": "sharma_leo",
+      "department": "LEO"
+    },
+    "event_hash": "3fed4380d105fa352aa805df7ec0bc1b984ea46199c6f78f40c63777f1a6b702"
+  },
+  {
+    "event_id": "633f2df6-4905-4d83-bb79-8289ebe266b0",
+    "document_id": "DOC-2026-8891-4194",
+    "case_id": "CASE-2026-8891",
+    "version_id": "1.0",
+    "action": "UPLOAD",
+    "user_id": "USR-POL-101",
+    "user_role": "POLICE_INVESTIGATOR",
+    "timestamp": "2026-09-12T19:52:34.201Z",
+    "data_hash": "5b2703e1d52dd04f39556cb6b5ce9bec286dd46b99428bd3af8fc125b103c946",
+    "parent_hashes": [
+      "3fed4380d105fa352aa805df7ec0bc1b984ea46199c6f78f40c63777f1a6b702"
+    ],
+    "metadata": {
+      "title": "fgbhgfh",
+      "category": "FIR",
+      "clearanceLevel": 2,
+      "encryptionAlgorithm": "AES-256-GCM"
+    },
+    "event_hash": "8c8aa9ec020a24980eb6d8628704d81570b1d3c8119afd4def0efea7d8eeb06f"
+  },
+  {
+    "event_id": "fece1b9f-28af-4b9d-9514-9d79f6e19edb",
+    "document_id": "SYSTEM_AUTH",
+    "case_id": "SYSTEM_AUTH",
+    "version_id": "v1.0",
+    "action": "LOGIN",
+    "user_id": "USR-POL-101",
+    "user_role": "POLICE_INVESTIGATOR",
+    "timestamp": "2026-09-12T19:58:06.903Z",
+    "data_hash": "DIRECT_AUTHENTICATED",
+    "parent_hashes": [
+      "8c8aa9ec020a24980eb6d8628704d81570b1d3c8119afd4def0efea7d8eeb06f"
+    ],
+    "metadata": {
+      "username": "sharma_leo",
+      "department": "LEO"
+    },
+    "event_hash": "511aae0900eba3bba00173af83bca0bb57cf45452555790968a34a82fdec1f6b"
+  },
+  {
+    "event_id": "ac43b02f-05c8-49ca-9779-2965fb6c8e4a",
+    "document_id": "SYSTEM_AUTH",
+    "case_id": "SYSTEM_AUTH",
+    "version_id": "v1.0",
+    "action": "LOGIN",
+    "user_id": "USR-POL-101",
+    "user_role": "POLICE_INVESTIGATOR",
+    "timestamp": "2026-09-12T19:58:06.920Z",
+    "data_hash": "DIRECT_AUTHENTICATED",
+    "parent_hashes": [
+      "511aae0900eba3bba00173af83bca0bb57cf45452555790968a34a82fdec1f6b"
+    ],
+    "metadata": {
+      "username": "sharma_leo",
+      "department": "LEO"
+    },
+    "event_hash": "e2884fcbe47e71e2ad90edf7e7233250751810ce5f0298a0c763403827ceaaa0"
+  },
+  {
+    "event_id": "5559bb38-7b76-4c06-83b4-df2629e58790",
+    "document_id": "DOC-2026-8891-7952",
+    "case_id": "CASE-2026-8891",
+    "version_id": "1.0",
+    "action": "UPLOAD",
+    "user_id": "USR-POL-101",
+    "user_role": "POLICE_INVESTIGATOR",
+    "timestamp": "2026-09-12T19:59:07.963Z",
+    "data_hash": "d7cb885f5bcc114d31cba7e42baf361ca0043cd3052f75a303ba693a87c6086c",
+    "parent_hashes": [
+      "e2884fcbe47e71e2ad90edf7e7233250751810ce5f0298a0c763403827ceaaa0"
+    ],
+    "metadata": {
+      "title": "download (2)",
+      "category": "FIR",
+      "clearanceLevel": 2,
+      "encryptionAlgorithm": "AES-256-GCM"
+    },
+    "event_hash": "7b610ed03d8b8e6cc1b28a1b6a5bfddda6dec330fec12542b34a5ab7bef10b24"
+  },
+  {
+    "event_id": "63201454-327a-43e4-adeb-1d14703b0068",
+    "document_id": "SYSTEM_AUTH",
+    "case_id": "SYSTEM_AUTH",
+    "version_id": "v1.0",
+    "action": "LOGIN",
+    "user_id": "USR-POL-101",
+    "user_role": "POLICE_INVESTIGATOR",
+    "timestamp": "2026-09-12T20:00:23.063Z",
+    "data_hash": "DIRECT_AUTHENTICATED",
+    "parent_hashes": [
+      "7b610ed03d8b8e6cc1b28a1b6a5bfddda6dec330fec12542b34a5ab7bef10b24"
+    ],
+    "metadata": {
+      "username": "sharma_leo",
+      "department": "LEO"
+    },
+    "event_hash": "0b1d04c4977aae3eb31c4924d8a610ab01d180a25ccf198247c86e3fe9177474"
+  },
+  {
+    "event_id": "41fc1747-36e6-47f3-9f72-30f341932c78",
+    "document_id": "DOC-2026-8891-3080",
+    "case_id": "CASE-2026-8891",
+    "version_id": "1.0",
+    "action": "UPLOAD",
+    "user_id": "USR-POL-101",
+    "user_role": "POLICE_INVESTIGATOR",
+    "timestamp": "2026-09-12T20:00:23.085Z",
+    "data_hash": "cf6a6dd227e5f138035b99e51e94333c66d49d4e43ea94a270206537ab5f9a74",
+    "parent_hashes": [
+      "0b1d04c4977aae3eb31c4924d8a610ab01d180a25ccf198247c86e3fe9177474"
+    ],
+    "metadata": {
+      "title": "Test Sworn Witness Report",
+      "category": "WITNESS_STATEMENT",
+      "clearanceLevel": 2,
+      "encryptionAlgorithm": "AES-256-GCM"
+    },
+    "event_hash": "af2b8ae4d7d56df1ad95072b0df6352fbe522f0467cce741975bab48298ea964"
+  },
+  {
+    "event_id": "7be966d5-4ca7-4939-b16c-1be956981641",
+    "document_id": "DOC-2026-8891-8509",
+    "case_id": "CASE-2026-8891",
+    "version_id": "1.0",
+    "action": "UPLOAD",
+    "user_id": "USR-POL-101",
+    "user_role": "POLICE_INVESTIGATOR",
+    "timestamp": "2026-09-12T20:00:58.518Z",
+    "data_hash": "5b2703e1d52dd04f39556cb6b5ce9bec286dd46b99428bd3af8fc125b103c946",
+    "parent_hashes": [
+      "af2b8ae4d7d56df1ad95072b0df6352fbe522f0467cce741975bab48298ea964"
+    ],
+    "metadata": {
+      "title": "TREE_PLANTATION_2362001",
+      "category": "FIR",
+      "clearanceLevel": 2,
+      "encryptionAlgorithm": "AES-256-GCM"
+    },
+    "event_hash": "ab0c9372e01cd43bce7319493ec0d33b399fdc0777c8a694dc266d7bcf65793b"
+  },
+  {
+    "event_id": "16bbd1d0-c9aa-4c86-be3c-763c4923e1d1",
+    "document_id": "DOC-2026-8891-5348",
+    "case_id": "CASE-2026-8891",
+    "version_id": "1.0",
+    "action": "UPLOAD",
+    "user_id": "USR-POL-101",
+    "user_role": "POLICE_INVESTIGATOR",
+    "timestamp": "2026-09-12T20:08:05.367Z",
+    "data_hash": "5b2703e1d52dd04f39556cb6b5ce9bec286dd46b99428bd3af8fc125b103c946",
+    "parent_hashes": [
+      "ab0c9372e01cd43bce7319493ec0d33b399fdc0777c8a694dc266d7bcf65793b"
+    ],
+    "metadata": {
+      "title": "TREE_PLANTATION_2362001",
+      "category": "FIR",
+      "clearanceLevel": 2,
+      "encryptionAlgorithm": "AES-256-GCM"
+    },
+    "event_hash": "39fcf2a8c1596afe79567eaaa4179c1b8cc49fd9095485bcd3dd7c5a821cb540"
+  },
+  {
+    "event_id": "d4810cd5-1d48-4220-a99e-ec7f6f47dc5d",
+    "document_id": "SYSTEM_AUTH",
+    "case_id": "SYSTEM_AUTH",
+    "version_id": "v1.0",
+    "action": "LOGIN",
+    "user_id": "USR-POL-101",
+    "user_role": "POLICE_INVESTIGATOR",
+    "timestamp": "2026-09-12T20:10:09.765Z",
+    "data_hash": "DIRECT_AUTHENTICATED",
+    "parent_hashes": [
+      "39fcf2a8c1596afe79567eaaa4179c1b8cc49fd9095485bcd3dd7c5a821cb540"
+    ],
+    "metadata": {
+      "username": "sharma_leo",
+      "department": "LEO"
+    },
+    "event_hash": "d2e2a281faba7241e578d5785a8146380078730c189cf939d3bc7a8b8ddca53a"
+  },
+  {
+    "event_id": "77a61ab6-1d63-4362-b842-18afe0334e91",
+    "document_id": "SYSTEM_AUTH",
+    "case_id": "SYSTEM_AUTH",
+    "version_id": "v1.0",
+    "action": "LOGIN",
+    "user_id": "USR-POL-101",
+    "user_role": "POLICE_INVESTIGATOR",
+    "timestamp": "2026-09-12T20:10:09.781Z",
+    "data_hash": "DIRECT_AUTHENTICATED",
+    "parent_hashes": [
+      "d2e2a281faba7241e578d5785a8146380078730c189cf939d3bc7a8b8ddca53a"
+    ],
+    "metadata": {
+      "username": "sharma_leo",
+      "department": "LEO"
+    },
+    "event_hash": "abaf3e03c92540e851707ce1fa711c6bd0cec0e6e629e70f0e1d231299f388c5"
+  }
+]
