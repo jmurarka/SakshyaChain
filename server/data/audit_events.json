@@ -3538,5 +3538,122 @@
       "department": "LEO"
     },
     "event_hash": "abaf3e03c92540e851707ce1fa711c6bd0cec0e6e629e70f0e1d231299f388c5"
+  },
+  {
+    "event_id": "3a310823-e5d1-4328-96ec-b99438333327",
+    "document_id": "SYSTEM_AUTH",
+    "case_id": "SYSTEM_AUTH",
+    "version_id": "v1.0",
+    "action": "LOGIN",
+    "user_id": "USR-POL-101",
+    "user_role": "POLICE_INVESTIGATOR",
+    "timestamp": "2026-09-12T20:49:41.602Z",
+    "data_hash": "DIRECT_AUTHENTICATED",
+    "parent_hashes": [
+      "abaf3e03c92540e851707ce1fa711c6bd0cec0e6e629e70f0e1d231299f388c5"
+    ],
+    "metadata": {
+      "username": "sharma_leo",
+      "department": "LEO"
+    },
+    "event_hash": "2c87d1dcfec3a1a947ac05d75f8aebcb2b645b4a487994e7a1d97101c76f937d"
+  },
+  {
+    "event_id": "036d63ce-4e3d-4de8-a79a-9e999f7a447c",
+    "document_id": "SYSTEM_AUTH",
+    "case_id": "SYSTEM_AUTH",
+    "version_id": "v1.0",
+    "action": "LOGIN",
+    "user_id": "USR-POL-101",
+    "user_role": "POLICE_INVESTIGATOR",
+    "timestamp": "2026-09-12T20:49:41.757Z",
+    "data_hash": "DIRECT_AUTHENTICATED",
+    "parent_hashes": [
+      "2c87d1dcfec3a1a947ac05d75f8aebcb2b645b4a487994e7a1d97101c76f937d"
+    ],
+    "metadata": {
+      "username": "sharma_leo",
+      "department": "LEO"
+    },
+    "event_hash": "f183d49a875a273137796bfca5889423b4ffef053a8a7af1d83608c2a333c0e9"
+  },
+  {
+    "event_id": "dc94c454-84f8-4273-9b34-09fd1f6902c4",
+    "document_id": "DOC-2026-8891-8358",
+    "case_id": "CASE-2026-8891",
+    "version_id": "1.0",
+    "action": "UPLOAD",
+    "user_id": "USR-POL-101",
+    "user_role": "POLICE_INVESTIGATOR",
+    "timestamp": "2026-09-12T20:49:58.373Z",
+    "data_hash": "336d89bd79b2d5bd2dc4adf51278260b4a972f28b4902c3ba693d46fbd5c904c",
+    "parent_hashes": [
+      "f183d49a875a273137796bfca5889423b4ffef053a8a7af1d83608c2a333c0e9"
+    ],
+    "metadata": {
+      "title": "Screenshot 2026-06-11 194520",
+      "category": "FIR",
+      "clearanceLevel": 2,
+      "encryptionAlgorithm": "AES-256-GCM"
+    },
+    "event_hash": "8a1f72b86de9b607c69ea03a678e340e32f2a9c4f24a1b15d66136af04e74716"
+  },
+  {
+    "event_id": "30854676-fbc0-4853-a1a9-9fe298178885",
+    "document_id": "SYSTEM_AUTH",
+    "case_id": "SYSTEM_AUTH",
+    "version_id": "v1.0",
+    "action": "FAILED_LOGIN",
+    "user_id": "inspector_sharma",
+    "user_role": "UNKNOWN",
+    "timestamp": "2026-09-12T20:51:57.614Z",
+    "data_hash": "USER_NOT_FOUND",
+    "parent_hashes": [
+      "8a1f72b86de9b607c69ea03a678e340e32f2a9c4f24a1b15d66136af04e74716"
+    ],
+    "metadata": {
+      "ip": "::1"
+    },
+    "event_hash": "dec7a8f87ff5c121d313f5fcfb4fafd9af06e71860e63251d4cd8585b420375d"
+  },
+  {
+    "event_id": "3f3b4557-7340-42c5-b868-d7b3dd518f46",
+    "document_id": "SYSTEM_AUTH",
+    "case_id": "SYSTEM_AUTH",
+    "version_id": "v1.0",
+    "action": "LOGIN",
+    "user_id": "USR-POL-101",
+    "user_role": "POLICE_INVESTIGATOR",
+    "timestamp": "2026-09-12T20:52:10.720Z",
+    "data_hash": "DIRECT_AUTHENTICATED",
+    "parent_hashes": [
+      "dec7a8f87ff5c121d313f5fcfb4fafd9af06e71860e63251d4cd8585b420375d"
+    ],
+    "metadata": {
+      "username": "sharma_leo",
+      "department": "LEO"
+    },
+    "event_hash": "e6bf8bda996037cd598d53789c3584a4ee417dd413c88cbe38dce33e2dff1736"
+  },
+  {
+    "event_id": "757afa41-5c53-4430-a0fc-11a8cb15368a",
+    "document_id": "DOC-2026-8891-0733",
+    "case_id": "CASE-2026-8891",
+    "version_id": "1.0",
+    "action": "UPLOAD",
+    "user_id": "USR-POL-101",
+    "user_role": "POLICE_INVESTIGATOR",
+    "timestamp": "2026-09-12T20:52:10.737Z",
+    "data_hash": "e6fd0e625eacb8bb619fbceff250a5abe962cb0071573d89473f742753eddb9a",
+    "parent_hashes": [
+      "e6bf8bda996037cd598d53789c3584a4ee417dd413c88cbe38dce33e2dff1736"
+    ],
+    "metadata": {
+      "title": "Sworn Witness Test Deposition",
+      "category": "WITNESS_STATEMENT",
+      "clearanceLevel": 2,
+      "encryptionAlgorithm": "AES-256-GCM"
+    },
+    "event_hash": "d340a25cddec2f6d7c4906364e08781c5c0403a9e0aff3522f3f1f77dd6b3936"
   }
 ]

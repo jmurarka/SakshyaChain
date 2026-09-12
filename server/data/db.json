@@ -1566,6 +1566,152 @@
           "timestamp": "2026-09-12T20:08:05.354Z"
         }
       ]
+    },
+    {
+      "id": "DOC-2026-8891-8358",
+      "title": "Screenshot 2026-06-11 194520",
+      "caseId": "CASE-2026-8891",
+      "caseTitle": "Case CASE-2026-8891",
+      "category": "FIR",
+      "clearanceLevel": 2,
+      "authorId": "USR-POL-101",
+      "authorName": "Inspector Vikram Sharma",
+      "authorRole": "POLICE_INVESTIGATOR",
+      "department": "LEO",
+      "dateCreated": "2026-09-12T20:49:58.365Z",
+      "version": "1.0",
+      "status": "VERIFIED",
+      "extractedText": "[PDF Attachment: Screenshot 2026-06-11 194520.png]",
+      "mimeType": "image/png",
+      "originalFileName": "Screenshot 2026-06-11 194520.png",
+      "payloadHash": "336d89bd79b2d5bd2dc4adf51278260b4a972f28b4902c3ba693d46fbd5c904c",
+      "fileSize": 239806,
+      "encryptionMetadata": {
+        "algorithm": "AES-256-GCM",
+        "kmsKeyId": "KMS-MASTER-KEY-PROD-2026",
+        "encryptedDEK": "32ef4ac5c87b742f56626495434b254b8de52f92295ba983b2676b135d618c055290d7f90e7f2b88f0f8b736dcfa214e3dfcb080703bd4cbe40629ea7508d62e",
+        "dekIv": "f57566f6ea46c78fdfe2a472",
+        "dekAuthTag": "b8caae93196e8a9b4f9ad8f4775a5f4c",
+        "payloadIv": "03667603700e9093948f4862",
+        "payloadAuthTag": "d0f870106f04c4db31f0030462369716"
+      },
+      "signature": null,
+      "aiEntities": [
+        {
+          "type": "Accused Suspect",
+          "name": "Sameer Verma",
+          "id": "ID-SV992"
+        },
+        {
+          "type": "Victim",
+          "name": "Rajesh Kumar",
+          "status": "Deceased"
+        },
+        {
+          "type": "Recovered Weapon",
+          "weapon": "Glock-17 Pistol (9mm)",
+          "serial": "GL-88392"
+        },
+        {
+          "type": "Location",
+          "venue": "Tech Vault Facility, Cyber Park, Block B4"
+        }
+      ],
+      "versionHistory": [
+        {
+          "version": "1.0",
+          "parentVersion": "GENESIS",
+          "parentPayloadHash": "0000000000000000000000000000000000000000000000000000000000000000",
+          "payloadHash": "336d89bd79b2d5bd2dc4adf51278260b4a972f28b4902c3ba693d46fbd5c904c",
+          "fileSize": 239806,
+          "authorId": "USR-POL-101",
+          "authorName": "Inspector Vikram Sharma",
+          "department": "LEO",
+          "dateCreated": "2026-09-12T20:49:58.365Z",
+          "changeNotes": "Initial document filing (v1.0)"
+        }
+      ],
+      "chainOfCustody": [
+        {
+          "action": "UPLOADED_AND_ENCRYPTED",
+          "actorName": "Inspector Vikram Sharma",
+          "department": "LEO",
+          "timestamp": "2026-09-12T20:49:58.365Z"
+        }
+      ]
+    },
+    {
+      "id": "DOC-2026-8891-0733",
+      "title": "Sworn Witness Test Deposition",
+      "caseId": "CASE-2026-8891",
+      "caseTitle": "Case CASE-2026-8891",
+      "category": "WITNESS_STATEMENT",
+      "clearanceLevel": 2,
+      "authorId": "USR-POL-101",
+      "authorName": "Inspector Vikram Sharma",
+      "authorRole": "POLICE_INVESTIGATOR",
+      "department": "LEO",
+      "dateCreated": "2026-09-12T20:52:10.734Z",
+      "version": "1.0",
+      "status": "VERIFIED",
+      "extractedText": "Test witness deposition payload content for verification.",
+      "mimeType": "text/plain",
+      "originalFileName": "Sworn_Witness_Test_Deposition.pdf",
+      "payloadHash": "e6fd0e625eacb8bb619fbceff250a5abe962cb0071573d89473f742753eddb9a",
+      "fileSize": 57,
+      "encryptionMetadata": {
+        "algorithm": "AES-256-GCM",
+        "kmsKeyId": "KMS-MASTER-KEY-PROD-2026",
+        "encryptedDEK": "e5eb4ac8885339c1e664ad38e80a51a17066c888a4c1eaa814e169f77fbdabc271e83cdf2fda4dd501ecb8ebe629fae64a8d663af8d3a402412da301f25c997c",
+        "dekIv": "226f766d5ecc91be4f2ca24f",
+        "dekAuthTag": "c2037392fafccba3abd7014437fb1083",
+        "payloadIv": "88551337b039214c0e8a7944",
+        "payloadAuthTag": "5d33e03ef88d9f05d911fccfcc86df27"
+      },
+      "signature": null,
+      "aiEntities": [
+        {
+          "type": "Accused Suspect",
+          "name": "Sameer Verma",
+          "id": "ID-SV992"
+        },
+        {
+          "type": "Victim",
+          "name": "Rajesh Kumar",
+          "status": "Deceased"
+        },
+        {
+          "type": "Recovered Weapon",
+          "weapon": "Glock-17 Pistol (9mm)",
+          "serial": "GL-88392"
+        },
+        {
+          "type": "Location",
+          "venue": "Tech Vault Facility, Cyber Park, Block B4"
+        }
+      ],
+      "versionHistory": [
+        {
+          "version": "1.0",
+          "parentVersion": "GENESIS",
+          "parentPayloadHash": "0000000000000000000000000000000000000000000000000000000000000000",
+          "payloadHash": "e6fd0e625eacb8bb619fbceff250a5abe962cb0071573d89473f742753eddb9a",
+          "fileSize": 57,
+          "authorId": "USR-POL-101",
+          "authorName": "Inspector Vikram Sharma",
+          "department": "LEO",
+          "dateCreated": "2026-09-12T20:52:10.734Z",
+          "changeNotes": "Initial document filing (v1.0)"
+        }
+      ],
+      "chainOfCustody": [
+        {
+          "action": "UPLOADED_AND_ENCRYPTED",
+          "actorName": "Inspector Vikram Sharma",
+          "department": "LEO",
+          "timestamp": "2026-09-12T20:52:10.734Z"
+        }
+      ]
     }
   ],
   "transferRequests": [

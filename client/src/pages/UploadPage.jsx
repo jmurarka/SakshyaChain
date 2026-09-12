@@ -10,7 +10,7 @@ export default function UploadPage({ navigateTo: propNavigateTo }) {
   const [title, setTitle] = useState('');
   const [caseId, setCaseId] = useState('CASE-2026-8891');
   const [category, setCategory] = useState('FIR');
-  const [clearanceLevel, setClearanceLevel] = useState('2');
+  const [clearanceLevel, setClearanceLevel] = useState(user?.clearanceLevel ? String(Math.min(2, user.clearanceLevel)) : '1');
   const [textContent, setTextContent] = useState('');
   const [selectedFile, setSelectedFile] = useState(null);
   const [isUploading, setIsUploading] = useState(false);
@@ -36,16 +36,15 @@ export default function UploadPage({ navigateTo: propNavigateTo }) {
         };
         reader.readAsText(file);
       } else {
-        // PDF or binary attachment: do not dump raw binary %PDF- stream syntax into text area
-        setTextContent(`[PDF Attachment: ${file.name}]`);
+        setTextContent(`[File Attachment: ${file.name}]`);
       }
     }
   };
 
   const handleUpload = async (e) => {
     e.preventDefault();
-    if (!title || (!textContent && !selectedFile)) {
-      alert('Please enter document title and text or file content payload.');
+    if (!title) {
+      alert('Please enter document title.');
       return;
     }
 
@@ -66,17 +65,15 @@ export default function UploadPage({ navigateTo: propNavigateTo }) {
         formData.append('caseId', caseId);
         formData.append('category', category);
         formData.append('clearanceLevel', clearanceLevel);
-        formData.append('textContent', textContent);
-        res = await api.post('/documents/upload', formData, {
-          headers: { 'Content-Type': 'multipart/form-data' }
-        });
+        formData.append('textContent', textContent || `[Attachment: ${selectedFile.name}]`);
+        res = await api.post('/documents/upload', formData);
       } else {
         res = await api.post('/documents/upload', {
           title,
           caseId,
           category,
           clearanceLevel,
-          textContent
+          textContent: textContent || 'Standard legal document filing'
         });
       }
 

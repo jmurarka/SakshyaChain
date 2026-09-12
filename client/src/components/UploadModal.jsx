@@ -48,9 +48,7 @@ export default function UploadModal({ isOpen, onClose, onUploaded }) {
         formData.append('category', category);
         formData.append('clearanceLevel', clearanceLevel);
         formData.append('textContent', textContent);
-        await api.post('/documents/upload', formData, {
-          headers: { 'Content-Type': 'multipart/form-data' }
-        });
+        await api.post('/documents/upload', formData);
       } else {
         await api.post('/documents/upload', {
           title,
