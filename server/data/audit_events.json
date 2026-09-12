@@ -4803,5 +4803,26 @@
       "encryptionAlgorithm": "AES-256-GCM"
     },
     "event_hash": "d212ebf9c8db18a860dafb0f379b7a5b38048b03e98a737a4c8006e2de5236b6"
+  },
+  {
+    "event_id": "57a7727d-1c56-4358-8dd1-58fcb328fc09",
+    "document_id": "DOC-2026-8891-8635",
+    "case_id": "CASE-2026-8891",
+    "version_id": "1.0",
+    "action": "UPLOAD",
+    "user_id": "USR-POL-101",
+    "user_role": "POLICE_INVESTIGATOR",
+    "timestamp": "2026-09-12T23:32:08.665Z",
+    "data_hash": "29a78df1daabe949b6e390b71dd6fb6d8a9a96fc19b3172111dc86b9eea31adb",
+    "parent_hashes": [
+      "d212ebf9c8db18a860dafb0f379b7a5b38048b03e98a737a4c8006e2de5236b6"
+    ],
+    "metadata": {
+      "title": "Screenshot 2026-06-21 000222",
+      "category": "FIR",
+      "clearanceLevel": 2,
+      "encryptionAlgorithm": "AES-256-GCM"
+    },
+    "event_hash": "8411b09647148060c99280effcf96bb4f755516befe7ef3f21aa955578912fae"
   }
 ]

@@ -98,10 +98,19 @@ export function AuthProvider({ children }) {
       }}
     >
       {loading ? (
-        <div className="min-h-screen bg-slate-900 text-white flex flex-col items-center justify-center font-sans space-y-4">
-          <div className="w-12 h-12 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
-          <div className="text-sm font-semibold tracking-wide text-slate-300 font-mono">
-            Initializing SākshyaChain Security Context...
+        <div className="min-h-screen bg-[#F8FAFC] text-slate-800 flex flex-col items-center justify-center font-sans space-y-4">
+          <div className="flex items-center gap-2.5">
+            <div className="w-10 h-10 rounded-xl bg-blue-600 flex items-center justify-center text-white shadow-md shadow-blue-600/20">
+              <span className="font-extrabold text-lg">S</span>
+            </div>
+            <div>
+              <span className="font-extrabold text-slate-900 text-xl tracking-tight font-mono">SākshyaChain</span>
+              <div className="text-[10px] text-slate-500 font-mono">Digital Legal Evidence Vault</div>
+            </div>
+          </div>
+          <div className="flex items-center gap-2.5 bg-white px-4 py-2 rounded-xl border border-slate-200 shadow-sm text-xs font-semibold text-slate-600 font-mono">
+            <div className="w-4 h-4 border-2 border-blue-600 border-t-transparent rounded-full animate-spin"></div>
+            <span>Verifying Security Context...</span>
           </div>
         </div>
       ) : (
