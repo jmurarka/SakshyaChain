@@ -1,4 +1,4 @@
-# 🛡️ SākshyaChain — Multi-Tenant Legal & Investigation Digital Vault
+# SākshyaChain — Multi-Tenant Legal & Investigation Digital Vault
 
 [![Docker](https://img.shields.io/badge/Docker-Containerized-blue.svg?logo=docker)](https://www.docker.com/)
 [![React](https://img.shields.io/badge/Frontend-React_18-61DAFB.svg?logo=react)](https://react.dev/)
@@ -9,20 +9,20 @@
 
 ---
 
-## 🌟 Key System Features
+## Key System Features
 
-- 🏛️ **Executive / Boss Portal (Level 4 Clearance)**:
+- **Executive / Boss Portal (Level 4 Clearance)**:
   - Full system oversight for Judicial Magistrates, Senior Authorities, and Compliance Auditors.
   - PKI Digital Signature Stamping & Verification.
   - Audit Trail DAG Graph visualization and security breach alert logs.
   - User directory management & supervisor oversight.
 
-- 👮 **Field / Employee Portal (Level 3 / Level 2 Clearance)**:
+- **Field / Employee Portal (Level 3 / Level 2 Clearance)**:
   - Operational workspace for Chief Investigating Officers and Field Investigators.
   - Restricted access isolation (Boss user IDs, audit DAGs, and profile switching disabled without logout).
   - Case file management, digital evidence upload, and AI Legal Assistant interface.
 
-- 🔒 **Zero-Trust Security Architecture**:
+- **Zero-Trust Security Architecture**:
   - **AES-256-GCM Envelope Encryption** for evidence vault files.
   - **Multi-Factor Authentication (MFA OTP)** with 120s TTL and 3-attempt lockout.
   - **Break-Glass Emergency Access** granting temporary 30-minute elevated privileges.
@@ -30,7 +30,7 @@
 
 ---
 
-## 🐳 Quick Start: Running with Docker (Recommended)
+## Quick Start: Running with Docker (Recommended)
 
 The entire full-stack application (React frontend + Express API server + Nginx reverse proxy) is fully containerized.
 
@@ -50,8 +50,8 @@ docker compose ps
 ```
 
 ### 3. Access Application
-- 🌐 **Frontend Web Portal**: [http://localhost:5173](http://localhost:5173) or [http://localhost](http://localhost)
-- ⚙️ **Backend REST API**: [http://localhost:5000/api/health](http://localhost:5000/api/health)
+- **Frontend Web Portal**: [http://localhost:5173](http://localhost:5173) or [http://localhost](http://localhost)
+- **Backend REST API**: [http://localhost:5000/api/health](http://localhost:5000/api/health)
 
 ### Stop Containers
 ```bash
@@ -60,7 +60,7 @@ docker compose down
 
 ---
 
-## 💻 Running Locally (Without Docker)
+## Running Locally (Without Docker)
 
 ### Prerequisites
 - Node.js v20 or higher
@@ -86,7 +86,7 @@ npm run dev:all
 
 ---
 
-## 📁 Repository Directory Structure
+## Repository Directory Structure
 
 ```
 SakshyaChain/
@@ -107,12 +107,12 @@ SakshyaChain/
 
 ---
 
-## 🔐 Security & Secret Protection Guarantee
+## Security & Secret Protection Guarantee
 
 - **No Secrets Exposed**: All sensitive configuration options (JWT secrets, master keys, Supabase credentials) are managed strictly via environment variables (`.env`).
 - `.env` files, generated private key pairs (`server/data/vault/keys/`), and binary uploads are excluded via `.gitignore` and `.dockerignore`.
 
 ---
 
-## 📄 License
+## License
 This project is licensed under the MIT License.
