@@ -279,11 +279,13 @@ export default function Layout() {
           </div>
 
           <div className="flex items-center gap-4 text-slate-500">
+            <Link to="/privacy" className="hover:text-blue-600 transition-colors font-medium underline underline-offset-2">Privacy Policy</Link>
+            <span>•</span>
+            <Link to="/terms" className="hover:text-blue-600 transition-colors font-medium underline underline-offset-2">Terms of Service</Link>
+            <span>•</span>
             <span>Role Isolation: <strong className={isBoss ? "text-rose-600" : "text-blue-600"}>{isBoss ? "Executive Oversight (L4)" : "Field Officer (L3)"}</strong></span>
             <span>•</span>
             <span>AES-256 Vault: <strong className="text-slate-700">Encrypted at Rest</strong></span>
-            <span>•</span>
-            <span>Last Ledger Sync: {new Date().toLocaleTimeString()}</span>
           </div>
         </div>
       </footer>

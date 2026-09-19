@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <rect width="1200" height="630" fill="#0f172a"/>
+  <rect x="40" y="40" width="1120" height="550" rx="24" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+  <circle cx="200" cy="315" r="90" fill="#2563eb" opacity="0.2"/>
+  <path d="M200 245c35 0 65 17.5 65 52.5 0 35-24.5 52.5-53.62 62.65a7 7 0 0 1-4.69 0C177.5 350 153 332.5 153 297.5c0-35 30-52.5 47-52.5z" fill="none" stroke="#3b82f6" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="m185 295 15 15 30-30" fill="none" stroke="#60a5fa" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="340" y="270" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="54" fill="#ffffff">SākshyaChain</text>
+  <text x="340" y="330" font-family="system-ui, -apple-system, sans-serif" font-weight="600" font-size="32" fill="#94a3b8">Multi-Tenant Legal &amp; Investigation Digital Vault</text>
+  <text x="340" y="390" font-family="monospace" font-size="22" fill="#3b82f6">PKI Signatures • Audit DAG • Break-Glass Emergency Access</text>
+  <rect x="340" y="440" width="300" height="50" rx="12" fill="#2563eb"/>
+  <text x="490" y="472" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="18" fill="#ffffff" text-anchor="middle">Enter Portal Gateway →</text>
+</svg>

@@ -1,0 +1,16 @@
+# SākshyaChain Robots Configuration
+User-agent: *
+Allow: /
+Allow: /login
+Allow: /privacy
+Allow: /terms
+
+# Disallow private application routes & API endpoints
+Disallow: /api/
+Disallow: /dashboard
+Disallow: /cases/
+Disallow: /audit/
+Disallow: /integrity/
+Disallow: /break-glass/
+
+Sitemap: https://sakshyachain.org/sitemap.xml
