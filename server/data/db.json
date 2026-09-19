@@ -1208,7 +1208,7 @@
       "department": "JUD",
       "dateCreated": "2026-09-12T19:28:52.678Z",
       "version": "1.0",
-      "status": "VERIFIED",
+      "status": "SIGNED_PKI",
       "extractedText": "[PDF Attachment: agnirva certificate.pdf]",
       "mimeType": "application/pdf",
       "originalFileName": "agnirva certificate.pdf",
@@ -1223,7 +1223,31 @@
         "payloadIv": "cae5358ca576f2c52723b89c",
         "payloadAuthTag": "d86a098ec4688a9b9d7079bc0c1a9647"
       },
-      "signature": null,
+      "signature": {
+        "signedBy": "Justice P. K. Mukherjee",
+        "signerRole": "Special Sessions Court Magistrate",
+        "signerDepartment": "High Court of Judicature / Sessions Court",
+        "signatureBase64": "J3qHBoHtkvP8nG9jIUu7MTNwDCmJbIQrqObSq+cDfYU3pLCEAY+qBOZvXAOFbPRAFMgAzOdLJZ3VI66qPuKO5Y+AoG8SwKHaYWP0GzgAyt/qveoxNo5wkD91K2/vH26fpuAR0HeTsHmdKzjfR09Pqu+jzPJyLFJuZsBLjS4rUP1EhmONGm//SGkKB2dZarrQ2c7BRElSdQ3c7SKVgutCrIDYPMVUDvmKUgA1X/Bg/LBMfN46b2zUwaO8ZeQDPjaWtYAw9+wpEB5++2UnEGqlmATAtBEUma/yxEMMxzoGl/OdHmSEn3slrdPBcxrZD7w3/MtMOkinzlTnt9DZLlO/Yg==",
+        "dateSigned": "2026-09-13T06:13:51.627Z",
+        "manifestId": "MANIFEST-d4c9af09eacacba6",
+        "signatureId": "SIG-c3a59f9c17448875",
+        "signatureProvider": "local-dev-v1",
+        "manifest": {
+          "manifestId": "MANIFEST-d4c9af09eacacba6",
+          "documentId": "DOC-2026-8891-2640",
+          "versionId": "v1.0.0",
+          "sha256": "e458e712099006cd18bd8bae55f946121d17419707072bb804efd346926a5e57",
+          "signerId": "USR-JUD-404",
+          "metadata": {
+            "docTitle": "agnirva certificate",
+            "caseId": "CASE-2026-8891",
+            "signerName": "Justice P. K. Mukherjee",
+            "signerRole": "Special Sessions Court Magistrate",
+            "signerDepartment": "High Court of Judicature / Sessions Court"
+          },
+          "timestamp": "2026-09-13T06:13:51.603Z"
+        }
+      },
       "aiEntities": [
         {
           "type": "Accused Suspect",
@@ -1265,6 +1289,17 @@
           "actorName": "Justice P. K. Mukherjee",
           "department": "JUD",
           "timestamp": "2026-09-12T19:28:52.679Z"
+        },
+        {
+          "action": "PKI_DIGITAL_SIGNATURE_APPLIED",
+          "actorName": "Justice P. K. Mukherjee",
+          "department": "High Court of Judicature / Sessions Court",
+          "timestamp": "2026-09-13T06:13:51.627Z",
+          "details": {
+            "manifestId": "MANIFEST-d4c9af09eacacba6",
+            "signatureId": "SIG-c3a59f9c17448875",
+            "provider": "local-dev-v1"
+          }
         }
       ]
     },
@@ -1749,6 +1784,26 @@
       "signatureProvider": "local-dev-v1",
       "signedAt": "2026-09-12T17:23:45.066Z",
       "status": "ACTIVE"
+    },
+    {
+      "manifestId": "MANIFEST-d4c9af09eacacba6",
+      "documentId": "DOC-2026-8891-2640",
+      "versionId": "v1.0.0",
+      "sha256": "e458e712099006cd18bd8bae55f946121d17419707072bb804efd346926a5e57",
+      "signerId": "USR-JUD-404",
+      "metadata": {
+        "docTitle": "agnirva certificate",
+        "caseId": "CASE-2026-8891",
+        "signerName": "Justice P. K. Mukherjee",
+        "signerRole": "Special Sessions Court Magistrate",
+        "signerDepartment": "High Court of Judicature / Sessions Court"
+      },
+      "timestamp": "2026-09-13T06:13:51.603Z",
+      "signatureId": "SIG-c3a59f9c17448875",
+      "signature": "J3qHBoHtkvP8nG9jIUu7MTNwDCmJbIQrqObSq+cDfYU3pLCEAY+qBOZvXAOFbPRAFMgAzOdLJZ3VI66qPuKO5Y+AoG8SwKHaYWP0GzgAyt/qveoxNo5wkD91K2/vH26fpuAR0HeTsHmdKzjfR09Pqu+jzPJyLFJuZsBLjS4rUP1EhmONGm//SGkKB2dZarrQ2c7BRElSdQ3c7SKVgutCrIDYPMVUDvmKUgA1X/Bg/LBMfN46b2zUwaO8ZeQDPjaWtYAw9+wpEB5++2UnEGqlmATAtBEUma/yxEMMxzoGl/OdHmSEn3slrdPBcxrZD7w3/MtMOkinzlTnt9DZLlO/Yg==",
+      "signatureProvider": "local-dev-v1",
+      "signedAt": "2026-09-13T06:13:51.627Z",
+      "status": "ACTIVE"
     }
   ],
   "revocations": [
@@ -1769,10 +1824,11 @@
       "docId": "DOC-8891-002",
       "timestamp": "2026-09-12T23:17:12.247Z",
       "details": "Server blocked an unencrypted raw binary payload download request for classified forensic report without break-glass privilege.",
-      "status": "OPEN",
-      "resolvedBy": null,
-      "resolutionNotes": null,
-      "resolutionBlockAddress": null
+      "status": "RESOLVED",
+      "resolvedBy": "Justice P. K. Mukherjee (Special Sessions Court Magistrate)",
+      "resolutionNotes": "Reviewed by Justice P. K. Mukherjee. Verified security compliance and out-of-band identity check.",
+      "resolutionBlockAddress": "",
+      "resolvedAt": "2026-09-13T06:42:05.369Z"
     },
     {
       "id": "ALT-1091",

@@ -2,12 +2,17 @@ node_modules
 client/node_modules
 server/node_modules
 dist
+client/dist
 build
 .DS_Store
 *.log
 .env
 .env.local
+server/.env
+scratch
 scratch_*
 *.zip
+server/data/vault/
+server/data/vault/keys/
 sakshyachain-vscode-project/
 SakshyaChain-audit-trail/

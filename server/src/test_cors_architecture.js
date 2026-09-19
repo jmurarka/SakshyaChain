@@ -1,7 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import http from 'http';
-import { CONFIG } from './config.js';
+import { CONFIG, isAllowedOrigin } from './config.js';
 
 console.log('=======================================================');
 console.log('   Testing CORS & IP Whitelist Architecture Policy    ');
@@ -16,18 +16,7 @@ const corsOptions = {
   origin: (origin, callback) => {
     if (!origin) return callback(null, true);
 
-    const isAllowedOrigin = CONFIG.ALLOWED_ORIGINS.some(allowed => {
-      if (allowed === '*') return true;
-      if (origin === allowed) return true;
-      try {
-        const url = new URL(origin);
-        return allowed.includes(url.hostname) || CONFIG.ALLOWED_CLIENT_IPS.some(ipPrefix => url.hostname.startsWith(ipPrefix));
-      } catch (e) {
-        return false;
-      }
-    });
-
-    if (isAllowedOrigin) callback(null, true);
+    if (isAllowedOrigin(origin)) callback(null, true);
     else callback(new Error(`CORS Policy Violation: Origin '${origin}' is unauthorized.`));
   },
   credentials: true,
@@ -122,15 +111,16 @@ function testRequest(headers = {}) {
 }
 
 async function runTests() {
-  console.log('\n[Test 1] Allowed Origin (http://192.168.102.99:5173)...');
-  const res1 = await testRequest({ origin: 'http://192.168.102.99:5173' });
-  console.log('Status:', res1.status);
-  console.log('Access-Control-Allow-Origin:', res1.headers['access-control-allow-origin']);
-  if (res1.status === 200 && res1.headers['access-control-allow-origin'] === 'http://192.168.102.99:5173') {
-    console.log('✅ Test 1 PASS: Allowed origin accepted cleanly!');
-  } else {
-    console.error('❌ Test 1 FAIL!');
+  console.log('\n[Test 1] All origins listed in .env...');
+  for (const allowedOrigin of CONFIG.ALLOWED_ORIGINS) {
+    const response = await testRequest({ origin: allowedOrigin });
+    const returnedOrigin = response.headers['access-control-allow-origin'];
+    if (response.status !== 200 || returnedOrigin !== allowedOrigin) {
+      console.error(`❌ Test 1 FAIL: ${allowedOrigin} was not accepted.`);
+      return;
+    }
   }
+  console.log(`✅ Test 1 PASS: All ${CONFIG.ALLOWED_ORIGINS.length} configured origins accepted cleanly!`);
 
   console.log('\n[Test 2] Unauthorized Origin (http://malicious-hacker.com)...');
   const res2 = await testRequest({ origin: 'http://malicious-hacker.com' });

@@ -6801,5 +6801,243 @@
     "blockHash": "c74e31ce282a66c8ecddc0e3efea42d0c5ab704c9c39b694a0ddd27accd0013f",
     "event_hash": "c74e31ce282a66c8ecddc0e3efea42d0c5ab704c9c39b694a0ddd27accd0013f",
     "gitCommitHash": "f5610bb0bfce1b7bd8665d16b43ea8ff4987af1f"
+  },
+  {
+    "index": 200,
+    "blockHeight": 200,
+    "timestamp": "2026-09-13T06:13:51.679Z",
+    "action": "PKI_SIGNATURE_APPLIED",
+    "actorId": "USR-JUD-404",
+    "actorName": "Justice P. K. Mukherjee",
+    "caseId": "CASE-2026-8891",
+    "docId": "DOC-2026-8891-2640",
+    "docHash": "e458e712099006cd18bd8bae55f946121d17419707072bb804efd346926a5e57",
+    "details": {
+      "manifestId": "MANIFEST-d4c9af09eacacba6",
+      "signatureId": "SIG-c3a59f9c17448875",
+      "provider": "local-dev-v1",
+      "versionId": "v1.0.0"
+    },
+    "previousBlockHash": "c74e31ce282a66c8ecddc0e3efea42d0c5ab704c9c39b694a0ddd27accd0013f",
+    "parent_hashes": [
+      "c74e31ce282a66c8ecddc0e3efea42d0c5ab704c9c39b694a0ddd27accd0013f"
+    ],
+    "payload": {
+      "action": "PKI_SIGNATURE_APPLIED",
+      "actorId": "USR-JUD-404",
+      "actorName": "Justice P. K. Mukherjee",
+      "caseId": "CASE-2026-8891",
+      "docId": "DOC-2026-8891-2640",
+      "docHash": "e458e712099006cd18bd8bae55f946121d17419707072bb804efd346926a5e57",
+      "details": {
+        "manifestId": "MANIFEST-d4c9af09eacacba6",
+        "signatureId": "SIG-c3a59f9c17448875",
+        "provider": "local-dev-v1",
+        "versionId": "v1.0.0"
+      }
+    },
+    "blockHash": "e3a6ba811e2e373f1a1f25db91d9cc87ff8db22a3c066883f4d17f2b45f7622c",
+    "event_hash": "e3a6ba811e2e373f1a1f25db91d9cc87ff8db22a3c066883f4d17f2b45f7622c",
+    "gitCommitHash": "e11e0133c4dc52fd0e3b1febf8c43b8181580e50"
+  },
+  {
+    "index": 201,
+    "blockHeight": 201,
+    "timestamp": "2026-09-13T06:14:21.045Z",
+    "action": "SYSTEM_AUDIT_EXECUTED",
+    "actorId": "USR-JUD-404",
+    "actorName": "Justice P. K. Mukherjee",
+    "caseId": "SYSTEM",
+    "docId": "SYSTEM",
+    "docHash": "AUDIT_CHECK",
+    "details": {
+      "auditStatus": "TAMPER_ALERT"
+    },
+    "previousBlockHash": "e3a6ba811e2e373f1a1f25db91d9cc87ff8db22a3c066883f4d17f2b45f7622c",
+    "parent_hashes": [
+      "e3a6ba811e2e373f1a1f25db91d9cc87ff8db22a3c066883f4d17f2b45f7622c"
+    ],
+    "payload": {
+      "action": "SYSTEM_AUDIT_EXECUTED",
+      "actorId": "USR-JUD-404",
+      "actorName": "Justice P. K. Mukherjee",
+      "caseId": "SYSTEM",
+      "docId": "SYSTEM",
+      "docHash": "AUDIT_CHECK",
+      "details": {
+        "auditStatus": "TAMPER_ALERT"
+      }
+    },
+    "blockHash": "b7fa6530802fda19f3f84f1997f0a76f84428d7edaac1401958d1ff551404cc0",
+    "event_hash": "b7fa6530802fda19f3f84f1997f0a76f84428d7edaac1401958d1ff551404cc0",
+    "gitCommitHash": "1a77d2ad4ec045800022f55719eae6a5c3078301"
+  },
+  {
+    "index": 202,
+    "blockHeight": 202,
+    "timestamp": "2026-09-13T06:14:21.691Z",
+    "action": "SYSTEM_AUDIT_EXECUTED",
+    "actorId": "USR-JUD-404",
+    "actorName": "Justice P. K. Mukherjee",
+    "caseId": "SYSTEM",
+    "docId": "SYSTEM",
+    "docHash": "AUDIT_CHECK",
+    "details": {
+      "auditStatus": "TAMPER_ALERT"
+    },
+    "previousBlockHash": "b7fa6530802fda19f3f84f1997f0a76f84428d7edaac1401958d1ff551404cc0",
+    "parent_hashes": [
+      "b7fa6530802fda19f3f84f1997f0a76f84428d7edaac1401958d1ff551404cc0"
+    ],
+    "payload": {
+      "action": "SYSTEM_AUDIT_EXECUTED",
+      "actorId": "USR-JUD-404",
+      "actorName": "Justice P. K. Mukherjee",
+      "caseId": "SYSTEM",
+      "docId": "SYSTEM",
+      "docHash": "AUDIT_CHECK",
+      "details": {
+        "auditStatus": "TAMPER_ALERT"
+      }
+    },
+    "blockHash": "50a7a938647831c265950dea6013dd6d5fd0a0c2682feebddd2b2c7e2ee6a37d",
+    "event_hash": "50a7a938647831c265950dea6013dd6d5fd0a0c2682feebddd2b2c7e2ee6a37d",
+    "gitCommitHash": "374253fde5caa0c47d65b246675e157c9eb89827"
+  },
+  {
+    "index": 203,
+    "blockHeight": 203,
+    "timestamp": "2026-09-13T06:40:08.171Z",
+    "action": "DOCUMENT_DOWNLOADED",
+    "actorId": "USR-JUD-404",
+    "actorName": "Justice P. K. Mukherjee",
+    "caseId": "CASE-2026-8891",
+    "docId": "DOC-2026-8891-2267",
+    "docHash": "e9facd6b66eb15d2299e549dc921db36bb11358d294018f66d7dd4cd408a1b3d",
+    "details": {
+      "downloaderRole": "JUDICIAL_MAGISTRATE"
+    },
+    "previousBlockHash": "50a7a938647831c265950dea6013dd6d5fd0a0c2682feebddd2b2c7e2ee6a37d",
+    "parent_hashes": [
+      "50a7a938647831c265950dea6013dd6d5fd0a0c2682feebddd2b2c7e2ee6a37d"
+    ],
+    "payload": {
+      "action": "DOCUMENT_DOWNLOADED",
+      "actorId": "USR-JUD-404",
+      "actorName": "Justice P. K. Mukherjee",
+      "caseId": "CASE-2026-8891",
+      "docId": "DOC-2026-8891-2267",
+      "docHash": "e9facd6b66eb15d2299e549dc921db36bb11358d294018f66d7dd4cd408a1b3d",
+      "details": {
+        "downloaderRole": "JUDICIAL_MAGISTRATE"
+      }
+    },
+    "blockHash": "66065634bf3400d11509cb36ff14534dcfbaa09274e2487383dde8fafc3522fa",
+    "event_hash": "66065634bf3400d11509cb36ff14534dcfbaa09274e2487383dde8fafc3522fa",
+    "gitCommitHash": "1a7421738d5e5322170bf43831b87eb99db7e42f"
+  },
+  {
+    "index": 204,
+    "blockHeight": 204,
+    "timestamp": "2026-09-13T06:41:45.146Z",
+    "action": "SYSTEM_AUDIT_EXECUTED",
+    "actorId": "USR-JUD-404",
+    "actorName": "Justice P. K. Mukherjee",
+    "caseId": "SYSTEM",
+    "docId": "SYSTEM",
+    "docHash": "AUDIT_CHECK",
+    "details": {
+      "auditStatus": "TAMPER_ALERT"
+    },
+    "previousBlockHash": "66065634bf3400d11509cb36ff14534dcfbaa09274e2487383dde8fafc3522fa",
+    "parent_hashes": [
+      "66065634bf3400d11509cb36ff14534dcfbaa09274e2487383dde8fafc3522fa"
+    ],
+    "payload": {
+      "action": "SYSTEM_AUDIT_EXECUTED",
+      "actorId": "USR-JUD-404",
+      "actorName": "Justice P. K. Mukherjee",
+      "caseId": "SYSTEM",
+      "docId": "SYSTEM",
+      "docHash": "AUDIT_CHECK",
+      "details": {
+        "auditStatus": "TAMPER_ALERT"
+      }
+    },
+    "blockHash": "4b7806fd4c5eacb0ed57ad4a5baf19c043b12136427bd2d1b71860832837f677",
+    "event_hash": "4b7806fd4c5eacb0ed57ad4a5baf19c043b12136427bd2d1b71860832837f677",
+    "gitCommitHash": "c36b7cab6a2d9fcac4bd8e39091a6af243d35a01"
+  },
+  {
+    "index": 205,
+    "blockHeight": 205,
+    "timestamp": "2026-09-13T06:41:45.670Z",
+    "action": "SYSTEM_AUDIT_EXECUTED",
+    "actorId": "USR-JUD-404",
+    "actorName": "Justice P. K. Mukherjee",
+    "caseId": "SYSTEM",
+    "docId": "SYSTEM",
+    "docHash": "AUDIT_CHECK",
+    "details": {
+      "auditStatus": "TAMPER_ALERT"
+    },
+    "previousBlockHash": "4b7806fd4c5eacb0ed57ad4a5baf19c043b12136427bd2d1b71860832837f677",
+    "parent_hashes": [
+      "4b7806fd4c5eacb0ed57ad4a5baf19c043b12136427bd2d1b71860832837f677"
+    ],
+    "payload": {
+      "action": "SYSTEM_AUDIT_EXECUTED",
+      "actorId": "USR-JUD-404",
+      "actorName": "Justice P. K. Mukherjee",
+      "caseId": "SYSTEM",
+      "docId": "SYSTEM",
+      "docHash": "AUDIT_CHECK",
+      "details": {
+        "auditStatus": "TAMPER_ALERT"
+      }
+    },
+    "blockHash": "84ae2b11d5bb6e3cf4a6e0d716c8cffd81c4f8dd45596ddc0a618469f638c145",
+    "event_hash": "84ae2b11d5bb6e3cf4a6e0d716c8cffd81c4f8dd45596ddc0a618469f638c145",
+    "gitCommitHash": "568746393efc7cf9c4877ca5cf72132ab959f69a"
+  },
+  {
+    "index": 206,
+    "blockHeight": 206,
+    "timestamp": "2026-09-13T06:42:04.911Z",
+    "action": "SECURITY_INCIDENT_RESOLVED",
+    "actorId": "USR-JUD-404",
+    "actorName": "Justice P. K. Mukherjee",
+    "caseId": "DOC-8891-002",
+    "docId": "ALT-1092",
+    "docHash": "DOC-8891-002",
+    "details": {
+      "alertTitle": "Unencrypted Export Attempt Blocked",
+      "severity": "HIGH",
+      "resolverRole": "Special Sessions Court Magistrate",
+      "resolutionNotes": "Reviewed by Justice P. K. Mukherjee. Verified security compliance and out-of-band identity check.",
+      "resolvedAt": "2026-09-13T06:42:04.902Z"
+    },
+    "previousBlockHash": "84ae2b11d5bb6e3cf4a6e0d716c8cffd81c4f8dd45596ddc0a618469f638c145",
+    "parent_hashes": [
+      "84ae2b11d5bb6e3cf4a6e0d716c8cffd81c4f8dd45596ddc0a618469f638c145"
+    ],
+    "payload": {
+      "action": "SECURITY_INCIDENT_RESOLVED",
+      "actorId": "USR-JUD-404",
+      "actorName": "Justice P. K. Mukherjee",
+      "caseId": "DOC-8891-002",
+      "docId": "ALT-1092",
+      "docHash": "DOC-8891-002",
+      "details": {
+        "alertTitle": "Unencrypted Export Attempt Blocked",
+        "severity": "HIGH",
+        "resolverRole": "Special Sessions Court Magistrate",
+        "resolutionNotes": "Reviewed by Justice P. K. Mukherjee. Verified security compliance and out-of-band identity check.",
+        "resolvedAt": "2026-09-13T06:42:04.902Z"
+      }
+    },
+    "blockHash": "4649884a5f26a6d4add094654c21dbe0fa109444ea36f8e458d073456c425819",
+    "event_hash": "4649884a5f26a6d4add094654c21dbe0fa109444ea36f8e458d073456c425819",
+    "gitCommitHash": "8120bb8f7cd044307119d074770446cf64e28d99"
   }
 ]

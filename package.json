@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
+    "postinstall": "npm run install:all",
     "install:all": "npm install --prefix server && npm install --prefix client",
-    "server": "npm start --prefix server",
+    "server": "npm run dev --prefix server",
     "client": "npm run dev --prefix client",
     "dev:all": "concurrently \"npm run server\" \"npm run client\"",
     "test": "node server/test_security_verification.js"

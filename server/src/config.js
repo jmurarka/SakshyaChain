@@ -5,11 +5,11 @@ import dotenv from 'dotenv';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Load .env configuration
-dotenv.config({ path: path.join(__dirname, '../.env') });
+// Load .env configuration (allow system/Docker environment variables to take precedence)
+dotenv.config({ path: path.join(__dirname, '../.env'), override: false });
 
-const defaultOrigins = ['http://192.168.102.99:5173', 'http://localhost:5173', 'http://127.0.0.1:5173'];
-const defaultIps = ['192.168.102.99', '127.0.0.1', '::1', '::ffff:127.0.0.1', '::ffff:192.168.102.99'];
+const defaultOrigins = [];
+const defaultIps = [];
 
 export const CONFIG = {
   PORT: process.env.PORT || 5000,
@@ -37,4 +37,24 @@ export const CONFIG = {
     : defaultIps,
   STRICT_CORS_ENABLED: process.env.STRICT_CORS_ENABLED === undefined ? true : process.env.STRICT_CORS_ENABLED === 'true'
 };
+
+export function isAllowedOrigin(origin) {
+  if (!origin) return false;
+
+  return CONFIG.ALLOWED_ORIGINS.some(allowedOrigin => {
+    if (allowedOrigin === '*') return true;
+    if (origin === allowedOrigin) return true;
+
+    // Normalizing origin URLs (handling default port 80/443 vs omitted port)
+    try {
+      const originUrl = new URL(origin);
+      const allowedUrl = new URL(allowedOrigin);
+      const originPort = originUrl.port || (originUrl.protocol === 'https:' ? '443' : '80');
+      const allowedPort = allowedUrl.port || (allowedUrl.protocol === 'https:' ? '443' : '80');
+      return originUrl.hostname === allowedUrl.hostname && originPort === allowedPort;
+    } catch {
+      return false;
+    }
+  });
+}
 

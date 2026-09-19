@@ -1,6 +1,7 @@
 import express from 'express';
 import cors from 'cors';
-import { CONFIG } from './config.js';
+import { CONFIG, isAllowedOrigin } from './config.js';
+// Reload trigger for .env changes
 import { seedInitialData } from './services/seedService.js';
 
 import authRoutes from './routes/authRoutes.js';
@@ -25,18 +26,7 @@ const corsOptions = {
       return callback(null, true);
     }
 
-    const isAllowedOrigin = CONFIG.ALLOWED_ORIGINS.some(allowed => {
-      if (allowed === '*') return true;
-      if (origin === allowed) return true;
-      try {
-        const url = new URL(origin);
-        return allowed.includes(url.hostname) || CONFIG.ALLOWED_CLIENT_IPS.some(ipPrefix => url.hostname.startsWith(ipPrefix));
-      } catch (e) {
-        return false;
-      }
-    });
-
-    if (isAllowedOrigin) {
+    if (isAllowedOrigin(origin)) {
       callback(null, true);
     } else {
       console.warn(`[CORS Policy Blocked] Unauthorized Origin '${origin}' attempted API access.`);
@@ -127,7 +117,8 @@ app.get('/api/health', (req, res) => {
 app.listen(CONFIG.PORT, () => {
   console.log(`=======================================================`);
   console.log(` SākshyaChain Production MVP Backend Server Active     `);
-  console.log(` Running on: http://localhost:${CONFIG.PORT}            `);
+  console.log(` Allowed API origins: ${CONFIG.ALLOWED_ORIGINS.join(', ')}`);
+  console.log(` Allowed client IPs: ${CONFIG.ALLOWED_CLIENT_IPS.join(', ')}`);
   console.log(` AES-256-GCM Envelope Encryption: ACTIVE                `);
   console.log(` MFA OTP Engine (120s TTL + 3-Attempt Lockout): ONLINE  `);
   console.log(` Break-Glass Emergency Access (30-min Grant): ONLINE   `);
