@@ -3,7 +3,7 @@ import { useNavigate, useLocation, Link, Outlet, Navigate } from 'react-router-d
 import { useAuth } from '../context/AuthContext';
 import {
   ShieldCheck, Search, Bell, Lock, Database, Cpu, ShieldAlert,
-  SlidersHorizontal, Users, Smartphone, User, FileText, CheckCircle2, Menu, X, LogOut, ChevronRight, HardDrive, Key
+  SlidersHorizontal, Users, Smartphone, User, FileText, CheckCircle2, Menu, X, LogOut, ChevronRight, HardDrive, Key, GitFork
 } from 'lucide-react';
 import UserSwitcherModal from './UserSwitcherModal';
 import MFALoginModal from './MFALoginModal';
@@ -38,11 +38,12 @@ export default function Layout() {
     const dashboardItem = { id: 'dashboard', label: 'Dashboard', icon: SlidersHorizontal, path: '/dashboard' };
     const casesItem = { id: 'cases', label: 'Case Management', icon: Database, path: '/cases' };
     const uploadItem = { id: 'upload', label: 'Upload & Ingest', icon: FileText, path: '/upload' };
+    const graphItem = { id: 'graph', label: 'Knowledge Graph', icon: GitFork, path: '/graph' };
     const ragItem = { id: 'rag', label: 'AI Legal Assistant', icon: Cpu, path: '/rag' };
 
-    // Employee Interface (Level < 4): Strictly isolated operational workspace
+    // Employee Interface (Level < 4): Operational workspace
     if (!isBoss) {
-      return [dashboardItem, casesItem, uploadItem, ragItem];
+      return [dashboardItem, casesItem, uploadItem, graphItem, ragItem];
     }
 
     // Boss / Executive Interface (Level 4): Full system oversight & administrative control
@@ -53,7 +54,7 @@ export default function Layout() {
     const userDirItem = { id: 'admin-users', label: 'User Directory', icon: Users, path: '/admin/users' };
     const deviceDirItem = { id: 'admin-devices', label: 'Device Approvals', icon: Smartphone, path: '/admin/devices' };
 
-    return [dashboardItem, casesItem, uploadItem, ragItem, auditItem, integrityItem, alertsItem, breakGlassItem, userDirItem, deviceDirItem];
+    return [dashboardItem, casesItem, uploadItem, graphItem, ragItem, auditItem, integrityItem, alertsItem, breakGlassItem, userDirItem, deviceDirItem];
   };
 
   const navItems = getSidebarNavItems();

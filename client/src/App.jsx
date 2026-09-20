@@ -16,6 +16,7 @@ import AdminUsersPage from './pages/AdminUsersPage';
 import AdminDevicesPage from './pages/AdminDevicesPage';
 import ProfilePage from './pages/ProfilePage';
 import RAGAssistantPage from './pages/RAGAssistantPage';
+import KnowledgeGraphPage from './pages/KnowledgeGraphPage';
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
 import TermsConditionsPage from './pages/TermsConditionsPage';
 import NotFoundPage from './pages/NotFoundPage';
@@ -39,7 +40,8 @@ function RouteTracker() {
       '/audit': 'Audit DAG Ledger | SākshyaChain',
       '/integrity': 'Cryptographic Integrity | SākshyaChain',
       '/break-glass': 'Break-Glass Emergency Access | SākshyaChain',
-      '/rag': 'AI Legal Assistant | SākshyaChain'
+      '/rag': 'AI Legal Assistant | SākshyaChain',
+      '/graph': 'Crime Report Knowledge Graph | SākshyaChain'
     };
 
     const title = pathTitles[location.pathname] || 'SākshyaChain — Multi-Tenant Digital Vault';
@@ -71,6 +73,7 @@ export default function App() {
           <Route path="cases/:id" element={<CaseDetailPage />} />
           <Route path="docs/:id" element={<DocumentViewerPage />} />
           <Route path="upload" element={<UploadPage />} />
+          <Route path="graph" element={<KnowledgeGraphPage />} />
           <Route path="rag" element={<RAGAssistantPage />} />
           <Route path="audit" element={<AuditTrailPage />} />
           <Route path="audit/:docId" element={<AuditTrailPage />} />

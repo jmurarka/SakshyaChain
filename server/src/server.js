@@ -13,6 +13,7 @@ import caseRoutes from './routes/caseRoutes.js';
 import emergencyRoutes from './routes/emergencyRoutes.js';
 import sharingRoutes from './routes/sharingRoutes.js';
 import demoRoutes from './routes/demoRoutes.js';
+import knowledgeGraphRoutes from './routes/knowledgeGraphRoutes.js';
 
 const app = express();
 
@@ -96,6 +97,7 @@ app.use('/api/ai', aiRoutes);
 app.use('/api/cases', caseRoutes);
 app.use('/api/emergency', emergencyRoutes);
 app.use('/api/sharing', sharingRoutes);
+app.use('/api/knowledge-graph', knowledgeGraphRoutes);
 app.use('/api', demoRoutes);
 
 // Health & CORS Security Status Endpoint
