@@ -13,13 +13,20 @@ import {
   Cpu
 } from 'lucide-react';
 import api from '../services/api';
+import { useAuth } from '../context/AuthContext';
+import { useNavigate } from 'react-router-dom';
 
 export default function IntegrityDashboardPage() {
+  const { user, isSupervisor, isITAdmin, logout } = useAuth();
+  const navigate = useNavigate();
   const [ledgerData, setLedgerData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [isScanning, setIsScanning] = useState(false);
   const [scanResult, setScanResult] = useState(null);
-  const [tamperSimulated, setTamperSimulated] = useState(false);
+  const [tamperedDocId, setTamperedDocId] = useState('');
+  const [selectedDocId, setSelectedDocId] = useState('');
+  const [tamperMessage, setTamperMessage] = useState('');
+  const [isSimulatingTamper, setIsSimulatingTamper] = useState(false);
 
   useEffect(() => {
     fetchIntegrity();
@@ -28,13 +35,14 @@ export default function IntegrityDashboardPage() {
   const fetchIntegrity = async () => {
     setLoading(true);
     try {
-      const res = await api.get('/ledger/verify');
-      if (res.data) {
-        setScanResult(res.data);
-      }
       const docsRes = await api.get('/documents');
       if (docsRes.data.documents) {
         setLedgerData(docsRes.data.documents || []);
+        setSelectedDocId(current => current || docsRes.data.documents[0]?.id || '');
+      }
+      if (isSupervisor) {
+        const res = await api.get('/ledger/verify');
+        if (res.data) setScanResult(res.data);
       }
     } catch (err) {
       console.error('Failed to fetch integrity data:', err);
@@ -44,6 +52,7 @@ export default function IntegrityDashboardPage() {
   };
 
   const handleRunScan = async () => {
+    if (!isSupervisor) return;
     setIsScanning(true);
     try {
       const res = await api.get('/ledger/verify');
@@ -57,14 +66,26 @@ export default function IntegrityDashboardPage() {
   };
 
   const handleSimulateTamper = async () => {
+    if (!selectedDocId || isITAdmin || user?.id !== 'USR-POL-102') return;
+    setIsSimulatingTamper(true);
+    setTamperMessage('Simulating an unauthorized evidence change…');
     try {
-      const res = await api.post('/ledger/tamper-test');
+      const res = await api.post('/ledger/tamper-test', { docId: selectedDocId });
       if (res.data.success) {
-        setTamperSimulated(true);
-        handleRunScan();
+        setTamperedDocId(selectedDocId);
+        setTamperMessage(res.data.message);
+        if (res.data.alert) {
+          try { localStorage.setItem('sakshya_tamper_incident', JSON.stringify({ ...res.data.alert, emittedAt: Date.now() })); } catch { /* Server polling remains the fallback notification path. */ }
+        }
+        window.setTimeout(() => {
+          logout();
+          navigate('/login', { replace: true, state: { lockoutMessage: res.data.message } });
+        }, 1200);
       }
     } catch (err) {
-      console.error('Failed to simulate tamper:', err);
+      setTamperMessage(err.response?.data?.message || 'Tamper simulation failed.');
+    } finally {
+      setIsSimulatingTamper(false);
     }
   };
 
@@ -84,24 +105,29 @@ export default function IntegrityDashboardPage() {
         </div>
 
         <div className="flex items-center gap-3">
-          <button
+          {user?.id === 'USR-POL-102' && <div className="flex items-center gap-2"><select value={selectedDocId} onChange={e=>setSelectedDocId(e.target.value)} className="max-w-64 rounded-lg border border-slate-300 bg-white px-3 py-2 text-xs" aria-label="Evidence to tamper in demonstration">{ledgerData.map(doc=><option key={doc.id} value={doc.id}>{doc.title} · {doc.id}</option>)}</select><button
             onClick={handleSimulateTamper}
-            className="flex items-center gap-2 px-3 py-2 bg-rose-50 hover:bg-rose-100 text-rose-700 border border-rose-200 rounded-lg text-xs font-semibold transition"
+            disabled={isSimulatingTamper || !selectedDocId}
+            className="flex items-center gap-2 px-3 py-2 bg-rose-50 hover:bg-rose-100 text-rose-700 border border-rose-200 rounded-lg text-xs font-semibold transition disabled:opacity-50"
           >
             <AlertTriangle className="w-4 h-4 text-rose-600" />
-            Simulate Disk Tamper Test
-          </button>
+            {isSimulatingTamper ? 'Simulating…' : 'Simulate Employee Tampering'}
+          </button></div>}
           
-          <button
+          {isSupervisor && <button
             onClick={handleRunScan}
             disabled={isScanning}
             className="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-sm font-semibold transition shadow-sm disabled:opacity-50"
           >
             <RefreshCw className={`w-4 h-4 ${isScanning ? 'animate-spin' : ''}`} />
             {isScanning ? 'Scanning Disk & Ledger...' : 'Run Full Integrity Scan'}
-          </button>
+          </button>}
         </div>
       </div>
+
+      {tamperMessage && <div role="status" className={`rounded-xl border p-4 text-sm ${tamperedDocId ? 'border-rose-300 bg-rose-50 text-rose-900' : 'border-blue-200 bg-blue-50 text-blue-900'}`}>{tamperMessage}</div>}
+      {user?.id === 'USR-POL-102' && <p className="text-xs text-slate-500">Tamper demo actor: Inspector Bhir Rao. On detection, Bhir Rao’s account is frozen for 15 minutes and the selected evidence is temporarily locked. Inspector Vikram Sharma is unaffected.</p>}
+      {!isITAdmin && user?.id !== 'USR-POL-102' && <p className="text-xs text-slate-500">To run the employee tamper demonstration, sign in as Inspector Bhir Rao. The event will freeze Bhir’s account only; Inspector Vikram Sharma is unaffected.</p>}
 
       {/* Top 3 Stat Cards */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
@@ -177,7 +203,7 @@ export default function IntegrityDashboardPage() {
               </thead>
               <tbody className="divide-y divide-slate-100 text-slate-700">
                 {ledgerData.map((doc) => {
-                  const isTamperedDoc = tamperSimulated && doc.id === 'DOC-8891-002';
+                  const isTamperedDoc = doc.id === tamperedDocId || (doc.tamperLockedUntil && Date.parse(doc.tamperLockedUntil) > Date.now());
                   return (
                     <tr key={doc.id} className="hover:bg-slate-50/80 transition">
                       <td className="py-3 px-4">
@@ -192,7 +218,7 @@ export default function IntegrityDashboardPage() {
                       <td className="py-3 px-4">
                         {isTamperedDoc ? (
                           <span className="text-rose-600 bg-rose-50 px-2 py-1 rounded text-[11px] font-bold inline-flex items-center gap-1">
-                            <AlertTriangle className="w-3.5 h-3.5 text-rose-600" /> DISK TAMPER DETECTED
+                            <AlertTriangle className="w-3.5 h-3.5 text-rose-600" /> CHANGE BLOCKED · EVIDENCE LOCKED
                           </span>
                         ) : (
                           <span className="text-emerald-700 bg-emerald-50 px-2 py-1 rounded text-[11px] font-medium inline-flex items-center gap-1">

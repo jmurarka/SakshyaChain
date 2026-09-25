@@ -6,12 +6,8 @@ import { signCanonicalManifest } from './cryptoService.js';
 
 export function seedInitialData() {
   const currentDocs = dbService.readDB().documents || [];
-  if (currentDocs.length > 0) {
-    // Already seeded
-    return;
-  }
-
-  console.log('[SeedService] Seeding initial legal documents into AES-256-GCM encrypted vault...');
+  const existingDocumentIds = new Set(currentDocs.map(doc => doc.id));
+  console.log('[SeedService] Checking for missing initial legal documents...');
 
   const initialDocuments = [
     {
@@ -36,6 +32,8 @@ export function seedInitialData() {
     },
     {
       id: 'DOC-8891-002',
+      ownerId: 'USR-FOR-202',
+      accessPolicy: 'OWNER_APPROVAL',
       title: 'Forensic Ballistics & DNA Fingerprint Analysis',
       caseId: 'CASE-2026-8891',
       caseTitle: 'State vs. Cyber Syndicate (Financial Fraud & Homicide)',
@@ -76,6 +74,8 @@ export function seedInitialData() {
     },
     {
       id: 'DOC-8891-004',
+      ownerId: 'USR-JUD-404',
+      accessPolicy: 'OWNER_APPROVAL',
       title: 'Restricted Judicial Interception Order & Note',
       caseId: 'CASE-2026-8891',
       caseTitle: 'State vs. Cyber Syndicate (Financial Fraud & Homicide)',
@@ -92,10 +92,98 @@ export function seedInitialData() {
       chainOfCustody: [
         { action: 'JUDICIAL_ORDER_ISSUED', actorName: 'Justice P. K. Mukherjee', department: 'JUD', timestamp: '2026-08-18T11:00:00Z' }
       ]
+    },
+    {
+      id: 'DOC-ACCESS-TEST-101',
+      ownerId: 'USR-FOR-202',
+      accessPolicy: 'OWNER_APPROVAL',
+      title: 'Access Test File A - Device Hash Notes',
+      caseId: 'CASE-2026-8891',
+      caseTitle: 'State vs. Cyber Syndicate (Financial Fraud & Homicide)',
+      category: 'FORENSIC_NOTES',
+      clearanceLevel: 3,
+      authorId: 'USR-FOR-202',
+      authorName: 'Dr. Sunita Rao',
+      authorRole: 'FORENSIC_SPECIALIST',
+      department: 'FOR',
+      dateCreated: '2026-09-20T10:00:00Z',
+      version: '1.0',
+      status: 'VERIFIED',
+      extractedText: 'Synthetic demonstration file for access permission testing.\n\nDevice Hash Notes: Sample device A was received, photographed, and assigned a test evidence label. SHA-256 verification was recorded at intake and again after analysis. This sample contains no real case evidence or personal information.\n\nUse this file to test VIEW, DOWNLOAD, and EDIT access requests.',
+      chainOfCustody: [
+        { action: 'TEST_FILE_CREATED', actorName: 'Dr. Sunita Rao', department: 'FOR', timestamp: '2026-09-20T10:00:00Z' }
+      ]
+    },
+    {
+      id: 'DOC-ACCESS-TEST-102',
+      ownerId: 'USR-FOR-202',
+      accessPolicy: 'OWNER_APPROVAL',
+      title: 'Access Test File B - Evidence Timeline Worksheet',
+      caseId: 'CASE-2026-8891',
+      caseTitle: 'State vs. Cyber Syndicate (Financial Fraud & Homicide)',
+      category: 'FORENSIC_NOTES',
+      clearanceLevel: 3,
+      authorId: 'USR-FOR-202',
+      authorName: 'Dr. Sunita Rao',
+      authorRole: 'FORENSIC_SPECIALIST',
+      department: 'FOR',
+      dateCreated: '2026-09-20T10:05:00Z',
+      version: '1.0',
+      status: 'VERIFIED',
+      extractedText: 'Synthetic demonstration file for access permission testing.\n\nEvidence Timeline Worksheet: 09:00 - sample item received; 09:15 - package condition documented; 09:30 - sample copied to a test workstation; 10:00 - integrity check completed. All times and events are fictional.\n\nUse this file to test VIEW, DOWNLOAD, and EDIT access requests.',
+      chainOfCustody: [
+        { action: 'TEST_FILE_CREATED', actorName: 'Dr. Sunita Rao', department: 'FOR', timestamp: '2026-09-20T10:05:00Z' }
+      ]
+    },
+    {
+      id: 'DOC-ACCESS-TEST-103',
+      ownerId: 'USR-FOR-202',
+      accessPolicy: 'OWNER_APPROVAL',
+      title: 'Access Test File C - Evidence Comparison Sheet',
+      caseId: 'CASE-2026-8891',
+      caseTitle: 'State vs. Cyber Syndicate (Financial Fraud & Homicide)',
+      category: 'FORENSIC_NOTES',
+      clearanceLevel: 3,
+      authorId: 'USR-FOR-202',
+      authorName: 'Dr. Sunita Rao',
+      authorRole: 'FORENSIC_SPECIALIST',
+      department: 'FOR',
+      dateCreated: '2026-09-20T10:10:00Z',
+      version: '1.0',
+      status: 'VERIFIED',
+      extractedText: 'Synthetic demonstration file for access permission testing.\n\nEvidence Comparison Sheet: Sample A and Sample B were compared using a fictional checklist. Packaging, label, and hash fields are marked as matching for this demonstration. No real evidence or identifying information is included.\n\nUse this file to test VIEW, DOWNLOAD, and EDIT access requests.',
+      chainOfCustody: [
+        { action: 'TEST_FILE_CREATED', actorName: 'Dr. Sunita Rao', department: 'FOR', timestamp: '2026-09-20T10:10:00Z' }
+      ]
+    },
+    {
+      id: 'DOC-ACCESS-TEST-104',
+      ownerId: 'USR-FOR-202', accessPolicy: 'OWNER_APPROVAL',
+      title: 'Access Test File D - Ballistics Intake Checklist',
+      caseId: 'CASE-2026-4412', caseTitle: 'State Narcotics Operation - Seizure & Ballistics Case',
+      category: 'FORENSIC_NOTES', clearanceLevel: 3,
+      authorId: 'USR-FOR-202', authorName: 'Dr. Sunita Rao', authorRole: 'FORENSIC_SPECIALIST', department: 'FOR',
+      dateCreated: '2026-09-21T10:00:00Z', version: '1.0', status: 'VERIFIED',
+      extractedText: 'Synthetic demonstration file for access permission testing.\n\nBallistics Intake Checklist: Sample casing received, photographed, sealed, and assigned a fictional evidence label. An intake hash was recorded for this prototype. No real evidence or personal information is included.\n\nUse this file to test VIEW, DOWNLOAD, and EDIT approval for the State Narcotics Operation case.',
+      chainOfCustody: [{ action: 'TEST_FILE_CREATED', actorName: 'Dr. Sunita Rao', department: 'FOR', timestamp: '2026-09-21T10:00:00Z' }]
+    },
+    {
+      id: 'DOC-ACCESS-TEST-105',
+      ownerId: 'USR-PRO-303', accessPolicy: 'OWNER_APPROVAL',
+      title: 'Access Test File E - Property Recovery Inventory',
+      caseId: 'CASE-2026-1102', caseTitle: 'Commercial Complex Armed Robbery & Heist',
+      category: 'CASE_WORKSHEET', clearanceLevel: 2,
+      authorId: 'USR-PRO-303', authorName: 'Advocate Rajesh Verma', authorRole: 'PUBLIC_PROSECUTOR', department: 'PROS',
+      dateCreated: '2026-09-21T10:05:00Z', version: '1.0', status: 'VERIFIED',
+      extractedText: 'Synthetic demonstration file for access permission testing.\n\nProperty Recovery Inventory: A fictional checklist records three sealed sample items, condition at receipt, and a matching prototype evidence label. No real evidence or personal information is included.\n\nUse this file to test VIEW, DOWNLOAD, and EDIT approval for the Commercial Complex Armed Robbery case.',
+      chainOfCustody: [{ action: 'TEST_FILE_CREATED', actorName: 'Advocate Rajesh Verma', department: 'PROS', timestamp: '2026-09-21T10:05:00Z' }]
     }
   ];
 
   for (const docData of initialDocuments) {
+    // Existing user documents and previously seeded files stay untouched.
+    if (existingDocumentIds.has(docData.id)) continue;
+
     const rawBuffer = Buffer.from(docData.extractedText, 'utf8');
     
     // Save file to encrypted vault storage
@@ -157,5 +245,5 @@ export function seedInitialData() {
     });
   }
 
-  console.log('[SeedService] Successfully seeded 4 initial encrypted documents & blockchain blocks!');
+  console.log('[SeedService] Missing initial legal documents have been seeded.');
 }

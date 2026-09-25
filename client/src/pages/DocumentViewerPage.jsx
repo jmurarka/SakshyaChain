@@ -10,17 +10,28 @@ export default function DocumentViewerPage({ doc: propDoc, navigateTo: propNavig
   const { user, isBoss } = useAuth();
 
   const [doc, setDoc] = useState(propDoc || null);
+  const [accessInfo, setAccessInfo] = useState(null);
+  const [accessError, setAccessError] = useState(null);
+  const [loadingDoc, setLoadingDoc] = useState(!propDoc);
   const [verifying, setVerifying] = useState(false);
   const [verifyStatus, setVerifyStatus] = useState(null);
+  const [editText, setEditText] = useState('');
+  const [changeNotes, setChangeNotes] = useState('');
+  const [savingEdit, setSavingEdit] = useState(false);
+  const [editMessage, setEditMessage] = useState('');
 
   useEffect(() => {
     async function loadDoc() {
       const docId = propDoc?.id || routeDocId || 'DOC-8891-002';
+      setLoadingDoc(true);
+      setDoc(propDoc || null);
+      setAccessInfo(null);
+      setAccessError(null);
       try {
         const res = await api.get(`/documents/${docId}`);
-        setDoc(res.data.document);
+        setDoc(res.data.document); setAccessInfo(res.data.access || null); setEditText(res.data.document.extractedText || ''); setAccessError(null); setLoadingDoc(false);
       } catch (err) {
-        console.error('Failed to load document view:', err);
+        setDoc(null); setAccessInfo(null); setAccessError(err.response?.data || { message: 'Unable to load document.' }); setLoadingDoc(false);
       }
     }
     loadDoc();
@@ -41,6 +52,10 @@ export default function DocumentViewerPage({ doc: propDoc, navigateTo: propNavig
       { version: '1.0', changeNotes: 'Initial forensic lab filing', authorName: 'Dr. Sunita Rao', dateCreated: '2026-08-16' }
     ]
   };
+
+  if (loadingDoc && !doc) return <div className="p-8 text-sm text-slate-500">Checking file access policy…</div>;
+
+  if (accessError && !doc) return <div className="max-w-3xl mx-auto space-y-4"><button onClick={() => navigate('/cases')} className="text-xs text-blue-600 hover:underline">← Back to Cases</button><section className="white-card p-6 border border-rose-200 bg-rose-50 space-y-3"><h1 className="text-xl font-bold text-rose-800">ACCESS DENIED</h1><p className="text-sm text-rose-900">{accessError.message || 'Approval required.'}</p><div className="bg-white border rounded-lg p-4 text-xs space-y-1"><b>Access Decision</b><p>Requester: {accessError.accessDecision?.requester || user?.name} · {accessError.accessDecision?.role || user?.role}</p><p>Department: {accessError.accessDecision?.department || user?.department} · Clearance L{accessError.accessDecision?.clearance ?? user?.clearanceLevel}</p><p>File: {accessError.accessDecision?.file || routeDocId}</p><p>Owner: {accessError.accessDecision?.owner || 'File owner'}</p><p>RBAC/ABAC: {accessError.accessDecision?.rbacAbac || 'Eligibility evaluated by policy'}</p><p>Owner approval: {accessError.accessDecision?.ownerApproval || 'REQUIRED'}</p><p>Supervisor approval: {accessError.accessDecision?.supervisorApproval || 'REQUIRED'}</p><p>Final decision: 🔴 ACCESS DENIED</p><p>Reason: {accessError.accessDecision?.reason || accessError.message}</p></div><button onClick={() => navigate('/access-requests')} className="btn btn-primary text-xs">REQUEST ACCESS</button></section></div>;
 
   const handleDownload = async () => {
     try {
@@ -81,6 +96,32 @@ export default function DocumentViewerPage({ doc: propDoc, navigateTo: propNavig
   const isPdfContent = (activeDoc.extractedText || '').trim().startsWith('%PDF-') ||
     activeDoc.mimeType === 'application/pdf' ||
     (activeDoc.extractedText || '').startsWith('[PDF');
+  const editMode = accessInfo?.canEdit && accessInfo?.mode === 'EDIT';
+
+  const handleSaveEdit = async (event) => {
+    event.preventDefault();
+    if (!editText.trim() || !changeNotes.trim()) {
+      setEditMessage('Enter revised text and a short description of the change.');
+      return;
+    }
+    setSavingEdit(true);
+    setEditMessage('Saving a new document version…');
+    try {
+      const response = await api.post(`/documents/${activeDoc.id}/versions`, {
+        textContent: editText,
+        changeNotes,
+        isMajorVersion: false
+      });
+      setDoc(response.data.document);
+      setEditText(response.data.document.extractedText || editText);
+      setChangeNotes('');
+      setEditMessage(response.data.message || 'New version saved to the audit ledger.');
+    } catch (error) {
+      setEditMessage(error.response?.data?.message || error.response?.data?.error || 'Could not save the edited version.');
+    } finally {
+      setSavingEdit(false);
+    }
+  };
 
   return (
     <div className="space-y-6">
@@ -95,19 +136,21 @@ export default function DocumentViewerPage({ doc: propDoc, navigateTo: propNavig
           <div className="flex items-center gap-2">
             <span className="badge badge-info font-mono">{activeDoc.id}</span>
             <span className="badge badge-success font-mono">v{activeDoc.version || '1.0'}</span>
+            {accessInfo && <span className={`badge font-mono ${editMode ? 'badge-success' : 'badge-info'}`}>{editMode ? 'EDIT MODE' : accessInfo.mode === 'DOWNLOAD' ? 'DOWNLOAD ACCESS' : 'VIEW ONLY'}</span>}
             <h2 className="text-xl font-bold text-slate-900 line-clamp-1">{activeDoc.title}</h2>
           </div>
           <p className="text-xs text-slate-500 mt-1 font-mono">Case ID: {activeDoc.caseId} • Clearance Level {activeDoc.clearanceLevel}</p>
+          {accessInfo?.readOnlyAdmin && <p className="mt-2 text-xs font-semibold text-blue-800">IT Admin evidence view · read-only · employee access changes are managed in Access Requests.</p>}
         </div>
 
         <div className="flex flex-wrap items-center gap-2">
-          <button
+          {accessInfo?.canDownload && <button
             onClick={handleDownload}
             className="btn btn-primary text-xs flex items-center gap-2"
           >
             <Download className="w-4 h-4" />
-            Download Decrypted PDF
-          </button>
+            Download Approved File
+          </button>}
 
           {/* Signature / Integrity Verification Option: BOSS PRIVILEGE */}
           {isBoss && (
@@ -156,7 +199,17 @@ export default function DocumentViewerPage({ doc: propDoc, navigateTo: propNavig
             </div>
 
             <div className="relative z-10 space-y-4">
-              {isPdfContent ? (
+              {editMode ? (
+                <form onSubmit={handleSaveEdit} className="space-y-3">
+                  <div className="rounded-lg border border-emerald-200 bg-emerald-50 p-3 text-xs text-emerald-900">Edit permission granted. Saving creates a new tracked document version.</div>
+                  <textarea value={editText} onChange={event => setEditText(event.target.value)} rows={16} className="w-full rounded-lg border border-slate-300 bg-white p-4 font-mono text-sm text-slate-800 focus:border-blue-500 focus:outline-none" aria-label="Edit document text" />
+                  <label className="block text-xs font-semibold text-slate-700">Change notes
+                    <input value={changeNotes} onChange={event => setChangeNotes(event.target.value)} required className="mt-1 w-full rounded-lg border border-slate-300 p-2" placeholder="Describe this revision" />
+                  </label>
+                  {editMessage && <p role="status" className="text-xs text-slate-700">{editMessage}</p>}
+                  <button type="submit" disabled={savingEdit} className="btn btn-success text-xs disabled:opacity-60">{savingEdit ? 'Saving version…' : 'Save new version'}</button>
+                </form>
+              ) : isPdfContent ? (
                 <div className="p-6 rounded-xl bg-slate-50 border border-slate-200 text-center space-y-3">
                   <div className="w-12 h-12 rounded-xl bg-red-100 text-red-600 flex items-center justify-center mx-auto">
                     <FileText className="w-6 h-6" />
@@ -165,12 +218,12 @@ export default function DocumentViewerPage({ doc: propDoc, navigateTo: propNavig
                   <p className="text-xs text-slate-500 max-w-md mx-auto">
                     This document is stored as a raw binary PDF payload with AES-256-GCM envelope encryption and SHA-256 integrity anchoring.
                   </p>
-                  <button onClick={handleDownload} className="btn btn-primary text-xs inline-flex items-center gap-2 mx-auto">
+                  {accessInfo?.canDownload && <button onClick={handleDownload} className="btn btn-primary text-xs inline-flex items-center gap-2 mx-auto">
                     <Download className="w-4 h-4" /> Download & View Decrypted PDF
-                  </button>
+                  </button>}
                 </div>
               ) : (
-                <div className="whitespace-pre-line">
+                <div className="whitespace-pre-line select-text">
                   {activeDoc.extractedText}
                 </div>
               )}
@@ -211,9 +264,9 @@ export default function DocumentViewerPage({ doc: propDoc, navigateTo: propNavig
             </div>
 
             <div className="pt-3 border-t border-slate-200 flex flex-col gap-2 font-sans">
-              <button onClick={handleDownload} className="btn btn-primary text-xs w-full py-1.5 flex items-center justify-center gap-1.5">
+              {accessInfo?.canDownload && <button onClick={handleDownload} className="btn btn-primary text-xs w-full py-1.5 flex items-center justify-center gap-1.5">
                 <Download className="w-4 h-4" /> Download Decrypted File
-              </button>
+              </button>}
               {isBoss && (
                 <button onClick={() => navigate('/audit')} className="btn btn-secondary text-xs w-full py-1.5">
                   View Git-Style Audit DAG ➔

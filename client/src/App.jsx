@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { BrowserRouter, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import Layout from './components/Layout';
 import LoginPage from './pages/LoginPage';
-import OTPPage from './pages/OTPPage';
 import DashboardPage from './pages/DashboardPage';
 import CaseListPage from './pages/CaseListPage';
 import CaseDetailPage from './pages/CaseDetailPage';
@@ -14,12 +13,16 @@ import AlertsPage from './pages/AlertsPage';
 import BreakGlassPage from './pages/BreakGlassPage';
 import AdminUsersPage from './pages/AdminUsersPage';
 import AdminDevicesPage from './pages/AdminDevicesPage';
+import DeviceRegistryPage from './pages/DeviceRegistryPage';
 import ProfilePage from './pages/ProfilePage';
 import RAGAssistantPage from './pages/RAGAssistantPage';
 import KnowledgeGraphPage from './pages/KnowledgeGraphPage';
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
 import TermsConditionsPage from './pages/TermsConditionsPage';
 import NotFoundPage from './pages/NotFoundPage';
+import OrgHierarchyPage from './pages/OrgHierarchyPage';
+import AccessRequestsPage from './pages/AccessRequestsPage';
+import SystemDocumentsPage from './pages/SystemDocumentsPage';
 import CookieConsent from './components/CookieConsent';
 import { analytics } from './services/analyticsService';
 
@@ -61,7 +64,7 @@ export default function App() {
       <Routes>
         {/* Public & Auth Routes */}
         <Route path="/login" element={<LoginPage />} />
-        <Route path="/otp" element={<OTPPage />} />
+        <Route path="/otp" element={<Navigate to="/login" replace />} />
         <Route path="/privacy" element={<PrivacyPolicyPage />} />
         <Route path="/terms" element={<TermsConditionsPage />} />
 
@@ -70,6 +73,8 @@ export default function App() {
           <Route index element={<Navigate to="/dashboard" replace />} />
           <Route path="dashboard" element={<DashboardPage />} />
           <Route path="cases" element={<CaseListPage />} />
+          <Route path="access-requests" element={<AccessRequestsPage />} />
+          <Route path="system/documents" element={<SystemDocumentsPage />} />
           <Route path="cases/:id" element={<CaseDetailPage />} />
           <Route path="docs/:id" element={<DocumentViewerPage />} />
           <Route path="upload" element={<UploadPage />} />
@@ -82,7 +87,9 @@ export default function App() {
           <Route path="break-glass" element={<BreakGlassPage />} />
           <Route path="admin/users" element={<AdminUsersPage />} />
           <Route path="admin/devices" element={<AdminDevicesPage />} />
+          <Route path="admin/device-registry" element={<DeviceRegistryPage />} />
           <Route path="profile" element={<ProfilePage />} />
+          <Route path="org-hierarchy" element={<OrgHierarchyPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Route>
 

@@ -3,7 +3,7 @@
     {
       "id": "USR-POL-101",
       "name": "Inspector Vikram Sharma",
-      "username": "sharma_leo",
+      "username": "POL-101",
       "role": "POLICE_INVESTIGATOR",
       "roleTitle": "Chief Investigating Officer",
       "department": "LEO",
@@ -12,15 +12,19 @@
       "publicKey": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuyvQOIfb5b4FjaSWgnN3\nnxWK8kD5SMwJbczq2eb7NzATO1qZeQO6zof6B5byRAZoMR0FlnykGl6rqvXQ2EMq\n4gNY/3uja7VktBQSVbsDrjqqCSZ+FOFydtyw+gdD+IwnYYDDKijQ+1GafTj5JU00\ns2T5BrPtrPSbrXhPA854y0mdN9ZNg2HiOu9pQEfEm5EgFvT/tmbGJBV3q4cHv7QG\nrUtgPDSBKJhI02Pct8N6uFwyMKHG2gJ6ARBs3c3zpKia3j9OGd+swmPXMSyo+3xE\n3MyuwBpLG4rTaRE0zx/2HgZOgnWG9DR5ssXRbVCRsTLYvZHyTdp0QnbSWub63QCn\nmwIDAQAB\n-----END PUBLIC KEY-----\n",
       "privateKey": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC7K9A4h9vlvgWN\npJaCc3efFYryQPlIzAltzOrZ5vs3MBM7Wpl5A7rOh/oHlvJEBmgxHQWWfKQaXquq\n9dDYQyriA1j/e6NrtWS0FBJVuwOuOqoJJn4U4XJ23LD6B0P4jCdhgMMqKND7UZp9\nOPklTTSzZPkGs+2s9JuteE8DznjLSZ031k2DYeI672lAR8SbkSAW9P+2ZsYkFXer\nhwe/tAatS2A8NIEomEjTY9y3w3q4XDIwocbaAnoBEGzdzfOkqJreP04Z36zCY9cx\nLKj7fETczK7AGksbitNpETTPH/YeBk6CdYb0NHmyxdFtUJGxMti9kfJN2nRCdtJa\n5vrdAKebAgMBAAECggEADo8ov2T4sBpuYHy3hRvfPQgrdTmkSnXYm+pkhaD9KedQ\nRP3V/KmoxnehoCUtNikQwhVBrIQzLaaZ5Y6rzqQMOhAhmZ9FRdO9KsbO6vfvoDC0\nWPQzZYNokyIKlYBVg11qPiA1I4U7mvkCMpBpIkOAVcivwvDhtuJAw9HHxQIyt46h\nnvK+MOhQUwnxMaFhidEvo6Y4I1fTqLZO4LAk+iWY9UDKNxTdofTC+sxXL2YUPbEo\nLmjUcagkWNyW1ecPxgbnRqGksfyRSr1v4avQoMY2WGPYYpoj8tykm3vNGI/HnHr4\niT6/k3o8oD6Ju/AShlxfF0z2Lgj1PfHlnR+weh1YxQKBgQDyTolN7GGvSfOXLX2Z\n04wNPh0EInVr+GpuG8EO5KZmNm/Ok5s36Dv7mgjJEAYZPRFLNKCLjBnmTrhD28YY\nh5oKpiIirZ7oWd7GygOjL10zLYWFywTyl4Gvh/CDfaylhSQBbsRDFH9jCsMbVzG/\nf5C5A2K8vZrDlDnGivYWv5vDxwKBgQDFv6CNnSb0h0vOJPkYXd/Bgu/p486VvkNE\nVToiJzqzNhTeX0TX2kpk3XVkO9njjmOBviUPjqjXrJKUB69wdslZOriPMsY7KlbQ\n7DfYzE4d5iw6yYS72qOvj6eQcws0mKdlLcZD1mBXZ3s5zK3ETcKgGXYAAbu0c6lH\nSQ77pKWVjQKBgQDawkz0LRWETB+/vTJITtWCnzFTKkkY0Y5FGomSCJyyazNGLb1V\nHDYLUWXdILpgzuFuJHVNh49afnedzC1suAA63QK0jEuLOpgGoRvnmDtsmQyTXld5\nLY/ICdL649ubFDkNkhNe/IKFyJGdfXtMiL8ASi46eHPhX1FKDuteXl8iwQKBgGsN\nhYaEuC0S/ZfY7j0hvNuO3gC5wgHQ4auhk/ofUKjqMzv7SVKtqy6VsVKVEC0fzYDU\nhk24xnETzLp0uqZguDolDvr+2s/26M7rwoQMfpGzJOiiZcgo4gpN88HAdiWAKscc\nk8Pvz3Ih5FTzGHM4QY/YmMgCKDLVlqOvynuys62VAoGBAI2uem8vD6MnxuPyPRnx\na37HE2DwKmOFB26GBjukuqdPeJz4rStBD1gvPa+HQTpfrbrxJEj5jgSmtnqToGWK\nns95HpTa2vKd4JhqqfLAKitoyxJbyLn25RPpr0mOPWIIuuHob5KywjEVBHv3S7Z6\nA/LK4MaogAmpolHmmHrVeocL\n-----END PRIVATE KEY-----\n",
       "assignedCases": [
-        "CASE-2026-8891",
-        "CASE-2026-4412",
-        "CASE-2026-1102"
-      ]
+        "CASE-2026-8891"
+      ],
+      "supervisorId": "USR-JUD-404",
+      "employeeId": "POL-101",
+      "policeStation": "Central Police Station",
+      "workLocation": "Central District Headquarters",
+      "contact": "vikram.sharma@demo.icjs.gov.in",
+      "assignedIp": "10.20.20.101"
     },
     {
       "id": "USR-FOR-202",
       "name": "Dr. Sunita Rao",
-      "username": "drao_forensic",
+      "username": "FOR-202",
       "role": "FORENSIC_SPECIALIST",
       "roleTitle": "Senior Forensic Analyst & Ballistics Expert",
       "department": "FOR",
@@ -31,12 +35,18 @@
       "assignedCases": [
         "CASE-2026-8891",
         "CASE-2026-4412"
-      ]
+      ],
+      "supervisorId": "USR-JUD-404",
+      "employeeId": "FOR-202",
+      "policeStation": "",
+      "workLocation": "State Central Forensic Science Laboratory, Kolkata",
+      "contact": "sunita.rao@demo.icjs.gov.in",
+      "assignedIp": "10.20.20.102"
     },
     {
       "id": "USR-PRO-303",
       "name": "Advocate Rajesh Verma",
-      "username": "verma_prosecutor",
+      "username": "PROS-303",
       "role": "PUBLIC_PROSECUTOR",
       "roleTitle": "Senior Public Prosecutor",
       "department": "PROS",
@@ -47,12 +57,18 @@
       "assignedCases": [
         "CASE-2026-8891",
         "CASE-2026-1102"
-      ]
+      ],
+      "supervisorId": "USR-JUD-404",
+      "employeeId": "PROS-303",
+      "policeStation": "",
+      "workLocation": "High Court Division, Kolkata",
+      "contact": "rajesh.verma@demo.icjs.gov.in",
+      "assignedIp": "10.20.20.103"
     },
     {
       "id": "USR-JUD-404",
       "name": "Justice P. K. Mukherjee",
-      "username": "mukherjee_magistrate",
+      "username": "JUD-404",
       "role": "JUDICIAL_MAGISTRATE",
       "roleTitle": "Special Sessions Court Magistrate",
       "department": "JUD",
@@ -64,12 +80,17 @@
         "CASE-2026-8891",
         "CASE-2026-4412",
         "CASE-2026-1102"
-      ]
+      ],
+      "employeeId": "JUD-404",
+      "policeStation": "",
+      "workLocation": "Sessions Court, Kolkata",
+      "contact": "court.registry@demo.icjs.gov.in",
+      "assignedIp": "10.20.20.104"
     },
     {
       "id": "USR-AUD-505",
       "name": "Anil Gupta",
-      "username": "gupta_auditor",
+      "username": "AUD-505",
       "role": "COMPLIANCE_AUDITOR",
       "roleTitle": "Principal Information Security Auditor",
       "department": "AUD",
@@ -81,7 +102,82 @@
         "CASE-2026-8891",
         "CASE-2026-4412",
         "CASE-2026-1102"
-      ]
+      ],
+      "employeeId": "AUD-505",
+      "policeStation": "",
+      "workLocation": "National Digital Evidence Oversight Board, New Delhi",
+      "contact": "anil.gupta@demo.icjs.gov.in",
+      "assignedIp": "10.20.20.105"
+    },
+    {
+      "id": "USR-IT-001",
+      "name": "SākshyaChain IT Administrator",
+      "username": "it_admin1",
+      "role": "IT_ADMIN",
+      "roleTitle": "IT Admin — Access Custodian",
+      "systemRole": "IT_ADMIN",
+      "department": "IT",
+      "departmentName": "Information Technology",
+      "clearanceLevel": 0,
+      "assignedCases": []
+    },
+    {
+      "id": "USR-IT-002",
+      "name": "Meera Nair",
+      "username": "it_admin2",
+      "role": "IT_ADMIN",
+      "roleTitle": "IT Admin — Access Custodian",
+      "systemRole": "IT_ADMIN",
+      "department": "IT",
+      "departmentName": "Information Technology",
+      "clearanceLevel": 0,
+      "assignedCases": []
+    },
+    {
+      "id": "USR-POL-102",
+      "name": "Inspector Bhir Rao",
+      "username": "POL-102",
+      "role": "POLICE_INVESTIGATOR",
+      "supervisorId": "USR-JUD-404",
+      "roleTitle": "Investigation Officer",
+      "department": "LEO",
+      "departmentName": "Special Crime Branch - Central Police",
+      "clearanceLevel": 3,
+      "publicKey": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyfY26anqFh2QtdCvo149\nVzymc6znnkUCgUZi+ffP90LC3di+czUVXfEqv1P0KEBEeEKXjBD/Yh8+s32pb59B\ncSdc0mg05RvzB8+O65wW8LiXBiuH2t5lX4W+cI/MEhDGKzllbkNLwiTyu5mC3o6i\n//SuzBcaIzEkWTN6rIosWYyh1uDN11ytKGL0yN2z6nDwHVrQvQDFbCH71KjXG29I\nwMJ1ccKY3744BR0ixNF+0v1jnBXBUtKq5ZeI/Bp14Hrf+T65OAinKOUljR+OFHse\nsZ/x8x3HbpJua/r4zji83s7WjEimw7dqCMIR/ooDC7gYiJ/WAks6LS+l70zeteWZ\nCwIDAQAB\n-----END PUBLIC KEY-----\n",
+      "privateKey": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDJ9jbpqeoWHZC1\n0K+jXj1XPKZzrOeeRQKBRmL598/3QsLd2L5zNRVd8Sq/U/QoQER4QpeMEP9iHz6z\nfalvn0FxJ1zSaDTlG/MHz47rnBbwuJcGK4fa3mVfhb5wj8wSEMYrOWVuQ0vCJPK7\nmYLejqL/9K7MFxojMSRZM3qsiixZjKHW4M3XXK0oYvTI3bPqcPAdWtC9AMVsIfvU\nqNcbb0jAwnVxwpjfvjgFHSLE0X7S/WOcFcFS0qrll4j8GnXget/5Prk4CKco5SWN\nH44Uex6xn/HzHcdukm5r+vjOOLzeztaMSKbDt2oIwhH+igMLuBiIn9YCSzotL6Xv\nTN615ZkLAgMBAAECggEANIuNr++YSta4XsWD3PJY7UiHWhNDU8dKpo3ElJqoDgHd\np1CMBHdsLrvfTlYucQZ/ifZxbWzCtSnB63snSTZbFXCTUt7v3CgQbBjRa3V59nlg\nOae7ufMg1uB6MtkG1DBvDrHpNO3nWQS57ps7FGJyADwN+mWMVFmlxluBcECm10ks\nEU8DiE5xKzz/3+hCseYfoFdqaSVBRehYvACohArBSHA7hudoMv7QvjSjIgcY/lPs\nAjrmGtQm1F8PhhAlpRKcK4R1c4+0a3+Y9JLjh6ChZr09CLBogOAWyYc+6xfptOl4\nG1ytvwlv8z8l1RSsDa6AtHmqgmaFK2im7FIKzpItUQKBgQDw/2hpMnstAbVsklKR\nI8/hJVt7NsMd0w60bB/kozG2ELBKMKmWyd/WOIGSYpSKBWKX4Eou820OKNpxlnAF\n6IXfed9oeF4BAAD3VCzAWJUkHcjW6NnbYdlYbxeCltN69CeIXJ2sdv4EsT5rA96x\nBMH1PV2q3G8m4UWvkzjRfY8FIwKBgQDWiLjGTc0if/ow1ZFEduTHGxV/hkagaz5y\n7ZTJBWk6azmcVgcj4/KYMaE0P8sEL5X8gtWUuAjRM9wQ/9jk97pelkYfbZlSzNdx\nKpUlaB55qeLKLU0EfOWm4GgpciHJ3nmHMjGDvXmWZYkhkDLsQirgH2XL5kLGrqmI\ngRZ7Ycqe+QKBgQC2s6pgNhkTobv8t2FJDzFFqqCT5Iw/TAZV2bLEDsRdFoHPfNzU\np+695NC2PW4GxNZd9XfH6FvA5E/W1QnQMNts9GPeO4Jol6wj1PioSX+nhb0A0D55\nBtFTLcVRBy8Eg5yE0FHosb0ZqZV8Y86rvMOePAuKwNqzSw0dcisdBmcqqQKBgFds\nwfe17tmXU4qhDaDb3qEw7VLZkmB/M6S8IrzEorw2w/Rsrl423z6cQvg64u2iwrlz\nS7xePuGaA5091dKBDYbMMGlQTYILjeRFGSB0TK8BxzTivxcMGr4lhu0U4KYWLmok\nzz7DcRAT8o0l6UqUMErDIMW14RJ8TQQert263UppAoGBAKU+EgBQebu5eQhtodpz\n+CqySEB7BaaNJI+Q+QZDUpr9kctcdecOG/MOR0HXvP+9bt03N4c+I01yhkEUy6II\naQMLdlSTdEUiqlqneQxFwc2kw5EhyU0v0DDK+uG4M5PEr3QqkiQpR7/deJqynp+p\njsrh5BTO+vMXcidXTX9tda89\n-----END PRIVATE KEY-----\n",
+      "assignedCases": [
+        "CASE-2026-4412"
+      ],
+      "accountFrozen": true,
+      "frozenAt": "2026-09-24T20:17:52.454Z",
+      "frozenUntil": "2026-09-24T20:32:52.454Z",
+      "freezeReason": "Tampering detected on evidence DOC-ACCESS-TEST-104",
+      "employeeId": "POL-102",
+      "policeStation": "North District Police Station",
+      "workLocation": "North District Investigation Unit",
+      "contact": "bhir.rao@demo.icjs.gov.in",
+      "assignedIp": "10.20.20.106"
+    },
+    {
+      "id": "USR-POL-103",
+      "employeeId": "POL-103",
+      "name": "Sub-Inspector Asha Nair",
+      "username": "POL-103",
+      "role": "POLICE_INVESTIGATOR",
+      "supervisorId": "USR-JUD-404",
+      "roleTitle": "Sub-Inspector",
+      "department": "LEO",
+      "departmentName": "Special Crime Branch - Central Police",
+      "policeStation": "East Gate Police Station",
+      "workLocation": "East District Investigation Unit",
+      "contact": "asha.nair@demo.icjs.gov.in",
+      "clearanceLevel": 3,
+      "publicKey": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA1XU1ImcM0Y0Ki7KlQY3j\nPUt7gc+MwqL7lqANCyFlh9FXts28+vnwKRWvu7Vdf+reL4oLbg5pf/sOP1D2IYxT\n/VDyH7+q6B9343oG6UAOXB2FPF/2L81HODyBsYwxaXm3YGlVIuF5NTDZjU5EyCbi\n2nVZLl7AJu8CH/96bJUSsATv3meCItq7pPtXp7Tm/aFChVGr77jOITofNAy3ra0X\n2pjOgCiqMXJfOBx6NcGAOCliNIl3vpMSxNJ4FRgVIJjKYxA21KFg5fnDGIvAxIgJ\nGXwSBZBrO+FWVDaoV8eARaCpIhFmYQIpUW10b0OlCPhXfa8B82ge2x/c6FyVq1G5\ndwIDAQAB\n-----END PUBLIC KEY-----\n",
+      "privateKey": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDVdTUiZwzRjQqL\nsqVBjeM9S3uBz4zCovuWoA0LIWWH0Ve2zbz6+fApFa+7tV1/6t4vigtuDml/+w4/\nUPYhjFP9UPIfv6roH3fjegbpQA5cHYU8X/YvzUc4PIGxjDFpebdgaVUi4Xk1MNmN\nTkTIJuLadVkuXsAm7wIf/3pslRKwBO/eZ4Ii2ruk+1entOb9oUKFUavvuM4hOh80\nDLetrRfamM6AKKoxcl84HHo1wYA4KWI0iXe+kxLE0ngVGBUgmMpjEDbUoWDl+cMY\ni8DEiAkZfBIFkGs74VZUNqhXx4BFoKkiEWZhAilRbXRvQ6UI+Fd9rwHzaB7bH9zo\nXJWrUbl3AgMBAAECggEACHumd24J+9/zjda1K5REdiCkUWXarbeFcRh+PDWBD/M5\nXanyezTonvFeMQMFqro+RzxgtOh8t9nV2J1SksW9ZsFLRgi7dYsenBsy4B0sFOwV\nae9UXNT3IhyBePld01fDemDlQcQdKYh99Ngp8pxdApqMR0P7tfBksLnZ9yu7eOQ+\nsr2ilZwwrhYUCjRiJ8eJhiPaArt2IgDUxU+lOBkajyMKdnztbVKbVRkFGA9kFjR+\n5kZiINumyjkM1KyfXe+QzLPSuTBJZ4pUv8f2gyKgj/zNJLMA/vdNIrgpAa27MOwX\noN/r0L/KmWvAuUh2kb2SqFp+OaRPUk8bq+e1AUlrtQKBgQD8/WPqBSfuMWKvEXJF\nzsepZwzLDseD33S3yDwvlXTIbGyCkXZlzgomUjhWeQkevBEnpwf7GKTLSxeVO0Eu\nJfFdtvXNu/uS0QMay4SPNxWWS9OKvjMWNr3lqCY6aIB27C47l1XAuAvwxpqpf02T\nrmKF3KdZZCjnZ8DNWhH8WJVTxQKBgQDX/2cIfPcJlCeP1r86ThZ1t0WZzkUYxUnf\nt0LwmoXMMAsD4cglNJFkIEpxLtaKtWPztQpRbOTtTjPgqp1yZlbA1SC1XogpNwwn\noFu+l0/IAr/C8QzchItGZ5/QfNfIj24lsbNfN6uh8F97kEGR8rnzctFxZ6HOdrhc\nRV8A0xygCwKBgHRhDElnPcsxJLhsSikaynZ/VT9D+TwM22B/2E/7bNGWLwSRbem/\nMqQWRpxg6XUeBrY6/EziNUzfqmWX8JAOHE6ED+cohr4vMEJvRPes211cXGACxvV9\nETZId+1+jTonw8zd/TC+eZ+1fQhj64f4PJJfwww4KyjobaUJviRbi7YRAoGBAI0d\n5vHLuxY9/i7ibWMpW1EjIMzgz5Hka2RG9ev9+IYzqS6rFzj/hDG3SwtxP2e2JIw3\nbntOOq6zlf8lWOJB7FHlrI3yKeFLfpxxDx+Q+eXBrgkttWppChlAYFA1EEGPO7ZS\nx87grziIs8klsUEqJMTh8eY2f6dFNyPJis0eICiLAoGAfvjD5Gt299qv3nVSrIwn\nVJufkCsywwUXLumOkxI3LBLXeZlFc5ORf/VRJS732pXNhEJDD7xvb1ZyE3yy9XIq\nWPriGqpZc0934yYZsgZZgqMErF+aqXRJpKp/OoZVfjf9pJBSpAf2oKDW5AK8BnS3\nM2AhTdVKxGrCAaZoUr8SZpQ=\n-----END PRIVATE KEY-----\n",
+      "assignedCases": [
+        "CASE-2026-1102"
+      ],
+      "assignedIp": "10.20.20.107"
     }
   ],
   "cases": [
@@ -155,7 +251,7 @@
       "authorRole": "POLICE_INVESTIGATOR",
       "department": "LEO",
       "dateCreated": "2026-08-15T09:10:00Z",
-      "version": "1.17",
+      "version": "1.18",
       "status": "SIGNED_PKI",
       "extractedText": "Updated witness statement details with supplemental vehicle descriptions.",
       "chainOfCustody": [
@@ -297,6 +393,12 @@
           "actorName": "Inspector Vikram Sharma",
           "department": "LEO",
           "timestamp": "2026-09-12T15:21:48.697Z"
+        },
+        {
+          "action": "REVISION_ADDED (1.17 -> 1.18)",
+          "actorName": "Inspector Vikram Sharma",
+          "department": "LEO",
+          "timestamp": "2026-09-23T21:06:34.096Z"
         }
       ],
       "payloadHash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
@@ -304,11 +406,11 @@
       "encryptionMetadata": {
         "algorithm": "AES-256-GCM",
         "kmsKeyId": "KMS-MASTER-KEY-PROD-2026",
-        "encryptedDEK": "3ac331019b842e6f3b6a383da5462b7670d38b6b1c141e811e3e425a730dc0fe3ebcdc12b14cab46bdd0d4a422f09072d4f3890f84e196957f4cfa3ae9eacfa1",
-        "dekIv": "49db20ee58f4b5b027ef45d8",
-        "dekAuthTag": "78265cf91a64943215381631bfe3bb8b",
-        "payloadIv": "d544d801f47d14db45c05b25",
-        "payloadAuthTag": "0b25ada3176b8c8e310894c232a1b771"
+        "encryptedDEK": "d064086b138a556fb814c69a556e09773dfc92c5f5848226da046e7d7a98923ef49aa78d559e9d1d1f5bdde3b526373c25609b4121607be7d9e7319370232050",
+        "dekIv": "637bfe1ed087d18db991035e",
+        "dekAuthTag": "49256a9446f564ded0f1cf977746fe73",
+        "payloadIv": "f2811bb60b9b73b10ef62fcb",
+        "payloadAuthTag": "54969b33412cad9e66edfcdab0f28851"
       },
       "signature": {
         "signedBy": "Inspector Vikram Sharma",
@@ -716,9 +818,38 @@
             "payloadIv": "d544d801f47d14db45c05b25",
             "payloadAuthTag": "0b25ada3176b8c8e310894c232a1b771"
           }
+        },
+        {
+          "version": "1.18",
+          "fileId": "DOC-8891-003_v1_18",
+          "parentVersion": "1.17",
+          "parentPayloadHash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+          "payloadHash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+          "fileSize": 73,
+          "authorId": "USR-POL-101",
+          "authorName": "Inspector Vikram Sharma",
+          "department": "LEO",
+          "dateCreated": "2026-09-23T21:06:34.096Z",
+          "changeNotes": "Added vehicle license plate info",
+          "encryptionMetadata": {
+            "algorithm": "AES-256-GCM",
+            "kmsKeyId": "KMS-MASTER-KEY-PROD-2026",
+            "encryptedDEK": "d064086b138a556fb814c69a556e09773dfc92c5f5848226da046e7d7a98923ef49aa78d559e9d1d1f5bdde3b526373c25609b4121607be7d9e7319370232050",
+            "dekIv": "637bfe1ed087d18db991035e",
+            "dekAuthTag": "49256a9446f564ded0f1cf977746fe73",
+            "payloadIv": "f2811bb60b9b73b10ef62fcb",
+            "payloadAuthTag": "54969b33412cad9e66edfcdab0f28851"
+          }
         }
       ],
-      "currentFileId": "DOC-8891-003_v1_17"
+      "currentFileId": "DOC-8891-003_v1_18",
+      "ownerId": "USR-POL-101",
+      "accessPolicy": "CASE_POLICY",
+      "tamperLockedUntil": "2026-09-24T13:44:02.065Z",
+      "tamperLockReason": "Unauthorized change attempt blocked; temporarily locked for IT security review.",
+      "tamperDetectedAt": "2026-09-24T13:29:02.065Z",
+      "tamperActorId": "USR-POL-102",
+      "tamperActorName": "Inspector Bhir Rao"
     },
     {
       "id": "DOC-8891-004",
@@ -768,7 +899,9 @@
           "authorId": "USR-JUD-404",
           "timestamp": "2026-08-18T11:00:00Z"
         }
-      }
+      },
+      "ownerId": "USR-JUD-404",
+      "accessPolicy": "OWNER_APPROVAL"
     },
     {
       "id": "DOC-2026-8891-7125",
@@ -839,7 +972,9 @@
             "provider": "local-dev-v1"
           }
         }
-      ]
+      ],
+      "ownerId": "USR-POL-101",
+      "accessPolicy": "CASE_POLICY"
     },
     {
       "id": "DOC-2026-8891-8418",
@@ -945,7 +1080,9 @@
             "provider": "local-dev-v1"
           }
         }
-      ]
+      ],
+      "ownerId": "USR-POL-101",
+      "accessPolicy": "OWNER_APPROVAL"
     },
     {
       "id": "DOC-2026-8891-5771",
@@ -1016,7 +1153,14 @@
           "department": "LEO",
           "timestamp": "2026-09-12T14:52:55.775Z"
         }
-      ]
+      ],
+      "ownerId": "USR-POL-101",
+      "accessPolicy": "CASE_POLICY",
+      "tamperLockedUntil": "2026-09-24T14:39:41.974Z",
+      "tamperLockReason": "Unauthorized change attempt blocked; temporarily locked for IT security review.",
+      "tamperDetectedAt": "2026-09-24T14:24:41.975Z",
+      "tamperActorId": "USR-POL-102",
+      "tamperActorName": "Inspector Bhir Rao"
     },
     {
       "id": "DOC-2026-8891-0096",
@@ -1122,7 +1266,9 @@
             "provider": "local-dev-v1"
           }
         }
-      ]
+      ],
+      "ownerId": "USR-POL-101",
+      "accessPolicy": "CASE_POLICY"
     },
     {
       "id": "DOC-2026-8891-4413",
@@ -1193,7 +1339,9 @@
           "department": "JUD",
           "timestamp": "2026-09-12T17:22:14.442Z"
         }
-      ]
+      ],
+      "ownerId": "USR-JUD-404",
+      "accessPolicy": "OWNER_APPROVAL"
     },
     {
       "id": "DOC-2026-8891-2640",
@@ -1301,7 +1449,9 @@
             "provider": "local-dev-v1"
           }
         }
-      ]
+      ],
+      "ownerId": "USR-JUD-404",
+      "accessPolicy": "CASE_POLICY"
     },
     {
       "id": "DOC-2026-8891-9252",
@@ -1374,7 +1524,9 @@
           "department": "JUD",
           "timestamp": "2026-09-12T22:34:49.289Z"
         }
-      ]
+      ],
+      "ownerId": "USR-JUD-404",
+      "accessPolicy": "CASE_POLICY"
     },
     {
       "id": "DOC-2026-8891-2267",
@@ -1447,7 +1599,9 @@
           "department": "JUD",
           "timestamp": "2026-09-12T23:25:52.281Z"
         }
-      ]
+      ],
+      "ownerId": "USR-JUD-404",
+      "accessPolicy": "CASE_POLICY"
     },
     {
       "id": "DOC-2026-8891-5565",
@@ -1520,7 +1674,9 @@
           "department": "JUD",
           "timestamp": "2026-09-12T23:27:05.575Z"
         }
-      ]
+      ],
+      "ownerId": "USR-JUD-404",
+      "accessPolicy": "CASE_POLICY"
     },
     {
       "id": "DOC-2026-8891-8366",
@@ -1593,7 +1749,9 @@
           "department": "JUD",
           "timestamp": "2026-09-12T23:28:48.378Z"
         }
-      ]
+      ],
+      "ownerId": "USR-JUD-404",
+      "accessPolicy": "CASE_POLICY"
     },
     {
       "id": "DOC-2026-8891-4992",
@@ -1665,6 +1823,536 @@
           "actorName": "Justice P. K. Mukherjee",
           "department": "JUD",
           "timestamp": "2026-09-12T23:33:15.004Z"
+        }
+      ],
+      "ownerId": "USR-JUD-404",
+      "accessPolicy": "CASE_POLICY"
+    },
+    {
+      "id": "DOC-2026-8891-0216",
+      "title": "diagram (1)",
+      "caseId": "CASE-2026-8891",
+      "caseTitle": "Case CASE-2026-8891",
+      "category": "FIR",
+      "clearanceLevel": 2,
+      "authorId": "USR-JUD-404",
+      "authorName": "Justice P. K. Mukherjee",
+      "authorRole": "JUDICIAL_MAGISTRATE",
+      "department": "JUD",
+      "dateCreated": "2026-09-23T22:57:00.226Z",
+      "version": "1.0",
+      "status": "VERIFIED",
+      "extractedText": "[PDF Attachment: diagram (1).png]",
+      "mimeType": "image/png",
+      "originalFileName": "diagram (1).png",
+      "payloadHash": "04873288ff62dcb094102e836b6808a8ef4ef02ec688d53601b1aeed15de24a2",
+      "fileSize": 1251717,
+      "encryptionMetadata": {
+        "algorithm": "AES-256-GCM",
+        "kmsKeyId": "KMS-MASTER-KEY-PROD-2026",
+        "encryptedDEK": "9202d014b5076c9f3f232b1e88e8d7f289fff5fafc6f505ad1fcbd0cc0af0b96ed8aad4b5057b92ec456342119eaa66524a9df948e8f0c059efac293032413e9",
+        "dekIv": "ac2b008f15965af6b35c322b",
+        "dekAuthTag": "df11f98b8edb91532ee5ee05094609eb",
+        "payloadIv": "f5447c7cb42db6967cf6d6fb",
+        "payloadAuthTag": "f548d801a61410f0832815f0f34e71d7"
+      },
+      "signature": null,
+      "aiEntities": [
+        {
+          "type": "Accused Suspect",
+          "name": "Sameer Verma",
+          "id": "ID-SV992"
+        },
+        {
+          "type": "Victim",
+          "name": "Rajesh Kumar",
+          "status": "Deceased"
+        },
+        {
+          "type": "Recovered Weapon",
+          "weapon": "Glock-17 Pistol (9mm)",
+          "serial": "GL-88392"
+        },
+        {
+          "type": "Location",
+          "venue": "Tech Vault Facility, Cyber Park, Block B4"
+        }
+      ],
+      "versionHistory": [
+        {
+          "version": "1.0",
+          "parentVersion": "GENESIS",
+          "parentPayloadHash": "0000000000000000000000000000000000000000000000000000000000000000",
+          "payloadHash": "04873288ff62dcb094102e836b6808a8ef4ef02ec688d53601b1aeed15de24a2",
+          "fileSize": 1251717,
+          "authorId": "USR-JUD-404",
+          "authorName": "Justice P. K. Mukherjee",
+          "department": "JUD",
+          "dateCreated": "2026-09-23T22:57:00.226Z",
+          "changeNotes": "Initial document filing (v1.0)"
+        }
+      ],
+      "chainOfCustody": [
+        {
+          "action": "UPLOADED_AND_ENCRYPTED",
+          "actorName": "Justice P. K. Mukherjee",
+          "department": "JUD",
+          "timestamp": "2026-09-23T22:57:00.226Z"
+        }
+      ],
+      "ownerId": "USR-JUD-404",
+      "accessPolicy": "CASE_POLICY"
+    },
+    {
+      "id": "DOC-8891-001",
+      "title": "First Information Report (FIR #00492/2026)",
+      "caseId": "CASE-2026-8891",
+      "caseTitle": "State vs. Cyber Syndicate (Financial Fraud & Homicide)",
+      "category": "FIR",
+      "clearanceLevel": 2,
+      "authorId": "USR-POL-101",
+      "authorName": "Inspector Vikram Sharma",
+      "authorRole": "POLICE_INVESTIGATOR",
+      "department": "LEO",
+      "dateCreated": "2026-08-14T02:45:00Z",
+      "version": "1.0",
+      "status": "VERIFIED",
+      "extractedText": "First Information Report under Section 154 CrPC.\n\nPolice received emergency call at 02:15 AM regarding armed intruders siphoning crypto keys at Tech Vault Facility, Cyber Park. Whistleblower Rajesh Kumar found deceased with gunshot wound near server room B4.\n\nAccused identified in preliminary CCTV as masked male suspect wearing tactical jacket, matching physical description of former sysadmin Sameer Verma (ID #SV-992). IPC Sections 302 (Murder), 392 (Robbery), and IT Act 66D applied.",
+      "chainOfCustody": [
+        {
+          "action": "CREATED_AND_FILED",
+          "actorName": "Inspector Vikram Sharma",
+          "department": "LEO",
+          "timestamp": "2026-08-14T02:45:00Z"
+        },
+        {
+          "action": "SUBMITTED_TO_PROSECUTION",
+          "actorName": "Inspector Vikram Sharma",
+          "department": "PROS",
+          "timestamp": "2026-08-14T06:00:00Z"
+        }
+      ],
+      "payloadHash": "e0d10fd7713a0974c66f67f78bea35c60a3e967c90648cda328772f95d48adf1",
+      "fileSize": 488,
+      "encryptionMetadata": {
+        "algorithm": "AES-256-GCM",
+        "kmsKeyId": "KMS-MASTER-KEY-PROD-2026",
+        "encryptedDEK": "4240b172579bf166b65e6fdded476a2e5c13ed4284401020f6b7484328ff979abf9254207d39e63bb32ee4f054a848d68c51e0dde87d4aef85da55fe256ce154",
+        "dekIv": "55731dd31b91fddf84c89106",
+        "dekAuthTag": "80ec9ffdfa70807d8f37d044b00941ed",
+        "payloadIv": "0f9c04a783b0d8181799cb85",
+        "payloadAuthTag": "029b231f4b303b373c06b9b83a3a6ed6"
+      },
+      "signature": null,
+      "ownerId": "USR-POL-101",
+      "accessPolicy": "CASE_POLICY"
+    },
+    {
+      "id": "DOC-8891-002",
+      "ownerId": "USR-FOR-202",
+      "accessPolicy": "OWNER_APPROVAL",
+      "title": "Forensic Ballistics & DNA Fingerprint Analysis",
+      "caseId": "CASE-2026-8891",
+      "caseTitle": "State vs. Cyber Syndicate (Financial Fraud & Homicide)",
+      "category": "FORENSIC_REPORT",
+      "clearanceLevel": 3,
+      "authorId": "USR-FOR-202",
+      "authorName": "Dr. Sunita Rao",
+      "authorRole": "FORENSIC_SPECIALIST",
+      "department": "FOR",
+      "dateCreated": "2026-08-16T14:20:00Z",
+      "version": "1.0",
+      "status": "SIGNED_PKI",
+      "extractedText": "State Central Forensic Science Laboratory Report #FSL-9921/2026.\n\n9mm bullet casing recovered from crime scene matches test-firing profile of Glock-17 pistol (Serial #GL-88392) seized from suspect residence. Partial DNA profile on weapon safety catch matches suspect Sameer Verma with 99.98% probability.\n\nDigital forensics on seized hardware revealed encrypted cold wallet containing $4.2M siphoned funds transferred 18 minutes after incident. IP logs trace back to VPN server registered under suspect alias.",
+      "chainOfCustody": [
+        {
+          "action": "EXAMINED_AND_LOGGED",
+          "actorName": "Dr. Sunita Rao",
+          "department": "FOR",
+          "timestamp": "2026-08-16T14:20:00Z"
+        },
+        {
+          "action": "PKI_SIGNATURE_STAMPED",
+          "actorName": "Dr. Sunita Rao",
+          "department": "FOR",
+          "timestamp": "2026-08-16T15:00:00Z"
+        },
+        {
+          "action": "TRANSFERRED_TO_PROSECUTION",
+          "actorName": "Dr. Sunita Rao",
+          "department": "PROS",
+          "timestamp": "2026-09-01T11:30:00Z"
+        }
+      ],
+      "payloadHash": "f3609862d0575427a2d9c535c2a4d2ac0a496b7c995af3e0977da12e0cbe4443",
+      "fileSize": 509,
+      "encryptionMetadata": {
+        "algorithm": "AES-256-GCM",
+        "kmsKeyId": "KMS-MASTER-KEY-PROD-2026",
+        "encryptedDEK": "58adade87a670cbc759789f42e082ed3f23399126e4a7264f456a628520e2d1958a0d688006ffb1f5592253ebb05ad0c33b4ea54986bc96a4a96d9e3a43351fb",
+        "dekIv": "ee0b82ba2f57f8c735d6750a",
+        "dekAuthTag": "ed5c10e30effd9fd22aae23c78d76271",
+        "payloadIv": "a8518505c28292c9936c19a5",
+        "payloadAuthTag": "3552c8b5bcd62a2a72531fed6a318bab"
+      },
+      "signature": {
+        "signedBy": "Dr. Sunita Rao",
+        "signerRole": "Senior Forensic Analyst & Ballistics Expert",
+        "publicKeyPem": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzAzoZRwp+f0hXBXbuPhr\nInptNmvZ33o4qwXmWtqL2Aa+IA+pwW/zSXZkdE7/cI0IvM24ntdWwewH+Iz1h7zp\nROFYu1vvl2Gi3hfghi8ktg1wCOYBNOMAsroDIm91yzRw0OufyN9RHF0u1nF77xch\n4iXgQ6x5P10vfOvkcjTGDk2bJOh7jNjokBNTY68eg5o5P/2Z2iQiDD0wLTUgPvJM\nw9VLxliLixo1GC/Vi8lJoVrIPu3UFEx8mxMRogZj3nYmEUM9IltlUzQuun6fgHr6\n2cIwMoDmRCyhHmG95s9YhXc9PPgQSY3hptd4rYj1en4QTVBV/jzSHZ5GqZ/jsuzy\npQIDAQAB\n-----END PUBLIC KEY-----\n",
+        "signatureBase64": "LNrfetcH+Rv9m0trb9JHLZjEx76Z18WP/g39i0sJdAvuY/EMuDFT+H8yqYIXUFF7aZhJhSpBJMLq+Ydd9mw8e10fzqEL7qvE82aj9oYc1HazjQMKOVp4LjlGvkPXzIeIYo6hsd3/msLZQxAVxxdfgxjoRiZ0KIjrHRH6sg0ww/sSnZnQR/c5dAmHtSVz4qQ0nAi1WIXnJmBb16/1kK3JbBWRwvWcUTt9zzMyHJvWqoHQTCClnxNNzO/9ARZKEo2sWehq/pwrbDID4oZ72ySn2zE3NMmTZmsz+JzTs5hZhnK6NfSYAlGaAqk5x+cOCqhknyBwE/KYikRbw9m8ekejLQ==",
+        "dateSigned": "2026-08-16T14:20:00Z",
+        "manifest": {
+          "docId": "DOC-8891-002",
+          "title": "Forensic Ballistics & DNA Fingerprint Analysis",
+          "caseId": "CASE-2026-8891",
+          "payloadHash": "f3609862d0575427a2d9c535c2a4d2ac0a496b7c995af3e0977da12e0cbe4443",
+          "authorId": "USR-FOR-202",
+          "timestamp": "2026-08-16T14:20:00Z"
+        }
+      }
+    },
+    {
+      "id": "DOC-ACCESS-TEST-101",
+      "ownerId": "USR-FOR-202",
+      "accessPolicy": "OWNER_APPROVAL",
+      "title": "Access Test File A - Device Hash Notes",
+      "caseId": "CASE-2026-8891",
+      "caseTitle": "State vs. Cyber Syndicate (Financial Fraud & Homicide)",
+      "category": "FORENSIC_NOTES",
+      "clearanceLevel": 3,
+      "authorId": "USR-FOR-202",
+      "authorName": "Dr. Sunita Rao",
+      "authorRole": "FORENSIC_SPECIALIST",
+      "department": "FOR",
+      "dateCreated": "2026-09-20T10:00:00Z",
+      "version": "1.0",
+      "status": "VERIFIED",
+      "extractedText": "Synthetic demonstration file for access permission testing.\n\nDevice Hash Notes: Sample device A was received, photographed, and assigned a test evidence label. SHA-256 verification was recorded at intake and again after analysis. This sample contains no real case evidence or personal information.\n\nUse this file to test VIEW, DOWNLOAD, and EDIT access requests.",
+      "chainOfCustody": [
+        {
+          "action": "TEST_FILE_CREATED",
+          "actorName": "Dr. Sunita Rao",
+          "department": "FOR",
+          "timestamp": "2026-09-20T10:00:00Z"
+        }
+      ],
+      "payloadHash": "0bad673d3f8281a73a1f09338cc180a4b2f046cd66f6bdd086255ef89333d709",
+      "fileSize": 362,
+      "encryptionMetadata": {
+        "algorithm": "AES-256-GCM",
+        "kmsKeyId": "KMS-MASTER-KEY-PROD-2026",
+        "encryptedDEK": "8540bac1234a4b156bc3a7104bbcbd94824bbf8a8ccee93a9e5019aae1fb7ebe7e8286803225bb7d41b716116e6535d99786a3ffcaa4da1e6829f0bf705c5fda",
+        "dekIv": "c7b2d3dbcc15b7cbbb197303",
+        "dekAuthTag": "24f86f47100e1837e7091dd832bd6c92",
+        "payloadIv": "908ce09203862a0ad62255fb",
+        "payloadAuthTag": "9d38005436e2f12cea1ce4cf7dc2f230"
+      },
+      "signature": null
+    },
+    {
+      "id": "DOC-ACCESS-TEST-102",
+      "ownerId": "USR-FOR-202",
+      "accessPolicy": "OWNER_APPROVAL",
+      "title": "Access Test File B - Evidence Timeline Worksheet",
+      "caseId": "CASE-2026-8891",
+      "caseTitle": "State vs. Cyber Syndicate (Financial Fraud & Homicide)",
+      "category": "FORENSIC_NOTES",
+      "clearanceLevel": 3,
+      "authorId": "USR-FOR-202",
+      "authorName": "Dr. Sunita Rao",
+      "authorRole": "FORENSIC_SPECIALIST",
+      "department": "FOR",
+      "dateCreated": "2026-09-20T10:05:00Z",
+      "version": "1.0",
+      "status": "VERIFIED",
+      "extractedText": "Synthetic demonstration file for access permission testing.\n\nEvidence Timeline Worksheet: 09:00 - sample item received; 09:15 - package condition documented; 09:30 - sample copied to a test workstation; 10:00 - integrity check completed. All times and events are fictional.\n\nUse this file to test VIEW, DOWNLOAD, and EDIT access requests.",
+      "chainOfCustody": [
+        {
+          "action": "TEST_FILE_CREATED",
+          "actorName": "Dr. Sunita Rao",
+          "department": "FOR",
+          "timestamp": "2026-09-20T10:05:00Z"
+        }
+      ],
+      "payloadHash": "2e7b69e65ee93a6939ab21d86fae1b748b4beb82d69589431b5c2430daf1c4af",
+      "fileSize": 338,
+      "encryptionMetadata": {
+        "algorithm": "AES-256-GCM",
+        "kmsKeyId": "KMS-MASTER-KEY-PROD-2026",
+        "encryptedDEK": "1fe6b8700af993e4d9761eab8c03da2b5df1c5ac81731a482481d9effefb76400379559e128e8e0e3ee88a5c9d33743f943f5a68d3fbffc0036c2f55d12e69f7",
+        "dekIv": "d4ddc66010c0d3db3ae09ce2",
+        "dekAuthTag": "8d90628bcdc8dc93cf6b80c68b164b71",
+        "payloadIv": "2661d8766d166dc9ce05aa67",
+        "payloadAuthTag": "44fd70da2fb8470e292ea96f235d1627"
+      },
+      "signature": null
+    },
+    {
+      "id": "DOC-ACCESS-TEST-103",
+      "ownerId": "USR-FOR-202",
+      "accessPolicy": "OWNER_APPROVAL",
+      "title": "Access Test File C - Evidence Comparison Sheet",
+      "caseId": "CASE-2026-8891",
+      "caseTitle": "State vs. Cyber Syndicate (Financial Fraud & Homicide)",
+      "category": "FORENSIC_NOTES",
+      "clearanceLevel": 3,
+      "authorId": "USR-FOR-202",
+      "authorName": "Dr. Sunita Rao",
+      "authorRole": "FORENSIC_SPECIALIST",
+      "department": "FOR",
+      "dateCreated": "2026-09-20T10:10:00Z",
+      "version": "1.0",
+      "status": "VERIFIED",
+      "extractedText": "Synthetic demonstration file for access permission testing.\n\nEvidence Comparison Sheet: Sample A and Sample B were compared using a fictional checklist. Packaging, label, and hash fields are marked as matching for this demonstration. No real evidence or identifying information is included.\n\nUse this file to test VIEW, DOWNLOAD, and EDIT access requests.",
+      "chainOfCustody": [
+        {
+          "action": "TEST_FILE_CREATED",
+          "actorName": "Dr. Sunita Rao",
+          "department": "FOR",
+          "timestamp": "2026-09-20T10:10:00Z"
+        }
+      ],
+      "payloadHash": "3293ef7430b527035198beed8d37f5354d6f58365eaeda05a4cdb19d2d108287",
+      "fileSize": 355,
+      "encryptionMetadata": {
+        "algorithm": "AES-256-GCM",
+        "kmsKeyId": "KMS-MASTER-KEY-PROD-2026",
+        "encryptedDEK": "8ff4e1866102f2da05411b6a6553de6fb1e4668da8f52f477f90ef0f59877eded0703d7e53b11c7315075cddd3863a24a6d599b117ef714fea9bbaa6c0c6aed3",
+        "dekIv": "5ebbd8012e4b6264984f6ac3",
+        "dekAuthTag": "71d0ebd9029d868a36bd8e261af5275d",
+        "payloadIv": "f0812a386c49a2acb641a3be",
+        "payloadAuthTag": "febad0d043a2cbae2c5525ebec431e86"
+      },
+      "signature": null
+    },
+    {
+      "id": "DOC-ACCESS-TEST-104",
+      "ownerId": "USR-FOR-202",
+      "accessPolicy": "OWNER_APPROVAL",
+      "title": "Access Test File D - Ballistics Intake Checklist",
+      "caseId": "CASE-2026-4412",
+      "caseTitle": "State Narcotics Operation - Seizure & Ballistics Case",
+      "category": "FORENSIC_NOTES",
+      "clearanceLevel": 3,
+      "authorId": "USR-FOR-202",
+      "authorName": "Dr. Sunita Rao",
+      "authorRole": "FORENSIC_SPECIALIST",
+      "department": "FOR",
+      "dateCreated": "2026-09-21T10:00:00Z",
+      "version": "1.0",
+      "status": "VERIFIED",
+      "extractedText": "Synthetic demonstration file for access permission testing.\n\nBallistics Intake Checklist: Sample casing received, photographed, sealed, and assigned a fictional evidence label. An intake hash was recorded for this prototype. No real evidence or personal information is included.\n\nUse this file to test VIEW, DOWNLOAD, and EDIT approval for the State Narcotics Operation case.",
+      "chainOfCustody": [
+        {
+          "action": "TEST_FILE_CREATED",
+          "actorName": "Dr. Sunita Rao",
+          "department": "FOR",
+          "timestamp": "2026-09-21T10:00:00Z"
+        }
+      ],
+      "payloadHash": "c9bc249827bb9a260158ee44664881f584362ac90a5b7170ea39312ab46844d3",
+      "fileSize": 375,
+      "encryptionMetadata": {
+        "algorithm": "AES-256-GCM",
+        "kmsKeyId": "KMS-MASTER-KEY-PROD-2026",
+        "encryptedDEK": "9723357229a68dd5fbac95dd1d391e6fe0fc89c2f9951b1ab0a4dbaca01152ab57972979d60b588c5019ef9b9f0dbff79feb85c42941692d9fa293b8f15b9ae2",
+        "dekIv": "bde1cf28ee498e9f84a63f84",
+        "dekAuthTag": "85a3d0f84041cf5d527f0c933156b31c",
+        "payloadIv": "d0a7653a2367f1180c218994",
+        "payloadAuthTag": "a84d62f228df2c7449eaa19a1bd878e4"
+      },
+      "signature": null,
+      "tamperLockedUntil": "2026-09-24T20:32:52.454Z",
+      "tamperLockReason": "Unauthorized change attempt blocked; temporarily locked for IT security review.",
+      "tamperDetectedAt": "2026-09-24T20:17:52.454Z",
+      "tamperActorId": "USR-POL-102",
+      "tamperActorName": "Inspector Bhir Rao"
+    },
+    {
+      "id": "DOC-ACCESS-TEST-105",
+      "ownerId": "USR-PRO-303",
+      "accessPolicy": "OWNER_APPROVAL",
+      "title": "Access Test File E - Property Recovery Inventory",
+      "caseId": "CASE-2026-1102",
+      "caseTitle": "Commercial Complex Armed Robbery & Heist",
+      "category": "CASE_WORKSHEET",
+      "clearanceLevel": 2,
+      "authorId": "USR-PRO-303",
+      "authorName": "Advocate Rajesh Verma",
+      "authorRole": "PUBLIC_PROSECUTOR",
+      "department": "PROS",
+      "dateCreated": "2026-09-21T10:05:00Z",
+      "version": "1.0",
+      "status": "VERIFIED",
+      "extractedText": "Synthetic demonstration file for access permission testing.\n\nProperty Recovery Inventory: A fictional checklist records three sealed sample items, condition at receipt, and a matching prototype evidence label. No real evidence or personal information is included.\n\nUse this file to test VIEW, DOWNLOAD, and EDIT approval for the Commercial Complex Armed Robbery case.",
+      "chainOfCustody": [
+        {
+          "action": "TEST_FILE_CREATED",
+          "actorName": "Advocate Rajesh Verma",
+          "department": "PROS",
+          "timestamp": "2026-09-21T10:05:00Z"
+        }
+      ],
+      "payloadHash": "2ae2aa37817b5a9ebe0da64f428cef61e764fa01c6de14e09f6decf7a8c2a106",
+      "fileSize": 367,
+      "encryptionMetadata": {
+        "algorithm": "AES-256-GCM",
+        "kmsKeyId": "KMS-MASTER-KEY-PROD-2026",
+        "encryptedDEK": "b77da921115436ff82e5cb426bcc0f3e9698ce1e1ca157421a64d8c9ab87ae3bab80ce4aa949a79cb5bb6dcabe347f05f43c9c2f7c59af60f4b9d7d6f52e5e57",
+        "dekIv": "cb1a11560f6c540387eb0b3b",
+        "dekAuthTag": "7d623806329650109d50cdb6f89715de",
+        "payloadIv": "296c714cc678599c908413cc",
+        "payloadAuthTag": "174112ba67cec50a5c484bc35e6125df"
+      },
+      "signature": null
+    },
+    {
+      "id": "DOC-2026-4412-0413",
+      "title": "diagram (1)",
+      "caseId": "CASE-2026-4412",
+      "caseTitle": "Case CASE-2026-4412",
+      "category": "FIR",
+      "clearanceLevel": 2,
+      "accessPolicy": "CASE_POLICY",
+      "authorId": "USR-POL-102",
+      "ownerId": "USR-POL-102",
+      "authorName": "Inspector Bhir Rao",
+      "authorRole": "POLICE_INVESTIGATOR",
+      "department": "LEO",
+      "dateCreated": "2026-09-24T19:15:30.429Z",
+      "version": "1.0",
+      "status": "VERIFIED",
+      "extractedText": "[PDF Attachment: diagram (1).png]",
+      "mimeType": "image/png",
+      "originalFileName": "diagram (1).png",
+      "payloadHash": "04873288ff62dcb094102e836b6808a8ef4ef02ec688d53601b1aeed15de24a2",
+      "fileSize": 1251717,
+      "encryptionMetadata": {
+        "algorithm": "AES-256-GCM",
+        "kmsKeyId": "KMS-MASTER-KEY-PROD-2026",
+        "encryptedDEK": "dbf6677908177d5d1b2656352884f4453e37c7d549f9180090cb624027e69948826be20be9a5a8572e2b72a735da30af16552dac815060a07f03c6223aac16ff",
+        "dekIv": "fccb8851fff4af12b9b6db8a",
+        "dekAuthTag": "46f8bd27c1dc2c4f110f4bee25937cb3",
+        "payloadIv": "c678208b51034718fbdbb5a1",
+        "payloadAuthTag": "3cbc61b3c210c5f6a8211e53f69f3555"
+      },
+      "signature": null,
+      "aiEntities": [
+        {
+          "type": "Accused Suspect",
+          "name": "Sameer Verma",
+          "id": "ID-SV992"
+        },
+        {
+          "type": "Victim",
+          "name": "Rajesh Kumar",
+          "status": "Deceased"
+        },
+        {
+          "type": "Recovered Weapon",
+          "weapon": "Glock-17 Pistol (9mm)",
+          "serial": "GL-88392"
+        },
+        {
+          "type": "Location",
+          "venue": "Tech Vault Facility, Cyber Park, Block B4"
+        }
+      ],
+      "versionHistory": [
+        {
+          "version": "1.0",
+          "parentVersion": "GENESIS",
+          "parentPayloadHash": "0000000000000000000000000000000000000000000000000000000000000000",
+          "payloadHash": "04873288ff62dcb094102e836b6808a8ef4ef02ec688d53601b1aeed15de24a2",
+          "fileSize": 1251717,
+          "authorId": "USR-POL-102",
+          "authorName": "Inspector Bhir Rao",
+          "department": "LEO",
+          "dateCreated": "2026-09-24T19:15:30.429Z",
+          "changeNotes": "Initial document filing (v1.0)"
+        }
+      ],
+      "chainOfCustody": [
+        {
+          "action": "UPLOADED_AND_ENCRYPTED",
+          "actorName": "Inspector Bhir Rao",
+          "department": "LEO",
+          "timestamp": "2026-09-24T19:15:30.429Z"
+        }
+      ]
+    },
+    {
+      "id": "DOC-2026-8891-0267",
+      "title": "Fingerprint match analysis",
+      "caseId": "CASE-2026-8891",
+      "caseTitle": "Case CASE-2026-8891",
+      "category": "FIR",
+      "clearanceLevel": 2,
+      "accessPolicy": "CASE_POLICY",
+      "authorId": "USR-FOR-202",
+      "ownerId": "USR-FOR-202",
+      "authorName": "Dr. Sunita Rao",
+      "authorRole": "FORENSIC_SPECIALIST",
+      "department": "FOR",
+      "dateCreated": "2026-09-24T20:22:00.273Z",
+      "version": "1.0",
+      "status": "VERIFIED",
+      "extractedText": "[PDF Attachment: women-safety-info.docx]",
+      "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "originalFileName": "women-safety-info.docx",
+      "payloadHash": "338feb521090a0a57307b2fb48c3fbb966aee574b83d15d64c7038ec6d391e61",
+      "fileSize": 28445,
+      "encryptionMetadata": {
+        "algorithm": "AES-256-GCM",
+        "kmsKeyId": "KMS-MASTER-KEY-PROD-2026",
+        "encryptedDEK": "55a8fcadbba3ab406168a726722e35883b8bd99c950d3a2a2ea5c3f7235b9f8ddba9d54b951ea0ba4f864d4d13dc81fb41fd073d176e1848d60fdbb2fdf3fd99",
+        "dekIv": "b625c4013f3c3e9a6c55a15d",
+        "dekAuthTag": "fad57e69b7ca4f5b48c1e09ecc9cfb5b",
+        "payloadIv": "5659aeae73e56ed79ccdc76b",
+        "payloadAuthTag": "3cfeec7f8523bf61fffb044f5ec2bb09"
+      },
+      "signature": null,
+      "aiEntities": [
+        {
+          "type": "Accused Suspect",
+          "name": "Sameer Verma",
+          "id": "ID-SV992"
+        },
+        {
+          "type": "Victim",
+          "name": "Rajesh Kumar",
+          "status": "Deceased"
+        },
+        {
+          "type": "Recovered Weapon",
+          "weapon": "Glock-17 Pistol (9mm)",
+          "serial": "GL-88392"
+        },
+        {
+          "type": "Location",
+          "venue": "Tech Vault Facility, Cyber Park, Block B4"
+        }
+      ],
+      "versionHistory": [
+        {
+          "version": "1.0",
+          "parentVersion": "GENESIS",
+          "parentPayloadHash": "0000000000000000000000000000000000000000000000000000000000000000",
+          "payloadHash": "338feb521090a0a57307b2fb48c3fbb966aee574b83d15d64c7038ec6d391e61",
+          "fileSize": 28445,
+          "authorId": "USR-FOR-202",
+          "authorName": "Dr. Sunita Rao",
+          "department": "FOR",
+          "dateCreated": "2026-09-24T20:22:00.273Z",
+          "changeNotes": "Initial document filing (v1.0)"
+        }
+      ],
+      "chainOfCustody": [
+        {
+          "action": "UPLOADED_AND_ENCRYPTED",
+          "actorName": "Dr. Sunita Rao",
+          "department": "FOR",
+          "timestamp": "2026-09-24T20:22:00.273Z"
         }
       ]
     }
@@ -1816,6 +2504,104 @@
   ],
   "alerts": [
     {
+      "id": "ALT-7292",
+      "timestamp": "2026-09-24T20:17:52.464Z",
+      "status": "RESOLVED",
+      "resolvedBy": "SākshyaChain IT Administrator (IT Admin — Access Custodian)",
+      "resolutionNotes": "Viewed and acknowledged by IT Admin SākshyaChain IT Administrator.",
+      "resolutionBlockAddress": "",
+      "title": "Evidence Tampering Detected — Account Frozen",
+      "severity": "HIGH",
+      "category": "EVIDENCE_TAMPERING",
+      "actor": "Inspector Bhir Rao (USR-POL-102)",
+      "userId": "USR-POL-102",
+      "userName": "Inspector Bhir Rao",
+      "docId": "DOC-ACCESS-TEST-104",
+      "details": "Inspector Bhir Rao attempted to tamper with “Access Test File D - Ballistics Intake Checklist”. The change was blocked before the vault file was altered. The account and evidence are locked until 25/9/2026, 2:02:52 am.",
+      "accountFrozen": true,
+      "frozenUntil": "2026-09-24T20:32:52.454Z",
+      "evidenceLocked": true,
+      "evidenceLockedUntil": "2026-09-24T20:32:52.454Z",
+      "resolvedAt": "2026-09-24T20:18:59.125Z"
+    },
+    {
+      "id": "ALT-1942",
+      "timestamp": "2026-09-24T14:24:41.981Z",
+      "status": "RESOLVED",
+      "resolvedBy": "SākshyaChain IT Administrator (IT Admin — Access Custodian)",
+      "resolutionNotes": "Viewed and acknowledged by IT Admin SākshyaChain IT Administrator.",
+      "resolutionBlockAddress": "",
+      "title": "Evidence Tampering Detected — Account Frozen",
+      "severity": "HIGH",
+      "category": "EVIDENCE_TAMPERING",
+      "actor": "Inspector Bhir Rao (USR-POL-102)",
+      "userId": "USR-POL-102",
+      "userName": "Inspector Bhir Rao",
+      "docId": "DOC-2026-8891-5771",
+      "details": "Inspector Bhir Rao attempted to tamper with “dsfdsfds”. The change was blocked before the vault file was altered. The account and evidence are locked until 24/9/2026, 8:09:41 pm.",
+      "accountFrozen": true,
+      "frozenUntil": "2026-09-24T14:39:41.974Z",
+      "evidenceLocked": true,
+      "evidenceLockedUntil": "2026-09-24T14:39:41.974Z",
+      "resolvedAt": "2026-09-24T14:46:21.415Z"
+    },
+    {
+      "id": "ALT-6812",
+      "timestamp": "2026-09-24T13:29:02.070Z",
+      "status": "RESOLVED",
+      "resolvedBy": "SākshyaChain IT Administrator (IT Admin — Access Custodian)",
+      "resolutionNotes": "Viewed and acknowledged by IT Admin SākshyaChain IT Administrator.",
+      "resolutionBlockAddress": "",
+      "title": "Evidence Tampering Detected — Account Frozen",
+      "severity": "HIGH",
+      "category": "EVIDENCE_TAMPERING",
+      "actor": "Inspector Bhir Rao (USR-POL-102)",
+      "userId": "USR-POL-102",
+      "userName": "Inspector Bhir Rao",
+      "docId": "DOC-8891-003",
+      "details": "Inspector Bhir Rao attempted to tamper with “Eyewitness Sworn Statement - Security Guard”. The change was blocked before the vault file was altered. The account and evidence are locked until 24/9/2026, 7:14:02 pm.",
+      "accountFrozen": true,
+      "frozenUntil": "2026-09-24T13:44:02.065Z",
+      "evidenceLocked": true,
+      "evidenceLockedUntil": "2026-09-24T13:44:02.065Z",
+      "resolvedAt": "2026-09-24T14:46:21.763Z"
+    },
+    {
+      "id": "ALT-4495",
+      "timestamp": "2026-09-24T12:59:55.414Z",
+      "status": "RESOLVED",
+      "resolvedBy": "SākshyaChain IT Administrator (IT Admin — Access Custodian)",
+      "resolutionNotes": "Viewed and acknowledged by IT Admin SākshyaChain IT Administrator.",
+      "resolutionBlockAddress": "",
+      "title": "Evidence Tampering Detected — Account Frozen",
+      "severity": "HIGH",
+      "category": "EVIDENCE_TAMPERING",
+      "actor": "Inspector Bhir Rao (USR-POL-102)",
+      "userId": "USR-POL-102",
+      "userName": "Inspector Bhir Rao",
+      "docId": "DOC-8891-003",
+      "details": "Inspector Bhir Rao attempted to tamper with “Eyewitness Sworn Statement - Security Guard”. The change was blocked before the vault file was altered. The account and evidence are locked until 24/9/2026, 6:44:54 pm.",
+      "accountFrozen": true,
+      "frozenUntil": "2026-09-24T13:14:54.813Z",
+      "evidenceLocked": true,
+      "evidenceLockedUntil": "2026-09-24T13:14:54.813Z",
+      "resolvedAt": "2026-09-24T14:46:22.115Z"
+    },
+    {
+      "id": "ALT-5178",
+      "timestamp": "2026-09-23T21:06:35.882Z",
+      "status": "OPEN",
+      "resolvedBy": null,
+      "resolutionNotes": null,
+      "resolutionBlockAddress": null,
+      "title": "Break-Glass Emergency Protocol Triggered",
+      "severity": "HIGH",
+      "category": "EMERGENCY_ACCESS",
+      "actor": "sharma_leo (Inspector Vikram Sharma)",
+      "docId": "CASE-2026-8891",
+      "details": "30-minute Emergency Access requested for case CASE-2026-8891 under Justification: \"Urgent homicide lead wiretap inspection required during active hostage situation.\"."
+    },
+    {
       "id": "ALT-1092",
       "title": "Unencrypted Export Attempt Blocked",
       "severity": "HIGH",
@@ -1858,6 +2644,197 @@
       "resolutionNotes": "Verified identity out-of-band via biometric phone verification. Account unlocked.",
       "resolvedAt": "2026-09-12T22:02:12.256Z",
       "resolutionBlockAddress": "0x8f2a...99e1"
+    }
+  ],
+  "accessRequests": [
+    {
+      "id": "AR-fbeb0695-9f7b-4703-a9db-592444aa01cf",
+      "documentId": "DOC-8891-002",
+      "requesterId": "USR-POL-101",
+      "ownerId": "USR-FOR-202",
+      "supervisorId": "USR-JUD-404",
+      "permission": "DOWNLOAD",
+      "reason": "I need this for investigation purposes",
+      "status": "GRANTED",
+      "ownerDecision": "APPROVED",
+      "supervisorDecision": "APPROVED",
+      "createdAt": "2026-09-24T10:43:14.098Z",
+      "updatedAt": "2026-09-24T10:49:11.320Z",
+      "validUntil": "2026-10-01T10:43:14.098Z",
+      "expiresAt": "2026-09-25T10:43:14.098Z",
+      "ownerDecisionBy": "USR-FOR-202",
+      "ownerDecisionAt": "2026-09-24T10:49:03.907Z",
+      "ownerDecisionReason": "",
+      "supervisorDecisionBy": "USR-JUD-404",
+      "supervisorDecisionAt": "2026-09-24T10:49:11.320Z",
+      "supervisorDecisionReason": ""
+    },
+    {
+      "id": "AR-fea00146-854a-4e2c-9775-a768661c2711",
+      "documentId": "DOC-ACCESS-TEST-101",
+      "requesterId": "USR-POL-101",
+      "ownerId": "USR-FOR-202",
+      "supervisorId": "USR-JUD-404",
+      "permission": "DOWNLOAD",
+      "reason": "investigation",
+      "status": "GRANTED",
+      "ownerDecision": "APPROVED",
+      "supervisorDecision": "APPROVED",
+      "createdAt": "2026-09-24T11:10:42.406Z",
+      "updatedAt": "2026-09-24T11:12:26.991Z",
+      "validUntil": "2026-10-01T11:10:42.406Z",
+      "expiresAt": null,
+      "ownerDecisionBy": "USR-FOR-202",
+      "ownerDecisionAt": "2026-09-24T11:11:04.943Z",
+      "ownerDecisionReason": "",
+      "supervisorDecisionBy": "USR-JUD-404",
+      "supervisorDecisionAt": "2026-09-24T11:12:26.991Z",
+      "supervisorDecisionReason": ""
+    },
+    {
+      "id": "AR-7f4d1099-5cbb-47a8-9b9d-57d0294bfe4c",
+      "documentId": "DOC-ACCESS-TEST-102",
+      "requesterId": "USR-POL-101",
+      "ownerId": "USR-FOR-202",
+      "supervisorId": "USR-JUD-404",
+      "permission": "VIEW",
+      "reason": "investigation purposes",
+      "status": "GRANTED",
+      "ownerDecision": "APPROVED",
+      "supervisorDecision": "APPROVED",
+      "createdAt": "2026-09-24T11:13:41.019Z",
+      "updatedAt": "2026-09-24T11:15:09.467Z",
+      "validUntil": "2026-10-01T11:13:41.019Z",
+      "expiresAt": "2026-09-25T11:13:41.019Z",
+      "ownerDecisionBy": "USR-FOR-202",
+      "ownerDecisionAt": "2026-09-24T11:14:56.253Z",
+      "ownerDecisionReason": "",
+      "supervisorDecisionBy": "USR-JUD-404",
+      "supervisorDecisionAt": "2026-09-24T11:15:09.467Z",
+      "supervisorDecisionReason": ""
+    },
+    {
+      "id": "AR-d9a078d0-4156-4e4d-8b48-73278c45b6ef",
+      "documentId": "DOC-ACCESS-TEST-104",
+      "requesterId": "USR-POL-102",
+      "ownerId": "USR-FOR-202",
+      "supervisorId": "USR-JUD-404",
+      "permission": "DOWNLOAD",
+      "reason": "Investigation",
+      "status": "GRANTED",
+      "ownerDecision": "APPROVED",
+      "supervisorDecision": "APPROVED",
+      "createdAt": "2026-09-24T20:11:07.528Z",
+      "updatedAt": "2026-09-24T20:13:26.454Z",
+      "validUntil": "2026-10-01T20:11:07.528Z",
+      "expiresAt": "2026-09-25T20:11:07.528Z",
+      "ownerDecisionBy": "USR-FOR-202",
+      "ownerDecisionAt": "2026-09-24T20:12:23.076Z",
+      "ownerDecisionReason": "",
+      "supervisorDecisionBy": "USR-JUD-404",
+      "supervisorDecisionAt": "2026-09-24T20:13:26.454Z",
+      "supervisorDecisionReason": ""
+    }
+  ],
+  "approvals": [
+    {
+      "requestId": "AR-fbeb0695-9f7b-4703-a9db-592444aa01cf",
+      "approverId": "USR-FOR-202",
+      "approverType": "OWNER",
+      "decision": "APPROVED",
+      "reason": "",
+      "timestamp": "2026-09-24T10:49:03.908Z"
+    },
+    {
+      "requestId": "AR-fbeb0695-9f7b-4703-a9db-592444aa01cf",
+      "approverId": "USR-JUD-404",
+      "approverType": "SUPERVISOR",
+      "decision": "APPROVED",
+      "reason": "",
+      "timestamp": "2026-09-24T10:49:11.320Z"
+    },
+    {
+      "requestId": "AR-fea00146-854a-4e2c-9775-a768661c2711",
+      "approverId": "USR-FOR-202",
+      "approverType": "OWNER",
+      "decision": "APPROVED",
+      "reason": "",
+      "timestamp": "2026-09-24T11:11:04.943Z"
+    },
+    {
+      "requestId": "AR-fea00146-854a-4e2c-9775-a768661c2711",
+      "approverId": "USR-JUD-404",
+      "approverType": "SUPERVISOR",
+      "decision": "APPROVED",
+      "reason": "",
+      "timestamp": "2026-09-24T11:12:26.991Z"
+    },
+    {
+      "requestId": "AR-7f4d1099-5cbb-47a8-9b9d-57d0294bfe4c",
+      "approverId": "USR-FOR-202",
+      "approverType": "OWNER",
+      "decision": "APPROVED",
+      "reason": "",
+      "timestamp": "2026-09-24T11:14:56.253Z"
+    },
+    {
+      "requestId": "AR-7f4d1099-5cbb-47a8-9b9d-57d0294bfe4c",
+      "approverId": "USR-JUD-404",
+      "approverType": "SUPERVISOR",
+      "decision": "APPROVED",
+      "reason": "",
+      "timestamp": "2026-09-24T11:15:09.467Z"
+    },
+    {
+      "requestId": "AR-d9a078d0-4156-4e4d-8b48-73278c45b6ef",
+      "approverId": "USR-FOR-202",
+      "approverType": "OWNER",
+      "decision": "APPROVED",
+      "reason": "",
+      "timestamp": "2026-09-24T20:12:23.076Z"
+    },
+    {
+      "requestId": "AR-d9a078d0-4156-4e4d-8b48-73278c45b6ef",
+      "approverId": "USR-JUD-404",
+      "approverType": "SUPERVISOR",
+      "decision": "APPROVED",
+      "reason": "",
+      "timestamp": "2026-09-24T20:13:26.454Z"
+    }
+  ],
+  "abnormalities": [],
+  "documentPermissions": [
+    {
+      "userId": "USR-POL-101",
+      "documentId": "DOC-8891-002",
+      "permission": "DOWNLOAD",
+      "grantedByRequest": "AR-fbeb0695-9f7b-4703-a9db-592444aa01cf",
+      "grantedAt": "2026-09-24T10:49:11.735Z",
+      "expiresAt": "2026-09-25T10:43:14.098Z"
+    },
+    {
+      "userId": "USR-POL-101",
+      "documentId": "DOC-ACCESS-TEST-101",
+      "permission": "DOWNLOAD",
+      "grantedByRequest": "AR-fea00146-854a-4e2c-9775-a768661c2711",
+      "grantedAt": "2026-09-24T11:12:27.474Z",
+      "expiresAt": null
+    },
+    {
+      "userId": "USR-POL-101",
+      "documentId": "DOC-ACCESS-TEST-102",
+      "permission": "VIEW",
+      "grantedByRequest": "AR-7f4d1099-5cbb-47a8-9b9d-57d0294bfe4c",
+      "grantedAt": "2026-09-24T11:15:09.907Z",
+      "expiresAt": "2026-09-25T11:13:41.019Z"
+    },
+    {
+      "userId": "USR-POL-102",
+      "documentId": "DOC-ACCESS-TEST-104",
+      "permission": "DOWNLOAD",
+      "grantedByRequest": "AR-d9a078d0-4156-4e4d-8b48-73278c45b6ef",
+      "grantedAt": "2026-09-24T20:13:27.040Z",
+      "expiresAt": "2026-09-25T20:11:07.528Z"
     }
   ]
 }

@@ -13,7 +13,8 @@ router.get('/', authenticateToken, (req, res) => {
 
 // GET /api/cases/transfers - Get inter-departmental transfer requests
 router.get('/transfers', authenticateToken, (req, res) => {
-  const requests = dbService.getTransferRequests();
+  const assigned = new Set(req.user.assignedCases || []);
+  const requests = dbService.getTransferRequests().filter(request => req.user.systemRole === 'IT_ADMIN' || assigned.has(request.caseId));
   res.json({ requests });
 });
 
@@ -24,6 +25,9 @@ router.post('/transfers/request', authenticateToken, (req, res) => {
 
   if (!doc) {
     return res.status(404).json({ error: 'DOC_NOT_FOUND', message: 'Document not found' });
+  }
+  if (req.user.systemRole !== 'IT_ADMIN' && !(req.user.assignedCases || []).includes(doc.caseId)) {
+    return res.status(403).json({ error: 'CASE_ASSIGNMENT_REQUIRED', message: 'This case is not assigned to your account.' });
   }
 
   const newRequest = {
@@ -64,6 +68,9 @@ router.post('/transfers/approve', authenticateToken, (req, res) => {
 
   if (!reqObj) {
     return res.status(404).json({ error: 'REQ_NOT_FOUND', message: 'Transfer request not found' });
+  }
+  if (req.user.systemRole !== 'IT_ADMIN' && !(req.user.assignedCases || []).includes(reqObj.caseId)) {
+    return res.status(403).json({ error: 'CASE_ASSIGNMENT_REQUIRED', message: 'This case is not assigned to your account.' });
   }
 
   reqObj.status = 'APPROVED';

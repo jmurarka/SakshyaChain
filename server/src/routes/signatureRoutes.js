@@ -4,6 +4,7 @@ import signatureService from '../services/signatureService.js';
 import { dbService } from '../services/dbService.js';
 import { ledgerService } from '../services/ledgerService.js';
 import { authenticateToken } from '../middleware/auth.js';
+import { evaluateDocumentAccess } from '../services/documentAccessService.js';
 
 const router = express.Router();
 
@@ -46,9 +47,8 @@ router.post('/documents/:documentId/versions/:versionId/sign', async (req, res) 
     return res.status(404).json({ error: 'DOC_NOT_FOUND', message: 'Document not found' });
   }
 
-  if (req.user.clearanceLevel < doc.clearanceLevel) {
-    return res.status(403).json({ error: 'FORBIDDEN_CLEARANCE', message: 'Insufficient clearance to sign document' });
-  }
+  const decision = evaluateDocumentAccess({ user: req.user, doc, db: dbService.readDB(), permission: 'VIEW' });
+  if (!decision.allowed) return res.status(403).json({ error: 'DOCUMENT_ACCESS_REQUIRED', message: decision.reason });
 
   const effectivePayloadHash = payloadHash || doc.payloadHash;
   if (!effectivePayloadHash) {
@@ -117,9 +117,8 @@ router.post('/sign', async (req, res) => {
     return res.status(404).json({ error: 'DOC_NOT_FOUND', message: 'Document not found' });
   }
 
-  if (req.user.clearanceLevel < doc.clearanceLevel) {
-    return res.status(403).json({ error: 'FORBIDDEN_CLEARANCE', message: 'Insufficient clearance to sign document' });
-  }
+  const decision = evaluateDocumentAccess({ user: req.user, doc, db: dbService.readDB(), permission: 'VIEW' });
+  if (!decision.allowed) return res.status(403).json({ error: 'DOCUMENT_ACCESS_REQUIRED', message: decision.reason });
 
   try {
     const record = await signatureService.signManifest({

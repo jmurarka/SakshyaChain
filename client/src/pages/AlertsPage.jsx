@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import api from '../services/api';
 import { useAuth } from '../context/AuthContext';
 import { 
@@ -21,7 +21,7 @@ import {
 } from 'lucide-react';
 
 export default function AlertsPage() {
-  const { user, isBoss } = useAuth();
+  const { user, isBoss, isITAdmin } = useAuth();
   const [filter, setFilter] = useState('all');
   const [alerts, setAlerts] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -32,6 +32,7 @@ export default function AlertsPage() {
   const [resolutionNotes, setResolutionNotes] = useState('');
   const [submittingResolution, setSubmittingResolution] = useState(false);
   const [resolvedResult, setResolvedResult] = useState(null);
+  const acknowledgingIncidents = useRef(new Set());
 
   const fetchAlerts = async () => {
     setLoading(true);
@@ -88,7 +89,27 @@ export default function AlertsPage() {
 
   useEffect(() => {
     fetchAlerts();
-  }, []);
+    if (!isITAdmin) return undefined;
+    const timer = window.setInterval(fetchAlerts, 3000);
+    return () => window.clearInterval(timer);
+  }, [isITAdmin]);
+
+  useEffect(() => {
+    if (!isITAdmin) return;
+    const openTamperIncidents = alerts.filter(alert => alert.status === 'OPEN' && alert.category === 'EVIDENCE_TAMPERING');
+    openTamperIncidents.forEach(incident => {
+      if (acknowledgingIncidents.current.has(incident.id)) return;
+      acknowledgingIncidents.current.add(incident.id);
+      api.post(`/audit/alerts/${incident.id}/acknowledge`)
+        .then(({ data }) => {
+          setAlerts(current => current.map(alert => alert.id === incident.id ? data.alert : alert));
+        })
+        .catch(err => {
+          acknowledgingIncidents.current.delete(incident.id);
+          setError(err.response?.data?.message || 'Could not acknowledge the incident. Refresh and try again.');
+        });
+    });
+  }, [alerts, isITAdmin]);
 
   const openResolutionModal = (alertObj) => {
     setResolvingAlert(alertObj);
@@ -124,6 +145,7 @@ export default function AlertsPage() {
 
   return (
     <div className="space-y-6">
+      {isITAdmin && <div className="px-4 py-3 rounded-xl border border-blue-200 bg-blue-50 text-blue-900 text-xs font-bold">IT ADMIN — READ ONLY · Opening the incident feed acknowledges and resolves its open tampering alerts.</div>}
       {/* Header Banner */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-4 border-b border-slate-200">
         <div>
@@ -224,6 +246,7 @@ export default function AlertsPage() {
                       <span>•</span>
                       <span>{new Date(alert.timestamp).toLocaleString()}</span>
                     </div>
+                    {isITAdmin && alert.category === 'EVIDENCE_TAMPERING' && <div className="flex flex-wrap gap-2 pt-2 text-[11px] font-bold"><span className="rounded border border-rose-200 bg-rose-100 px-2 py-1 text-rose-800">ACCOUNT {alert.accountFrozen ? 'FROZEN' : 'STATUS UNKNOWN'}</span><span className="rounded border border-amber-200 bg-amber-100 px-2 py-1 text-amber-900">EVIDENCE {alert.evidenceLocked ? 'TEMPORARILY LOCKED' : 'STATUS UNKNOWN'}</span>{alert.frozenUntil && <span className="self-center font-normal text-slate-500">Lock expires {new Date(alert.frozenUntil).toLocaleString()}</span>}</div>}
 
                     {/* Resolution Metadata Block (Judicial Proof) */}
                     {isResolved && alert.resolvedBy && (

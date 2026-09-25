@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import api from '../services/api';
 import { useAuth } from '../context/AuthContext';
-import { Database, FileText, Bell, ShieldCheck, ArrowRight, Clock, Lock, AlertTriangle, Plus, ChevronRight } from 'lucide-react';
+import { Database, FileText, Bell, ShieldCheck, ArrowRight, Clock, Lock, AlertTriangle, Plus, ChevronRight, GitFork } from 'lucide-react';
+import ZeroTrustSecurityPanel from '../components/ZeroTrustSecurityPanel';
 
 export default function DashboardPage({ navigateTo: propNavigateTo }) {
   const { user, isBoss } = useAuth();
@@ -54,14 +55,33 @@ export default function DashboardPage({ navigateTo: propNavigateTo }) {
           </p>
         </div>
 
-        <button
-          onClick={() => handleNavigate('/upload')}
-          className="btn btn-primary text-xs flex items-center gap-2"
-        >
-          <Plus className="w-4 h-4" />
-          <span>Upload & Ingest Document</span>
-        </button>
+        <div className="flex items-center gap-2">
+          <button
+            onClick={() => handleNavigate('/graph')}
+            className="btn btn-secondary text-xs flex items-center gap-2 py-2 px-3 border border-slate-300 font-bold"
+          >
+            <GitFork className="w-4 h-4 text-blue-600" />
+            <span>Open Knowledge Graph</span>
+          </button>
+          <button
+            onClick={() => handleNavigate('/upload')}
+            className="btn btn-primary text-xs flex items-center gap-2 py-2 px-3"
+          >
+            <Plus className="w-4 h-4" />
+            <span>Upload & Ingest Document</span>
+          </button>
+        </div>
       </div>
+
+      <section className="white-card grid gap-3 border border-slate-200 p-4 sm:grid-cols-2 xl:grid-cols-4" aria-label="Staff assignment details">
+        <div><div className="text-[10px] font-bold uppercase tracking-wider text-slate-400">Employee ID</div><div className="mt-1 font-mono text-sm font-semibold text-slate-800">{user?.employeeId || user?.id || '—'}</div></div>
+        <div><div className="text-[10px] font-bold uppercase tracking-wider text-slate-400">Designation</div><div className="mt-1 text-sm font-semibold text-slate-800">{user?.roleTitle || user?.role || '—'}</div></div>
+        <div><div className="text-[10px] font-bold uppercase tracking-wider text-slate-400">Police Station</div><div className="mt-1 text-sm font-semibold text-slate-800">{user?.policeStation || 'Not applicable'}</div></div>
+        <div><div className="text-[10px] font-bold uppercase tracking-wider text-slate-400">Work Location</div><div className="mt-1 text-sm font-semibold text-slate-800">{user?.workLocation || user?.departmentName || '—'}</div></div>
+      </section>
+
+      {/* Continuous Zero-Trust Security Posture & RBAC/ABAC Evaluation Section */}
+      <ZeroTrustSecurityPanel />
 
       {/* 4 Stat Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -70,7 +90,7 @@ export default function DashboardPage({ navigateTo: propNavigateTo }) {
             <Database className="w-6 h-6" />
           </div>
           <div>
-            <div className="text-2xl font-bold text-slate-900 font-mono">{cases.length || 3}</div>
+            <div className="text-2xl font-bold text-slate-900 font-mono">{cases.length}</div>
             <div className="text-xs text-slate-500 font-medium">Assigned Cases</div>
           </div>
         </div>

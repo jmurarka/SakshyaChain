@@ -7,6 +7,7 @@ import { ragEngine } from '../services/ragEngine.js';
 import { versionService } from '../services/versionService.js';
 import { wrapTextInPDFBuffer } from '../services/cryptoService.js';
 import { authenticateToken } from '../middleware/auth.js';
+import { evaluateDocumentAccess, getDocumentCapabilities, isEligibleForDocument } from '../services/documentAccessService.js';
 
 const router = express.Router();
 const upload = multer({ storage: multer.memoryStorage() });
@@ -14,8 +15,11 @@ const upload = multer({ storage: multer.memoryStorage() });
 // GET /api/documents - Returns clearance-filtered document list
 router.get('/', authenticateToken, (req, res) => {
   const { caseId, category } = req.query;
-  const docs = dbService.getDocumentsForUser(req.user, { caseId, category });
-  res.json({ documents: docs, count: docs.length });
+  const db = dbService.readDB();
+  const docs = req.user.systemRole === 'IT_ADMIN'
+    ? db.documents.filter(d => (!caseId || d.caseId === caseId) && (!category || d.category === category)).map(({ extractedText, encryptionMetadata, ...d }) => d)
+    : dbService.getDocumentsForUser(req.user, { caseId, category });
+  res.json({ documents: docs.map(doc => ({ ...doc, access: req.user.systemRole === 'IT_ADMIN' ? { mode: 'VIEW', grantedPermission: null, canView: true, canDownload: false, canEdit: false, readOnlyAdmin: true } : getDocumentCapabilities({ user: req.user, doc, db }) })), count: docs.length });
 });
 
 // GET /api/documents/:id - Get metadata and custody timeline
@@ -25,11 +29,20 @@ router.get('/:id', authenticateToken, (req, res) => {
     return res.status(404).json({ error: 'DOC_NOT_FOUND', message: 'Document not found' });
   }
 
-  // Clearance check unless active Break-Glass Grant exists
-  if (!req.breakGlassActive && req.user.clearanceLevel < doc.clearanceLevel) {
+  const db = dbService.readDB();
+  if (req.user.systemRole === 'IT_ADMIN') {
+    ledgerService.addBlock({ action: 'IT_ADMIN_EVIDENCE_VIEWED', actorId: req.user.id, actorName: req.user.name, caseId: doc.caseId, docId: doc.id, docHash: doc.payloadHash, details: { readOnly: true } });
+    return res.json({ document: doc, access: { mode: 'VIEW', canView: true, canDownload: false, canEdit: false, readOnlyAdmin: true } });
+  }
+  const decision = evaluateDocumentAccess({ user: req.user, doc, db, permission: 'VIEW', breakGlass: !!req.breakGlassActive });
+  if (!decision.allowed) {
+    const previousRequest = [...(db.accessRequests || [])].filter(r => r.documentId === doc.id && r.requesterId === req.user.id).sort((a, b) => Date.parse(b.createdAt) - Date.parse(a.createdAt))[0];
+    const denialReason = previousRequest?.ownerDecision === 'REJECTED' ? 'File owner approval rejected.' : previousRequest?.supervisorDecision === 'REJECTED' ? 'Supervisor approval rejected.' : decision.reason;
+    ledgerService.addBlock({ action: 'ACCESS_DENIED', actorId: req.user.id, actorName: req.user.name, caseId: doc.caseId, docId: doc.id, docHash: doc.payloadHash, details: { requestId: previousRequest?.id, reason: denialReason } });
     return res.status(403).json({
-      error: 'FORBIDDEN_CLEARANCE_VIOLATION',
-      message: `Access Denied: Clearance Level ${doc.clearanceLevel} required. Your level is ${req.user.clearanceLevel}.`
+      error: !decision.clearance ? 'FORBIDDEN_CLEARANCE_VIOLATION' : 'APPROVAL_REQUIRED',
+      message: decision.reason,
+      accessDecision: { requester: req.user.name, role: req.user.role, department: req.user.department, clearance: req.user.clearanceLevel, file: doc.title, owner: db.users.find(u => u.id === (doc.ownerId || doc.authorId))?.name || doc.authorName, rbacAbac: decision.rbacEligible ? 'PASS' : 'FAIL', ownerApproval: previousRequest?.ownerDecision || 'REQUIRED', supervisorApproval: previousRequest?.supervisorDecision || 'REQUIRED', decision: 'DENIED', reason: denialReason }
     });
   }
 
@@ -48,7 +61,7 @@ router.get('/:id', authenticateToken, (req, res) => {
     }
   });
 
-  res.json({ document: doc });
+  res.json({ document: doc, access: getDocumentCapabilities({ user: req.user, doc, db }) });
 });
 
 // POST /api/documents/upload - Secure File Upload & Envelope Encryption
@@ -61,6 +74,9 @@ router.post('/upload', authenticateToken, upload.single('file'), (req, res) => {
   }
 
   const docClearance = parseInt(clearanceLevel || '2', 10);
+  const db = dbService.readDB();
+  const parentCase = db.cases.find(c => c.id === caseId);
+  if (!parentCase || !isEligibleForDocument(req.user, { caseId, clearanceLevel: docClearance }, db).caseEligible) return res.status(403).json({ error: 'CASE_ASSIGNMENT_REQUIRED', message: 'Upload requires access to the selected case under your department or assignment.' });
   if (req.user.clearanceLevel < docClearance) {
     return res.status(403).json({
       error: 'FORBIDDEN_CANNOT_CREATE_ABOVE_CLEARANCE',
@@ -104,7 +120,9 @@ router.post('/upload', authenticateToken, upload.single('file'), (req, res) => {
     caseTitle: `Case ${caseId}`,
     category,
     clearanceLevel: docClearance,
+    accessPolicy: docClearance >= 3 ? 'OWNER_APPROVAL' : 'CASE_POLICY',
     authorId: req.user.id,
+    ownerId: req.user.id,
     authorName: req.user.name,
     authorRole: req.user.role,
     department: req.user.department,
@@ -174,11 +192,19 @@ router.post('/upload', authenticateToken, upload.single('file'), (req, res) => {
 
 // POST /api/documents/:id/versions - Add New Revision/Version (v1.1, v2.0)
 router.post('/:id/versions', authenticateToken, (req, res) => {
-  const { docId } = req.params;
+  const docId = req.params.id;
   const { textContent, changeNotes, isMajorVersion } = req.body;
 
   if (!textContent) {
     return res.status(400).json({ error: 'MISSING_CONTENT', message: 'textContent is required for new version' });
+  }
+
+  const doc = dbService.getDocumentById(docId);
+  const db = dbService.readDB();
+  const decision = doc && evaluateDocumentAccess({ user: req.user, doc, db, permission: 'EDIT' });
+  if (!decision?.allowed) {
+    if (doc) ledgerService.addBlock({ action: 'ACCESS_DENIED', actorId: req.user.id, actorName: req.user.name, caseId: doc.caseId, docId: doc.id, docHash: doc.payloadHash, details: { reason: 'Edit permission required' } });
+    return res.status(403).json({ error: 'EDIT_PERMISSION_REQUIRED', message: 'Only the file owner or a user with explicit edit permission may create a version.' });
   }
 
   try {
@@ -206,16 +232,17 @@ router.get('/:id/download', authenticateToken, (req, res) => {
     return res.status(404).json({ error: 'DOC_NOT_FOUND', message: 'Document not found' });
   }
 
-  // Clearance check unless active Break-Glass Grant exists
-  if (!req.breakGlassActive && req.user.clearanceLevel < doc.clearanceLevel) {
+  const db = dbService.readDB();
+  const decision = evaluateDocumentAccess({ user: req.user, doc, db, permission: 'DOWNLOAD', breakGlass: !!req.breakGlassActive });
+  if (!decision.allowed) {
+    ledgerService.addBlock({ action: 'ACCESS_DENIED', actorId: req.user.id, actorName: req.user.name, caseId: doc.caseId, docId: doc.id, docHash: doc.payloadHash, details: { reason: decision.reason } });
     return res.status(403).json({
-      error: 'FORBIDDEN_CLEARANCE_VIOLATION',
-      message: `Access Denied: Clearance Level ${doc.clearanceLevel} required.`
+      error: !decision.clearance ? 'FORBIDDEN_CLEARANCE_VIOLATION' : 'APPROVAL_REQUIRED', message: decision.reason
     });
   }
 
   try {
-    const decryptedBuffer = storageService.readFileFromVault(doc.id, doc.encryptionMetadata);
+    const decryptedBuffer = storageService.readFileFromVault(doc.currentFileId || doc.id, doc.encryptionMetadata);
 
     // Log Download Action to Ledger
     ledgerService.addBlock({

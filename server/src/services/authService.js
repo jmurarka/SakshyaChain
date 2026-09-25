@@ -3,6 +3,7 @@ import jwt from 'jsonwebtoken';
 import { CONFIG } from '../config.js';
 import { dbService } from './dbService.js';
 import { ledgerService } from './ledgerService.js';
+import { isAccountFrozen } from '../utils/accountFreeze.js';
 
 // In-Memory store for MFA OTP states (userId -> { hashedOTP, expiresAt, attempts })
 const mfaSessionStore = new Map();
@@ -27,6 +28,7 @@ export function verifyPassword(password, salt, hash) {
 export function generateMFAOTP(userId) {
   const user = dbService.getUserById(userId);
   if (!user) throw new Error('User not found');
+  if (isAccountFrozen(user)) throw new Error('Account frozen after a security incident.');
 
   // Cryptographically Secure PRNG (CSPRNG) for 6-digit numeric OTP
   const rawOTP = crypto.randomInt(100000, 1000000).toString();
@@ -63,6 +65,7 @@ export function generateMFAOTP(userId) {
 export function verifyMFAOTP(userId, inputOTP) {
   const user = dbService.getUserById(userId);
   if (!user) throw new Error('User not found');
+  if (isAccountFrozen(user)) throw new Error('Account frozen after a security incident.');
 
   const mfaSession = mfaSessionStore.get(userId);
   if (!mfaSession) {
@@ -142,7 +145,7 @@ export function issueTokens(user) {
   const accessToken = jwt.sign(payload, CONFIG.JWT_SECRET, { expiresIn: CONFIG.ACCESS_TOKEN_EXPIRY });
   const refreshToken = jwt.sign({ id: user.id }, CONFIG.JWT_REFRESH_SECRET, { expiresIn: CONFIG.REFRESH_TOKEN_EXPIRY });
 
-  const { privateKey, ...userPublic } = dbService.getUserWithPrivateKey(user.id);
+  const { privateKey, passwordHash, passwordSalt, ...userPublic } = dbService.getUserWithPrivateKey(user.id);
 
   return {
     accessToken,
@@ -160,6 +163,7 @@ export function refreshAccessToken(refreshToken) {
     const decoded = jwt.verify(refreshToken, CONFIG.JWT_REFRESH_SECRET);
     const user = dbService.getUserById(decoded.id);
     if (!user) throw new Error('User not found');
+    if (isAccountFrozen(user)) throw new Error('Account frozen after a security incident');
     return issueTokens(user);
   } catch (err) {
     throw new Error('Invalid or expired refresh token');

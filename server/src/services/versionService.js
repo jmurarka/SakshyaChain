@@ -98,6 +98,15 @@ class VersionService {
         changeNotes
       }
     });
+    ledgerService.addBlock({
+      action: 'DOCUMENT_EDITED',
+      actorId: authorUser.id,
+      actorName: authorUser.name,
+      caseId: doc.caseId,
+      docId: doc.id,
+      docHash: storageRes.payloadHash,
+      details: { version: versionRecord.version, changeNotes }
+    });
 
     return { document: doc, versionRecord, ledgerBlock: block };
   }

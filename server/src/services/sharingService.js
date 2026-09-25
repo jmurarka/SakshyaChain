@@ -42,6 +42,15 @@ class SharingService {
       docHash: doc.payloadHash,
       details: { recipientEmail, policy: 'VIEW_ONLY_NO_DOWNLOAD', expiresAtHours }
     });
+    ledgerService.addBlock({
+      action: 'DOCUMENT_SHARED',
+      actorId: createdByUser.id,
+      actorName: createdByUser.name,
+      caseId: doc.caseId,
+      docId: doc.id,
+      docHash: doc.payloadHash,
+      details: { recipientEmail, policy: 'VIEW_ONLY_NO_DOWNLOAD', expiresAtHours }
+    });
 
     return shareRecord;
   }

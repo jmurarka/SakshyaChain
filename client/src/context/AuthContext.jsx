@@ -5,7 +5,7 @@ const AuthContext = createContext();
 
 export function AuthProvider({ children }) {
   const [user, setUser] = useState(null);
-  const [token, setToken] = useState(localStorage.getItem('sakshya_jwt_token') || null);
+  const [token, setToken] = useState(sessionStorage.getItem('sakshya_jwt_token') || null);
   const [allUsers, setAllUsers] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -34,7 +34,7 @@ export function AuthProvider({ children }) {
       setError(null);
     } catch (err) {
       console.warn('JWT invalid or expired, returning to login screen...');
-      localStorage.removeItem('sakshya_jwt_token');
+      sessionStorage.removeItem('sakshya_jwt_token');
       setToken(null);
       setUser(null);
     } finally {
@@ -42,22 +42,43 @@ export function AuthProvider({ children }) {
     }
   };
 
-  // Authenticate as a specific persona & obtain real JWT from server
-  const loginAsUser = async (userId) => {
+  const beginCredentialLogin = async (credentials, portal) => {
     setLoading(true);
     setError(null);
     try {
-      // Clear any previous token from localStorage so fresh login is not treated as a privilege escalation switch
-      localStorage.removeItem('sakshya_jwt_token');
+      sessionStorage.removeItem('sakshya_jwt_token');
       setToken(null);
       setUser(null);
 
-      const res = await api.post('/auth/login', { userId }, {
+      const res = await api.post('/auth/login', { ...credentials, portal }, {
+        headers: { Authorization: '' }
+      });
+      return res.data;
+    } catch (err) {
+      const errMsg = err.response?.data?.message || 'Authentication failed';
+      setError(errMsg);
+      throw new Error(errMsg);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const loginWithEmployeeCredentials = (username, password) => beginCredentialLogin({ username, password }, 'EMPLOYEE');
+  const loginWithITAdminCredentials = (username, password, secretCode) => beginCredentialLogin({ username, password, secretCode }, 'IT_ADMIN');
+
+  const verifyLoginOTP = async (challengeId, otp) => {
+    setLoading(true);
+    setError(null);
+    try {
+      sessionStorage.removeItem('sakshya_jwt_token');
+      setToken(null);
+      setUser(null);
+
+      const res = await api.post('/auth/verify-login-otp', { challengeId, otp }, {
         headers: { Authorization: '' }
       });
       const { token: jwtToken, user: userObj } = res.data;
-
-      localStorage.setItem('sakshya_jwt_token', jwtToken);
+      sessionStorage.setItem('sakshya_jwt_token', jwtToken);
       setToken(jwtToken);
       setUser(userObj);
       return userObj;
@@ -71,17 +92,30 @@ export function AuthProvider({ children }) {
   };
 
   const logout = () => {
-    localStorage.removeItem('sakshya_jwt_token');
+    sessionStorage.removeItem('sakshya_jwt_token');
     setToken(null);
     setUser(null);
   };
 
-  const isBoss = user && (user.clearanceLevel >= 4 || user.role === 'JUDICIAL_MAGISTRATE' || user.role === 'COMPLIANCE_AUDITOR' || user.role === 'ADMIN');
-  const isEmployee = user && !isBoss;
+  const isITAdmin = user?.systemRole === 'IT_ADMIN';
+  const isSupervisor = user && ['JUDICIAL_MAGISTRATE', 'COMPLIANCE_AUDITOR'].includes(user.role);
+  const isBoss = isSupervisor;
+  const isEmployee = user && !isITAdmin;
 
   useEffect(() => {
     fetchPersonas();
     verifyToken();
+  }, []);
+
+  useEffect(() => {
+    const handleFrozenAccount = event => {
+      sessionStorage.removeItem('sakshya_jwt_token');
+      setToken(null);
+      setUser(null);
+      setError(event.detail || 'This account is temporarily frozen after a security incident.');
+    };
+    window.addEventListener('sakshya-account-frozen', handleFrozenAccount);
+    return () => window.removeEventListener('sakshya-account-frozen', handleFrozenAccount);
   }, []);
 
   return (
@@ -93,8 +127,12 @@ export function AuthProvider({ children }) {
         loading,
         error,
         isBoss,
+        isITAdmin,
+        isSupervisor,
         isEmployee,
-        loginAsUser,
+        loginWithITAdminCredentials,
+        loginWithEmployeeCredentials,
+        verifyLoginOTP,
         logout,
         refreshPersonas: fetchPersonas
       }}

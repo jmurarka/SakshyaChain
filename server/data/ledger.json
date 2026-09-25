@@ -7039,5 +7039,2639 @@
     "blockHash": "4649884a5f26a6d4add094654c21dbe0fa109444ea36f8e458d073456c425819",
     "event_hash": "4649884a5f26a6d4add094654c21dbe0fa109444ea36f8e458d073456c425819",
     "gitCommitHash": "8120bb8f7cd044307119d074770446cf64e28d99"
+  },
+  {
+    "index": 207,
+    "blockHeight": 207,
+    "timestamp": "2026-09-23T21:06:32.428Z",
+    "action": "MFA_OTP_GENERATED",
+    "actorId": "USR-POL-101",
+    "actorName": "Inspector Vikram Sharma",
+    "caseId": "AUTH-MFA",
+    "docId": "MFA-SESSION",
+    "docHash": "70f98f2159d9e4737e52bb824d8cbf4d25754073d943d73e7b6253f46e754e22",
+    "details": {
+      "ttlSeconds": 120
+    },
+    "previousBlockHash": "4649884a5f26a6d4add094654c21dbe0fa109444ea36f8e458d073456c425819",
+    "parent_hashes": [
+      "4649884a5f26a6d4add094654c21dbe0fa109444ea36f8e458d073456c425819"
+    ],
+    "payload": {
+      "action": "MFA_OTP_GENERATED",
+      "actorId": "USR-POL-101",
+      "actorName": "Inspector Vikram Sharma",
+      "caseId": "AUTH-MFA",
+      "docId": "MFA-SESSION",
+      "docHash": "70f98f2159d9e4737e52bb824d8cbf4d25754073d943d73e7b6253f46e754e22",
+      "details": {
+        "ttlSeconds": 120
+      }
+    },
+    "blockHash": "2744159f3f66956b568b5c306764877634d7850a2864f67179cb284e8e512cb5",
+    "event_hash": "2744159f3f66956b568b5c306764877634d7850a2864f67179cb284e8e512cb5",
+    "gitCommitHash": "6e2b836f8229bcbe1ea9dcb2a9bce0a4e9bacc7c"
+  },
+  {
+    "index": 208,
+    "blockHeight": 208,
+    "timestamp": "2026-09-23T21:06:33.267Z",
+    "action": "MFA_OTP_VERIFIED",
+    "actorId": "USR-POL-101",
+    "actorName": "Inspector Vikram Sharma",
+    "caseId": "AUTH-MFA",
+    "docId": "MFA-SUCCESS",
+    "docHash": "VERIFIED",
+    "details": {
+      "authStatus": "MFA_SUCCESS"
+    },
+    "previousBlockHash": "2744159f3f66956b568b5c306764877634d7850a2864f67179cb284e8e512cb5",
+    "parent_hashes": [
+      "2744159f3f66956b568b5c306764877634d7850a2864f67179cb284e8e512cb5"
+    ],
+    "payload": {
+      "action": "MFA_OTP_VERIFIED",
+      "actorId": "USR-POL-101",
+      "actorName": "Inspector Vikram Sharma",
+      "caseId": "AUTH-MFA",
+      "docId": "MFA-SUCCESS",
+      "docHash": "VERIFIED",
+      "details": {
+        "authStatus": "MFA_SUCCESS"
+      }
+    },
+    "blockHash": "dfea3e56bad4fcecf6246fa9b7501ecbb18d9e074210a858357795d608c49b45",
+    "event_hash": "dfea3e56bad4fcecf6246fa9b7501ecbb18d9e074210a858357795d608c49b45",
+    "gitCommitHash": "267f705cb9eb935acbe429d7ae4f3378fbd76a20"
+  },
+  {
+    "index": 209,
+    "blockHeight": 209,
+    "timestamp": "2026-09-23T21:06:34.131Z",
+    "action": "DOCUMENT_VERSION_CREATED",
+    "actorId": "USR-POL-101",
+    "actorName": "Inspector Vikram Sharma",
+    "caseId": "CASE-2026-8891",
+    "docId": "DOC-8891-003",
+    "docHash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+    "details": {
+      "previousVersion": "1.17",
+      "newVersion": "1.18",
+      "fileId": "DOC-8891-003_v1_18",
+      "parentHash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+      "changeNotes": "Added vehicle license plate info"
+    },
+    "previousBlockHash": "dfea3e56bad4fcecf6246fa9b7501ecbb18d9e074210a858357795d608c49b45",
+    "parent_hashes": [
+      "dfea3e56bad4fcecf6246fa9b7501ecbb18d9e074210a858357795d608c49b45"
+    ],
+    "payload": {
+      "action": "DOCUMENT_VERSION_CREATED",
+      "actorId": "USR-POL-101",
+      "actorName": "Inspector Vikram Sharma",
+      "caseId": "CASE-2026-8891",
+      "docId": "DOC-8891-003",
+      "docHash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+      "details": {
+        "previousVersion": "1.17",
+        "newVersion": "1.18",
+        "fileId": "DOC-8891-003_v1_18",
+        "parentHash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+        "changeNotes": "Added vehicle license plate info"
+      }
+    },
+    "blockHash": "00430ec53d7a7354b719944d5bada6baf96e0905c6d9547e77a9dcaf46788e5e",
+    "event_hash": "00430ec53d7a7354b719944d5bada6baf96e0905c6d9547e77a9dcaf46788e5e",
+    "gitCommitHash": "c9fca9b15a983bf853f4a828e8b10addb6537a21"
+  },
+  {
+    "index": 210,
+    "blockHeight": 210,
+    "timestamp": "2026-09-23T21:06:34.991Z",
+    "action": "EMERGENCY_ACCESS_REQUESTED",
+    "actorId": "USR-POL-101",
+    "actorName": "Inspector Vikram Sharma",
+    "caseId": "CASE-2026-8891",
+    "docId": "BREAK-GLASS",
+    "docHash": "EMERGENCY_REQ",
+    "details": {
+      "requestId": "BG-REQ-94984",
+      "reason": "Urgent homicide lead wiretap inspection required during active hostage situation."
+    },
+    "previousBlockHash": "00430ec53d7a7354b719944d5bada6baf96e0905c6d9547e77a9dcaf46788e5e",
+    "parent_hashes": [
+      "00430ec53d7a7354b719944d5bada6baf96e0905c6d9547e77a9dcaf46788e5e"
+    ],
+    "payload": {
+      "action": "EMERGENCY_ACCESS_REQUESTED",
+      "actorId": "USR-POL-101",
+      "actorName": "Inspector Vikram Sharma",
+      "caseId": "CASE-2026-8891",
+      "docId": "BREAK-GLASS",
+      "docHash": "EMERGENCY_REQ",
+      "details": {
+        "requestId": "BG-REQ-94984",
+        "reason": "Urgent homicide lead wiretap inspection required during active hostage situation."
+      }
+    },
+    "blockHash": "b63781946013a6a98bdb07a2e98e016c3615fb0c54b5990cd3918d5190ac33ad",
+    "event_hash": "b63781946013a6a98bdb07a2e98e016c3615fb0c54b5990cd3918d5190ac33ad",
+    "gitCommitHash": "811aef1b05e73c7e95fba65f5eaa9ff6c4591343"
+  },
+  {
+    "index": 211,
+    "blockHeight": 211,
+    "timestamp": "2026-09-23T21:06:35.905Z",
+    "action": "EMERGENCY_ACCESS_GRANTED",
+    "actorId": "USR-POL-101",
+    "actorName": "Inspector Vikram Sharma",
+    "caseId": "CASE-2026-8891",
+    "docId": "BREAK-GLASS",
+    "docHash": "GRANT_ACTIVE",
+    "details": {
+      "requestId": "BG-REQ-94984",
+      "approvedBy": "Inspector Vikram Sharma",
+      "durationMinutes": 30,
+      "expiresAt": "2026-09-23T21:36:35.900Z"
+    },
+    "previousBlockHash": "b63781946013a6a98bdb07a2e98e016c3615fb0c54b5990cd3918d5190ac33ad",
+    "parent_hashes": [
+      "b63781946013a6a98bdb07a2e98e016c3615fb0c54b5990cd3918d5190ac33ad"
+    ],
+    "payload": {
+      "action": "EMERGENCY_ACCESS_GRANTED",
+      "actorId": "USR-POL-101",
+      "actorName": "Inspector Vikram Sharma",
+      "caseId": "CASE-2026-8891",
+      "docId": "BREAK-GLASS",
+      "docHash": "GRANT_ACTIVE",
+      "details": {
+        "requestId": "BG-REQ-94984",
+        "approvedBy": "Inspector Vikram Sharma",
+        "durationMinutes": 30,
+        "expiresAt": "2026-09-23T21:36:35.900Z"
+      }
+    },
+    "blockHash": "63259038f3a3d47ae836e03800c70c02c5bc420aa64a241c1c5222f0b4ca9d52",
+    "event_hash": "63259038f3a3d47ae836e03800c70c02c5bc420aa64a241c1c5222f0b4ca9d52",
+    "gitCommitHash": "c042f94ba577c63e046556566e66ef9f767e6d26"
+  },
+  {
+    "index": 212,
+    "blockHeight": 212,
+    "timestamp": "2026-09-23T21:06:36.801Z",
+    "action": "CONTROLLED_LINK_CREATED",
+    "actorId": "USR-POL-101",
+    "actorName": "Inspector Vikram Sharma",
+    "caseId": "CASE-2026-8891",
+    "docId": "DOC-8891-003",
+    "docHash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+    "details": {
+      "recipientEmail": "defense.counsel@highcourt.gov.in",
+      "policy": "VIEW_ONLY_NO_DOWNLOAD",
+      "expiresAtHours": 24
+    },
+    "previousBlockHash": "63259038f3a3d47ae836e03800c70c02c5bc420aa64a241c1c5222f0b4ca9d52",
+    "parent_hashes": [
+      "63259038f3a3d47ae836e03800c70c02c5bc420aa64a241c1c5222f0b4ca9d52"
+    ],
+    "payload": {
+      "action": "CONTROLLED_LINK_CREATED",
+      "actorId": "USR-POL-101",
+      "actorName": "Inspector Vikram Sharma",
+      "caseId": "CASE-2026-8891",
+      "docId": "DOC-8891-003",
+      "docHash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+      "details": {
+        "recipientEmail": "defense.counsel@highcourt.gov.in",
+        "policy": "VIEW_ONLY_NO_DOWNLOAD",
+        "expiresAtHours": 24
+      }
+    },
+    "blockHash": "6041fa69a65c1d2c8bc6f7f0474b536cdb7227d3694a36650133ac78dcfbc5cd",
+    "event_hash": "6041fa69a65c1d2c8bc6f7f0474b536cdb7227d3694a36650133ac78dcfbc5cd",
+    "gitCommitHash": "393db04cf6841ee323affe367ba82fff2bf2752b"
+  },
+  {
+    "index": 213,
+    "blockHeight": 213,
+    "timestamp": "2026-09-23T21:06:37.655Z",
+    "action": "CONTROLLED_LINK_ACCESSED",
+    "actorId": "RECIPIENT_GUEST",
+    "actorName": "defense.counsel@highcourt.gov.in",
+    "caseId": "CASE-2026-8891",
+    "docId": "DOC-8891-003",
+    "docHash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+    "details": {
+      "shareToken": "SHARE-2b8b3ca41c4cc835cf0163d93743b953",
+      "policy": "VIEW_ONLY_NO_DOWNLOAD"
+    },
+    "previousBlockHash": "6041fa69a65c1d2c8bc6f7f0474b536cdb7227d3694a36650133ac78dcfbc5cd",
+    "parent_hashes": [
+      "6041fa69a65c1d2c8bc6f7f0474b536cdb7227d3694a36650133ac78dcfbc5cd"
+    ],
+    "payload": {
+      "action": "CONTROLLED_LINK_ACCESSED",
+      "actorId": "RECIPIENT_GUEST",
+      "actorName": "defense.counsel@highcourt.gov.in",
+      "caseId": "CASE-2026-8891",
+      "docId": "DOC-8891-003",
+      "docHash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+      "details": {
+        "shareToken": "SHARE-2b8b3ca41c4cc835cf0163d93743b953",
+        "policy": "VIEW_ONLY_NO_DOWNLOAD"
+      }
+    },
+    "blockHash": "abe0aea8af8c9e2be2d4224ecf59b2fe842feed543753720f78dd6e9736dceb7",
+    "event_hash": "abe0aea8af8c9e2be2d4224ecf59b2fe842feed543753720f78dd6e9736dceb7",
+    "gitCommitHash": "5c4c6a96b3e3ee72e120e58ee5c7353e5f7ec445"
+  },
+  {
+    "index": 214,
+    "blockHeight": 214,
+    "timestamp": "2026-09-23T21:06:38.998Z",
+    "action": "SYSTEM_AUDIT_EXECUTED",
+    "actorId": "USR-POL-101",
+    "actorName": "Inspector Vikram Sharma",
+    "caseId": "SYSTEM",
+    "docId": "SYSTEM",
+    "docHash": "AUDIT_CHECK",
+    "details": {
+      "auditStatus": "TAMPER_ALERT"
+    },
+    "previousBlockHash": "abe0aea8af8c9e2be2d4224ecf59b2fe842feed543753720f78dd6e9736dceb7",
+    "parent_hashes": [
+      "abe0aea8af8c9e2be2d4224ecf59b2fe842feed543753720f78dd6e9736dceb7"
+    ],
+    "payload": {
+      "action": "SYSTEM_AUDIT_EXECUTED",
+      "actorId": "USR-POL-101",
+      "actorName": "Inspector Vikram Sharma",
+      "caseId": "SYSTEM",
+      "docId": "SYSTEM",
+      "docHash": "AUDIT_CHECK",
+      "details": {
+        "auditStatus": "TAMPER_ALERT"
+      }
+    },
+    "blockHash": "f2c61b8cd33617ad31bc5fc7ada711961e4071519d63490cb29d248109250ef1",
+    "event_hash": "f2c61b8cd33617ad31bc5fc7ada711961e4071519d63490cb29d248109250ef1",
+    "gitCommitHash": "6f342b76dfa969f98e21b653f0b9a1e2edf13504"
+  },
+  {
+    "index": 215,
+    "blockHeight": 215,
+    "timestamp": "2026-09-23T21:35:37.249Z",
+    "action": "SYSTEM_AUDIT_EXECUTED",
+    "actorId": "USR-JUD-404",
+    "actorName": "Justice P. K. Mukherjee",
+    "caseId": "SYSTEM",
+    "docId": "SYSTEM",
+    "docHash": "AUDIT_CHECK",
+    "details": {
+      "auditStatus": "TAMPER_ALERT"
+    },
+    "previousBlockHash": "f2c61b8cd33617ad31bc5fc7ada711961e4071519d63490cb29d248109250ef1",
+    "parent_hashes": [
+      "f2c61b8cd33617ad31bc5fc7ada711961e4071519d63490cb29d248109250ef1"
+    ],
+    "payload": {
+      "action": "SYSTEM_AUDIT_EXECUTED",
+      "actorId": "USR-JUD-404",
+      "actorName": "Justice P. K. Mukherjee",
+      "caseId": "SYSTEM",
+      "docId": "SYSTEM",
+      "docHash": "AUDIT_CHECK",
+      "details": {
+        "auditStatus": "TAMPER_ALERT"
+      }
+    },
+    "blockHash": "8ca43008b0a77e2440733c87fd72d8753932700505de75e9fff5665d19413bbc",
+    "event_hash": "8ca43008b0a77e2440733c87fd72d8753932700505de75e9fff5665d19413bbc",
+    "gitCommitHash": "b6f04dcd8701b03afd3d6f4624a71ad4549bc065"
+  },
+  {
+    "index": 216,
+    "blockHeight": 216,
+    "timestamp": "2026-09-23T21:35:38.051Z",
+    "action": "SYSTEM_AUDIT_EXECUTED",
+    "actorId": "USR-JUD-404",
+    "actorName": "Justice P. K. Mukherjee",
+    "caseId": "SYSTEM",
+    "docId": "SYSTEM",
+    "docHash": "AUDIT_CHECK",
+    "details": {
+      "auditStatus": "TAMPER_ALERT"
+    },
+    "previousBlockHash": "8ca43008b0a77e2440733c87fd72d8753932700505de75e9fff5665d19413bbc",
+    "parent_hashes": [
+      "8ca43008b0a77e2440733c87fd72d8753932700505de75e9fff5665d19413bbc"
+    ],
+    "payload": {
+      "action": "SYSTEM_AUDIT_EXECUTED",
+      "actorId": "USR-JUD-404",
+      "actorName": "Justice P. K. Mukherjee",
+      "caseId": "SYSTEM",
+      "docId": "SYSTEM",
+      "docHash": "AUDIT_CHECK",
+      "details": {
+        "auditStatus": "TAMPER_ALERT"
+      }
+    },
+    "blockHash": "d8753afd784286f29cf93df1f6b29e57b47c84f2cb38195a9a0a790a85fac4f2",
+    "event_hash": "d8753afd784286f29cf93df1f6b29e57b47c84f2cb38195a9a0a790a85fac4f2",
+    "gitCommitHash": "6fba0502cc00ceb2ea999cf5411767d3d4e0b4a9"
+  },
+  {
+    "index": 217,
+    "blockHeight": 217,
+    "timestamp": "2026-09-23T21:35:39.360Z",
+    "action": "SYSTEM_AUDIT_EXECUTED",
+    "actorId": "USR-JUD-404",
+    "actorName": "Justice P. K. Mukherjee",
+    "caseId": "SYSTEM",
+    "docId": "SYSTEM",
+    "docHash": "AUDIT_CHECK",
+    "details": {
+      "auditStatus": "TAMPER_ALERT"
+    },
+    "previousBlockHash": "d8753afd784286f29cf93df1f6b29e57b47c84f2cb38195a9a0a790a85fac4f2",
+    "parent_hashes": [
+      "d8753afd784286f29cf93df1f6b29e57b47c84f2cb38195a9a0a790a85fac4f2"
+    ],
+    "payload": {
+      "action": "SYSTEM_AUDIT_EXECUTED",
+      "actorId": "USR-JUD-404",
+      "actorName": "Justice P. K. Mukherjee",
+      "caseId": "SYSTEM",
+      "docId": "SYSTEM",
+      "docHash": "AUDIT_CHECK",
+      "details": {
+        "auditStatus": "TAMPER_ALERT"
+      }
+    },
+    "blockHash": "ce2f38d013afc64dd7822c3c8e72f43ba68ac4b9a143d40623543bcafe660dab",
+    "event_hash": "ce2f38d013afc64dd7822c3c8e72f43ba68ac4b9a143d40623543bcafe660dab",
+    "gitCommitHash": "d3a18a58fb1456271a390aff53c752922300c178"
+  },
+  {
+    "index": 218,
+    "blockHeight": 218,
+    "timestamp": "2026-09-23T21:35:59.333Z",
+    "action": "SYSTEM_AUDIT_EXECUTED",
+    "actorId": "USR-JUD-404",
+    "actorName": "Justice P. K. Mukherjee",
+    "caseId": "SYSTEM",
+    "docId": "SYSTEM",
+    "docHash": "AUDIT_CHECK",
+    "details": {
+      "auditStatus": "TAMPER_ALERT"
+    },
+    "previousBlockHash": "ce2f38d013afc64dd7822c3c8e72f43ba68ac4b9a143d40623543bcafe660dab",
+    "parent_hashes": [
+      "ce2f38d013afc64dd7822c3c8e72f43ba68ac4b9a143d40623543bcafe660dab"
+    ],
+    "payload": {
+      "action": "SYSTEM_AUDIT_EXECUTED",
+      "actorId": "USR-JUD-404",
+      "actorName": "Justice P. K. Mukherjee",
+      "caseId": "SYSTEM",
+      "docId": "SYSTEM",
+      "docHash": "AUDIT_CHECK",
+      "details": {
+        "auditStatus": "TAMPER_ALERT"
+      }
+    },
+    "blockHash": "6cf5962684787c1539f1e2a3de2ad9562b23b015e18f439e608cb765d536f66e",
+    "event_hash": "6cf5962684787c1539f1e2a3de2ad9562b23b015e18f439e608cb765d536f66e",
+    "gitCommitHash": "b898b79cdde95ef6b30d68e553984a4dc4b26728"
+  },
+  {
+    "index": 219,
+    "blockHeight": 219,
+    "timestamp": "2026-09-23T21:35:59.955Z",
+    "action": "SYSTEM_AUDIT_EXECUTED",
+    "actorId": "USR-JUD-404",
+    "actorName": "Justice P. K. Mukherjee",
+    "caseId": "SYSTEM",
+    "docId": "SYSTEM",
+    "docHash": "AUDIT_CHECK",
+    "details": {
+      "auditStatus": "TAMPER_ALERT"
+    },
+    "previousBlockHash": "6cf5962684787c1539f1e2a3de2ad9562b23b015e18f439e608cb765d536f66e",
+    "parent_hashes": [
+      "6cf5962684787c1539f1e2a3de2ad9562b23b015e18f439e608cb765d536f66e"
+    ],
+    "payload": {
+      "action": "SYSTEM_AUDIT_EXECUTED",
+      "actorId": "USR-JUD-404",
+      "actorName": "Justice P. K. Mukherjee",
+      "caseId": "SYSTEM",
+      "docId": "SYSTEM",
+      "docHash": "AUDIT_CHECK",
+      "details": {
+        "auditStatus": "TAMPER_ALERT"
+      }
+    },
+    "blockHash": "217e59c25edeea60b24f891061393f596a36bd730d1b41d0986b6b3c59c4f6a2",
+    "event_hash": "217e59c25edeea60b24f891061393f596a36bd730d1b41d0986b6b3c59c4f6a2",
+    "gitCommitHash": "c88e33791a804d2602c7b6bebb72dab2a53d8e05"
+  },
+  {
+    "index": 220,
+    "blockHeight": 220,
+    "timestamp": "2026-09-23T22:57:00.242Z",
+    "action": "DOCUMENT_UPLOADED",
+    "actorId": "USR-JUD-404",
+    "actorName": "Justice P. K. Mukherjee",
+    "caseId": "CASE-2026-8891",
+    "docId": "DOC-2026-8891-0216",
+    "docHash": "04873288ff62dcb094102e836b6808a8ef4ef02ec688d53601b1aeed15de24a2",
+    "details": {
+      "title": "diagram (1)",
+      "category": "FIR",
+      "clearanceLevel": 2,
+      "encryptionAlgorithm": "AES-256-GCM"
+    },
+    "previousBlockHash": "217e59c25edeea60b24f891061393f596a36bd730d1b41d0986b6b3c59c4f6a2",
+    "parent_hashes": [
+      "217e59c25edeea60b24f891061393f596a36bd730d1b41d0986b6b3c59c4f6a2"
+    ],
+    "payload": {
+      "action": "DOCUMENT_UPLOADED",
+      "actorId": "USR-JUD-404",
+      "actorName": "Justice P. K. Mukherjee",
+      "caseId": "CASE-2026-8891",
+      "docId": "DOC-2026-8891-0216",
+      "docHash": "04873288ff62dcb094102e836b6808a8ef4ef02ec688d53601b1aeed15de24a2",
+      "details": {
+        "title": "diagram (1)",
+        "category": "FIR",
+        "clearanceLevel": 2,
+        "encryptionAlgorithm": "AES-256-GCM"
+      }
+    },
+    "blockHash": "6ca3c7585d8a0a7f55f3d0bcd506d27c223d248ac314b9cedac74920edb93f38",
+    "event_hash": "6ca3c7585d8a0a7f55f3d0bcd506d27c223d248ac314b9cedac74920edb93f38",
+    "gitCommitHash": "2db0afcad19c335f3b3922bdcc71752bc8ffa11f"
+  },
+  {
+    "index": 221,
+    "blockHeight": 221,
+    "timestamp": "2026-09-23T23:22:06.285Z",
+    "action": "MFA_OTP_GENERATED",
+    "actorId": "USR-POL-101",
+    "actorName": "Inspector Vikram Sharma",
+    "caseId": "AUTH-MFA",
+    "docId": "MFA-SESSION",
+    "docHash": "0e876cb26f6c3644f86bf29d91295da8effc4a354b6f470be056b6781002aaaf",
+    "details": {
+      "ttlSeconds": 120
+    },
+    "previousBlockHash": "6ca3c7585d8a0a7f55f3d0bcd506d27c223d248ac314b9cedac74920edb93f38",
+    "parent_hashes": [
+      "6ca3c7585d8a0a7f55f3d0bcd506d27c223d248ac314b9cedac74920edb93f38"
+    ],
+    "payload": {
+      "action": "MFA_OTP_GENERATED",
+      "actorId": "USR-POL-101",
+      "actorName": "Inspector Vikram Sharma",
+      "caseId": "AUTH-MFA",
+      "docId": "MFA-SESSION",
+      "docHash": "0e876cb26f6c3644f86bf29d91295da8effc4a354b6f470be056b6781002aaaf",
+      "details": {
+        "ttlSeconds": 120
+      }
+    },
+    "blockHash": "62fc9db3f95a67f147ed76a3ad4856ec76b213e3da64e424cb848be767961ed8",
+    "event_hash": "62fc9db3f95a67f147ed76a3ad4856ec76b213e3da64e424cb848be767961ed8",
+    "gitCommitHash": "57efd503f643f264c671e932d37af59e31bed303"
+  },
+  {
+    "index": 222,
+    "blockHeight": 222,
+    "timestamp": "2026-09-23T23:22:09.957Z",
+    "action": "MFA_OTP_VERIFIED",
+    "actorId": "USR-POL-101",
+    "actorName": "Inspector Vikram Sharma",
+    "caseId": "AUTH-MFA",
+    "docId": "MFA-SUCCESS",
+    "docHash": "VERIFIED",
+    "details": {
+      "authStatus": "MFA_SUCCESS"
+    },
+    "previousBlockHash": "62fc9db3f95a67f147ed76a3ad4856ec76b213e3da64e424cb848be767961ed8",
+    "parent_hashes": [
+      "62fc9db3f95a67f147ed76a3ad4856ec76b213e3da64e424cb848be767961ed8"
+    ],
+    "payload": {
+      "action": "MFA_OTP_VERIFIED",
+      "actorId": "USR-POL-101",
+      "actorName": "Inspector Vikram Sharma",
+      "caseId": "AUTH-MFA",
+      "docId": "MFA-SUCCESS",
+      "docHash": "VERIFIED",
+      "details": {
+        "authStatus": "MFA_SUCCESS"
+      }
+    },
+    "blockHash": "7fdd83e5fe7e4082c785ed411fd0fe9743a05b331472b3b1420d614a18e3f721",
+    "event_hash": "7fdd83e5fe7e4082c785ed411fd0fe9743a05b331472b3b1420d614a18e3f721",
+    "gitCommitHash": "46e83c9c74df02be5bad84292a7438282272923c"
+  },
+  {
+    "index": 223,
+    "blockHeight": 223,
+    "timestamp": "2026-09-23T23:22:36.499Z",
+    "action": "SYSTEM_AUDIT_EXECUTED",
+    "actorId": "USR-JUD-404",
+    "actorName": "Justice P. K. Mukherjee",
+    "caseId": "SYSTEM",
+    "docId": "SYSTEM",
+    "docHash": "AUDIT_CHECK",
+    "details": {
+      "auditStatus": "TAMPER_ALERT"
+    },
+    "previousBlockHash": "7fdd83e5fe7e4082c785ed411fd0fe9743a05b331472b3b1420d614a18e3f721",
+    "parent_hashes": [
+      "7fdd83e5fe7e4082c785ed411fd0fe9743a05b331472b3b1420d614a18e3f721"
+    ],
+    "payload": {
+      "action": "SYSTEM_AUDIT_EXECUTED",
+      "actorId": "USR-JUD-404",
+      "actorName": "Justice P. K. Mukherjee",
+      "caseId": "SYSTEM",
+      "docId": "SYSTEM",
+      "docHash": "AUDIT_CHECK",
+      "details": {
+        "auditStatus": "TAMPER_ALERT"
+      }
+    },
+    "blockHash": "e311ab9fbdb603bd59e7a5a3cbbe2b84f4c002574a7f3b7fd987972cba05a9f7",
+    "event_hash": "e311ab9fbdb603bd59e7a5a3cbbe2b84f4c002574a7f3b7fd987972cba05a9f7",
+    "gitCommitHash": "0418e13c57d29525df16ce35ca8f6dd615219d0e"
+  },
+  {
+    "index": 224,
+    "blockHeight": 224,
+    "timestamp": "2026-09-23T23:22:37.077Z",
+    "action": "SYSTEM_AUDIT_EXECUTED",
+    "actorId": "USR-JUD-404",
+    "actorName": "Justice P. K. Mukherjee",
+    "caseId": "SYSTEM",
+    "docId": "SYSTEM",
+    "docHash": "AUDIT_CHECK",
+    "details": {
+      "auditStatus": "TAMPER_ALERT"
+    },
+    "previousBlockHash": "e311ab9fbdb603bd59e7a5a3cbbe2b84f4c002574a7f3b7fd987972cba05a9f7",
+    "parent_hashes": [
+      "e311ab9fbdb603bd59e7a5a3cbbe2b84f4c002574a7f3b7fd987972cba05a9f7"
+    ],
+    "payload": {
+      "action": "SYSTEM_AUDIT_EXECUTED",
+      "actorId": "USR-JUD-404",
+      "actorName": "Justice P. K. Mukherjee",
+      "caseId": "SYSTEM",
+      "docId": "SYSTEM",
+      "docHash": "AUDIT_CHECK",
+      "details": {
+        "auditStatus": "TAMPER_ALERT"
+      }
+    },
+    "blockHash": "728d805e5beaa7b407dfdb02b8548ee23b0c5be058081fcb4e483a0673cde174",
+    "event_hash": "728d805e5beaa7b407dfdb02b8548ee23b0c5be058081fcb4e483a0673cde174",
+    "gitCommitHash": "a9822883ccc9697de8923b62fd903684c2b47827"
+  },
+  {
+    "index": 225,
+    "blockHeight": 225,
+    "timestamp": "2026-09-23T23:31:39.552Z",
+    "action": "SYSTEM_AUDIT_EXECUTED",
+    "actorId": "USR-JUD-404",
+    "actorName": "Justice P. K. Mukherjee",
+    "caseId": "SYSTEM",
+    "docId": "SYSTEM",
+    "docHash": "AUDIT_CHECK",
+    "details": {
+      "auditStatus": "TAMPER_ALERT"
+    },
+    "previousBlockHash": "728d805e5beaa7b407dfdb02b8548ee23b0c5be058081fcb4e483a0673cde174",
+    "parent_hashes": [
+      "728d805e5beaa7b407dfdb02b8548ee23b0c5be058081fcb4e483a0673cde174"
+    ],
+    "payload": {
+      "action": "SYSTEM_AUDIT_EXECUTED",
+      "actorId": "USR-JUD-404",
+      "actorName": "Justice P. K. Mukherjee",
+      "caseId": "SYSTEM",
+      "docId": "SYSTEM",
+      "docHash": "AUDIT_CHECK",
+      "details": {
+        "auditStatus": "TAMPER_ALERT"
+      }
+    },
+    "blockHash": "ab4f3dbe9fab30d0f658c7000ae18e9aa42f6be30e51d68c0d97c7c0a5178e9a",
+    "event_hash": "ab4f3dbe9fab30d0f658c7000ae18e9aa42f6be30e51d68c0d97c7c0a5178e9a",
+    "gitCommitHash": "a3f7b7a2edbbe9c3a99047d452bfaa392dc08bb9"
+  },
+  {
+    "index": 226,
+    "blockHeight": 226,
+    "timestamp": "2026-09-23T23:31:40.145Z",
+    "action": "SYSTEM_AUDIT_EXECUTED",
+    "actorId": "USR-JUD-404",
+    "actorName": "Justice P. K. Mukherjee",
+    "caseId": "SYSTEM",
+    "docId": "SYSTEM",
+    "docHash": "AUDIT_CHECK",
+    "details": {
+      "auditStatus": "TAMPER_ALERT"
+    },
+    "previousBlockHash": "ab4f3dbe9fab30d0f658c7000ae18e9aa42f6be30e51d68c0d97c7c0a5178e9a",
+    "parent_hashes": [
+      "ab4f3dbe9fab30d0f658c7000ae18e9aa42f6be30e51d68c0d97c7c0a5178e9a"
+    ],
+    "payload": {
+      "action": "SYSTEM_AUDIT_EXECUTED",
+      "actorId": "USR-JUD-404",
+      "actorName": "Justice P. K. Mukherjee",
+      "caseId": "SYSTEM",
+      "docId": "SYSTEM",
+      "docHash": "AUDIT_CHECK",
+      "details": {
+        "auditStatus": "TAMPER_ALERT"
+      }
+    },
+    "blockHash": "ae86e8337e86b0345a7a4f425e30f8a47003aeb1588c4e8f35f4fd8690ac3adb",
+    "event_hash": "ae86e8337e86b0345a7a4f425e30f8a47003aeb1588c4e8f35f4fd8690ac3adb",
+    "gitCommitHash": "a56d88ab77c33af65c8cb8da60f164e1af3e0c22"
+  },
+  {
+    "index": 227,
+    "blockHeight": 227,
+    "timestamp": "2026-09-24T10:31:48.878Z",
+    "action": "DOCUMENT_UPLOADED",
+    "actorId": "USR-POL-101",
+    "actorName": "Inspector Vikram Sharma",
+    "caseId": "CASE-2026-8891",
+    "docId": "DOC-8891-001",
+    "docHash": "e0d10fd7713a0974c66f67f78bea35c60a3e967c90648cda328772f95d48adf1",
+    "details": {
+      "title": "First Information Report (FIR #00492/2026)",
+      "category": "FIR",
+      "clearanceLevel": 2,
+      "encryptionAlgorithm": "AES-256-GCM"
+    },
+    "previousBlockHash": "ae86e8337e86b0345a7a4f425e30f8a47003aeb1588c4e8f35f4fd8690ac3adb",
+    "parent_hashes": [
+      "ae86e8337e86b0345a7a4f425e30f8a47003aeb1588c4e8f35f4fd8690ac3adb"
+    ],
+    "payload": {
+      "action": "DOCUMENT_UPLOADED",
+      "actorId": "USR-POL-101",
+      "actorName": "Inspector Vikram Sharma",
+      "caseId": "CASE-2026-8891",
+      "docId": "DOC-8891-001",
+      "docHash": "e0d10fd7713a0974c66f67f78bea35c60a3e967c90648cda328772f95d48adf1",
+      "details": {
+        "title": "First Information Report (FIR #00492/2026)",
+        "category": "FIR",
+        "clearanceLevel": 2,
+        "encryptionAlgorithm": "AES-256-GCM"
+      }
+    },
+    "blockHash": "5df415e89a35fd3d82746f1fa38f5229de2aaca2741878687e7822551b94b8cf",
+    "event_hash": "5df415e89a35fd3d82746f1fa38f5229de2aaca2741878687e7822551b94b8cf",
+    "gitCommitHash": "dcb699fb31b7c1a06f0c77b94931c9f21ffc72e5"
+  },
+  {
+    "index": 228,
+    "blockHeight": 228,
+    "timestamp": "2026-09-24T10:31:49.369Z",
+    "action": "DOCUMENT_UPLOADED",
+    "actorId": "USR-FOR-202",
+    "actorName": "Dr. Sunita Rao",
+    "caseId": "CASE-2026-8891",
+    "docId": "DOC-8891-002",
+    "docHash": "f3609862d0575427a2d9c535c2a4d2ac0a496b7c995af3e0977da12e0cbe4443",
+    "details": {
+      "title": "Forensic Ballistics & DNA Fingerprint Analysis",
+      "category": "FORENSIC_REPORT",
+      "clearanceLevel": 3,
+      "encryptionAlgorithm": "AES-256-GCM"
+    },
+    "previousBlockHash": "5df415e89a35fd3d82746f1fa38f5229de2aaca2741878687e7822551b94b8cf",
+    "parent_hashes": [
+      "5df415e89a35fd3d82746f1fa38f5229de2aaca2741878687e7822551b94b8cf"
+    ],
+    "payload": {
+      "action": "DOCUMENT_UPLOADED",
+      "actorId": "USR-FOR-202",
+      "actorName": "Dr. Sunita Rao",
+      "caseId": "CASE-2026-8891",
+      "docId": "DOC-8891-002",
+      "docHash": "f3609862d0575427a2d9c535c2a4d2ac0a496b7c995af3e0977da12e0cbe4443",
+      "details": {
+        "title": "Forensic Ballistics & DNA Fingerprint Analysis",
+        "category": "FORENSIC_REPORT",
+        "clearanceLevel": 3,
+        "encryptionAlgorithm": "AES-256-GCM"
+      }
+    },
+    "blockHash": "e6c381eea99afef077bec1f293721fa7f0105243686d29d837fcb1a64d1c9424",
+    "event_hash": "e6c381eea99afef077bec1f293721fa7f0105243686d29d837fcb1a64d1c9424",
+    "gitCommitHash": "b49cce05e50d4228200e3f768a44f541f10288ed"
+  },
+  {
+    "index": 229,
+    "blockHeight": 229,
+    "timestamp": "2026-09-24T10:43:14.113Z",
+    "action": "ACCESS_REQUESTED",
+    "actorId": "USR-POL-101",
+    "actorName": "Inspector Vikram Sharma",
+    "caseId": "CASE-2026-8891",
+    "docId": "DOC-8891-002",
+    "docHash": "f3609862d0575427a2d9c535c2a4d2ac0a496b7c995af3e0977da12e0cbe4443",
+    "details": {
+      "requestId": "AR-fbeb0695-9f7b-4703-a9db-592444aa01cf",
+      "permission": "DOWNLOAD",
+      "reason": "I need this for investigation purposes"
+    },
+    "previousBlockHash": "e6c381eea99afef077bec1f293721fa7f0105243686d29d837fcb1a64d1c9424",
+    "parent_hashes": [
+      "e6c381eea99afef077bec1f293721fa7f0105243686d29d837fcb1a64d1c9424"
+    ],
+    "payload": {
+      "action": "ACCESS_REQUESTED",
+      "actorId": "USR-POL-101",
+      "actorName": "Inspector Vikram Sharma",
+      "caseId": "CASE-2026-8891",
+      "docId": "DOC-8891-002",
+      "docHash": "f3609862d0575427a2d9c535c2a4d2ac0a496b7c995af3e0977da12e0cbe4443",
+      "details": {
+        "requestId": "AR-fbeb0695-9f7b-4703-a9db-592444aa01cf",
+        "permission": "DOWNLOAD",
+        "reason": "I need this for investigation purposes"
+      }
+    },
+    "blockHash": "db3d7f3cde3ab83a7720213ffcc22af35369e9612ef2227ab522f8f012a5e5e3",
+    "event_hash": "db3d7f3cde3ab83a7720213ffcc22af35369e9612ef2227ab522f8f012a5e5e3",
+    "gitCommitHash": "5994829f822614e2d4160aae9439938786eac16d"
+  },
+  {
+    "index": 230,
+    "blockHeight": 230,
+    "timestamp": "2026-09-24T10:49:03.912Z",
+    "action": "OWNER_APPROVED",
+    "actorId": "USR-FOR-202",
+    "actorName": "Dr. Sunita Rao",
+    "caseId": "CASE-2026-8891",
+    "docId": "DOC-8891-002",
+    "docHash": "f3609862d0575427a2d9c535c2a4d2ac0a496b7c995af3e0977da12e0cbe4443",
+    "details": {
+      "requestId": "AR-fbeb0695-9f7b-4703-a9db-592444aa01cf",
+      "reason": ""
+    },
+    "previousBlockHash": "db3d7f3cde3ab83a7720213ffcc22af35369e9612ef2227ab522f8f012a5e5e3",
+    "parent_hashes": [
+      "db3d7f3cde3ab83a7720213ffcc22af35369e9612ef2227ab522f8f012a5e5e3"
+    ],
+    "payload": {
+      "action": "OWNER_APPROVED",
+      "actorId": "USR-FOR-202",
+      "actorName": "Dr. Sunita Rao",
+      "caseId": "CASE-2026-8891",
+      "docId": "DOC-8891-002",
+      "docHash": "f3609862d0575427a2d9c535c2a4d2ac0a496b7c995af3e0977da12e0cbe4443",
+      "details": {
+        "requestId": "AR-fbeb0695-9f7b-4703-a9db-592444aa01cf",
+        "reason": ""
+      }
+    },
+    "blockHash": "5b00478cfe348eea64bb6facf1e0c1043c3f7ed3d00ae8ab9d7446832fe9db8d",
+    "event_hash": "5b00478cfe348eea64bb6facf1e0c1043c3f7ed3d00ae8ab9d7446832fe9db8d",
+    "gitCommitHash": "81f621385ba3fbc3a6844ae0ba74bf00d5951e4d"
+  },
+  {
+    "index": 231,
+    "blockHeight": 231,
+    "timestamp": "2026-09-24T10:49:11.327Z",
+    "action": "SUPERVISOR_APPROVED",
+    "actorId": "USR-JUD-404",
+    "actorName": "Justice P. K. Mukherjee",
+    "caseId": "CASE-2026-8891",
+    "docId": "DOC-8891-002",
+    "docHash": "f3609862d0575427a2d9c535c2a4d2ac0a496b7c995af3e0977da12e0cbe4443",
+    "details": {
+      "requestId": "AR-fbeb0695-9f7b-4703-a9db-592444aa01cf",
+      "reason": ""
+    },
+    "previousBlockHash": "5b00478cfe348eea64bb6facf1e0c1043c3f7ed3d00ae8ab9d7446832fe9db8d",
+    "parent_hashes": [
+      "5b00478cfe348eea64bb6facf1e0c1043c3f7ed3d00ae8ab9d7446832fe9db8d"
+    ],
+    "payload": {
+      "action": "SUPERVISOR_APPROVED",
+      "actorId": "USR-JUD-404",
+      "actorName": "Justice P. K. Mukherjee",
+      "caseId": "CASE-2026-8891",
+      "docId": "DOC-8891-002",
+      "docHash": "f3609862d0575427a2d9c535c2a4d2ac0a496b7c995af3e0977da12e0cbe4443",
+      "details": {
+        "requestId": "AR-fbeb0695-9f7b-4703-a9db-592444aa01cf",
+        "reason": ""
+      }
+    },
+    "blockHash": "a9dde8a70f00adc9a37edd6b95703e91e1edcbd134d3b21fe855db2551674111",
+    "event_hash": "a9dde8a70f00adc9a37edd6b95703e91e1edcbd134d3b21fe855db2551674111",
+    "gitCommitHash": "bcfb088b2f014cdd594548db62277a6bdb974499"
+  },
+  {
+    "index": 232,
+    "blockHeight": 232,
+    "timestamp": "2026-09-24T10:49:11.737Z",
+    "action": "ACCESS_GRANTED",
+    "actorId": "USR-JUD-404",
+    "actorName": "Justice P. K. Mukherjee",
+    "caseId": "CASE-2026-8891",
+    "docId": "DOC-8891-002",
+    "docHash": "f3609862d0575427a2d9c535c2a4d2ac0a496b7c995af3e0977da12e0cbe4443",
+    "details": {
+      "requestId": "AR-fbeb0695-9f7b-4703-a9db-592444aa01cf",
+      "permission": "DOWNLOAD"
+    },
+    "previousBlockHash": "a9dde8a70f00adc9a37edd6b95703e91e1edcbd134d3b21fe855db2551674111",
+    "parent_hashes": [
+      "a9dde8a70f00adc9a37edd6b95703e91e1edcbd134d3b21fe855db2551674111"
+    ],
+    "payload": {
+      "action": "ACCESS_GRANTED",
+      "actorId": "USR-JUD-404",
+      "actorName": "Justice P. K. Mukherjee",
+      "caseId": "CASE-2026-8891",
+      "docId": "DOC-8891-002",
+      "docHash": "f3609862d0575427a2d9c535c2a4d2ac0a496b7c995af3e0977da12e0cbe4443",
+      "details": {
+        "requestId": "AR-fbeb0695-9f7b-4703-a9db-592444aa01cf",
+        "permission": "DOWNLOAD"
+      }
+    },
+    "blockHash": "573f6f21f3b39aaf8a177099af263e913442653c6e83a5690add402ec730c5bd",
+    "event_hash": "573f6f21f3b39aaf8a177099af263e913442653c6e83a5690add402ec730c5bd",
+    "gitCommitHash": "a841c838b4f365b2f8aa1e04b096e6731ce10131"
+  },
+  {
+    "index": 233,
+    "blockHeight": 233,
+    "timestamp": "2026-09-24T11:04:43.770Z",
+    "action": "DOCUMENT_DOWNLOADED",
+    "actorId": "USR-POL-101",
+    "actorName": "Inspector Vikram Sharma",
+    "caseId": "CASE-2026-8891",
+    "docId": "DOC-8891-002",
+    "docHash": "f3609862d0575427a2d9c535c2a4d2ac0a496b7c995af3e0977da12e0cbe4443",
+    "details": {
+      "downloaderRole": "POLICE_INVESTIGATOR"
+    },
+    "previousBlockHash": "573f6f21f3b39aaf8a177099af263e913442653c6e83a5690add402ec730c5bd",
+    "parent_hashes": [
+      "573f6f21f3b39aaf8a177099af263e913442653c6e83a5690add402ec730c5bd"
+    ],
+    "payload": {
+      "action": "DOCUMENT_DOWNLOADED",
+      "actorId": "USR-POL-101",
+      "actorName": "Inspector Vikram Sharma",
+      "caseId": "CASE-2026-8891",
+      "docId": "DOC-8891-002",
+      "docHash": "f3609862d0575427a2d9c535c2a4d2ac0a496b7c995af3e0977da12e0cbe4443",
+      "details": {
+        "downloaderRole": "POLICE_INVESTIGATOR"
+      }
+    },
+    "blockHash": "5296527cde85b6691ef7e2dacd1fbcd744b73958ca7e4f8bab94b38b9fd26a80",
+    "event_hash": "5296527cde85b6691ef7e2dacd1fbcd744b73958ca7e4f8bab94b38b9fd26a80",
+    "gitCommitHash": "d6ef8e7f888621cf69d03d9138227dc7011c175f"
+  },
+  {
+    "index": 234,
+    "blockHeight": 234,
+    "timestamp": "2026-09-24T11:07:20.820Z",
+    "action": "DOCUMENT_UPLOADED",
+    "actorId": "USR-FOR-202",
+    "actorName": "Dr. Sunita Rao",
+    "caseId": "CASE-2026-8891",
+    "docId": "DOC-ACCESS-TEST-101",
+    "docHash": "0bad673d3f8281a73a1f09338cc180a4b2f046cd66f6bdd086255ef89333d709",
+    "details": {
+      "title": "Access Test File A - Device Hash Notes",
+      "category": "FORENSIC_NOTES",
+      "clearanceLevel": 3,
+      "encryptionAlgorithm": "AES-256-GCM"
+    },
+    "previousBlockHash": "5296527cde85b6691ef7e2dacd1fbcd744b73958ca7e4f8bab94b38b9fd26a80",
+    "parent_hashes": [
+      "5296527cde85b6691ef7e2dacd1fbcd744b73958ca7e4f8bab94b38b9fd26a80"
+    ],
+    "payload": {
+      "action": "DOCUMENT_UPLOADED",
+      "actorId": "USR-FOR-202",
+      "actorName": "Dr. Sunita Rao",
+      "caseId": "CASE-2026-8891",
+      "docId": "DOC-ACCESS-TEST-101",
+      "docHash": "0bad673d3f8281a73a1f09338cc180a4b2f046cd66f6bdd086255ef89333d709",
+      "details": {
+        "title": "Access Test File A - Device Hash Notes",
+        "category": "FORENSIC_NOTES",
+        "clearanceLevel": 3,
+        "encryptionAlgorithm": "AES-256-GCM"
+      }
+    },
+    "blockHash": "75ea59d3f2d146acebb25e32b7a34eba979407da9512d51d56144168abd0ae36",
+    "event_hash": "75ea59d3f2d146acebb25e32b7a34eba979407da9512d51d56144168abd0ae36",
+    "gitCommitHash": "GIT_COMMIT_SIMULATED_1790248041106"
+  },
+  {
+    "index": 235,
+    "blockHeight": 235,
+    "timestamp": "2026-09-24T11:07:21.114Z",
+    "action": "DOCUMENT_UPLOADED",
+    "actorId": "USR-FOR-202",
+    "actorName": "Dr. Sunita Rao",
+    "caseId": "CASE-2026-8891",
+    "docId": "DOC-ACCESS-TEST-102",
+    "docHash": "2e7b69e65ee93a6939ab21d86fae1b748b4beb82d69589431b5c2430daf1c4af",
+    "details": {
+      "title": "Access Test File B - Evidence Timeline Worksheet",
+      "category": "FORENSIC_NOTES",
+      "clearanceLevel": 3,
+      "encryptionAlgorithm": "AES-256-GCM"
+    },
+    "previousBlockHash": "75ea59d3f2d146acebb25e32b7a34eba979407da9512d51d56144168abd0ae36",
+    "parent_hashes": [
+      "75ea59d3f2d146acebb25e32b7a34eba979407da9512d51d56144168abd0ae36"
+    ],
+    "payload": {
+      "action": "DOCUMENT_UPLOADED",
+      "actorId": "USR-FOR-202",
+      "actorName": "Dr. Sunita Rao",
+      "caseId": "CASE-2026-8891",
+      "docId": "DOC-ACCESS-TEST-102",
+      "docHash": "2e7b69e65ee93a6939ab21d86fae1b748b4beb82d69589431b5c2430daf1c4af",
+      "details": {
+        "title": "Access Test File B - Evidence Timeline Worksheet",
+        "category": "FORENSIC_NOTES",
+        "clearanceLevel": 3,
+        "encryptionAlgorithm": "AES-256-GCM"
+      }
+    },
+    "blockHash": "486a08ee4d89bba74d518612933aeef7a87cfd63f6389fed6e2bf0d5347b632a",
+    "event_hash": "486a08ee4d89bba74d518612933aeef7a87cfd63f6389fed6e2bf0d5347b632a",
+    "gitCommitHash": "3cf60edcef61b90859a61947125e5604f49c3e98"
+  },
+  {
+    "index": 236,
+    "blockHeight": 236,
+    "timestamp": "2026-09-24T11:07:21.501Z",
+    "action": "DOCUMENT_UPLOADED",
+    "actorId": "USR-FOR-202",
+    "actorName": "Dr. Sunita Rao",
+    "caseId": "CASE-2026-8891",
+    "docId": "DOC-ACCESS-TEST-103",
+    "docHash": "3293ef7430b527035198beed8d37f5354d6f58365eaeda05a4cdb19d2d108287",
+    "details": {
+      "title": "Access Test File C - Evidence Comparison Sheet",
+      "category": "FORENSIC_NOTES",
+      "clearanceLevel": 3,
+      "encryptionAlgorithm": "AES-256-GCM"
+    },
+    "previousBlockHash": "486a08ee4d89bba74d518612933aeef7a87cfd63f6389fed6e2bf0d5347b632a",
+    "parent_hashes": [
+      "486a08ee4d89bba74d518612933aeef7a87cfd63f6389fed6e2bf0d5347b632a"
+    ],
+    "payload": {
+      "action": "DOCUMENT_UPLOADED",
+      "actorId": "USR-FOR-202",
+      "actorName": "Dr. Sunita Rao",
+      "caseId": "CASE-2026-8891",
+      "docId": "DOC-ACCESS-TEST-103",
+      "docHash": "3293ef7430b527035198beed8d37f5354d6f58365eaeda05a4cdb19d2d108287",
+      "details": {
+        "title": "Access Test File C - Evidence Comparison Sheet",
+        "category": "FORENSIC_NOTES",
+        "clearanceLevel": 3,
+        "encryptionAlgorithm": "AES-256-GCM"
+      }
+    },
+    "blockHash": "1b34a7285cfbe74ac977341eac0ce9b2508f543f7357a6400f1d6d2d5724188a",
+    "event_hash": "1b34a7285cfbe74ac977341eac0ce9b2508f543f7357a6400f1d6d2d5724188a",
+    "gitCommitHash": "be524fe2188be2181ce999cea831e40a33108e38"
+  },
+  {
+    "index": 237,
+    "blockHeight": 237,
+    "timestamp": "2026-09-24T11:10:42.428Z",
+    "action": "ACCESS_REQUESTED",
+    "actorId": "USR-POL-101",
+    "actorName": "Inspector Vikram Sharma",
+    "caseId": "CASE-2026-8891",
+    "docId": "DOC-ACCESS-TEST-101",
+    "docHash": "0bad673d3f8281a73a1f09338cc180a4b2f046cd66f6bdd086255ef89333d709",
+    "details": {
+      "requestId": "AR-fea00146-854a-4e2c-9775-a768661c2711",
+      "permission": "DOWNLOAD",
+      "reason": "investigation"
+    },
+    "previousBlockHash": "1b34a7285cfbe74ac977341eac0ce9b2508f543f7357a6400f1d6d2d5724188a",
+    "parent_hashes": [
+      "1b34a7285cfbe74ac977341eac0ce9b2508f543f7357a6400f1d6d2d5724188a"
+    ],
+    "payload": {
+      "action": "ACCESS_REQUESTED",
+      "actorId": "USR-POL-101",
+      "actorName": "Inspector Vikram Sharma",
+      "caseId": "CASE-2026-8891",
+      "docId": "DOC-ACCESS-TEST-101",
+      "docHash": "0bad673d3f8281a73a1f09338cc180a4b2f046cd66f6bdd086255ef89333d709",
+      "details": {
+        "requestId": "AR-fea00146-854a-4e2c-9775-a768661c2711",
+        "permission": "DOWNLOAD",
+        "reason": "investigation"
+      }
+    },
+    "blockHash": "fd68a9b48f67938eee65ca6afac3be135af35b67148b40e239ac272890e3f731",
+    "event_hash": "fd68a9b48f67938eee65ca6afac3be135af35b67148b40e239ac272890e3f731",
+    "gitCommitHash": "5193773e29f3dcfe3eac7ce26b43de93dd2ffd7c"
+  },
+  {
+    "index": 238,
+    "blockHeight": 238,
+    "timestamp": "2026-09-24T11:11:04.947Z",
+    "action": "OWNER_APPROVED",
+    "actorId": "USR-FOR-202",
+    "actorName": "Dr. Sunita Rao",
+    "caseId": "CASE-2026-8891",
+    "docId": "DOC-ACCESS-TEST-101",
+    "docHash": "0bad673d3f8281a73a1f09338cc180a4b2f046cd66f6bdd086255ef89333d709",
+    "details": {
+      "requestId": "AR-fea00146-854a-4e2c-9775-a768661c2711",
+      "reason": ""
+    },
+    "previousBlockHash": "fd68a9b48f67938eee65ca6afac3be135af35b67148b40e239ac272890e3f731",
+    "parent_hashes": [
+      "fd68a9b48f67938eee65ca6afac3be135af35b67148b40e239ac272890e3f731"
+    ],
+    "payload": {
+      "action": "OWNER_APPROVED",
+      "actorId": "USR-FOR-202",
+      "actorName": "Dr. Sunita Rao",
+      "caseId": "CASE-2026-8891",
+      "docId": "DOC-ACCESS-TEST-101",
+      "docHash": "0bad673d3f8281a73a1f09338cc180a4b2f046cd66f6bdd086255ef89333d709",
+      "details": {
+        "requestId": "AR-fea00146-854a-4e2c-9775-a768661c2711",
+        "reason": ""
+      }
+    },
+    "blockHash": "95d4e521f2ba1fec8f4a009a41d26921f7a1b165f298809b1b13851911be1e81",
+    "event_hash": "95d4e521f2ba1fec8f4a009a41d26921f7a1b165f298809b1b13851911be1e81",
+    "gitCommitHash": "32abaa8d9501d4a04ed6ea137404efec627102c9"
+  },
+  {
+    "index": 239,
+    "blockHeight": 239,
+    "timestamp": "2026-09-24T11:12:26.997Z",
+    "action": "SUPERVISOR_APPROVED",
+    "actorId": "USR-JUD-404",
+    "actorName": "Justice P. K. Mukherjee",
+    "caseId": "CASE-2026-8891",
+    "docId": "DOC-ACCESS-TEST-101",
+    "docHash": "0bad673d3f8281a73a1f09338cc180a4b2f046cd66f6bdd086255ef89333d709",
+    "details": {
+      "requestId": "AR-fea00146-854a-4e2c-9775-a768661c2711",
+      "reason": ""
+    },
+    "previousBlockHash": "95d4e521f2ba1fec8f4a009a41d26921f7a1b165f298809b1b13851911be1e81",
+    "parent_hashes": [
+      "95d4e521f2ba1fec8f4a009a41d26921f7a1b165f298809b1b13851911be1e81"
+    ],
+    "payload": {
+      "action": "SUPERVISOR_APPROVED",
+      "actorId": "USR-JUD-404",
+      "actorName": "Justice P. K. Mukherjee",
+      "caseId": "CASE-2026-8891",
+      "docId": "DOC-ACCESS-TEST-101",
+      "docHash": "0bad673d3f8281a73a1f09338cc180a4b2f046cd66f6bdd086255ef89333d709",
+      "details": {
+        "requestId": "AR-fea00146-854a-4e2c-9775-a768661c2711",
+        "reason": ""
+      }
+    },
+    "blockHash": "c5f46d6b50d0ba987f27bc157fc5943b07e78abe1cf7a648d87f4aae76e99c9c",
+    "event_hash": "c5f46d6b50d0ba987f27bc157fc5943b07e78abe1cf7a648d87f4aae76e99c9c",
+    "gitCommitHash": "ffbfae638c88049ef687bde0dd84e822f75ee807"
+  },
+  {
+    "index": 240,
+    "blockHeight": 240,
+    "timestamp": "2026-09-24T11:12:27.478Z",
+    "action": "ACCESS_GRANTED",
+    "actorId": "USR-JUD-404",
+    "actorName": "Justice P. K. Mukherjee",
+    "caseId": "CASE-2026-8891",
+    "docId": "DOC-ACCESS-TEST-101",
+    "docHash": "0bad673d3f8281a73a1f09338cc180a4b2f046cd66f6bdd086255ef89333d709",
+    "details": {
+      "requestId": "AR-fea00146-854a-4e2c-9775-a768661c2711",
+      "permission": "DOWNLOAD"
+    },
+    "previousBlockHash": "c5f46d6b50d0ba987f27bc157fc5943b07e78abe1cf7a648d87f4aae76e99c9c",
+    "parent_hashes": [
+      "c5f46d6b50d0ba987f27bc157fc5943b07e78abe1cf7a648d87f4aae76e99c9c"
+    ],
+    "payload": {
+      "action": "ACCESS_GRANTED",
+      "actorId": "USR-JUD-404",
+      "actorName": "Justice P. K. Mukherjee",
+      "caseId": "CASE-2026-8891",
+      "docId": "DOC-ACCESS-TEST-101",
+      "docHash": "0bad673d3f8281a73a1f09338cc180a4b2f046cd66f6bdd086255ef89333d709",
+      "details": {
+        "requestId": "AR-fea00146-854a-4e2c-9775-a768661c2711",
+        "permission": "DOWNLOAD"
+      }
+    },
+    "blockHash": "8112e049e7a54920a6d21b92dee953cbb48ab8097d9df72f3ca345f588d2e244",
+    "event_hash": "8112e049e7a54920a6d21b92dee953cbb48ab8097d9df72f3ca345f588d2e244",
+    "gitCommitHash": "fb1bdded91cf4af7ffb8dce2cb8e59909db04688"
+  },
+  {
+    "index": 241,
+    "blockHeight": 241,
+    "timestamp": "2026-09-24T11:12:49.855Z",
+    "action": "DOCUMENT_DOWNLOADED",
+    "actorId": "USR-POL-101",
+    "actorName": "Inspector Vikram Sharma",
+    "caseId": "CASE-2026-8891",
+    "docId": "DOC-ACCESS-TEST-101",
+    "docHash": "0bad673d3f8281a73a1f09338cc180a4b2f046cd66f6bdd086255ef89333d709",
+    "details": {
+      "downloaderRole": "POLICE_INVESTIGATOR"
+    },
+    "previousBlockHash": "8112e049e7a54920a6d21b92dee953cbb48ab8097d9df72f3ca345f588d2e244",
+    "parent_hashes": [
+      "8112e049e7a54920a6d21b92dee953cbb48ab8097d9df72f3ca345f588d2e244"
+    ],
+    "payload": {
+      "action": "DOCUMENT_DOWNLOADED",
+      "actorId": "USR-POL-101",
+      "actorName": "Inspector Vikram Sharma",
+      "caseId": "CASE-2026-8891",
+      "docId": "DOC-ACCESS-TEST-101",
+      "docHash": "0bad673d3f8281a73a1f09338cc180a4b2f046cd66f6bdd086255ef89333d709",
+      "details": {
+        "downloaderRole": "POLICE_INVESTIGATOR"
+      }
+    },
+    "blockHash": "e6791cc2bd4584323ea43ab7ae951d1ac1254e2a096479a45db68da9545fd198",
+    "event_hash": "e6791cc2bd4584323ea43ab7ae951d1ac1254e2a096479a45db68da9545fd198",
+    "gitCommitHash": "753fcb9f7c7e905ae2f1e67e332b79e3c385892f"
+  },
+  {
+    "index": 242,
+    "blockHeight": 242,
+    "timestamp": "2026-09-24T11:12:58.332Z",
+    "action": "DOCUMENT_DOWNLOADED",
+    "actorId": "USR-POL-101",
+    "actorName": "Inspector Vikram Sharma",
+    "caseId": "CASE-2026-8891",
+    "docId": "DOC-8891-002",
+    "docHash": "f3609862d0575427a2d9c535c2a4d2ac0a496b7c995af3e0977da12e0cbe4443",
+    "details": {
+      "downloaderRole": "POLICE_INVESTIGATOR"
+    },
+    "previousBlockHash": "e6791cc2bd4584323ea43ab7ae951d1ac1254e2a096479a45db68da9545fd198",
+    "parent_hashes": [
+      "e6791cc2bd4584323ea43ab7ae951d1ac1254e2a096479a45db68da9545fd198"
+    ],
+    "payload": {
+      "action": "DOCUMENT_DOWNLOADED",
+      "actorId": "USR-POL-101",
+      "actorName": "Inspector Vikram Sharma",
+      "caseId": "CASE-2026-8891",
+      "docId": "DOC-8891-002",
+      "docHash": "f3609862d0575427a2d9c535c2a4d2ac0a496b7c995af3e0977da12e0cbe4443",
+      "details": {
+        "downloaderRole": "POLICE_INVESTIGATOR"
+      }
+    },
+    "blockHash": "6e75850a446657eec3d6b81cfb7ebe2da0ba0561054c8cea69de52aaa3a12b43",
+    "event_hash": "6e75850a446657eec3d6b81cfb7ebe2da0ba0561054c8cea69de52aaa3a12b43",
+    "gitCommitHash": "bb98e408036c2308e8f4e513e0ea664954207cdc"
+  },
+  {
+    "index": 243,
+    "blockHeight": 243,
+    "timestamp": "2026-09-24T11:13:41.036Z",
+    "action": "ACCESS_REQUESTED",
+    "actorId": "USR-POL-101",
+    "actorName": "Inspector Vikram Sharma",
+    "caseId": "CASE-2026-8891",
+    "docId": "DOC-ACCESS-TEST-102",
+    "docHash": "2e7b69e65ee93a6939ab21d86fae1b748b4beb82d69589431b5c2430daf1c4af",
+    "details": {
+      "requestId": "AR-7f4d1099-5cbb-47a8-9b9d-57d0294bfe4c",
+      "permission": "VIEW",
+      "reason": "investigation purposes"
+    },
+    "previousBlockHash": "6e75850a446657eec3d6b81cfb7ebe2da0ba0561054c8cea69de52aaa3a12b43",
+    "parent_hashes": [
+      "6e75850a446657eec3d6b81cfb7ebe2da0ba0561054c8cea69de52aaa3a12b43"
+    ],
+    "payload": {
+      "action": "ACCESS_REQUESTED",
+      "actorId": "USR-POL-101",
+      "actorName": "Inspector Vikram Sharma",
+      "caseId": "CASE-2026-8891",
+      "docId": "DOC-ACCESS-TEST-102",
+      "docHash": "2e7b69e65ee93a6939ab21d86fae1b748b4beb82d69589431b5c2430daf1c4af",
+      "details": {
+        "requestId": "AR-7f4d1099-5cbb-47a8-9b9d-57d0294bfe4c",
+        "permission": "VIEW",
+        "reason": "investigation purposes"
+      }
+    },
+    "blockHash": "a8d7a188ffee5d6a994d4186ff363bb0a4eed2322455da8a740a2615a958f5c1",
+    "event_hash": "a8d7a188ffee5d6a994d4186ff363bb0a4eed2322455da8a740a2615a958f5c1",
+    "gitCommitHash": "1941070fb40b7b7341029ffe2a2274c98eb0f3bb"
+  },
+  {
+    "index": 244,
+    "blockHeight": 244,
+    "timestamp": "2026-09-24T11:14:56.258Z",
+    "action": "OWNER_APPROVED",
+    "actorId": "USR-FOR-202",
+    "actorName": "Dr. Sunita Rao",
+    "caseId": "CASE-2026-8891",
+    "docId": "DOC-ACCESS-TEST-102",
+    "docHash": "2e7b69e65ee93a6939ab21d86fae1b748b4beb82d69589431b5c2430daf1c4af",
+    "details": {
+      "requestId": "AR-7f4d1099-5cbb-47a8-9b9d-57d0294bfe4c",
+      "reason": ""
+    },
+    "previousBlockHash": "a8d7a188ffee5d6a994d4186ff363bb0a4eed2322455da8a740a2615a958f5c1",
+    "parent_hashes": [
+      "a8d7a188ffee5d6a994d4186ff363bb0a4eed2322455da8a740a2615a958f5c1"
+    ],
+    "payload": {
+      "action": "OWNER_APPROVED",
+      "actorId": "USR-FOR-202",
+      "actorName": "Dr. Sunita Rao",
+      "caseId": "CASE-2026-8891",
+      "docId": "DOC-ACCESS-TEST-102",
+      "docHash": "2e7b69e65ee93a6939ab21d86fae1b748b4beb82d69589431b5c2430daf1c4af",
+      "details": {
+        "requestId": "AR-7f4d1099-5cbb-47a8-9b9d-57d0294bfe4c",
+        "reason": ""
+      }
+    },
+    "blockHash": "8c0ae2e86395fe664a022bfeefe8d8cbd080301c45fbbdbfeb8493b6d6866a98",
+    "event_hash": "8c0ae2e86395fe664a022bfeefe8d8cbd080301c45fbbdbfeb8493b6d6866a98",
+    "gitCommitHash": "e5875c165c478fe196f9cb119af7d9a6a0d12ee2"
+  },
+  {
+    "index": 245,
+    "blockHeight": 245,
+    "timestamp": "2026-09-24T11:15:09.475Z",
+    "action": "SUPERVISOR_APPROVED",
+    "actorId": "USR-JUD-404",
+    "actorName": "Justice P. K. Mukherjee",
+    "caseId": "CASE-2026-8891",
+    "docId": "DOC-ACCESS-TEST-102",
+    "docHash": "2e7b69e65ee93a6939ab21d86fae1b748b4beb82d69589431b5c2430daf1c4af",
+    "details": {
+      "requestId": "AR-7f4d1099-5cbb-47a8-9b9d-57d0294bfe4c",
+      "reason": ""
+    },
+    "previousBlockHash": "8c0ae2e86395fe664a022bfeefe8d8cbd080301c45fbbdbfeb8493b6d6866a98",
+    "parent_hashes": [
+      "8c0ae2e86395fe664a022bfeefe8d8cbd080301c45fbbdbfeb8493b6d6866a98"
+    ],
+    "payload": {
+      "action": "SUPERVISOR_APPROVED",
+      "actorId": "USR-JUD-404",
+      "actorName": "Justice P. K. Mukherjee",
+      "caseId": "CASE-2026-8891",
+      "docId": "DOC-ACCESS-TEST-102",
+      "docHash": "2e7b69e65ee93a6939ab21d86fae1b748b4beb82d69589431b5c2430daf1c4af",
+      "details": {
+        "requestId": "AR-7f4d1099-5cbb-47a8-9b9d-57d0294bfe4c",
+        "reason": ""
+      }
+    },
+    "blockHash": "980cd1cf55f92c38781b66a7569fa3fd884686fb5ece5d6b9ec03967e4e4dfe5",
+    "event_hash": "980cd1cf55f92c38781b66a7569fa3fd884686fb5ece5d6b9ec03967e4e4dfe5",
+    "gitCommitHash": "23d57764b53f24957fea37ef13908b3f437ea74b"
+  },
+  {
+    "index": 246,
+    "blockHeight": 246,
+    "timestamp": "2026-09-24T11:15:09.911Z",
+    "action": "ACCESS_GRANTED",
+    "actorId": "USR-JUD-404",
+    "actorName": "Justice P. K. Mukherjee",
+    "caseId": "CASE-2026-8891",
+    "docId": "DOC-ACCESS-TEST-102",
+    "docHash": "2e7b69e65ee93a6939ab21d86fae1b748b4beb82d69589431b5c2430daf1c4af",
+    "details": {
+      "requestId": "AR-7f4d1099-5cbb-47a8-9b9d-57d0294bfe4c",
+      "permission": "VIEW"
+    },
+    "previousBlockHash": "980cd1cf55f92c38781b66a7569fa3fd884686fb5ece5d6b9ec03967e4e4dfe5",
+    "parent_hashes": [
+      "980cd1cf55f92c38781b66a7569fa3fd884686fb5ece5d6b9ec03967e4e4dfe5"
+    ],
+    "payload": {
+      "action": "ACCESS_GRANTED",
+      "actorId": "USR-JUD-404",
+      "actorName": "Justice P. K. Mukherjee",
+      "caseId": "CASE-2026-8891",
+      "docId": "DOC-ACCESS-TEST-102",
+      "docHash": "2e7b69e65ee93a6939ab21d86fae1b748b4beb82d69589431b5c2430daf1c4af",
+      "details": {
+        "requestId": "AR-7f4d1099-5cbb-47a8-9b9d-57d0294bfe4c",
+        "permission": "VIEW"
+      }
+    },
+    "blockHash": "72292d29982fb5f6c86d80c37114328565794d6876b4affe169c9880bf4b9e44",
+    "event_hash": "72292d29982fb5f6c86d80c37114328565794d6876b4affe169c9880bf4b9e44",
+    "gitCommitHash": "a16e5693cd8592aea1aea471aeb47ab3f0e62fb7"
+  },
+  {
+    "index": 247,
+    "blockHeight": 247,
+    "timestamp": "2026-09-24T11:15:31.441Z",
+    "action": "DOCUMENT_VIEWED",
+    "actorId": "USR-POL-101",
+    "actorName": "Inspector Vikram Sharma",
+    "caseId": "CASE-2026-8891",
+    "docId": "DOC-ACCESS-TEST-102",
+    "docHash": "2e7b69e65ee93a6939ab21d86fae1b748b4beb82d69589431b5c2430daf1c4af",
+    "details": {
+      "viewerRole": "POLICE_INVESTIGATOR",
+      "viewerDept": "LEO",
+      "breakGlass": false
+    },
+    "previousBlockHash": "72292d29982fb5f6c86d80c37114328565794d6876b4affe169c9880bf4b9e44",
+    "parent_hashes": [
+      "72292d29982fb5f6c86d80c37114328565794d6876b4affe169c9880bf4b9e44"
+    ],
+    "payload": {
+      "action": "DOCUMENT_VIEWED",
+      "actorId": "USR-POL-101",
+      "actorName": "Inspector Vikram Sharma",
+      "caseId": "CASE-2026-8891",
+      "docId": "DOC-ACCESS-TEST-102",
+      "docHash": "2e7b69e65ee93a6939ab21d86fae1b748b4beb82d69589431b5c2430daf1c4af",
+      "details": {
+        "viewerRole": "POLICE_INVESTIGATOR",
+        "viewerDept": "LEO",
+        "breakGlass": false
+      }
+    },
+    "blockHash": "587f847b8d7460314b0a957fb78530a940d3159ea40b1f9a5f8f44a29b31fae2",
+    "event_hash": "587f847b8d7460314b0a957fb78530a940d3159ea40b1f9a5f8f44a29b31fae2",
+    "gitCommitHash": "3c95e3688fa9c39e496db9e5cfd611300b9e9e46"
+  },
+  {
+    "index": 248,
+    "blockHeight": 248,
+    "timestamp": "2026-09-24T11:15:31.912Z",
+    "action": "DOCUMENT_VIEWED",
+    "actorId": "USR-POL-101",
+    "actorName": "Inspector Vikram Sharma",
+    "caseId": "CASE-2026-8891",
+    "docId": "DOC-ACCESS-TEST-102",
+    "docHash": "2e7b69e65ee93a6939ab21d86fae1b748b4beb82d69589431b5c2430daf1c4af",
+    "details": {
+      "viewerRole": "POLICE_INVESTIGATOR",
+      "viewerDept": "LEO",
+      "breakGlass": false
+    },
+    "previousBlockHash": "587f847b8d7460314b0a957fb78530a940d3159ea40b1f9a5f8f44a29b31fae2",
+    "parent_hashes": [
+      "587f847b8d7460314b0a957fb78530a940d3159ea40b1f9a5f8f44a29b31fae2"
+    ],
+    "payload": {
+      "action": "DOCUMENT_VIEWED",
+      "actorId": "USR-POL-101",
+      "actorName": "Inspector Vikram Sharma",
+      "caseId": "CASE-2026-8891",
+      "docId": "DOC-ACCESS-TEST-102",
+      "docHash": "2e7b69e65ee93a6939ab21d86fae1b748b4beb82d69589431b5c2430daf1c4af",
+      "details": {
+        "viewerRole": "POLICE_INVESTIGATOR",
+        "viewerDept": "LEO",
+        "breakGlass": false
+      }
+    },
+    "blockHash": "c5ae175a7fe5e9b7c23fdb9f756bb8c6812c91786d5663218d3c68649e2756c0",
+    "event_hash": "c5ae175a7fe5e9b7c23fdb9f756bb8c6812c91786d5663218d3c68649e2756c0",
+    "gitCommitHash": "47bc7c3f6af35521c8d6c7f1203ff40d8beada75"
+  },
+  {
+    "index": 249,
+    "blockHeight": 249,
+    "timestamp": "2026-09-24T12:59:54.832Z",
+    "action": "EVIDENCE_TAMPER_DETECTED",
+    "actorId": "USR-POL-102",
+    "actorName": "Inspector Bhir Rao",
+    "caseId": "CASE-2026-8891",
+    "docId": "DOC-8891-003",
+    "docHash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+    "details": {
+      "targetDoc": "Eyewitness Sworn Statement - Security Guard",
+      "method": "Unauthorized evidence change attempt blocked before vault write",
+      "accountFrozen": true,
+      "evidenceLockedUntil": "2026-09-24T13:14:54.813Z"
+    },
+    "previousBlockHash": "c5ae175a7fe5e9b7c23fdb9f756bb8c6812c91786d5663218d3c68649e2756c0",
+    "parent_hashes": [
+      "c5ae175a7fe5e9b7c23fdb9f756bb8c6812c91786d5663218d3c68649e2756c0"
+    ],
+    "payload": {
+      "action": "EVIDENCE_TAMPER_DETECTED",
+      "actorId": "USR-POL-102",
+      "actorName": "Inspector Bhir Rao",
+      "caseId": "CASE-2026-8891",
+      "docId": "DOC-8891-003",
+      "docHash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+      "details": {
+        "targetDoc": "Eyewitness Sworn Statement - Security Guard",
+        "method": "Unauthorized evidence change attempt blocked before vault write",
+        "accountFrozen": true,
+        "evidenceLockedUntil": "2026-09-24T13:14:54.813Z"
+      }
+    },
+    "blockHash": "b0ccf75462b85548b0fabac10106dd1ec2da9e687bdd206a839851242de91a5c",
+    "event_hash": "b0ccf75462b85548b0fabac10106dd1ec2da9e687bdd206a839851242de91a5c",
+    "gitCommitHash": "5ae3fe4215c28e1e58342702159f135c0ebdb004"
+  },
+  {
+    "index": 250,
+    "blockHeight": 250,
+    "timestamp": "2026-09-24T13:29:02.128Z",
+    "action": "EVIDENCE_TAMPER_DETECTED",
+    "actorId": "USR-POL-102",
+    "actorName": "Inspector Bhir Rao",
+    "caseId": "CASE-2026-8891",
+    "docId": "DOC-8891-003",
+    "docHash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+    "details": {
+      "targetDoc": "Eyewitness Sworn Statement - Security Guard",
+      "method": "Unauthorized evidence change attempt blocked before vault write",
+      "accountFrozen": true,
+      "evidenceLockedUntil": "2026-09-24T13:44:02.065Z"
+    },
+    "previousBlockHash": "b0ccf75462b85548b0fabac10106dd1ec2da9e687bdd206a839851242de91a5c",
+    "parent_hashes": [
+      "b0ccf75462b85548b0fabac10106dd1ec2da9e687bdd206a839851242de91a5c"
+    ],
+    "payload": {
+      "action": "EVIDENCE_TAMPER_DETECTED",
+      "actorId": "USR-POL-102",
+      "actorName": "Inspector Bhir Rao",
+      "caseId": "CASE-2026-8891",
+      "docId": "DOC-8891-003",
+      "docHash": "63820f5f8a4d414c685d8b1313f53ed6ceb04a62cb5ac17c16aceb07017d75b5",
+      "details": {
+        "targetDoc": "Eyewitness Sworn Statement - Security Guard",
+        "method": "Unauthorized evidence change attempt blocked before vault write",
+        "accountFrozen": true,
+        "evidenceLockedUntil": "2026-09-24T13:44:02.065Z"
+      }
+    },
+    "blockHash": "6c353143f9bafe659834aff21a6a56fe456df72e66bb31cdfbe8e648cb95cdea",
+    "event_hash": "6c353143f9bafe659834aff21a6a56fe456df72e66bb31cdfbe8e648cb95cdea",
+    "gitCommitHash": "1dba56a6348d0ab6329803dc21043782fdd6ac13"
+  },
+  {
+    "index": 251,
+    "blockHeight": 251,
+    "timestamp": "2026-09-24T14:24:42.053Z",
+    "action": "EVIDENCE_TAMPER_DETECTED",
+    "actorId": "USR-POL-102",
+    "actorName": "Inspector Bhir Rao",
+    "caseId": "CASE-2026-8891",
+    "docId": "DOC-2026-8891-5771",
+    "docHash": "2574b1ea109f8c2851f41ed115a683de21ca5d1c2b557b143cd1dda36cca9c17",
+    "details": {
+      "targetDoc": "dsfdsfds",
+      "method": "Unauthorized evidence change attempt blocked before vault write",
+      "accountFrozen": true,
+      "evidenceLockedUntil": "2026-09-24T14:39:41.974Z"
+    },
+    "previousBlockHash": "6c353143f9bafe659834aff21a6a56fe456df72e66bb31cdfbe8e648cb95cdea",
+    "parent_hashes": [
+      "6c353143f9bafe659834aff21a6a56fe456df72e66bb31cdfbe8e648cb95cdea"
+    ],
+    "payload": {
+      "action": "EVIDENCE_TAMPER_DETECTED",
+      "actorId": "USR-POL-102",
+      "actorName": "Inspector Bhir Rao",
+      "caseId": "CASE-2026-8891",
+      "docId": "DOC-2026-8891-5771",
+      "docHash": "2574b1ea109f8c2851f41ed115a683de21ca5d1c2b557b143cd1dda36cca9c17",
+      "details": {
+        "targetDoc": "dsfdsfds",
+        "method": "Unauthorized evidence change attempt blocked before vault write",
+        "accountFrozen": true,
+        "evidenceLockedUntil": "2026-09-24T14:39:41.974Z"
+      }
+    },
+    "blockHash": "3eada10f48d3a0bbfc0fb155b16b4cd0928414a52bd803cd762af02936da1718",
+    "event_hash": "3eada10f48d3a0bbfc0fb155b16b4cd0928414a52bd803cd762af02936da1718",
+    "gitCommitHash": "0ee6dc7523755f1069c8416c727979ab38427a9a"
+  },
+  {
+    "index": 252,
+    "blockHeight": 252,
+    "timestamp": "2026-09-24T14:46:21.029Z",
+    "action": "IT_ADMIN_TAMPER_ALERT_ACKNOWLEDGED",
+    "actorId": "USR-IT-001",
+    "actorName": "SākshyaChain IT Administrator",
+    "caseId": "DOC-2026-8891-5771",
+    "docId": "ALT-1942",
+    "docHash": "DOC-2026-8891-5771",
+    "details": {
+      "alertTitle": "Evidence Tampering Detected — Account Frozen",
+      "resolutionNotes": "Viewed and acknowledged by IT Admin SākshyaChain IT Administrator.",
+      "resolvedAt": "2026-09-24T14:46:21.028Z"
+    },
+    "previousBlockHash": "3eada10f48d3a0bbfc0fb155b16b4cd0928414a52bd803cd762af02936da1718",
+    "parent_hashes": [
+      "3eada10f48d3a0bbfc0fb155b16b4cd0928414a52bd803cd762af02936da1718"
+    ],
+    "payload": {
+      "action": "IT_ADMIN_TAMPER_ALERT_ACKNOWLEDGED",
+      "actorId": "USR-IT-001",
+      "actorName": "SākshyaChain IT Administrator",
+      "caseId": "DOC-2026-8891-5771",
+      "docId": "ALT-1942",
+      "docHash": "DOC-2026-8891-5771",
+      "details": {
+        "alertTitle": "Evidence Tampering Detected — Account Frozen",
+        "resolutionNotes": "Viewed and acknowledged by IT Admin SākshyaChain IT Administrator.",
+        "resolvedAt": "2026-09-24T14:46:21.028Z"
+      }
+    },
+    "blockHash": "5e54901ed2bf8d0bd9017d81537121766bbf2b0d401bd7f785c6e8a372d0a136",
+    "event_hash": "5e54901ed2bf8d0bd9017d81537121766bbf2b0d401bd7f785c6e8a372d0a136",
+    "gitCommitHash": "067e2ed6657787a2e2935498eba6eedea5a64a27"
+  },
+  {
+    "index": 253,
+    "blockHeight": 253,
+    "timestamp": "2026-09-24T14:46:21.426Z",
+    "action": "IT_ADMIN_TAMPER_ALERT_ACKNOWLEDGED",
+    "actorId": "USR-IT-001",
+    "actorName": "SākshyaChain IT Administrator",
+    "caseId": "DOC-8891-003",
+    "docId": "ALT-6812",
+    "docHash": "DOC-8891-003",
+    "details": {
+      "alertTitle": "Evidence Tampering Detected — Account Frozen",
+      "resolutionNotes": "Viewed and acknowledged by IT Admin SākshyaChain IT Administrator.",
+      "resolvedAt": "2026-09-24T14:46:21.425Z"
+    },
+    "previousBlockHash": "5e54901ed2bf8d0bd9017d81537121766bbf2b0d401bd7f785c6e8a372d0a136",
+    "parent_hashes": [
+      "5e54901ed2bf8d0bd9017d81537121766bbf2b0d401bd7f785c6e8a372d0a136"
+    ],
+    "payload": {
+      "action": "IT_ADMIN_TAMPER_ALERT_ACKNOWLEDGED",
+      "actorId": "USR-IT-001",
+      "actorName": "SākshyaChain IT Administrator",
+      "caseId": "DOC-8891-003",
+      "docId": "ALT-6812",
+      "docHash": "DOC-8891-003",
+      "details": {
+        "alertTitle": "Evidence Tampering Detected — Account Frozen",
+        "resolutionNotes": "Viewed and acknowledged by IT Admin SākshyaChain IT Administrator.",
+        "resolvedAt": "2026-09-24T14:46:21.425Z"
+      }
+    },
+    "blockHash": "01a81a57d98af71ce8ba0ae77c291e67abd74927241e1c0b9aacc2348376232f",
+    "event_hash": "01a81a57d98af71ce8ba0ae77c291e67abd74927241e1c0b9aacc2348376232f",
+    "gitCommitHash": "e2e47c907f612da8c29273484fad87693dc20630"
+  },
+  {
+    "index": 254,
+    "blockHeight": 254,
+    "timestamp": "2026-09-24T14:46:21.772Z",
+    "action": "IT_ADMIN_TAMPER_ALERT_ACKNOWLEDGED",
+    "actorId": "USR-IT-001",
+    "actorName": "SākshyaChain IT Administrator",
+    "caseId": "DOC-8891-003",
+    "docId": "ALT-4495",
+    "docHash": "DOC-8891-003",
+    "details": {
+      "alertTitle": "Evidence Tampering Detected — Account Frozen",
+      "resolutionNotes": "Viewed and acknowledged by IT Admin SākshyaChain IT Administrator.",
+      "resolvedAt": "2026-09-24T14:46:21.770Z"
+    },
+    "previousBlockHash": "01a81a57d98af71ce8ba0ae77c291e67abd74927241e1c0b9aacc2348376232f",
+    "parent_hashes": [
+      "01a81a57d98af71ce8ba0ae77c291e67abd74927241e1c0b9aacc2348376232f"
+    ],
+    "payload": {
+      "action": "IT_ADMIN_TAMPER_ALERT_ACKNOWLEDGED",
+      "actorId": "USR-IT-001",
+      "actorName": "SākshyaChain IT Administrator",
+      "caseId": "DOC-8891-003",
+      "docId": "ALT-4495",
+      "docHash": "DOC-8891-003",
+      "details": {
+        "alertTitle": "Evidence Tampering Detected — Account Frozen",
+        "resolutionNotes": "Viewed and acknowledged by IT Admin SākshyaChain IT Administrator.",
+        "resolvedAt": "2026-09-24T14:46:21.770Z"
+      }
+    },
+    "blockHash": "d96d1a034c8ba4be20791b9c6381abc0eeb54d61600e3b0376681aed88d6ed6d",
+    "event_hash": "d96d1a034c8ba4be20791b9c6381abc0eeb54d61600e3b0376681aed88d6ed6d",
+    "gitCommitHash": "3b0f682b121e43522e552e0890704f6aeb7cc98f"
+  },
+  {
+    "index": 255,
+    "blockHeight": 255,
+    "timestamp": "2026-09-24T19:00:20.758Z",
+    "action": "DOCUMENT_UPLOADED",
+    "actorId": "USR-FOR-202",
+    "actorName": "Dr. Sunita Rao",
+    "caseId": "CASE-2026-4412",
+    "docId": "DOC-ACCESS-TEST-104",
+    "docHash": "c9bc249827bb9a260158ee44664881f584362ac90a5b7170ea39312ab46844d3",
+    "details": {
+      "title": "Access Test File D - Ballistics Intake Checklist",
+      "category": "FORENSIC_NOTES",
+      "clearanceLevel": 3,
+      "encryptionAlgorithm": "AES-256-GCM"
+    },
+    "previousBlockHash": "d96d1a034c8ba4be20791b9c6381abc0eeb54d61600e3b0376681aed88d6ed6d",
+    "parent_hashes": [
+      "d96d1a034c8ba4be20791b9c6381abc0eeb54d61600e3b0376681aed88d6ed6d"
+    ],
+    "payload": {
+      "action": "DOCUMENT_UPLOADED",
+      "actorId": "USR-FOR-202",
+      "actorName": "Dr. Sunita Rao",
+      "caseId": "CASE-2026-4412",
+      "docId": "DOC-ACCESS-TEST-104",
+      "docHash": "c9bc249827bb9a260158ee44664881f584362ac90a5b7170ea39312ab46844d3",
+      "details": {
+        "title": "Access Test File D - Ballistics Intake Checklist",
+        "category": "FORENSIC_NOTES",
+        "clearanceLevel": 3,
+        "encryptionAlgorithm": "AES-256-GCM"
+      }
+    },
+    "blockHash": "b2ffcaf9bf512c8419ffb1e795c06aaf646b52624af6173a6157d81f3fbb651a",
+    "event_hash": "b2ffcaf9bf512c8419ffb1e795c06aaf646b52624af6173a6157d81f3fbb651a",
+    "gitCommitHash": "96da059bcdfe6d2b5db9cb74cecf2fbef53c7cc6"
+  },
+  {
+    "index": 256,
+    "blockHeight": 256,
+    "timestamp": "2026-09-24T19:00:21.375Z",
+    "action": "DOCUMENT_UPLOADED",
+    "actorId": "USR-PRO-303",
+    "actorName": "Advocate Rajesh Verma",
+    "caseId": "CASE-2026-1102",
+    "docId": "DOC-ACCESS-TEST-105",
+    "docHash": "2ae2aa37817b5a9ebe0da64f428cef61e764fa01c6de14e09f6decf7a8c2a106",
+    "details": {
+      "title": "Access Test File E - Property Recovery Inventory",
+      "category": "CASE_WORKSHEET",
+      "clearanceLevel": 2,
+      "encryptionAlgorithm": "AES-256-GCM"
+    },
+    "previousBlockHash": "b2ffcaf9bf512c8419ffb1e795c06aaf646b52624af6173a6157d81f3fbb651a",
+    "parent_hashes": [
+      "b2ffcaf9bf512c8419ffb1e795c06aaf646b52624af6173a6157d81f3fbb651a"
+    ],
+    "payload": {
+      "action": "DOCUMENT_UPLOADED",
+      "actorId": "USR-PRO-303",
+      "actorName": "Advocate Rajesh Verma",
+      "caseId": "CASE-2026-1102",
+      "docId": "DOC-ACCESS-TEST-105",
+      "docHash": "2ae2aa37817b5a9ebe0da64f428cef61e764fa01c6de14e09f6decf7a8c2a106",
+      "details": {
+        "title": "Access Test File E - Property Recovery Inventory",
+        "category": "CASE_WORKSHEET",
+        "clearanceLevel": 2,
+        "encryptionAlgorithm": "AES-256-GCM"
+      }
+    },
+    "blockHash": "dfdcaf160b770419b2bcb0ccfe5f9b7d1cba41df9f5112ae1183b90358a046ea",
+    "event_hash": "dfdcaf160b770419b2bcb0ccfe5f9b7d1cba41df9f5112ae1183b90358a046ea",
+    "gitCommitHash": "6981ee6ab1adde8ad57b624e23d1b760258b5d73"
+  },
+  {
+    "index": 257,
+    "blockHeight": 257,
+    "timestamp": "2026-09-24T19:13:31.119Z",
+    "action": "MFA_OTP_GENERATED",
+    "actorId": "USR-POL-101",
+    "actorName": "Inspector Vikram Sharma",
+    "caseId": "AUTH-MFA",
+    "docId": "MFA-SESSION",
+    "docHash": "5c87fcff7ec21cc8211c06841f490ae46f4ab3af78e03f9f523de2deb703dba8",
+    "details": {
+      "ttlSeconds": 120
+    },
+    "previousBlockHash": "dfdcaf160b770419b2bcb0ccfe5f9b7d1cba41df9f5112ae1183b90358a046ea",
+    "parent_hashes": [
+      "dfdcaf160b770419b2bcb0ccfe5f9b7d1cba41df9f5112ae1183b90358a046ea"
+    ],
+    "payload": {
+      "action": "MFA_OTP_GENERATED",
+      "actorId": "USR-POL-101",
+      "actorName": "Inspector Vikram Sharma",
+      "caseId": "AUTH-MFA",
+      "docId": "MFA-SESSION",
+      "docHash": "5c87fcff7ec21cc8211c06841f490ae46f4ab3af78e03f9f523de2deb703dba8",
+      "details": {
+        "ttlSeconds": 120
+      }
+    },
+    "blockHash": "c523b662a4008dcf0455f107fda0876d6242be787255d92dd30da23a3e0a94c0",
+    "event_hash": "c523b662a4008dcf0455f107fda0876d6242be787255d92dd30da23a3e0a94c0",
+    "gitCommitHash": "a9d6acaeab004ecd90951cc41379c820ebd99ef2"
+  },
+  {
+    "index": 258,
+    "blockHeight": 258,
+    "timestamp": "2026-09-24T19:13:40.999Z",
+    "action": "MFA_OTP_VERIFIED",
+    "actorId": "USR-POL-101",
+    "actorName": "Inspector Vikram Sharma",
+    "caseId": "AUTH-MFA",
+    "docId": "MFA-SUCCESS",
+    "docHash": "VERIFIED",
+    "details": {
+      "authStatus": "MFA_SUCCESS"
+    },
+    "previousBlockHash": "c523b662a4008dcf0455f107fda0876d6242be787255d92dd30da23a3e0a94c0",
+    "parent_hashes": [
+      "c523b662a4008dcf0455f107fda0876d6242be787255d92dd30da23a3e0a94c0"
+    ],
+    "payload": {
+      "action": "MFA_OTP_VERIFIED",
+      "actorId": "USR-POL-101",
+      "actorName": "Inspector Vikram Sharma",
+      "caseId": "AUTH-MFA",
+      "docId": "MFA-SUCCESS",
+      "docHash": "VERIFIED",
+      "details": {
+        "authStatus": "MFA_SUCCESS"
+      }
+    },
+    "blockHash": "7dc7388e0c0c082b587cf95f21bb5aaa618a2f76e91cc4a4607f00c80b7217ec",
+    "event_hash": "7dc7388e0c0c082b587cf95f21bb5aaa618a2f76e91cc4a4607f00c80b7217ec",
+    "gitCommitHash": "133ef7630464662c57f99b3282b453214726bcbd"
+  },
+  {
+    "index": 259,
+    "blockHeight": 259,
+    "timestamp": "2026-09-24T19:14:40.590Z",
+    "action": "MFA_OTP_GENERATED",
+    "actorId": "USR-POL-102",
+    "actorName": "Inspector Bhir Rao",
+    "caseId": "AUTH-MFA",
+    "docId": "MFA-SESSION",
+    "docHash": "2d82da2bbaab0e5e2901275a52ab3f9360446174f50b0f6cfd1b04564ea3f504",
+    "details": {
+      "ttlSeconds": 120
+    },
+    "previousBlockHash": "7dc7388e0c0c082b587cf95f21bb5aaa618a2f76e91cc4a4607f00c80b7217ec",
+    "parent_hashes": [
+      "7dc7388e0c0c082b587cf95f21bb5aaa618a2f76e91cc4a4607f00c80b7217ec"
+    ],
+    "payload": {
+      "action": "MFA_OTP_GENERATED",
+      "actorId": "USR-POL-102",
+      "actorName": "Inspector Bhir Rao",
+      "caseId": "AUTH-MFA",
+      "docId": "MFA-SESSION",
+      "docHash": "2d82da2bbaab0e5e2901275a52ab3f9360446174f50b0f6cfd1b04564ea3f504",
+      "details": {
+        "ttlSeconds": 120
+      }
+    },
+    "blockHash": "5a11f7d58abfd07c85283fb441f6b6f1a5332e5490833b33630cfc947448c865",
+    "event_hash": "5a11f7d58abfd07c85283fb441f6b6f1a5332e5490833b33630cfc947448c865",
+    "gitCommitHash": "dfa1b8f6d1e7e6029d3600434edaed57e1d1ef6f"
+  },
+  {
+    "index": 260,
+    "blockHeight": 260,
+    "timestamp": "2026-09-24T19:14:50.120Z",
+    "action": "MFA_OTP_VERIFIED",
+    "actorId": "USR-POL-102",
+    "actorName": "Inspector Bhir Rao",
+    "caseId": "AUTH-MFA",
+    "docId": "MFA-SUCCESS",
+    "docHash": "VERIFIED",
+    "details": {
+      "authStatus": "MFA_SUCCESS"
+    },
+    "previousBlockHash": "5a11f7d58abfd07c85283fb441f6b6f1a5332e5490833b33630cfc947448c865",
+    "parent_hashes": [
+      "5a11f7d58abfd07c85283fb441f6b6f1a5332e5490833b33630cfc947448c865"
+    ],
+    "payload": {
+      "action": "MFA_OTP_VERIFIED",
+      "actorId": "USR-POL-102",
+      "actorName": "Inspector Bhir Rao",
+      "caseId": "AUTH-MFA",
+      "docId": "MFA-SUCCESS",
+      "docHash": "VERIFIED",
+      "details": {
+        "authStatus": "MFA_SUCCESS"
+      }
+    },
+    "blockHash": "738eb20e7f153cc45eb625ea11c65b56dc38dfdbde919d54b96802e9a9b0b433",
+    "event_hash": "738eb20e7f153cc45eb625ea11c65b56dc38dfdbde919d54b96802e9a9b0b433",
+    "gitCommitHash": "ecf0389870fc232765dbf6240340dcc010c90b7e"
+  },
+  {
+    "index": 261,
+    "blockHeight": 261,
+    "timestamp": "2026-09-24T19:15:30.458Z",
+    "action": "DOCUMENT_UPLOADED",
+    "actorId": "USR-POL-102",
+    "actorName": "Inspector Bhir Rao",
+    "caseId": "CASE-2026-4412",
+    "docId": "DOC-2026-4412-0413",
+    "docHash": "04873288ff62dcb094102e836b6808a8ef4ef02ec688d53601b1aeed15de24a2",
+    "details": {
+      "title": "diagram (1)",
+      "category": "FIR",
+      "clearanceLevel": 2,
+      "encryptionAlgorithm": "AES-256-GCM"
+    },
+    "previousBlockHash": "738eb20e7f153cc45eb625ea11c65b56dc38dfdbde919d54b96802e9a9b0b433",
+    "parent_hashes": [
+      "738eb20e7f153cc45eb625ea11c65b56dc38dfdbde919d54b96802e9a9b0b433"
+    ],
+    "payload": {
+      "action": "DOCUMENT_UPLOADED",
+      "actorId": "USR-POL-102",
+      "actorName": "Inspector Bhir Rao",
+      "caseId": "CASE-2026-4412",
+      "docId": "DOC-2026-4412-0413",
+      "docHash": "04873288ff62dcb094102e836b6808a8ef4ef02ec688d53601b1aeed15de24a2",
+      "details": {
+        "title": "diagram (1)",
+        "category": "FIR",
+        "clearanceLevel": 2,
+        "encryptionAlgorithm": "AES-256-GCM"
+      }
+    },
+    "blockHash": "9dec5f273c38a2ca5ba1c4044636eccbd1eadef08673f6a9755c28f6adfc3c53",
+    "event_hash": "9dec5f273c38a2ca5ba1c4044636eccbd1eadef08673f6a9755c28f6adfc3c53",
+    "gitCommitHash": "fba5aeee0bf5fd0420bc8de510928c7cd961b244"
+  },
+  {
+    "index": 262,
+    "blockHeight": 262,
+    "timestamp": "2026-09-24T19:17:16.179Z",
+    "action": "MFA_OTP_GENERATED",
+    "actorId": "USR-IT-001",
+    "actorName": "SākshyaChain IT Administrator",
+    "caseId": "AUTH-MFA",
+    "docId": "MFA-SESSION",
+    "docHash": "9a4202389eed9f904730c765f18a675bbb67234d06fd9ffe5cbff1a945e682c8",
+    "details": {
+      "ttlSeconds": 120
+    },
+    "previousBlockHash": "9dec5f273c38a2ca5ba1c4044636eccbd1eadef08673f6a9755c28f6adfc3c53",
+    "parent_hashes": [
+      "9dec5f273c38a2ca5ba1c4044636eccbd1eadef08673f6a9755c28f6adfc3c53"
+    ],
+    "payload": {
+      "action": "MFA_OTP_GENERATED",
+      "actorId": "USR-IT-001",
+      "actorName": "SākshyaChain IT Administrator",
+      "caseId": "AUTH-MFA",
+      "docId": "MFA-SESSION",
+      "docHash": "9a4202389eed9f904730c765f18a675bbb67234d06fd9ffe5cbff1a945e682c8",
+      "details": {
+        "ttlSeconds": 120
+      }
+    },
+    "blockHash": "9a9671ee1765b2589cc5a084ed22ddf5cd363a04a29420f5010f71de6535018b",
+    "event_hash": "9a9671ee1765b2589cc5a084ed22ddf5cd363a04a29420f5010f71de6535018b",
+    "gitCommitHash": "02fd5a668d991da73276f34c1b02b213ac548bf0"
+  },
+  {
+    "index": 263,
+    "blockHeight": 263,
+    "timestamp": "2026-09-24T19:17:21.317Z",
+    "action": "MFA_OTP_VERIFIED",
+    "actorId": "USR-IT-001",
+    "actorName": "SākshyaChain IT Administrator",
+    "caseId": "AUTH-MFA",
+    "docId": "MFA-SUCCESS",
+    "docHash": "VERIFIED",
+    "details": {
+      "authStatus": "MFA_SUCCESS"
+    },
+    "previousBlockHash": "9a9671ee1765b2589cc5a084ed22ddf5cd363a04a29420f5010f71de6535018b",
+    "parent_hashes": [
+      "9a9671ee1765b2589cc5a084ed22ddf5cd363a04a29420f5010f71de6535018b"
+    ],
+    "payload": {
+      "action": "MFA_OTP_VERIFIED",
+      "actorId": "USR-IT-001",
+      "actorName": "SākshyaChain IT Administrator",
+      "caseId": "AUTH-MFA",
+      "docId": "MFA-SUCCESS",
+      "docHash": "VERIFIED",
+      "details": {
+        "authStatus": "MFA_SUCCESS"
+      }
+    },
+    "blockHash": "eea2e9f25e04168d0a567f1e2d1373794287e021f632978521cfe02ec960bc4c",
+    "event_hash": "eea2e9f25e04168d0a567f1e2d1373794287e021f632978521cfe02ec960bc4c",
+    "gitCommitHash": "36696ec93bf9672e51a5ae8fbd308e7bcee03819"
+  },
+  {
+    "index": 264,
+    "blockHeight": 264,
+    "timestamp": "2026-09-24T20:05:07.625Z",
+    "action": "MFA_OTP_GENERATED",
+    "actorId": "USR-POL-101",
+    "actorName": "Inspector Vikram Sharma",
+    "caseId": "AUTH-MFA",
+    "docId": "MFA-SESSION",
+    "docHash": "5d66719ed0cd3b9591161e6feff649cc28f3f8507ac2bc535c0ee2bcdda578b4",
+    "details": {
+      "ttlSeconds": 120
+    },
+    "previousBlockHash": "eea2e9f25e04168d0a567f1e2d1373794287e021f632978521cfe02ec960bc4c",
+    "parent_hashes": [
+      "eea2e9f25e04168d0a567f1e2d1373794287e021f632978521cfe02ec960bc4c"
+    ],
+    "payload": {
+      "action": "MFA_OTP_GENERATED",
+      "actorId": "USR-POL-101",
+      "actorName": "Inspector Vikram Sharma",
+      "caseId": "AUTH-MFA",
+      "docId": "MFA-SESSION",
+      "docHash": "5d66719ed0cd3b9591161e6feff649cc28f3f8507ac2bc535c0ee2bcdda578b4",
+      "details": {
+        "ttlSeconds": 120
+      }
+    },
+    "blockHash": "c3d3f4b26d03f005131f98bbed7f62f4400137246e8db46a248bc684cf8d8f08",
+    "event_hash": "c3d3f4b26d03f005131f98bbed7f62f4400137246e8db46a248bc684cf8d8f08",
+    "gitCommitHash": "a8a94cdbe6a2f4108ed4ebc27378cea68be60b5c"
+  },
+  {
+    "index": 265,
+    "blockHeight": 265,
+    "timestamp": "2026-09-24T20:05:21.391Z",
+    "action": "MFA_OTP_VERIFIED",
+    "actorId": "USR-POL-101",
+    "actorName": "Inspector Vikram Sharma",
+    "caseId": "AUTH-MFA",
+    "docId": "MFA-SUCCESS",
+    "docHash": "VERIFIED",
+    "details": {
+      "authStatus": "MFA_SUCCESS"
+    },
+    "previousBlockHash": "c3d3f4b26d03f005131f98bbed7f62f4400137246e8db46a248bc684cf8d8f08",
+    "parent_hashes": [
+      "c3d3f4b26d03f005131f98bbed7f62f4400137246e8db46a248bc684cf8d8f08"
+    ],
+    "payload": {
+      "action": "MFA_OTP_VERIFIED",
+      "actorId": "USR-POL-101",
+      "actorName": "Inspector Vikram Sharma",
+      "caseId": "AUTH-MFA",
+      "docId": "MFA-SUCCESS",
+      "docHash": "VERIFIED",
+      "details": {
+        "authStatus": "MFA_SUCCESS"
+      }
+    },
+    "blockHash": "da790beee1f2b22d57e88843df07d48414bd5afc9b93a2838ef5a2589d02ddcf",
+    "event_hash": "da790beee1f2b22d57e88843df07d48414bd5afc9b93a2838ef5a2589d02ddcf",
+    "gitCommitHash": "da85c509af758ea6e11ff24c5aa81fcf1eafcb4d"
+  },
+  {
+    "index": 266,
+    "blockHeight": 266,
+    "timestamp": "2026-09-24T20:06:28.402Z",
+    "action": "MFA_OTP_GENERATED",
+    "actorId": "USR-POL-102",
+    "actorName": "Inspector Bhir Rao",
+    "caseId": "AUTH-MFA",
+    "docId": "MFA-SESSION",
+    "docHash": "1df9843e3cfad447c46a12bc74b99fa595b779d007ccf5b9c90f1ad548a0b231",
+    "details": {
+      "ttlSeconds": 120
+    },
+    "previousBlockHash": "da790beee1f2b22d57e88843df07d48414bd5afc9b93a2838ef5a2589d02ddcf",
+    "parent_hashes": [
+      "da790beee1f2b22d57e88843df07d48414bd5afc9b93a2838ef5a2589d02ddcf"
+    ],
+    "payload": {
+      "action": "MFA_OTP_GENERATED",
+      "actorId": "USR-POL-102",
+      "actorName": "Inspector Bhir Rao",
+      "caseId": "AUTH-MFA",
+      "docId": "MFA-SESSION",
+      "docHash": "1df9843e3cfad447c46a12bc74b99fa595b779d007ccf5b9c90f1ad548a0b231",
+      "details": {
+        "ttlSeconds": 120
+      }
+    },
+    "blockHash": "619253b83b42814d21611a9b4b0227b6f0d2a9d4eb1d674dcc7f3954341c5619",
+    "event_hash": "619253b83b42814d21611a9b4b0227b6f0d2a9d4eb1d674dcc7f3954341c5619",
+    "gitCommitHash": "0f6385af51944f2a2d045ecfdffc04b8585870a4"
+  },
+  {
+    "index": 267,
+    "blockHeight": 267,
+    "timestamp": "2026-09-24T20:06:33.837Z",
+    "action": "MFA_OTP_VERIFIED",
+    "actorId": "USR-POL-102",
+    "actorName": "Inspector Bhir Rao",
+    "caseId": "AUTH-MFA",
+    "docId": "MFA-SUCCESS",
+    "docHash": "VERIFIED",
+    "details": {
+      "authStatus": "MFA_SUCCESS"
+    },
+    "previousBlockHash": "619253b83b42814d21611a9b4b0227b6f0d2a9d4eb1d674dcc7f3954341c5619",
+    "parent_hashes": [
+      "619253b83b42814d21611a9b4b0227b6f0d2a9d4eb1d674dcc7f3954341c5619"
+    ],
+    "payload": {
+      "action": "MFA_OTP_VERIFIED",
+      "actorId": "USR-POL-102",
+      "actorName": "Inspector Bhir Rao",
+      "caseId": "AUTH-MFA",
+      "docId": "MFA-SUCCESS",
+      "docHash": "VERIFIED",
+      "details": {
+        "authStatus": "MFA_SUCCESS"
+      }
+    },
+    "blockHash": "44e113c01d2a246f320b8325b1a875bea08275fa45fe0009e6e154756a093cae",
+    "event_hash": "44e113c01d2a246f320b8325b1a875bea08275fa45fe0009e6e154756a093cae",
+    "gitCommitHash": "ccdd47b2f7c6e1938fd72b9e5126bc017d7bf90b"
+  },
+  {
+    "index": 268,
+    "blockHeight": 268,
+    "timestamp": "2026-09-24T20:08:23.834Z",
+    "action": "MFA_OTP_GENERATED",
+    "actorId": "USR-POL-102",
+    "actorName": "Inspector Bhir Rao",
+    "caseId": "AUTH-MFA",
+    "docId": "MFA-SESSION",
+    "docHash": "123bf9ba08a0674082969356837372c758c9294f9c92fa44ec73feb7a4c68c41",
+    "details": {
+      "ttlSeconds": 120
+    },
+    "previousBlockHash": "44e113c01d2a246f320b8325b1a875bea08275fa45fe0009e6e154756a093cae",
+    "parent_hashes": [
+      "44e113c01d2a246f320b8325b1a875bea08275fa45fe0009e6e154756a093cae"
+    ],
+    "payload": {
+      "action": "MFA_OTP_GENERATED",
+      "actorId": "USR-POL-102",
+      "actorName": "Inspector Bhir Rao",
+      "caseId": "AUTH-MFA",
+      "docId": "MFA-SESSION",
+      "docHash": "123bf9ba08a0674082969356837372c758c9294f9c92fa44ec73feb7a4c68c41",
+      "details": {
+        "ttlSeconds": 120
+      }
+    },
+    "blockHash": "ba1d5c5626acb0a38ec2ceab68eda0dae328eecb19653c2c34dbf1b6f55b5c04",
+    "event_hash": "ba1d5c5626acb0a38ec2ceab68eda0dae328eecb19653c2c34dbf1b6f55b5c04",
+    "gitCommitHash": "ad33e7fb9cf693fd0bcf72373247761d29d186e6"
+  },
+  {
+    "index": 269,
+    "blockHeight": 269,
+    "timestamp": "2026-09-24T20:08:29.899Z",
+    "action": "MFA_OTP_VERIFIED",
+    "actorId": "USR-POL-102",
+    "actorName": "Inspector Bhir Rao",
+    "caseId": "AUTH-MFA",
+    "docId": "MFA-SUCCESS",
+    "docHash": "VERIFIED",
+    "details": {
+      "authStatus": "MFA_SUCCESS"
+    },
+    "previousBlockHash": "ba1d5c5626acb0a38ec2ceab68eda0dae328eecb19653c2c34dbf1b6f55b5c04",
+    "parent_hashes": [
+      "ba1d5c5626acb0a38ec2ceab68eda0dae328eecb19653c2c34dbf1b6f55b5c04"
+    ],
+    "payload": {
+      "action": "MFA_OTP_VERIFIED",
+      "actorId": "USR-POL-102",
+      "actorName": "Inspector Bhir Rao",
+      "caseId": "AUTH-MFA",
+      "docId": "MFA-SUCCESS",
+      "docHash": "VERIFIED",
+      "details": {
+        "authStatus": "MFA_SUCCESS"
+      }
+    },
+    "blockHash": "828e67df8efa4f1c6e1c398302259eafbdc382bbaddda2442ea62a38dac55e5e",
+    "event_hash": "828e67df8efa4f1c6e1c398302259eafbdc382bbaddda2442ea62a38dac55e5e",
+    "gitCommitHash": "38d93571cc125aa2f361dd89460d35902af61636"
+  },
+  {
+    "index": 270,
+    "blockHeight": 270,
+    "timestamp": "2026-09-24T20:11:07.550Z",
+    "action": "ACCESS_REQUESTED",
+    "actorId": "USR-POL-102",
+    "actorName": "Inspector Bhir Rao",
+    "caseId": "CASE-2026-4412",
+    "docId": "DOC-ACCESS-TEST-104",
+    "docHash": "c9bc249827bb9a260158ee44664881f584362ac90a5b7170ea39312ab46844d3",
+    "details": {
+      "requestId": "AR-d9a078d0-4156-4e4d-8b48-73278c45b6ef",
+      "permission": "DOWNLOAD",
+      "reason": "Investigation"
+    },
+    "previousBlockHash": "828e67df8efa4f1c6e1c398302259eafbdc382bbaddda2442ea62a38dac55e5e",
+    "parent_hashes": [
+      "828e67df8efa4f1c6e1c398302259eafbdc382bbaddda2442ea62a38dac55e5e"
+    ],
+    "payload": {
+      "action": "ACCESS_REQUESTED",
+      "actorId": "USR-POL-102",
+      "actorName": "Inspector Bhir Rao",
+      "caseId": "CASE-2026-4412",
+      "docId": "DOC-ACCESS-TEST-104",
+      "docHash": "c9bc249827bb9a260158ee44664881f584362ac90a5b7170ea39312ab46844d3",
+      "details": {
+        "requestId": "AR-d9a078d0-4156-4e4d-8b48-73278c45b6ef",
+        "permission": "DOWNLOAD",
+        "reason": "Investigation"
+      }
+    },
+    "blockHash": "7c4c7d7914bf467d8e5a0e564411d3af1e013e107ffa37a3fd1feae6edf4ea5e",
+    "event_hash": "7c4c7d7914bf467d8e5a0e564411d3af1e013e107ffa37a3fd1feae6edf4ea5e",
+    "gitCommitHash": "fd0537f784f2b463cc03f8daf154a1c32e406c25"
+  },
+  {
+    "index": 271,
+    "blockHeight": 271,
+    "timestamp": "2026-09-24T20:11:56.418Z",
+    "action": "MFA_OTP_GENERATED",
+    "actorId": "USR-FOR-202",
+    "actorName": "Dr. Sunita Rao",
+    "caseId": "AUTH-MFA",
+    "docId": "MFA-SESSION",
+    "docHash": "f9c34d0bfa7736f685a46fb4322c3e299a14a7cfb0cf4da3239d57a549190b71",
+    "details": {
+      "ttlSeconds": 120
+    },
+    "previousBlockHash": "7c4c7d7914bf467d8e5a0e564411d3af1e013e107ffa37a3fd1feae6edf4ea5e",
+    "parent_hashes": [
+      "7c4c7d7914bf467d8e5a0e564411d3af1e013e107ffa37a3fd1feae6edf4ea5e"
+    ],
+    "payload": {
+      "action": "MFA_OTP_GENERATED",
+      "actorId": "USR-FOR-202",
+      "actorName": "Dr. Sunita Rao",
+      "caseId": "AUTH-MFA",
+      "docId": "MFA-SESSION",
+      "docHash": "f9c34d0bfa7736f685a46fb4322c3e299a14a7cfb0cf4da3239d57a549190b71",
+      "details": {
+        "ttlSeconds": 120
+      }
+    },
+    "blockHash": "d2f0d6813ba1b6584e692d0b3d44aaa894213c5e41201c947f9de4a4b1b94c93",
+    "event_hash": "d2f0d6813ba1b6584e692d0b3d44aaa894213c5e41201c947f9de4a4b1b94c93",
+    "gitCommitHash": "7bec7e95661827b8b58b1826b7c2829862320fc2"
+  },
+  {
+    "index": 272,
+    "blockHeight": 272,
+    "timestamp": "2026-09-24T20:12:00.987Z",
+    "action": "MFA_OTP_VERIFIED",
+    "actorId": "USR-FOR-202",
+    "actorName": "Dr. Sunita Rao",
+    "caseId": "AUTH-MFA",
+    "docId": "MFA-SUCCESS",
+    "docHash": "VERIFIED",
+    "details": {
+      "authStatus": "MFA_SUCCESS"
+    },
+    "previousBlockHash": "d2f0d6813ba1b6584e692d0b3d44aaa894213c5e41201c947f9de4a4b1b94c93",
+    "parent_hashes": [
+      "d2f0d6813ba1b6584e692d0b3d44aaa894213c5e41201c947f9de4a4b1b94c93"
+    ],
+    "payload": {
+      "action": "MFA_OTP_VERIFIED",
+      "actorId": "USR-FOR-202",
+      "actorName": "Dr. Sunita Rao",
+      "caseId": "AUTH-MFA",
+      "docId": "MFA-SUCCESS",
+      "docHash": "VERIFIED",
+      "details": {
+        "authStatus": "MFA_SUCCESS"
+      }
+    },
+    "blockHash": "ecd65c1e90ca8e333363405bd06711b3c5b291870dd289d4d73ecad66810d37d",
+    "event_hash": "ecd65c1e90ca8e333363405bd06711b3c5b291870dd289d4d73ecad66810d37d",
+    "gitCommitHash": "2d7575d0ee6f43afc110f39bd3d9b9a0f2390e85"
+  },
+  {
+    "index": 273,
+    "blockHeight": 273,
+    "timestamp": "2026-09-24T20:12:23.083Z",
+    "action": "OWNER_APPROVED",
+    "actorId": "USR-FOR-202",
+    "actorName": "Dr. Sunita Rao",
+    "caseId": "CASE-2026-4412",
+    "docId": "DOC-ACCESS-TEST-104",
+    "docHash": "c9bc249827bb9a260158ee44664881f584362ac90a5b7170ea39312ab46844d3",
+    "details": {
+      "requestId": "AR-d9a078d0-4156-4e4d-8b48-73278c45b6ef",
+      "reason": ""
+    },
+    "previousBlockHash": "ecd65c1e90ca8e333363405bd06711b3c5b291870dd289d4d73ecad66810d37d",
+    "parent_hashes": [
+      "ecd65c1e90ca8e333363405bd06711b3c5b291870dd289d4d73ecad66810d37d"
+    ],
+    "payload": {
+      "action": "OWNER_APPROVED",
+      "actorId": "USR-FOR-202",
+      "actorName": "Dr. Sunita Rao",
+      "caseId": "CASE-2026-4412",
+      "docId": "DOC-ACCESS-TEST-104",
+      "docHash": "c9bc249827bb9a260158ee44664881f584362ac90a5b7170ea39312ab46844d3",
+      "details": {
+        "requestId": "AR-d9a078d0-4156-4e4d-8b48-73278c45b6ef",
+        "reason": ""
+      }
+    },
+    "blockHash": "66a0839ea5c8a836b8b2173b342a7c5517e78b4db9421e4377326f128796eaec",
+    "event_hash": "66a0839ea5c8a836b8b2173b342a7c5517e78b4db9421e4377326f128796eaec",
+    "gitCommitHash": "a8315b33b5ec8ebead4e00d13eb98f835a77980c"
+  },
+  {
+    "index": 274,
+    "blockHeight": 274,
+    "timestamp": "2026-09-24T20:13:04.220Z",
+    "action": "MFA_OTP_GENERATED",
+    "actorId": "USR-JUD-404",
+    "actorName": "Justice P. K. Mukherjee",
+    "caseId": "AUTH-MFA",
+    "docId": "MFA-SESSION",
+    "docHash": "16a13d494554ef7ebf976814dcf8c126b4998e00c88bd9e6afe3dc0142462673",
+    "details": {
+      "ttlSeconds": 120
+    },
+    "previousBlockHash": "66a0839ea5c8a836b8b2173b342a7c5517e78b4db9421e4377326f128796eaec",
+    "parent_hashes": [
+      "66a0839ea5c8a836b8b2173b342a7c5517e78b4db9421e4377326f128796eaec"
+    ],
+    "payload": {
+      "action": "MFA_OTP_GENERATED",
+      "actorId": "USR-JUD-404",
+      "actorName": "Justice P. K. Mukherjee",
+      "caseId": "AUTH-MFA",
+      "docId": "MFA-SESSION",
+      "docHash": "16a13d494554ef7ebf976814dcf8c126b4998e00c88bd9e6afe3dc0142462673",
+      "details": {
+        "ttlSeconds": 120
+      }
+    },
+    "blockHash": "a22d5a5b33629493752c22fb2f2baec4a3916ce38c875f23eff2457d95dd07cf",
+    "event_hash": "a22d5a5b33629493752c22fb2f2baec4a3916ce38c875f23eff2457d95dd07cf",
+    "gitCommitHash": "0af8070466f988bd619b6ffec0c2ac5fc0dd1623"
+  },
+  {
+    "index": 275,
+    "blockHeight": 275,
+    "timestamp": "2026-09-24T20:13:10.653Z",
+    "action": "MFA_OTP_VERIFIED",
+    "actorId": "USR-JUD-404",
+    "actorName": "Justice P. K. Mukherjee",
+    "caseId": "AUTH-MFA",
+    "docId": "MFA-SUCCESS",
+    "docHash": "VERIFIED",
+    "details": {
+      "authStatus": "MFA_SUCCESS"
+    },
+    "previousBlockHash": "a22d5a5b33629493752c22fb2f2baec4a3916ce38c875f23eff2457d95dd07cf",
+    "parent_hashes": [
+      "a22d5a5b33629493752c22fb2f2baec4a3916ce38c875f23eff2457d95dd07cf"
+    ],
+    "payload": {
+      "action": "MFA_OTP_VERIFIED",
+      "actorId": "USR-JUD-404",
+      "actorName": "Justice P. K. Mukherjee",
+      "caseId": "AUTH-MFA",
+      "docId": "MFA-SUCCESS",
+      "docHash": "VERIFIED",
+      "details": {
+        "authStatus": "MFA_SUCCESS"
+      }
+    },
+    "blockHash": "fb7bb7692f3da61e1842c989dc067b9078410f8e88805813f74682c13b15ebb8",
+    "event_hash": "fb7bb7692f3da61e1842c989dc067b9078410f8e88805813f74682c13b15ebb8",
+    "gitCommitHash": "a572efcefcf85d78ce9785593dca5df7c72fc3a7"
+  },
+  {
+    "index": 276,
+    "blockHeight": 276,
+    "timestamp": "2026-09-24T20:13:26.468Z",
+    "action": "SUPERVISOR_APPROVED",
+    "actorId": "USR-JUD-404",
+    "actorName": "Justice P. K. Mukherjee",
+    "caseId": "CASE-2026-4412",
+    "docId": "DOC-ACCESS-TEST-104",
+    "docHash": "c9bc249827bb9a260158ee44664881f584362ac90a5b7170ea39312ab46844d3",
+    "details": {
+      "requestId": "AR-d9a078d0-4156-4e4d-8b48-73278c45b6ef",
+      "reason": ""
+    },
+    "previousBlockHash": "fb7bb7692f3da61e1842c989dc067b9078410f8e88805813f74682c13b15ebb8",
+    "parent_hashes": [
+      "fb7bb7692f3da61e1842c989dc067b9078410f8e88805813f74682c13b15ebb8"
+    ],
+    "payload": {
+      "action": "SUPERVISOR_APPROVED",
+      "actorId": "USR-JUD-404",
+      "actorName": "Justice P. K. Mukherjee",
+      "caseId": "CASE-2026-4412",
+      "docId": "DOC-ACCESS-TEST-104",
+      "docHash": "c9bc249827bb9a260158ee44664881f584362ac90a5b7170ea39312ab46844d3",
+      "details": {
+        "requestId": "AR-d9a078d0-4156-4e4d-8b48-73278c45b6ef",
+        "reason": ""
+      }
+    },
+    "blockHash": "d9387fd43bffff6bbcebd7b02bf1a7739d869a123b5946540e59a26f4639e819",
+    "event_hash": "d9387fd43bffff6bbcebd7b02bf1a7739d869a123b5946540e59a26f4639e819",
+    "gitCommitHash": "e5fc0c3af2bc75c88350f876e4629b6b7128e29f"
+  },
+  {
+    "index": 277,
+    "blockHeight": 277,
+    "timestamp": "2026-09-24T20:13:27.048Z",
+    "action": "ACCESS_GRANTED",
+    "actorId": "USR-JUD-404",
+    "actorName": "Justice P. K. Mukherjee",
+    "caseId": "CASE-2026-4412",
+    "docId": "DOC-ACCESS-TEST-104",
+    "docHash": "c9bc249827bb9a260158ee44664881f584362ac90a5b7170ea39312ab46844d3",
+    "details": {
+      "requestId": "AR-d9a078d0-4156-4e4d-8b48-73278c45b6ef",
+      "permission": "DOWNLOAD"
+    },
+    "previousBlockHash": "d9387fd43bffff6bbcebd7b02bf1a7739d869a123b5946540e59a26f4639e819",
+    "parent_hashes": [
+      "d9387fd43bffff6bbcebd7b02bf1a7739d869a123b5946540e59a26f4639e819"
+    ],
+    "payload": {
+      "action": "ACCESS_GRANTED",
+      "actorId": "USR-JUD-404",
+      "actorName": "Justice P. K. Mukherjee",
+      "caseId": "CASE-2026-4412",
+      "docId": "DOC-ACCESS-TEST-104",
+      "docHash": "c9bc249827bb9a260158ee44664881f584362ac90a5b7170ea39312ab46844d3",
+      "details": {
+        "requestId": "AR-d9a078d0-4156-4e4d-8b48-73278c45b6ef",
+        "permission": "DOWNLOAD"
+      }
+    },
+    "blockHash": "c0743edf32aa31ff29833bc5ae550cf7218dba9e6cc83009b25f4f0fe42aeeed",
+    "event_hash": "c0743edf32aa31ff29833bc5ae550cf7218dba9e6cc83009b25f4f0fe42aeeed",
+    "gitCommitHash": "72de32c45e4ae0eb8520b067bcb993f8dcf70507"
+  },
+  {
+    "index": 278,
+    "blockHeight": 278,
+    "timestamp": "2026-09-24T20:13:40.262Z",
+    "action": "DOCUMENT_DOWNLOADED",
+    "actorId": "USR-POL-102",
+    "actorName": "Inspector Bhir Rao",
+    "caseId": "CASE-2026-4412",
+    "docId": "DOC-ACCESS-TEST-104",
+    "docHash": "c9bc249827bb9a260158ee44664881f584362ac90a5b7170ea39312ab46844d3",
+    "details": {
+      "downloaderRole": "POLICE_INVESTIGATOR"
+    },
+    "previousBlockHash": "c0743edf32aa31ff29833bc5ae550cf7218dba9e6cc83009b25f4f0fe42aeeed",
+    "parent_hashes": [
+      "c0743edf32aa31ff29833bc5ae550cf7218dba9e6cc83009b25f4f0fe42aeeed"
+    ],
+    "payload": {
+      "action": "DOCUMENT_DOWNLOADED",
+      "actorId": "USR-POL-102",
+      "actorName": "Inspector Bhir Rao",
+      "caseId": "CASE-2026-4412",
+      "docId": "DOC-ACCESS-TEST-104",
+      "docHash": "c9bc249827bb9a260158ee44664881f584362ac90a5b7170ea39312ab46844d3",
+      "details": {
+        "downloaderRole": "POLICE_INVESTIGATOR"
+      }
+    },
+    "blockHash": "9242cc605e3cfd0c83da79bfd8e5cb3f35347f520bdb9df5a69b9b55c258b794",
+    "event_hash": "9242cc605e3cfd0c83da79bfd8e5cb3f35347f520bdb9df5a69b9b55c258b794",
+    "gitCommitHash": "a36fcbc14a6664ddf44dca35123fc59f4cf1b85b"
+  },
+  {
+    "index": 279,
+    "blockHeight": 279,
+    "timestamp": "2026-09-24T20:15:00.467Z",
+    "action": "MFA_OTP_GENERATED",
+    "actorId": "USR-IT-001",
+    "actorName": "SākshyaChain IT Administrator",
+    "caseId": "AUTH-MFA",
+    "docId": "MFA-SESSION",
+    "docHash": "880878815d4ecdc8cb8fc0d727d079bc502c60e4defa6a33e2bba57df4716b90",
+    "details": {
+      "ttlSeconds": 120
+    },
+    "previousBlockHash": "9242cc605e3cfd0c83da79bfd8e5cb3f35347f520bdb9df5a69b9b55c258b794",
+    "parent_hashes": [
+      "9242cc605e3cfd0c83da79bfd8e5cb3f35347f520bdb9df5a69b9b55c258b794"
+    ],
+    "payload": {
+      "action": "MFA_OTP_GENERATED",
+      "actorId": "USR-IT-001",
+      "actorName": "SākshyaChain IT Administrator",
+      "caseId": "AUTH-MFA",
+      "docId": "MFA-SESSION",
+      "docHash": "880878815d4ecdc8cb8fc0d727d079bc502c60e4defa6a33e2bba57df4716b90",
+      "details": {
+        "ttlSeconds": 120
+      }
+    },
+    "blockHash": "479a9d9f40f0b55c3230d0104f711d6c6c29aec6d93262c95afccc60bb3afc51",
+    "event_hash": "479a9d9f40f0b55c3230d0104f711d6c6c29aec6d93262c95afccc60bb3afc51",
+    "gitCommitHash": "5ec975201ea26c21460cb6a7d9d780800a7dd3cd"
+  },
+  {
+    "index": 280,
+    "blockHeight": 280,
+    "timestamp": "2026-09-24T20:15:05.399Z",
+    "action": "MFA_OTP_VERIFIED",
+    "actorId": "USR-IT-001",
+    "actorName": "SākshyaChain IT Administrator",
+    "caseId": "AUTH-MFA",
+    "docId": "MFA-SUCCESS",
+    "docHash": "VERIFIED",
+    "details": {
+      "authStatus": "MFA_SUCCESS"
+    },
+    "previousBlockHash": "479a9d9f40f0b55c3230d0104f711d6c6c29aec6d93262c95afccc60bb3afc51",
+    "parent_hashes": [
+      "479a9d9f40f0b55c3230d0104f711d6c6c29aec6d93262c95afccc60bb3afc51"
+    ],
+    "payload": {
+      "action": "MFA_OTP_VERIFIED",
+      "actorId": "USR-IT-001",
+      "actorName": "SākshyaChain IT Administrator",
+      "caseId": "AUTH-MFA",
+      "docId": "MFA-SUCCESS",
+      "docHash": "VERIFIED",
+      "details": {
+        "authStatus": "MFA_SUCCESS"
+      }
+    },
+    "blockHash": "e19c1918dfd94c680949bd12326c0df0865e6f0528c482a2f42438a9626ff162",
+    "event_hash": "e19c1918dfd94c680949bd12326c0df0865e6f0528c482a2f42438a9626ff162",
+    "gitCommitHash": "54cc3d65f026bdf7e4c239b04c6303a351f9d73c"
+  },
+  {
+    "index": 281,
+    "blockHeight": 281,
+    "timestamp": "2026-09-24T20:17:52.551Z",
+    "action": "EVIDENCE_TAMPER_DETECTED",
+    "actorId": "USR-POL-102",
+    "actorName": "Inspector Bhir Rao",
+    "caseId": "CASE-2026-4412",
+    "docId": "DOC-ACCESS-TEST-104",
+    "docHash": "c9bc249827bb9a260158ee44664881f584362ac90a5b7170ea39312ab46844d3",
+    "details": {
+      "targetDoc": "Access Test File D - Ballistics Intake Checklist",
+      "method": "Unauthorized evidence change attempt blocked before vault write",
+      "accountFrozen": true,
+      "evidenceLockedUntil": "2026-09-24T20:32:52.454Z"
+    },
+    "previousBlockHash": "e19c1918dfd94c680949bd12326c0df0865e6f0528c482a2f42438a9626ff162",
+    "parent_hashes": [
+      "e19c1918dfd94c680949bd12326c0df0865e6f0528c482a2f42438a9626ff162"
+    ],
+    "payload": {
+      "action": "EVIDENCE_TAMPER_DETECTED",
+      "actorId": "USR-POL-102",
+      "actorName": "Inspector Bhir Rao",
+      "caseId": "CASE-2026-4412",
+      "docId": "DOC-ACCESS-TEST-104",
+      "docHash": "c9bc249827bb9a260158ee44664881f584362ac90a5b7170ea39312ab46844d3",
+      "details": {
+        "targetDoc": "Access Test File D - Ballistics Intake Checklist",
+        "method": "Unauthorized evidence change attempt blocked before vault write",
+        "accountFrozen": true,
+        "evidenceLockedUntil": "2026-09-24T20:32:52.454Z"
+      }
+    },
+    "blockHash": "5ca5ccb86a514dbeb4522964e7a3e403eda9678b9a63aa801a45a14343028102",
+    "event_hash": "5ca5ccb86a514dbeb4522964e7a3e403eda9678b9a63aa801a45a14343028102",
+    "gitCommitHash": "017c78f9bbb909f3d92383f2ddb1e9fa75c8b42b"
+  },
+  {
+    "index": 282,
+    "blockHeight": 282,
+    "timestamp": "2026-09-24T20:18:58.554Z",
+    "action": "IT_ADMIN_TAMPER_ALERT_ACKNOWLEDGED",
+    "actorId": "USR-IT-001",
+    "actorName": "SākshyaChain IT Administrator",
+    "caseId": "DOC-ACCESS-TEST-104",
+    "docId": "ALT-7292",
+    "docHash": "DOC-ACCESS-TEST-104",
+    "details": {
+      "alertTitle": "Evidence Tampering Detected — Account Frozen",
+      "resolutionNotes": "Viewed and acknowledged by IT Admin SākshyaChain IT Administrator.",
+      "resolvedAt": "2026-09-24T20:18:58.548Z"
+    },
+    "previousBlockHash": "5ca5ccb86a514dbeb4522964e7a3e403eda9678b9a63aa801a45a14343028102",
+    "parent_hashes": [
+      "5ca5ccb86a514dbeb4522964e7a3e403eda9678b9a63aa801a45a14343028102"
+    ],
+    "payload": {
+      "action": "IT_ADMIN_TAMPER_ALERT_ACKNOWLEDGED",
+      "actorId": "USR-IT-001",
+      "actorName": "SākshyaChain IT Administrator",
+      "caseId": "DOC-ACCESS-TEST-104",
+      "docId": "ALT-7292",
+      "docHash": "DOC-ACCESS-TEST-104",
+      "details": {
+        "alertTitle": "Evidence Tampering Detected — Account Frozen",
+        "resolutionNotes": "Viewed and acknowledged by IT Admin SākshyaChain IT Administrator.",
+        "resolvedAt": "2026-09-24T20:18:58.548Z"
+      }
+    },
+    "blockHash": "c8816a63352c749bc17f10ff347049baf15f39614338c54fa5c465af66fe8173",
+    "event_hash": "c8816a63352c749bc17f10ff347049baf15f39614338c54fa5c465af66fe8173",
+    "gitCommitHash": "0d98d48313025af2a4cf752a60756b1b7dbf60b3"
+  },
+  {
+    "index": 283,
+    "blockHeight": 283,
+    "timestamp": "2026-09-24T20:22:00.304Z",
+    "action": "DOCUMENT_UPLOADED",
+    "actorId": "USR-FOR-202",
+    "actorName": "Dr. Sunita Rao",
+    "caseId": "CASE-2026-8891",
+    "docId": "DOC-2026-8891-0267",
+    "docHash": "338feb521090a0a57307b2fb48c3fbb966aee574b83d15d64c7038ec6d391e61",
+    "details": {
+      "title": "Fingerprint match analysis",
+      "category": "FIR",
+      "clearanceLevel": 2,
+      "encryptionAlgorithm": "AES-256-GCM"
+    },
+    "previousBlockHash": "c8816a63352c749bc17f10ff347049baf15f39614338c54fa5c465af66fe8173",
+    "parent_hashes": [
+      "c8816a63352c749bc17f10ff347049baf15f39614338c54fa5c465af66fe8173"
+    ],
+    "payload": {
+      "action": "DOCUMENT_UPLOADED",
+      "actorId": "USR-FOR-202",
+      "actorName": "Dr. Sunita Rao",
+      "caseId": "CASE-2026-8891",
+      "docId": "DOC-2026-8891-0267",
+      "docHash": "338feb521090a0a57307b2fb48c3fbb966aee574b83d15d64c7038ec6d391e61",
+      "details": {
+        "title": "Fingerprint match analysis",
+        "category": "FIR",
+        "clearanceLevel": 2,
+        "encryptionAlgorithm": "AES-256-GCM"
+      }
+    },
+    "blockHash": "a26900437672871a863f2bdeacbf7d67390a550f564bb9d30f69af40898826a7",
+    "event_hash": "a26900437672871a863f2bdeacbf7d67390a550f564bb9d30f69af40898826a7",
+    "gitCommitHash": "0e2aabc38a78ca7a6812ae6e96f7719cf27b00e4"
   }
 ]

@@ -1,0 +1,10 @@
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import api from '../services/api';
+import { useAuth } from '../context/AuthContext';
+
+export default function SystemDocumentsPage() {
+  const { isITAdmin } = useAuth(); const [documents, setDocuments] = useState([]); const [error, setError] = useState('');
+  useEffect(() => { api.get('/documents').then(r => setDocuments(r.data.documents || [])).catch(e => setError(e.response?.data?.message || 'Unable to load document inventory.')); }, []);
+  return <div className="space-y-5"><header><h1 className="text-xl font-bold">Document Inventory</h1><p className="text-xs text-slate-500">{isITAdmin ? 'System-wide evidence view · Read-only except employee access grants and revocations.' : 'Case documents visible under your assignment and clearance.'}</p></header>{error && <p role="alert" className="text-rose-700">{error}</p>}<div className="white-card border border-slate-200 overflow-x-auto"><table className="w-full text-left text-xs"><thead className="bg-slate-50"><tr>{['File','Case','Owner','Department','Classification','Created'].map(x=><th key={x} className="p-3">{x}</th>)}</tr></thead><tbody className="divide-y">{documents.map(d=><tr key={d.id}><td className="p-3"><Link to={`/docs/${d.id}`} className="font-bold text-blue-700 hover:underline">{d.title}</Link><div className="text-slate-400 font-mono">{d.id}</div>{d.tamperLockedUntil && Date.parse(d.tamperLockedUntil)>Date.now() && <div className="mt-1 inline-flex rounded bg-rose-100 px-2 py-0.5 text-[10px] font-bold text-rose-800">TEMPORARILY LOCKED · until {new Date(d.tamperLockedUntil).toLocaleTimeString()}</div>}</td><td className="p-3">{d.caseTitle || d.caseId}</td><td className="p-3">{d.ownerName || d.authorName || d.ownerId || d.authorId}</td><td className="p-3">{d.department}</td><td className="p-3">L{d.clearanceLevel} · {d.accessPolicy || 'CASE POLICY'}</td><td className="p-3">{d.dateCreated ? new Date(d.dateCreated).toLocaleDateString() : '—'}</td></tr>)}</tbody></table>{!documents.length && !error && <p className="p-5 text-xs text-slate-500">No file metadata available.</p>}</div></div>;
+}

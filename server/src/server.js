@@ -14,6 +14,9 @@ import emergencyRoutes from './routes/emergencyRoutes.js';
 import sharingRoutes from './routes/sharingRoutes.js';
 import demoRoutes from './routes/demoRoutes.js';
 import knowledgeGraphRoutes from './routes/knowledgeGraphRoutes.js';
+import accessRequestRoutes from './routes/accessRequestRoutes.js';
+import jwt from 'jsonwebtoken';
+import { dbService } from './services/dbService.js';
 
 const app = express();
 
@@ -89,6 +92,23 @@ seedInitialData();
 
 // Register Routes
 app.use('/api/auth', authRoutes);
+// A system observer is read-only across every mutation endpoint, not only the approval UI.
+app.use('/api', (req, res, next) => {
+  if (!['POST', 'PUT', 'PATCH', 'DELETE'].includes(req.method)) return next();
+  const itAdminAccessAction = req.method === 'POST' && (
+    ['/access-requests/admin/grant', '/access-requests/admin/revoke'].includes(req.path) ||
+    req.path === '/auth/register-user' ||
+    /^\/audit\/alerts\/[^/]+\/acknowledge$/.test(req.path)
+  );
+  const token = req.headers.authorization?.split(' ')[1];
+  if (!token) return next();
+  try {
+    const claims = jwt.verify(token, CONFIG.JWT_SECRET);
+    const user = dbService.getUserById(claims.id);
+    if (user?.systemRole === 'IT_ADMIN' && !itAdminAccessAction) return res.status(403).json({ error: 'READ_ONLY_ADMIN', message: 'IT Admin may only grant or revoke employee document access.' });
+  } catch { /* The route authentication middleware returns the token error. */ }
+  next();
+});
 app.use('/api/documents', documentRoutes);
 app.use('/api/signature', signatureRoutes);
 app.use('/api/audit', auditRoutes);
@@ -98,6 +118,7 @@ app.use('/api/cases', caseRoutes);
 app.use('/api/emergency', emergencyRoutes);
 app.use('/api/sharing', sharingRoutes);
 app.use('/api/knowledge-graph', knowledgeGraphRoutes);
+app.use('/api/access-requests', accessRequestRoutes);
 app.use('/api', demoRoutes);
 
 // Health & CORS Security Status Endpoint

@@ -238,13 +238,13 @@ export default function CaseListPage({ navigateTo: propNavigateTo }) {
                           <FileText className="w-3.5 h-3.5 text-blue-600" />
                           <span className="font-bold">{d.title}</span>
                           <span className="text-[10px] text-slate-400">({d.id})</span>
-                          <button
+                          {d.access?.canDownload && <button
                             onClick={(ev) => handleDownloadDoc(d, ev)}
                             title="Download Decrypted PDF"
                             className="p-1 hover:bg-blue-600 hover:text-white rounded transition-colors text-slate-500 ml-1"
                           >
                             <Download className="w-3 h-3" />
-                          </button>
+                          </button>}
                         </div>
                       ))}
                     </div>
@@ -306,12 +306,12 @@ export default function CaseListPage({ navigateTo: propNavigateTo }) {
                 </div>
 
                 <div className="flex items-center gap-2">
-                  <button
+                  {doc.access?.canDownload && <button
                     onClick={(e) => handleDownloadDoc(doc, e)}
                     className="btn btn-primary text-xs flex items-center gap-1.5 py-1.5 px-3"
                   >
                     <Download className="w-4 h-4" /> Download Decrypted File
-                  </button>
+                  </button>}
                   <button
                     onClick={() => setSelectedDocModal(doc)}
                     className="btn btn-secondary text-xs flex items-center gap-1.5 py-1.5 px-3"

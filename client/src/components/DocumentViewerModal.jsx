@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import api from '../services/api';
 import { useAuth } from '../context/AuthContext';
 import { X, Lock, Key, ShieldCheck, FileText, Clock, CheckCircle2, AlertTriangle, Download, GitCommit, FilePlus, ExternalLink, ShieldAlert, Cpu } from 'lucide-react';
@@ -20,6 +20,13 @@ export default function DocumentViewerModal({ doc, isOpen, onClose }) {
   const [changeNotes, setChangeNotes] = useState('');
   const [isMajorVersion, setIsMajorVersion] = useState(false);
   const [submittingVersion, setSubmittingVersion] = useState(false);
+
+  useEffect(() => {
+    if (!doc || !isOpen) return;
+    setNewVersionText(doc.extractedText || '');
+    setShowVersionForm(doc.access?.mode === 'EDIT' && doc.access?.canEdit);
+    setActiveTab('preview');
+  }, [doc, isOpen]);
 
   if (!isOpen || !doc) return null;
 
@@ -207,16 +214,16 @@ export default function DocumentViewerModal({ doc, isOpen, onClose }) {
                 )}
               </div>
               <div className="flex justify-between items-center pt-2">
-                <button
+                {doc.access?.canEdit && <button
                   onClick={() => setShowVersionForm(!showVersionForm)}
                   className="btn btn-secondary text-xs flex items-center gap-1.5"
                 >
                   <FilePlus className="w-4 h-4 text-emerald-400" />
-                  {showVersionForm ? 'Cancel New Version' : 'Upload Revised Version'}
-                </button>
-                <button onClick={handleDownload} className="btn btn-primary text-xs flex items-center gap-1.5">
-                  <Download className="w-4 h-4" /> Download Decrypted Copy
-                </button>
+                  {showVersionForm ? 'Cancel New Version' : 'Edit Document Version'}
+                </button>}
+                {doc.access?.canDownload && <button onClick={handleDownload} className="btn btn-primary text-xs flex items-center gap-1.5">
+                  <Download className="w-4 h-4" /> Download Approved Copy
+                </button>}
               </div>
 
               {showVersionForm && (

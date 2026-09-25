@@ -2,6 +2,7 @@ import jwt from 'jsonwebtoken';
 import { CONFIG } from '../config.js';
 import { dbService } from '../services/dbService.js';
 import { breakGlassService } from '../services/breakGlassService.js';
+import { isAccountFrozen } from '../utils/accountFreeze.js';
 
 export function authenticateToken(req, res, next) {
   const authHeader = req.headers['authorization'];
@@ -27,6 +28,13 @@ export function authenticateToken(req, res, next) {
       return res.status(403).json({
         error: 'FORBIDDEN_USER_NOT_FOUND',
         message: 'Access Denied: User record not found'
+      });
+    }
+
+    if (isAccountFrozen(user)) {
+      return res.status(423).json({
+        error: 'ACCOUNT_FROZEN',
+        message: `This account is temporarily frozen after a security incident until ${new Date(user.frozenUntil).toLocaleString()}.`
       });
     }
 
@@ -91,13 +99,12 @@ export function authorizeCaseAccess(req, res, next) {
   }
 
   // Department / Assignment Check
-  const hasDeptAccess = targetCase.departmentsAccess.includes(req.user.department);
-  const isAssigned = req.user.assignedCases.includes(caseId);
+  const isAssigned = (req.user.assignedCases || []).includes(caseId);
 
-  if (!hasDeptAccess && !isAssigned && req.user.role !== 'COMPLIANCE_AUDITOR') {
+  if (!isAssigned && req.user.systemRole !== 'IT_ADMIN') {
     return res.status(403).json({
       error: 'FORBIDDEN_DEPARTMENT_RESTRICTED',
-      message: `Access Denied: Case restricted to departments [${targetCase.departmentsAccess.join(', ')}]. Your department is ${req.user.department}.`
+      message: 'Access Denied: This case is not assigned to your account.'
     });
   }
 

@@ -1,231 +1,108 @@
 import React, { useState } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate, useLocation, Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
-import { ShieldCheck, UserCheck, Key, ArrowRight, EyeOff, Award, Users, CheckCircle2, Lock } from 'lucide-react';
+import { ShieldCheck, UserCheck, Key, ArrowLeft, ArrowRight, Award, Users, Lock, MessageSquareText } from 'lucide-react';
 
 export default function LoginPage({ navigateTo: propNavigateTo }) {
   const navigate = useNavigate();
-  const { allUsers, loginAsUser } = useAuth();
-
-  const [authenticatingBoss, setAuthenticatingBoss] = useState(false);
-  const [authenticatingEmployee, setAuthenticatingEmployee] = useState(false);
+  const location = useLocation();
+  const { loginWithITAdminCredentials, loginWithEmployeeCredentials, verifyLoginOTP } = useAuth();
+  const [selectedPortal, setSelectedPortal] = useState(null);
+  const [challenge, setChallenge] = useState(null);
+  const [otp, setOtp] = useState('');
+  const [authenticating, setAuthenticating] = useState(false);
   const [authError, setAuthError] = useState(null);
   const [honeypot, setHoneypot] = useState('');
+  const [employeeUsername, setEmployeeUsername] = useState('');
+  const [employeePassword, setEmployeePassword] = useState('');
+  const [adminUsername, setAdminUsername] = useState('');
+  const [adminPassword, setAdminPassword] = useState('');
+  const [adminSecretCode, setAdminSecretCode] = useState('');
 
-  // Default Boss (Level 4 Magistrate) and Employee (Level 3 Officer)
-  const defaultBossId = 'USR-JUD-404';
-  const defaultEmployeeId = 'USR-POL-101';
-
-  const handleBossLogin = async (userId = defaultBossId) => {
-    // Bot Spam Protection Honeypot Validation
-    if (honeypot) {
-      console.warn('[Bot Honeypot Blocked] Automated submission attempt detected.');
-      return;
-    }
-
-    setAuthenticatingBoss(true);
+  const handleCredentials = async event => {
+    event.preventDefault();
+    if (honeypot) return;
+    setAuthenticating(true);
     setAuthError(null);
     try {
-      await loginAsUser(userId);
-      if (propNavigateTo) return propNavigateTo('dashboard');
-      navigate('/dashboard');
-    } catch (err) {
-      setAuthError(`Boss Portal Login Failed: ${err.message}`);
+      const pending = selectedPortal === 'IT_ADMIN'
+        ? await loginWithITAdminCredentials(adminUsername, adminPassword, adminSecretCode)
+        : await loginWithEmployeeCredentials(employeeUsername, employeePassword);
+      setChallenge(pending);
+    } catch (error) {
+      setAuthError(`${selectedPortal === 'IT_ADMIN' ? 'IT Admin' : 'Employee'} sign-in failed: ${error.message}`);
     } finally {
-      setAuthenticatingBoss(false);
+      setAuthenticating(false);
     }
   };
 
-  const handleEmployeeLogin = async (userId = defaultEmployeeId) => {
-    if (honeypot) {
-      console.warn('[Bot Honeypot Blocked] Automated submission attempt detected.');
-      return;
-    }
-
-    setAuthenticatingEmployee(true);
+  const handleVerifyOtp = async event => {
+    event.preventDefault();
+    setAuthenticating(true);
     setAuthError(null);
     try {
-      await loginAsUser(userId);
+      await verifyLoginOTP(challenge.challengeId, otp);
       if (propNavigateTo) return propNavigateTo('dashboard');
       navigate('/dashboard');
-    } catch (err) {
-      setAuthError(`Employee Portal Login Failed: ${err.message}`);
+    } catch (error) {
+      setAuthError(`OTP verification failed: ${error.message}`);
     } finally {
-      setAuthenticatingEmployee(false);
+      setAuthenticating(false);
     }
   };
+
+  const resetPortal = () => { setSelectedPortal(null); setChallenge(null); setOtp(''); setAuthError(null); };
 
   return (
-    <div className="min-h-screen bg-[#F8FAFC] text-slate-800 flex flex-col justify-between py-12 px-4 sm:px-6 lg:px-8 font-sans">
-      
-      {/* Bot Spam Honeypot Trap (Hidden from human users) */}
-      <input
-        type="text"
-        name="b_hp_field"
-        value={honeypot}
-        onChange={(e) => setHoneypot(e.target.value)}
-        tabIndex="-1"
-        autoComplete="off"
-        className="hidden opacity-0 absolute -z-50 pointer-events-none"
-        aria-hidden="true"
-      />
-
-      <div className="space-y-8">
-        {/* Header Branding */}
-        <div className="sm:mx-auto sm:w-full sm:max-w-md text-center space-y-3">
-          <div className="w-14 h-14 rounded-2xl bg-blue-600 flex items-center justify-center text-white mx-auto shadow-md shadow-blue-600/20">
-            <ShieldCheck className="w-8 h-8" />
-          </div>
-          <div>
-            <h1 className="text-2xl font-extrabold text-slate-900 tracking-tight font-mono">
-              SākshyaChain Portal Gateway
-            </h1>
-            <p className="text-xs text-slate-600 mt-1 font-medium">
-              Multi-Tenant Legal &amp; Investigation Digital Vault • Direct Role Gateway
-            </p>
-          </div>
+    <div className="min-h-screen bg-[#F8FAFC] px-4 py-10 font-sans text-slate-800 sm:px-6">
+      <input type="text" name="b_hp_field" value={honeypot} onChange={event => setHoneypot(event.target.value)} tabIndex="-1" autoComplete="off" className="hidden opacity-0 absolute -z-50 pointer-events-none" aria-hidden="true" />
+      <main className="mx-auto flex min-h-[calc(100vh-5rem)] max-w-lg flex-col items-center justify-center">
+        <div className="mb-6 text-center">
+          <div className="mx-auto mb-3 flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-600 text-white shadow-md shadow-blue-600/20"><ShieldCheck className="h-8 w-8" /></div>
+          <h1 className="font-mono text-2xl font-extrabold tracking-tight text-slate-900">SĀKSHYACHAIN</h1>
+          <p className="mt-1 text-xs font-medium text-slate-600">Secure Digital Evidence Portal</p>
         </div>
 
-        {authError && (
-          <div role="alert" className="max-w-4xl mx-auto w-full p-4 rounded-xl bg-red-50 border border-red-200 text-red-800 text-xs text-center font-mono">
-            {authError}
-          </div>
-        )}
+        <div className="w-full rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-7">
+          {location.state?.lockoutMessage && <div role="alert" className="mb-4 rounded-xl border border-rose-300 bg-rose-50 p-3 text-center text-sm font-semibold text-rose-900">{location.state.lockoutMessage}</div>}
+          {authError && <div role="alert" className="mb-4 rounded-xl border border-red-200 bg-red-50 p-3 text-center text-xs text-red-800">{authError}</div>}
 
-        {/* Dual Portal Direct Authentication Cards */}
-        <div className="max-w-4xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-6">
-          
-          {/* Card 1: Boss / Executive Portal */}
-          <div className="bg-white border-2 border-blue-200 hover:border-blue-500 rounded-2xl p-6 shadow-sm flex flex-col justify-between space-y-6 transition-all">
-            <div className="space-y-4">
-              <div className="flex items-center justify-between">
-                <span className="px-3 py-1 rounded-full text-[11px] font-bold font-mono bg-blue-50 text-blue-800 border border-blue-200 flex items-center gap-1.5">
-                  <Award className="w-3.5 h-3.5 text-blue-600" /> EXECUTIVE PORTAL (LEVEL 4)
-                </span>
-                <span className="text-xs text-slate-500 font-mono font-semibold">Boss Interface</span>
+          {!selectedPortal ? (
+            <>
+              <h2 className="text-center text-lg font-bold text-slate-900">Choose your sign-in portal</h2>
+              <p className="mt-1 text-center text-xs text-slate-500">Select the account type for this prototype.</p>
+              <div className="mt-5 space-y-3">
+                <button type="button" onClick={() => { setSelectedPortal('EMPLOYEE'); setAuthError(null); }} className="flex w-full items-center gap-3 rounded-xl border border-slate-200 p-4 text-left transition hover:border-blue-400 hover:bg-blue-50/50">
+                  <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-50 text-blue-700"><Users className="h-5 w-5" /></span><span className="flex-1"><strong className="block text-sm text-slate-900">Employee</strong><span className="text-xs text-slate-500">Investigators and other staff</span></span><ArrowRight className="h-4 w-4 text-slate-400" />
+                </button>
+                <button type="button" onClick={() => { setSelectedPortal('IT_ADMIN'); setAuthError(null); }} className="flex w-full items-center gap-3 rounded-xl border border-slate-200 p-4 text-left transition hover:border-blue-400 hover:bg-blue-50/50">
+                  <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-50 text-indigo-700"><Award className="h-5 w-5" /></span><span className="flex-1"><strong className="block text-sm text-slate-900">IT Admin</strong><span className="text-xs text-slate-500">Read-only system access custodian</span></span><ArrowRight className="h-4 w-4 text-slate-400" />
+                </button>
               </div>
-
-              <div>
-                <h2 className="text-lg font-bold text-slate-900 flex items-center gap-2">
-                  <ShieldCheck className="w-5 h-5 text-blue-600" /> Boss / Magistrate Login
-                </h2>
-                <p className="text-xs text-slate-600 mt-1 leading-relaxed">
-                  Full System Oversight, PKI Signature Verification &amp; Stamping, Audit DAG Graph, and Security Alerts.
-                </p>
-              </div>
-
-              <div className="bg-blue-50/70 p-3 rounded-xl border border-blue-100 space-y-2 text-xs">
-                <div className="font-semibold text-blue-950 flex items-center gap-1.5">
-                  <CheckCircle2 className="w-4 h-4 text-blue-600" /> Boss Privileges Included:
-                </div>
-                <ul className="space-y-1 text-slate-700 text-[11px] list-disc list-inside font-medium">
-                  <li>PKI Digital Signature Verification &amp; Stamping</li>
-                  <li>Audit Trail DAG Graph &amp; System Logs</li>
-                  <li>Security Alerts &amp; Break-Glass Access</li>
-                  <li>User Directory &amp; Supervisor Oversight</li>
-                </ul>
-              </div>
-
-              <div className="p-3 bg-slate-50 rounded-xl border border-slate-200">
-                <div className="text-xs font-bold text-slate-800">Authenticating Persona:</div>
-                <div className="text-xs text-blue-700 font-bold mt-0.5">Justice P. K. Mukherjee</div>
-                <div className="text-[11px] text-slate-600">Special Sessions Court Magistrate (Level 4)</div>
-              </div>
-
-              {/* Primary Call-To-Action (CTA) Button */}
-              <button
-                onClick={() => handleBossLogin(defaultBossId)}
-                disabled={authenticatingBoss}
-                aria-label="Enter Boss Magistrate Executive Portal"
-                className="btn btn-primary w-full py-3.5 text-xs font-extrabold flex items-center justify-center gap-2 shadow-md hover:shadow-lg transition-all"
-              >
-                <Key className="w-4 h-4" />
-                <span>{authenticatingBoss ? 'Authenticating Boss...' : 'Enter Boss Portal Gateway →'}</span>
-              </button>
-            </div>
-
-            <div className="text-[10px] text-slate-500 font-mono text-center pt-2 border-t border-slate-100 font-semibold">
-              Clearance Level 4 • Full System Oversight
-            </div>
-          </div>
-
-          {/* Card 2: Employee / Field Officer Portal */}
-          <div className="bg-white border-2 border-blue-200 hover:border-blue-500 rounded-2xl p-6 shadow-sm flex flex-col justify-between space-y-6 transition-all">
-            <div className="space-y-4">
-              <div className="flex items-center justify-between">
-                <span className="px-3 py-1 rounded-full text-[11px] font-bold font-mono bg-blue-50 text-blue-800 border border-blue-200 flex items-center gap-1.5">
-                  <Users className="w-3.5 h-3.5 text-blue-600" /> FIELD PORTAL (LEVEL 3 / 2)
-                </span>
-                <span className="text-xs text-slate-500 font-mono font-semibold">Employee Interface</span>
-              </div>
-
-              <div>
-                <h2 className="text-lg font-bold text-slate-900 flex items-center gap-2">
-                  <ShieldCheck className="w-5 h-5 text-blue-600" /> Employee / Officer Login
-                </h2>
-                <p className="text-xs text-slate-600 mt-1 leading-relaxed">
-                  Restricted Operational Workspace for Case File Management, Evidence Upload, and AI Legal Assistant.
-                </p>
-              </div>
-
-              <div className="bg-slate-50 p-3 rounded-xl border border-slate-200 space-y-2 text-xs">
-                <div className="font-semibold text-slate-900 flex items-center gap-1.5">
-                  <EyeOff className="w-4 h-4 text-slate-600" /> Employee Access Isolation:
-                </div>
-                <ul className="space-y-1 text-slate-700 text-[11px] list-disc list-inside font-medium">
-                  <li>Verify Signature / PKI Options Hidden</li>
-                  <li>Boss User IDs &amp; Senior Authorities Hidden</li>
-                  <li>Security Alerts &amp; Audit DAG Hidden</li>
-                  <li>Profile Switching Disabled Without Logout</li>
-                </ul>
-              </div>
-
-              <div className="p-3 bg-slate-50 rounded-xl border border-slate-200">
-                <div className="text-xs font-bold text-slate-800">Authenticating Persona:</div>
-                <div className="text-xs text-blue-700 font-bold mt-0.5">Inspector Vikram Sharma</div>
-                <div className="text-[11px] text-slate-600">Chief Investigating Officer (Level 3)</div>
-              </div>
-
-              {/* Primary Call-To-Action (CTA) Button */}
-              <button
-                onClick={() => handleEmployeeLogin(defaultEmployeeId)}
-                disabled={authenticatingEmployee}
-                aria-label="Enter Employee Officer Field Portal"
-                className="btn btn-primary w-full py-3.5 text-xs font-extrabold flex items-center justify-center gap-2 shadow-md hover:shadow-lg transition-all"
-              >
-                <UserCheck className="w-4 h-4" />
-                <span>{authenticatingEmployee ? 'Authenticating Employee...' : 'Enter Employee Portal Gateway →'}</span>
-              </button>
-            </div>
-
-            <div className="text-[10px] text-slate-500 font-mono text-center pt-2 border-t border-slate-100 font-semibold">
-              Clearance Level 3/2 • Operational Field Access
-            </div>
-          </div>
-
+              <div className="mt-5 rounded-lg border border-amber-200 bg-amber-50 p-3 text-[11px] leading-5 text-amber-900"><strong>Prototype portal selection.</strong> In the final implementation, a registered device or IP will determine the portal and open its sign-in page directly.</div>
+            </>
+          ) : challenge ? (
+            <>
+              <button type="button" onClick={resetPortal} className="mb-4 inline-flex items-center gap-1.5 text-xs font-semibold text-slate-500 hover:text-blue-700"><ArrowLeft className="h-3.5 w-3.5" />Start over</button>
+              <div className="mb-5"><div className="mb-2 inline-flex items-center gap-1.5 rounded-full border border-emerald-200 bg-emerald-50 px-2.5 py-1 text-[10px] font-bold text-emerald-800"><MessageSquareText className="h-3.5 w-3.5" /> DESKTOP OTP MESSAGE</div><h2 className="text-lg font-bold text-slate-900">Verify it’s you</h2><p className="mt-1 text-xs leading-5 text-slate-600">A demo one-time code was received on this desktop for {challenge.displayName}. Enter it to finish signing in.</p></div>
+              <div role="status" className="mb-4 rounded-xl border border-blue-200 bg-blue-50 p-4"><div className="text-[10px] font-bold uppercase tracking-wider text-blue-800">Prototype desktop message</div><div className="mt-1 font-mono text-2xl font-extrabold tracking-[0.25em] text-slate-900">{challenge.demoOtp}</div><div className="mt-1 text-[11px] text-slate-600">Expires in {challenge.expiresInSeconds} seconds</div></div>
+              <form onSubmit={handleVerifyOtp} className="space-y-3"><label className="block text-xs font-semibold text-slate-800">6-digit OTP<input required inputMode="numeric" pattern="[0-9]{6}" maxLength={6} autoComplete="one-time-code" value={otp} onChange={event => setOtp(event.target.value.replace(/\D/g, '').slice(0, 6))} className="mt-1.5 w-full rounded-lg border border-slate-300 bg-white p-2.5 text-center font-mono text-lg tracking-[0.3em]" placeholder="000000" /></label><button type="submit" disabled={authenticating || otp.length !== 6} className="btn btn-primary flex w-full items-center justify-center gap-2 py-3 text-xs font-extrabold disabled:opacity-60"><Key className="h-4 w-4" />{authenticating ? 'Verifying…' : 'Verify OTP and sign in'}</button></form>
+            </>
+          ) : (
+            <>
+              <button type="button" onClick={resetPortal} className="mb-4 inline-flex items-center gap-1.5 text-xs font-semibold text-slate-500 hover:text-blue-700"><ArrowLeft className="h-3.5 w-3.5" />Choose another portal</button>
+              {selectedPortal === 'IT_ADMIN' ? (
+                <><div className="mb-5"><div className="mb-2 inline-flex items-center gap-1.5 rounded-full border border-blue-200 bg-blue-50 px-2.5 py-1 text-[10px] font-bold text-blue-800"><Award className="h-3.5 w-3.5" /> IT ADMIN · ACCESS CUSTODIAN</div><h2 className="text-lg font-bold text-slate-900">IT Admin sign-in</h2><p className="mt-1 text-xs leading-5 text-slate-600">System-wide view access; may grant or revoke employee document access.</p></div>
+                  <form onSubmit={handleCredentials} className="space-y-3"><label className="block text-xs font-semibold text-slate-800">Admin username<input required autoComplete="username" value={adminUsername} onChange={event => setAdminUsername(event.target.value)} className="mt-1.5 w-full rounded-lg border border-slate-300 bg-white p-2.5 text-sm" placeholder="Enter IT Admin username" /></label><label className="block text-xs font-semibold text-slate-800">Password<input type="password" required autoComplete="current-password" value={adminPassword} onChange={event => setAdminPassword(event.target.value)} className="mt-1.5 w-full rounded-lg border border-slate-300 bg-white p-2.5 text-sm" placeholder="Enter password" /></label><label className="block text-xs font-semibold text-slate-800">IT Admin secret code<input type="password" required autoComplete="off" value={adminSecretCode} onChange={event => setAdminSecretCode(event.target.value)} className="mt-1.5 w-full rounded-lg border border-slate-300 bg-white p-2.5 text-sm" placeholder="Enter admin-only code" /></label><div className="rounded-lg border border-blue-100 bg-blue-50 p-3 text-[11px] text-slate-600"><strong className="block text-blue-900">Demo Admin usernames</strong><code>it_admin1</code> · <code>it_admin2</code><span className="mt-1 block">Credentials are in the prototype handout.</span></div><button type="submit" disabled={authenticating} className="btn btn-primary flex w-full items-center justify-center gap-2 py-3 text-xs font-extrabold disabled:opacity-60"><UserCheck className="h-4 w-4" />{authenticating ? 'Checking credentials…' : 'Continue to OTP'}</button></form></>
+              ) : (
+                <><div className="mb-5"><div className="mb-2 inline-flex items-center gap-1.5 rounded-full border border-blue-200 bg-blue-50 px-2.5 py-1 text-[10px] font-bold text-blue-800"><Users className="h-3.5 w-3.5" /> EMPLOYEE PORTAL</div><h2 className="text-lg font-bold text-slate-900">Employee sign-in</h2><p className="mt-1 text-xs leading-5 text-slate-600">Use your employee ID as your username. OTP is required for every sign-in.</p></div>
+                  <form onSubmit={handleCredentials} className="space-y-3"><label className="block text-xs font-semibold text-slate-800">Employee ID<input required autoComplete="username" value={employeeUsername} onChange={event => setEmployeeUsername(event.target.value)} className="mt-1.5 w-full rounded-lg border border-slate-300 bg-white p-2.5 text-sm" placeholder="e.g. POL-101" /></label><label className="block text-xs font-semibold text-slate-800">Password<input type="password" required autoComplete="current-password" value={employeePassword} onChange={event => setEmployeePassword(event.target.value)} className="mt-1.5 w-full rounded-lg border border-slate-300 bg-white p-2.5 text-sm" placeholder="Enter your password" /></label><div className="rounded-lg border border-blue-100 bg-blue-50 p-3 text-[11px] leading-5 text-slate-600">Hardcoded demonstration credentials are listed in <strong className="text-blue-900">DEMO_CREDENTIALS_AND_ACCESS_FLOW.md</strong> in the project folder.</div><button type="submit" disabled={authenticating} className="btn btn-primary flex w-full items-center justify-center gap-2 py-3 text-xs font-extrabold disabled:opacity-60"><UserCheck className="h-4 w-4" />{authenticating ? 'Checking credentials…' : 'Continue to OTP'}</button></form></>
+              )}
+            </>
+          )}
         </div>
-      </div>
-
-      {/* Footer Legal & Compliance Navigation Links */}
-      <footer className="mt-12 text-center text-xs text-slate-500 space-y-2">
-        <div className="flex items-center justify-center gap-4 font-medium">
-          <Link to="/privacy" className="hover:text-blue-600 transition-colors underline underline-offset-4">
-            Privacy Policy
-          </Link>
-          <span>•</span>
-          <Link to="/terms" className="hover:text-blue-600 transition-colors underline underline-offset-4">
-            Terms of Service
-          </Link>
-          <span>•</span>
-          <span className="flex items-center gap-1 text-slate-600">
-            <Lock className="w-3 h-3 text-blue-600" /> AES-256-GCM Vault Standard
-          </span>
-        </div>
-        <p className="text-[11px] text-slate-400 font-mono">
-          © 2026 SākshyaChain Legal &amp; Judicial Digital Infrastructure. All rights reserved.
-        </p>
-      </footer>
-
+        <footer className="mt-6 text-center text-[11px] text-slate-500"><div className="flex items-center justify-center gap-3"><Link to="/privacy" className="underline underline-offset-4 hover:text-blue-600">Privacy</Link><span>·</span><Link to="/terms" className="underline underline-offset-4 hover:text-blue-600">Terms</Link><span>·</span><span className="inline-flex items-center gap-1"><Lock className="h-3 w-3 text-blue-600" /> AES-256-GCM vault</span></div><p className="mt-2 font-mono text-slate-400">© 2026 SākshyaChain</p></footer>
+      </main>
     </div>
   );
 }

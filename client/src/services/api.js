@@ -19,12 +19,20 @@ api.interceptors.request.use(config => {
     return config;
   }
 
-  const token = localStorage.getItem('sakshya_jwt_token');
+  const token = sessionStorage.getItem('sakshya_jwt_token');
   if (token) {
     config.headers['Authorization'] = `Bearer ${token}`;
   }
   return config;
 }, error => {
+  return Promise.reject(error);
+});
+
+api.interceptors.response.use(response => response, error => {
+  if (error.response?.status === 423 && error.response?.data?.error === 'ACCOUNT_FROZEN') {
+    sessionStorage.removeItem('sakshya_jwt_token');
+    window.dispatchEvent(new CustomEvent('sakshya-account-frozen', { detail: error.response.data.message }));
+  }
   return Promise.reject(error);
 });
 

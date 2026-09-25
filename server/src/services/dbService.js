@@ -3,6 +3,7 @@ import path from 'path';
 import { CONFIG } from '../config.js';
 import { generateRSAKeyPair } from './cryptoService.js';
 import { supabase } from '../supabaseClient.js';
+import { evaluateDocumentAccess } from './documentAccessService.js';
 
 // Pre-generated RSA Key Pairs for Demo Users
 const inspectorKeyPair = generateRSAKeyPair();
@@ -16,46 +17,56 @@ const INITIAL_DB = {
     {
       id: 'USR-POL-101',
       name: 'Inspector Vikram Sharma',
-      username: 'sharma_leo',
+      employeeId: 'POL-101',
+      username: 'POL-101',
       role: 'POLICE_INVESTIGATOR',
+      supervisorId: 'USR-JUD-404',
       roleTitle: 'Chief Investigating Officer',
       department: 'LEO', // Law Enforcement Organization
       departmentName: 'Special Crime Branch - Central Police',
       clearanceLevel: 3, // 1: Unclassified, 2: Confidential, 3: Secret, 4: Top Secret
       publicKey: inspectorKeyPair.publicKey,
       privateKey: inspectorKeyPair.privateKey, // Encrypted/managed in server key store
-      assignedCases: ['CASE-2026-8891', 'CASE-2026-4412', 'CASE-2026-1102']
+      policeStation: 'Central Police Station', workLocation: 'Central District Headquarters', contact: 'vikram.sharma@demo.icjs.gov.in', assignedIp: '10.20.20.101',
+      assignedCases: ['CASE-2026-8891']
     },
     {
       id: 'USR-FOR-202',
       name: 'Dr. Sunita Rao',
-      username: 'drao_forensic',
+      employeeId: 'FOR-202',
+      username: 'FOR-202',
       role: 'FORENSIC_SPECIALIST',
+      supervisorId: 'USR-JUD-404',
       roleTitle: 'Senior Forensic Analyst & Ballistics Expert',
       department: 'FOR',
       departmentName: 'State Central Forensic Science Laboratory',
       clearanceLevel: 3,
       publicKey: forensicKeyPair.publicKey,
       privateKey: forensicKeyPair.privateKey,
+      workLocation: 'State Central Forensic Science Laboratory, Kolkata', contact: 'sunita.rao@demo.icjs.gov.in', assignedIp: '10.20.20.102',
       assignedCases: ['CASE-2026-8891', 'CASE-2026-4412']
     },
     {
       id: 'USR-PRO-303',
       name: 'Advocate Rajesh Verma',
-      username: 'verma_prosecutor',
+      employeeId: 'PROS-303',
+      username: 'PROS-303',
       role: 'PUBLIC_PROSECUTOR',
+      supervisorId: 'USR-JUD-404',
       roleTitle: 'Senior Public Prosecutor',
       department: 'PROS',
       departmentName: 'Directorate of Prosecution - High Court Division',
       clearanceLevel: 3,
       publicKey: prosecutorKeyPair.publicKey,
       privateKey: prosecutorKeyPair.privateKey,
+      workLocation: 'High Court Division, Kolkata', contact: 'rajesh.verma@demo.icjs.gov.in', assignedIp: '10.20.20.103',
       assignedCases: ['CASE-2026-8891', 'CASE-2026-1102']
     },
     {
       id: 'USR-JUD-404',
       name: 'Justice P. K. Mukherjee',
-      username: 'mukherjee_magistrate',
+      employeeId: 'JUD-404',
+      username: 'JUD-404',
       role: 'JUDICIAL_MAGISTRATE',
       roleTitle: 'Special Sessions Court Magistrate',
       department: 'JUD',
@@ -63,12 +74,14 @@ const INITIAL_DB = {
       clearanceLevel: 4,
       publicKey: judgeKeyPair.publicKey,
       privateKey: judgeKeyPair.privateKey,
+      workLocation: 'Sessions Court, Kolkata', contact: 'court.registry@demo.icjs.gov.in', assignedIp: '10.20.20.104',
       assignedCases: ['CASE-2026-8891', 'CASE-2026-4412', 'CASE-2026-1102']
     },
     {
       id: 'USR-AUD-505',
       name: 'Anil Gupta',
-      username: 'gupta_auditor',
+      employeeId: 'AUD-505',
+      username: 'AUD-505',
       role: 'COMPLIANCE_AUDITOR',
       roleTitle: 'Principal Information Security Auditor',
       department: 'AUD',
@@ -76,6 +89,7 @@ const INITIAL_DB = {
       clearanceLevel: 4,
       publicKey: auditorKeyPair.publicKey,
       privateKey: auditorKeyPair.privateKey,
+      workLocation: 'National Digital Evidence Oversight Board, New Delhi', contact: 'anil.gupta@demo.icjs.gov.in', assignedIp: '10.20.20.105',
       assignedCases: ['CASE-2026-8891', 'CASE-2026-4412', 'CASE-2026-1102']
     }
   ],
@@ -121,6 +135,10 @@ const INITIAL_DB = {
     }
   ],
   documents: [], // Managed by storageService + dbService
+  accessRequests: [],
+  approvals: [],
+  abnormalities: [],
+  documentPermissions: [],
   transferRequests: [
     {
       id: 'TRF-9001',
@@ -161,6 +179,72 @@ class DBService {
     try {
       const data = fs.readFileSync(this.dbPath, 'utf8');
       const db = JSON.parse(data);
+      db.accessRequests ||= [];
+      db.approvals ||= [];
+      db.abnormalities ||= [];
+      db.documentPermissions ||= [];
+      let migrated = false;
+      if (!db.users.some(u => u.id === 'USR-IT-001')) { db.users.push({ id: 'USR-IT-001', name: 'SākshyaChain IT Administrator', username: 'it_admin1', role: 'IT_ADMIN', roleTitle: 'IT Admin — Access Custodian', systemRole: 'IT_ADMIN', department: 'IT', departmentName: 'Information Technology', clearanceLevel: 0, assignedCases: [] }); migrated = true; }
+      const firstITAdmin = db.users.find(u => u.id === 'USR-IT-001');
+      if (firstITAdmin && (firstITAdmin.username !== 'it_admin1' || firstITAdmin.roleTitle !== 'IT Admin — Access Custodian')) { firstITAdmin.username = 'it_admin1'; firstITAdmin.roleTitle = 'IT Admin — Access Custodian'; firstITAdmin.systemRole = 'IT_ADMIN'; migrated = true; }
+      if (!db.users.some(u => u.id === 'USR-IT-002')) { db.users.push({ id: 'USR-IT-002', name: 'Meera Nair', username: 'it_admin2', role: 'IT_ADMIN', roleTitle: 'IT Admin — Access Custodian', systemRole: 'IT_ADMIN', department: 'IT', departmentName: 'Information Technology', clearanceLevel: 0, assignedCases: [] }); migrated = true; }
+      if (!db.users.some(u => u.id === 'USR-POL-102')) {
+        const bhirKeyPair = generateRSAKeyPair();
+        db.users.push({
+          id: 'USR-POL-102',
+          name: 'Inspector Bhir Rao',
+          employeeId: 'POL-102',
+          username: 'POL-102',
+          role: 'POLICE_INVESTIGATOR',
+          supervisorId: 'USR-JUD-404',
+          roleTitle: 'Investigation Officer',
+          department: 'LEO',
+          departmentName: 'Special Crime Branch - Central Police',
+          clearanceLevel: 3,
+          publicKey: bhirKeyPair.publicKey,
+          privateKey: bhirKeyPair.privateKey,
+          policeStation: 'North District Police Station', workLocation: 'North District Investigation Unit', contact: 'bhir.rao@demo.icjs.gov.in', assignedIp: '10.20.20.106',
+          assignedCases: ['CASE-2026-4412']
+        });
+        migrated = true;
+      }
+      if (!db.users.some(u => u.id === 'USR-POL-103')) {
+        const officerKeyPair = generateRSAKeyPair();
+        db.users.push({
+          id: 'USR-POL-103', employeeId: 'POL-103', name: 'Sub-Inspector Asha Nair', username: 'POL-103',
+          role: 'POLICE_INVESTIGATOR', supervisorId: 'USR-JUD-404', roleTitle: 'Sub-Inspector', department: 'LEO',
+          departmentName: 'Special Crime Branch - Central Police', policeStation: 'East Gate Police Station',
+          workLocation: 'East District Investigation Unit', contact: 'asha.nair@demo.icjs.gov.in', assignedIp: '10.20.20.107', clearanceLevel: 3,
+          publicKey: officerKeyPair.publicKey, privateKey: officerKeyPair.privateKey, assignedCases: ['CASE-2026-1102']
+        });
+        migrated = true;
+      }
+      const hardcodedProfile = {
+        'USR-POL-101': ['POL-101', 'Central Police Station', 'Central District Headquarters', 'vikram.sharma@demo.icjs.gov.in', '10.20.20.101'],
+        'USR-POL-102': ['POL-102', 'North District Police Station', 'North District Investigation Unit', 'bhir.rao@demo.icjs.gov.in', '10.20.20.106'],
+        'USR-POL-103': ['POL-103', 'East Gate Police Station', 'East District Investigation Unit', 'asha.nair@demo.icjs.gov.in', '10.20.20.107'],
+        'USR-FOR-202': ['FOR-202', '', 'State Central Forensic Science Laboratory, Kolkata', 'sunita.rao@demo.icjs.gov.in', '10.20.20.102'],
+        'USR-PRO-303': ['PROS-303', '', 'High Court Division, Kolkata', 'rajesh.verma@demo.icjs.gov.in', '10.20.20.103'],
+        'USR-JUD-404': ['JUD-404', '', 'Sessions Court, Kolkata', 'court.registry@demo.icjs.gov.in', '10.20.20.104'],
+        'USR-AUD-505': ['AUD-505', '', 'National Digital Evidence Oversight Board, New Delhi', 'anil.gupta@demo.icjs.gov.in', '10.20.20.105']
+      };
+      for (const user of db.users) {
+        const profile = hardcodedProfile[user.id];
+        if (!profile) continue;
+        const [employeeId, policeStation, workLocation, contact, assignedIp] = profile;
+        for (const [key, value] of Object.entries({ employeeId, username: employeeId, policeStation, workLocation, contact, assignedIp })) {
+          if (user[key] !== value) { user[key] = value; migrated = true; }
+        }
+        if (user.id === 'USR-POL-101' && JSON.stringify(user.assignedCases) !== JSON.stringify(['CASE-2026-8891'])) { user.assignedCases = ['CASE-2026-8891']; migrated = true; }
+        if (user.id === 'USR-POL-102' && JSON.stringify(user.assignedCases) !== JSON.stringify(['CASE-2026-4412'])) { user.assignedCases = ['CASE-2026-4412']; migrated = true; }
+        if (user.id === 'USR-POL-103' && JSON.stringify(user.assignedCases) !== JSON.stringify(['CASE-2026-1102'])) { user.assignedCases = ['CASE-2026-1102']; migrated = true; }
+      }
+      for (const user of db.users) if (!user.supervisorId && !['USR-JUD-404', 'USR-AUD-505', 'USR-IT-001', 'USR-IT-002'].includes(user.id)) { user.supervisorId = 'USR-JUD-404'; migrated = true; }
+      for (const doc of db.documents || []) {
+        if (!doc.ownerId) { doc.ownerId = doc.authorId; migrated = true; }
+        if (!doc.accessPolicy) { doc.accessPolicy = doc.clearanceLevel >= 3 ? 'OWNER_APPROVAL' : 'CASE_POLICY'; migrated = true; }
+      }
+      if (migrated) this.writeDB(db);
       if (!db.manifests) db.manifests = [];
       if (!db.revocations) db.revocations = [];
       if (!db.transferRequests) db.transferRequests = [];
@@ -229,13 +313,13 @@ class DBService {
 
   getUserByUsername(username) {
     const db = this.readDB();
-    return db.users.find(u => u.username === username);
+    return db.users.find(u => String(u.username || '').toLowerCase() === String(username || '').toLowerCase());
   }
 
   getAllUsers() {
     const db = this.readDB();
     // Exclude private keys from listing endpoints
-    return db.users.map(({ privateKey, ...rest }) => rest);
+    return db.users.map(({ privateKey, passwordHash, passwordSalt, ...rest }) => rest);
   }
 
   getUserWithPrivateKey(userId) {
@@ -245,28 +329,17 @@ class DBService {
 
   getCasesForUser(user) {
     const db = this.readDB();
+    if (user.systemRole === 'IT_ADMIN') return db.cases;
     return db.cases.filter(c => {
-      // Must satisfy clearance and department or case assignment
       const clearanceOK = user.clearanceLevel >= c.clearanceRequired;
-      const deptOK = c.departmentsAccess.includes(user.department);
-      const assignedOK = user.assignedCases.includes(c.id);
-      return clearanceOK && (deptOK || assignedOK);
+      const assignedOK = (user.assignedCases || []).includes(c.id);
+      return clearanceOK && assignedOK;
     });
   }
 
   getDocumentsForUser(user, filters = {}) {
     const db = this.readDB();
-    let docs = db.documents;
-
-    // Server-Side Clearance Level Filtering (Strict ABAC enforcement)
-    docs = docs.filter(d => user.clearanceLevel >= d.clearanceLevel);
-
-    // Case access check
-    docs = docs.filter(d => {
-      const parentCase = db.cases.find(c => c.id === d.caseId);
-      if (!parentCase) return false;
-      return parentCase.departmentsAccess.includes(user.department) || user.assignedCases.includes(d.caseId);
-    });
+    let docs = db.documents.filter(d => evaluateDocumentAccess({ user, doc: d, db, permission: 'VIEW' }).allowed);
 
     if (filters.caseId) {
       docs = docs.filter(d => d.caseId === filters.caseId);
@@ -302,6 +375,8 @@ class DBService {
         case_title: docObj.caseTitle,
         category: docObj.category,
         clearance_level: docObj.clearanceLevel,
+        owner_id: docObj.ownerId || docObj.authorId,
+        access_policy: docObj.accessPolicy || 'CASE_POLICY',
         author_id: docObj.authorId,
         author_name: docObj.authorName,
         author_role: docObj.authorRole,

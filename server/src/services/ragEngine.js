@@ -1,4 +1,5 @@
 import { dbService } from './dbService.js';
+import { evaluateDocumentAccess } from './documentAccessService.js';
 
 class RAGEngine {
   constructor() {
@@ -108,17 +109,14 @@ class RAGEngine {
    */
   performRAGSearch(user, query, targetCaseId = null) {
     const queryTerms = query.toLowerCase().split(/\s+/).filter(t => t.length > 2);
+    const db = dbService.readDB();
     
     // 1. STRICT SERVER-SIDE CLEARANCE & CASE AUTHORIZATION FILTER
     const accessibleChunks = this.chunks.filter(chunk => {
-      // Clearance check
-      if (user.clearanceLevel < chunk.clearanceLevel) return false;
       // Case filter check
       if (targetCaseId && chunk.caseId !== targetCaseId) return false;
-      
-      const parentCase = dbService.readDB().cases.find(c => c.id === chunk.caseId);
-      if (!parentCase) return false;
-      return parentCase.departmentsAccess.includes(user.department) || user.assignedCases.includes(chunk.caseId);
+      const doc = db.documents.find(d => d.id === chunk.docId);
+      return !!doc && evaluateDocumentAccess({ user, doc, db, permission: 'VIEW' }).allowed;
     });
 
     // 2. Score relevance

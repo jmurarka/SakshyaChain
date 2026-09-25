@@ -12,7 +12,6 @@ import {
   Zap, 
   FileText, 
   Trash2, 
-  Edit3, 
   Maximize2, 
   RotateCcw, 
   Link as LinkIcon, 
@@ -22,22 +21,24 @@ import {
   MapPin, 
   Shield, 
   Crosshair, 
-  CheckCircle2,
-  X
+  X,
+  ZoomIn,
+  ZoomOut,
+  Move
 } from 'lucide-react';
 
 const FALLBACK_GRAPH = {
   nodes: [
-    { nodeId: 'person_sameer_verma', label: 'Sameer Verma', entityType: 'PERSON', properties: { title: 'Former Sysadmin / Prime Suspect', alias: 'SV-992' }, x: 180, y: 140 },
-    { nodeId: 'person_vikram_sharma', label: 'Inspector Vikram Sharma', entityType: 'PERSON', properties: { title: 'Chief Investigating Officer' }, x: 140, y: 380 },
-    { nodeId: 'person_mukherjee', label: 'Justice P. K. Mukherjee', entityType: 'PERSON', properties: { title: 'Special Sessions Magistrate' }, x: 620, y: 410 },
-    { nodeId: 'person_rajesh_kumar', label: 'Rajesh Kumar', entityType: 'PERSON', properties: { title: 'Whistleblower (Deceased)' }, x: 580, y: 120 },
-    { nodeId: 'org_cyber_syndicate', label: 'Cyber Syndicate', entityType: 'ORGANIZATION', properties: { title: 'Target Cybercrime Cell' }, x: 140, y: 260 },
-    { nodeId: 'location_tech_vault', label: 'Tech Vault Facility (Bldg B4)', entityType: 'LOCATION', properties: { address: 'Cyber Park, Bldg B4' }, x: 420, y: 240 },
-    { nodeId: 'evidence_glock_17', label: 'Glock-17 Pistol (Serial #GL-88392)', entityType: 'EVIDENCE_WEAPON', properties: { caliber: '9mm' }, x: 740, y: 240 },
-    { nodeId: 'account_cold_wallet', label: 'Cold Wallet Key ($4.2M Siphoned)', entityType: 'ACCOUNT', properties: { type: 'Crypto Cold Wallet' }, x: 400, y: 80 },
-    { nodeId: 'phone_wiretap', label: '+91 98210-44910', entityType: 'PHONE', properties: { carrier: 'Encrypted SIP Wiretap' }, x: 760, y: 340 },
-    { nodeId: 'location_mumbai', label: 'Mumbai Central Terminal', entityType: 'LOCATION', properties: { city: 'Mumbai' }, x: 420, y: 400 }
+    { nodeId: 'person_sameer_verma', label: 'Sameer Verma', entityType: 'PERSON', properties: { title: 'Former Sysadmin / Prime Suspect', alias: 'SV-992' }, x: 60, y: 80, width: 220, height: 50 },
+    { nodeId: 'person_vikram_sharma', label: 'Inspector Vikram Sharma', entityType: 'PERSON', properties: { title: 'Chief Investigating Officer' }, x: 60, y: 340, width: 240, height: 50 },
+    { nodeId: 'person_mukherjee', label: 'Justice P. K. Mukherjee', entityType: 'PERSON', properties: { title: 'Special Sessions Magistrate' }, x: 540, y: 380, width: 240, height: 50 },
+    { nodeId: 'person_rajesh_kumar', label: 'Rajesh Kumar', entityType: 'PERSON', properties: { title: 'Whistleblower (Deceased)' }, x: 540, y: 60, width: 220, height: 50 },
+    { nodeId: 'org_cyber_syndicate', label: 'Cyber Syndicate', entityType: 'ORGANIZATION', properties: { title: 'Target Cybercrime Cell' }, x: 60, y: 210, width: 200, height: 50 },
+    { nodeId: 'location_tech_vault', label: 'Tech Vault Facility (Bldg B4)', entityType: 'LOCATION', properties: { address: 'Cyber Park, Bldg B4' }, x: 360, y: 200, width: 260, height: 50 },
+    { nodeId: 'evidence_glock_17', label: 'Glock-17 Pistol (#GL-88392)', entityType: 'EVIDENCE_WEAPON', properties: { caliber: '9mm' }, x: 660, y: 200, width: 250, height: 50 },
+    { nodeId: 'account_cold_wallet', label: 'Cold Wallet Key ($4.2M Siphoned)', entityType: 'ACCOUNT', properties: { type: 'Crypto Cold Wallet' }, x: 340, y: 40, width: 260, height: 50 },
+    { nodeId: 'phone_wiretap', label: '+91 98210-44910', entityType: 'PHONE', properties: { carrier: 'Encrypted SIP Wiretap' }, x: 680, y: 300, width: 210, height: 50 },
+    { nodeId: 'location_mumbai', label: 'Mumbai Central Terminal', entityType: 'LOCATION', properties: { city: 'Mumbai' }, x: 340, y: 360, width: 240, height: 50 }
   ],
   edges: [
     {
@@ -100,31 +101,32 @@ const FALLBACK_GRAPH = {
 };
 
 const ENTITY_CONFIG = {
-  PERSON: { label: 'Person / Suspect', color: '#3b82f6', bg: '#eff6ff', border: '#93c5fd', icon: User },
-  ORGANIZATION: { label: 'Organization / Syndicate', color: '#a855f7', bg: '#faf5ff', border: '#d8b4fe', icon: Building },
-  PHONE: { label: 'Phone / Wiretap', color: '#f59e0b', bg: '#fffbeb', border: '#fde68a', icon: Phone },
-  ACCOUNT: { label: 'Account / Wallet', color: '#06b6d4', bg: '#ecfeff', border: '#a5f3fc', icon: Shield },
-  LOCATION: { label: 'Location / Scene', color: '#10b981', bg: '#ecfdf5', border: '#6ee7b7', icon: MapPin },
-  EVIDENCE_WEAPON: { label: 'Evidence / Weapon', color: '#ef4444', bg: '#fef2f2', border: '#fca5a5', icon: Crosshair }
+  PERSON: { label: 'Person / Suspect', color: '#2563eb', bg: '#eff6ff', border: '#93c5fd', icon: User },
+  ORGANIZATION: { label: 'Organization / Syndicate', color: '#9333ea', bg: '#faf5ff', border: '#d8b4fe', icon: Building },
+  PHONE: { label: 'Phone / Wiretap', color: '#d97706', bg: '#fffbeb', border: '#fde68a', icon: Phone },
+  ACCOUNT: { label: 'Account / Wallet', color: '#0891b2', bg: '#ecfeff', border: '#a5f3fc', icon: Shield },
+  LOCATION: { label: 'Location / Scene', color: '#059669', bg: '#ecfdf5', border: '#6ee7b7', icon: MapPin },
+  EVIDENCE_WEAPON: { label: 'Evidence / Weapon', color: '#dc2626', bg: '#fef2f2', border: '#fca5a5', icon: Crosshair }
 };
 
 export default function KnowledgeGraphPage() {
-  const { user } = useAuth();
+  const { user, isITAdmin } = useAuth();
   const navigate = useNavigate();
   const canvasRef = useRef(null);
 
-  const [activeTab, setActiveTab] = useState('visualizer'); // 'visualizer' | 'pathfinder' | 'contradictions' | 'timeline'
+  const [activeTab, setActiveTab] = useState('visualizer');
   const [caseId, setCaseId] = useState('CASE-2026-8891');
   const [nodes, setNodes] = useState(FALLBACK_GRAPH.nodes);
   const [edges, setEdges] = useState(FALLBACK_GRAPH.edges);
   const [loading, setLoading] = useState(false);
 
-  // Canvas Interactions
+  // Canvas State & Scaling
   const [selectedNodeId, setSelectedNodeId] = useState(null);
   const [selectedEdgeId, setSelectedEdgeId] = useState(null);
   const [draggingNodeId, setDraggingNodeId] = useState(null);
+  const [resizingNodeId, setResizingNodeId] = useState(null);
   const [dragOffset, setDragOffset] = useState({ x: 0, y: 0 });
-  const [zoom, setZoom] = useState(1);
+  const [zoomScale, setZoomScale] = useState(1);
 
   // Pathfinder Tab State
   const [pathStart, setPathStart] = useState('person_sameer_verma');
@@ -132,7 +134,7 @@ export default function KnowledgeGraphPage() {
   const [discoveredPath, setDiscoveredPath] = useState(null);
   const [findingPath, setFindingPath] = useState(false);
 
-  // Modals for Editing
+  // Editing Modals
   const [isAddNodeOpen, setIsAddNodeOpen] = useState(false);
   const [isAddEdgeOpen, setIsAddEdgeOpen] = useState(false);
   const [newNodeLabel, setNewNodeLabel] = useState('');
@@ -142,18 +144,19 @@ export default function KnowledgeGraphPage() {
   const [newEdgeRelation, setNewEdgeRelation] = useState('CONNECTED_TO');
   const [newEdgeQuote, setNewEdgeQuote] = useState('');
 
-  // Load Graph Data from REST API (with offline fallback)
+  // Load Graph Data from API
   useEffect(() => {
     async function loadGraphData() {
       setLoading(true);
       try {
         const res = await api.get(`/knowledge-graph/cases/${caseId}`);
         if (res.data?.graph?.nodes?.length > 0) {
-          // Preserve custom x/y if assigned
           const fetchedNodes = res.data.graph.nodes.map((n, idx) => ({
             ...n,
-            x: n.x || FALLBACK_GRAPH.nodes[idx]?.x || (150 + (idx % 3) * 220),
-            y: n.y || FALLBACK_GRAPH.nodes[idx]?.y || (120 + Math.floor(idx / 3) * 120)
+            x: n.x || FALLBACK_GRAPH.nodes[idx]?.x || (60 + (idx % 3) * 260),
+            y: n.y || FALLBACK_GRAPH.nodes[idx]?.y || (60 + Math.floor(idx / 3) * 120),
+            width: n.width || 230,
+            height: n.height || 50
           }));
           setNodes(fetchedNodes);
           setEdges(res.data.graph.edges || []);
@@ -169,28 +172,41 @@ export default function KnowledgeGraphPage() {
     loadGraphData();
   }, [caseId]);
 
-  // Dynamic Canvas Renderer: Auto-adjusts node size to fit label text 100%
+  // ULTRA-CRISP HIGH-DPI CANVAS RENDERER
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
     const ctx = canvas.getContext('2d');
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
 
+    const parent = canvas.parentElement;
     const dpr = window.devicePixelRatio || 1;
-    ctx.save();
+    const width = parent.clientWidth || 940;
+    const height = 560;
 
-    // Map Node Positions & Bounds
+    // Set canvas dimensions matched to High-DPI display ratio
+    canvas.width = Math.floor(width * dpr);
+    canvas.height = Math.floor(height * dpr);
+    canvas.style.width = `${width}px`;
+    canvas.style.height = `${height}px`;
+
+    ctx.save();
+    ctx.scale(dpr * zoomScale, dpr * zoomScale);
+    ctx.clearRect(0, 0, width, height);
+
+    // Map Node Positions & Dynamic Text Width Measurements
     const nodeMap = new Map();
     nodes.forEach(node => {
-      ctx.font = 'bold 12px Inter, system-ui, sans-serif';
+      ctx.font = 'bold 13px Inter, system-ui, -apple-system, sans-serif';
       const textWidth = ctx.measureText(node.label).width;
-      // Dynamic padding & sizing to ensure text never overflows
-      const nodeWidth = Math.max(160, textWidth + 50);
-      const nodeHeight = 44;
-      nodeMap.set(node.nodeId, { ...node, width: nodeWidth, height: nodeHeight });
+      // Ensure node is wide enough for complete text without truncation
+      const minWidth = Math.max(180, textWidth + 60);
+      const computedWidth = node.width ? Math.max(node.width, minWidth) : minWidth;
+      const computedHeight = node.height || 50;
+
+      nodeMap.set(node.nodeId, { ...node, width: computedWidth, height: computedHeight });
     });
 
-    // 1. Draw Edges & Relationship Arrows
+    // 1. Draw Directional Edges & Bezier Curves
     edges.forEach(edge => {
       const src = nodeMap.get(edge.sourceId);
       const tgt = nodeMap.get(edge.targetId);
@@ -204,36 +220,35 @@ export default function KnowledgeGraphPage() {
       const tgtCenterX = tgt.x + tgt.width / 2;
       const tgtCenterY = tgt.y + tgt.height / 2;
 
+      const midX = (srcCenterX + tgtCenterX) / 2;
+      const midY = (srcCenterY + tgtCenterY) / 2 - 20;
+
+      // Curve path
       ctx.beginPath();
       ctx.moveTo(srcCenterX, srcCenterY);
-
-      // Curved Bezier line
-      const midX = (srcCenterX + tgtCenterX) / 2;
-      const midY = (srcCenterY + tgtCenterY) / 2 - 25;
       ctx.quadraticCurveTo(midX, midY, tgtCenterX, tgtCenterY);
 
       ctx.lineWidth = isPathHighlighted ? 4 : isSelected ? 3 : 2;
       ctx.strokeStyle = isPathHighlighted ? '#06b6d4' : isSelected ? '#2563eb' : '#cbd5e1';
-      ctx.setLineDash(isSelected ? [4, 4] : []);
       ctx.stroke();
 
-      // Directional Arrow Head
+      // Directional Arrowhead
       const angle = Math.atan2(tgtCenterY - midY, tgtCenterX - midX);
       ctx.beginPath();
-      ctx.fillStyle = isPathHighlighted ? '#06b6d4' : isSelected ? '#2563eb' : '#94a3b8';
+      ctx.fillStyle = isPathHighlighted ? '#06b6d4' : isSelected ? '#2563eb' : '#64748b';
       ctx.moveTo(tgtCenterX - 14 * Math.cos(angle - Math.PI / 6), tgtCenterY - 14 * Math.sin(angle - Math.PI / 6));
       ctx.lineTo(tgtCenterX, tgtCenterY);
       ctx.lineTo(tgtCenterX - 14 * Math.cos(angle + Math.PI / 6), tgtCenterY - 14 * Math.sin(angle + Math.PI / 6));
       ctx.fill();
 
-      // Relationship Text Badge on Edge
+      // Relationship Text Pill Badge
       ctx.font = 'bold 10px monospace';
       const labelText = edge.relationshipType;
-      const labelWidth = ctx.measureText(labelText).width + 12;
+      const labelWidth = ctx.measureText(labelText).width + 14;
 
-      ctx.fillStyle = isPathHighlighted ? '#0891b2' : isSelected ? '#1e40af' : '#475569';
+      ctx.fillStyle = isPathHighlighted ? '#0891b2' : isSelected ? '#1d4ed8' : '#334155';
       ctx.beginPath();
-      ctx.roundRect(midX - labelWidth / 2, midY - 10, labelWidth, 18, 9);
+      ctx.roundRect(midX - labelWidth / 2, midY - 9, labelWidth, 18, 9);
       ctx.fill();
 
       ctx.fillStyle = '#ffffff';
@@ -242,102 +257,136 @@ export default function KnowledgeGraphPage() {
       ctx.fillText(labelText, midX, midY);
     });
 
-    // 2. Draw Nodes (Auto-sized Pill Cards matching SākshyaChain aesthetic)
+    // 2. Draw Vector Node Cards (Auto-sized, Crisp High-DPI Rendering)
     nodes.forEach(node => {
       const computed = nodeMap.get(node.nodeId);
       const isSelected = selectedNodeId === node.nodeId;
       const isHighlightedInPath = discoveredPath && discoveredPath.some(p => p.sourceId === node.nodeId || p.targetId === node.nodeId);
       const cfg = ENTITY_CONFIG[node.entityType] || ENTITY_CONFIG.PERSON;
 
-      // Card Background Shadow & Glow
-      if (isSelected || isHighlightedInPath) {
-        ctx.shadowColor = isHighlightedInPath ? '#06b6d4' : '#2563eb';
-        ctx.shadowBlur = 12;
-      } else {
-        ctx.shadowColor = 'rgba(0,0,0,0.06)';
-        ctx.shadowBlur = 6;
-      }
+      // Card Body Background
+      ctx.shadowColor = isSelected ? 'rgba(37, 99, 235, 0.25)' : isHighlightedInPath ? 'rgba(6, 182, 212, 0.25)' : 'rgba(15, 23, 42, 0.08)';
+      ctx.shadowBlur = isSelected || isHighlightedInPath ? 12 : 6;
+      ctx.shadowOffsetY = 3;
 
       ctx.beginPath();
-      ctx.roundRect(computed.x, computed.y, computed.width, computed.height, 12);
+      ctx.roundRect(computed.x, computed.y, computed.width, computed.height, 10);
       ctx.fillStyle = '#ffffff';
       ctx.fill();
-      ctx.shadowBlur = 0; // Reset shadow
+      ctx.shadowBlur = 0;
+      ctx.shadowOffsetY = 0;
 
-      // Border Styling
+      // Outer Border
       ctx.lineWidth = isSelected ? 2.5 : 1.5;
-      ctx.strokeStyle = isSelected ? '#2563eb' : isHighlightedInPath ? '#0891b2' : cfg.border;
+      ctx.strokeStyle = isSelected ? '#2563eb' : isHighlightedInPath ? '#06b6d4' : cfg.border;
       ctx.stroke();
 
-      // Entity Color Badge Circle
+      // Color Badge Left Bar
       ctx.beginPath();
-      ctx.arc(computed.x + 20, computed.y + computed.height / 2, 8, 0, 2 * Math.PI);
+      ctx.roundRect(computed.x, computed.y, 6, computed.height, [10, 0, 0, 10]);
       ctx.fillStyle = cfg.color;
       ctx.fill();
 
-      // Node Label Text (Adjusts dynamically so text is 100% visible)
-      ctx.font = 'bold 12px Inter, system-ui, sans-serif';
+      // Node Label Text (100% visible, never cut off)
+      ctx.font = 'bold 13px Inter, system-ui, -apple-system, sans-serif';
       ctx.fillStyle = '#0f172a';
       ctx.textAlign = 'left';
       ctx.textBaseline = 'middle';
-      ctx.fillText(node.label, computed.x + 36, computed.y + computed.height / 2 - 2);
+      ctx.fillText(node.label, computed.x + 18, computed.y + computed.height / 2 - 8);
 
-      // Subtitle / Entity Type Label
-      ctx.font = '9px monospace';
-      ctx.fillStyle = '#64748b';
-      ctx.fillText(node.entityType.replace('_', ' '), computed.x + 36, computed.y + computed.height / 2 + 10);
+      // Subtitle Entity Tag
+      ctx.font = '10px monospace';
+      ctx.fillStyle = cfg.color;
+      ctx.fillText(node.entityType.replace('_', ' '), computed.x + 18, computed.y + computed.height / 2 + 10);
+
+      // Resize Handle Grip on Bottom Right when selected
+      if (isSelected) {
+        ctx.fillStyle = '#2563eb';
+        ctx.beginPath();
+        ctx.arc(computed.x + computed.width - 6, computed.y + computed.height - 6, 5, 0, 2 * Math.PI);
+        ctx.fill();
+      }
     });
 
     ctx.restore();
-  }, [nodes, edges, selectedNodeId, selectedEdgeId, discoveredPath]);
+  }, [nodes, edges, selectedNodeId, selectedEdgeId, discoveredPath, zoomScale]);
 
-  // Handle Drag-and-Drop Node Movement on Canvas
+  // Accurate Mouse Coordinate Helper
+  const getCanvasPos = (e) => {
+    const canvas = canvasRef.current;
+    if (!canvas) return { x: 0, y: 0 };
+    const rect = canvas.getBoundingClientRect();
+    return {
+      x: (e.clientX - rect.left) / zoomScale,
+      y: (e.clientY - rect.top) / zoomScale
+    };
+  };
+
+  // Drag & Resize Mouse Handlers
   const handleMouseDown = (e) => {
+    const pos = getCanvasPos(e);
     const canvas = canvasRef.current;
     if (!canvas) return;
-    const rect = canvas.getBoundingClientRect();
-    const clickX = e.clientX - rect.left;
-    const clickY = e.clientY - rect.top;
+    const ctx = canvas.getContext('2d');
 
-    // Check if clicked inside a node card
+    // Check if clicked inside a node or resize handle
     for (let i = nodes.length - 1; i >= 0; i--) {
       const node = nodes[i];
-      const ctx = canvas.getContext('2d');
-      ctx.font = 'bold 12px Inter, system-ui, sans-serif';
+      ctx.font = 'bold 13px Inter, system-ui, -apple-system, sans-serif';
       const textWidth = ctx.measureText(node.label).width;
-      const width = Math.max(160, textWidth + 50);
-      const height = 44;
+      const minWidth = Math.max(180, textWidth + 60);
+      const width = node.width ? Math.max(node.width, minWidth) : minWidth;
+      const height = node.height || 50;
 
-      if (clickX >= node.x && clickX <= node.x + width && clickY >= node.y && clickY <= node.y + height) {
+      // Check Bottom-Right Resize Handle
+      const isResizeClick = Math.abs(pos.x - (node.x + width)) < 15 && Math.abs(pos.y - (node.y + height)) < 15;
+      if (isResizeClick) {
+        setSelectedNodeId(node.nodeId);
+        setResizingNodeId(node.nodeId);
+        return;
+      }
+
+      // Check Inside Node Body
+      if (pos.x >= node.x && pos.x <= node.x + width && pos.y >= node.y && pos.y <= node.y + height) {
         setSelectedNodeId(node.nodeId);
         setSelectedEdgeId(null);
         setDraggingNodeId(node.nodeId);
-        setDragOffset({ x: clickX - node.x, y: clickY - node.y });
+        setDragOffset({ x: pos.x - node.x, y: pos.y - node.y });
         return;
       }
     }
 
-    // Check if clicked near an edge label
     setSelectedNodeId(null);
     setSelectedEdgeId(null);
   };
 
   const handleMouseMove = (e) => {
-    if (!draggingNodeId) return;
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-    const rect = canvas.getBoundingClientRect();
-    const mouseX = e.clientX - rect.left;
-    const mouseY = e.clientY - rect.top;
+    const pos = getCanvasPos(e);
 
-    const newX = Math.max(10, mouseX - dragOffset.x);
-    const newY = Math.max(10, mouseY - dragOffset.y);
+    // Resizing Node Width & Height
+    if (resizingNodeId) {
+      setNodes(prev => prev.map(n => {
+        if (n.nodeId === resizingNodeId) {
+          const newW = Math.max(180, pos.x - n.x);
+          const newH = Math.max(40, pos.y - n.y);
+          return { ...n, width: newW, height: newH };
+        }
+        return n;
+      }));
+      return;
+    }
 
-    setNodes(prev => prev.map(n => n.nodeId === draggingNodeId ? { ...n, x: newX, y: newY } : n));
+    // Dragging Node Position
+    if (draggingNodeId) {
+      const newX = Math.max(10, pos.x - dragOffset.x);
+      const newY = Math.max(10, pos.y - dragOffset.y);
+      setNodes(prev => prev.map(n => n.nodeId === draggingNodeId ? { ...n, x: newX, y: newY } : n));
+    }
   };
 
   const handleMouseUp = () => {
     setDraggingNodeId(null);
+    setResizingNodeId(null);
   };
 
   // Add Custom Node
@@ -345,15 +394,27 @@ export default function KnowledgeGraphPage() {
     e.preventDefault();
     if (!newNodeLabel) return;
     const nodeId = `${newNodeType.toLowerCase()}_${newNodeLabel.toLowerCase().replace(/[^a-z0-9]/g, '_')}_${Date.now()}`;
+    const canvas = canvasRef.current;
+    const ctx = canvas ? canvas.getContext('2d') : null;
+    let computedW = 230;
+    if (ctx) {
+      ctx.font = 'bold 13px Inter, system-ui, sans-serif';
+      computedW = Math.max(180, ctx.measureText(newNodeLabel).width + 60);
+    }
+
     const newNode = {
       nodeId,
       label: newNodeLabel,
       entityType: newNodeType,
       properties: { title: 'Custom Operational Entity' },
-      x: 200 + Math.random() * 200,
-      y: 150 + Math.random() * 150
+      x: 100 + Math.random() * 200,
+      y: 100 + Math.random() * 150,
+      width: computedW,
+      height: 50
     };
+
     setNodes(prev => [...prev, newNode]);
+    setSelectedNodeId(nodeId);
     setNewNodeLabel('');
     setIsAddNodeOpen(false);
   };
@@ -372,7 +433,7 @@ export default function KnowledgeGraphPage() {
         sourceDocId: 'DOC-8891-001',
         trackingNo: 'MANUAL-ENTRY-01',
         pageNumber: 1,
-        quote: newEdgeQuote || 'Direct officer relationship mapping logged on canvas.',
+        quote: newEdgeQuote || 'Direct relationship mapped manually on canvas by officer.',
         confidence: 0.95,
         eventDate: new Date().toISOString().split('T')[0]
       }
@@ -399,7 +460,6 @@ export default function KnowledgeGraphPage() {
       if (res.data?.path && res.data.path.length > 0) {
         setDiscoveredPath(res.data.path);
       } else {
-        // Fallback Pathfinder BFS logic for offline client
         const path = findClientPath(pathStart, pathEnd);
         setDiscoveredPath(path);
       }
@@ -445,14 +505,14 @@ export default function KnowledgeGraphPage() {
             <div>
               <h1 className="text-xl font-bold text-slate-900 font-mono">Crime Report Knowledge Graph &amp; Entity Pathfinder</h1>
               <p className="text-xs text-slate-500 mt-0.5">
-                Evidence-Backed Multi-Hop Relationship Mapping • Citation Provenance • Contradiction Scanner
+                Crisp Vector Canvas • Drag &amp; Resize Nodes • Citation Provenance • Contradiction Scanner
               </p>
             </div>
           </div>
         </div>
 
         <div className="flex items-center gap-2 font-sans">
-          <select value={caseId} onChange={(e) => setCaseId(e.target.value)} className="input-field text-xs py-2 px-3">
+          <select value={caseId} onChange={(e) => setCaseId(e.target.value)} className="input-field text-xs py-2 px-3 font-semibold">
             <option value="CASE-2026-8891">CASE-2026-8891 (State vs. Cyber Syndicate)</option>
             <option value="CASE-2026-4412">CASE-2026-4412 (Contraband Seizure)</option>
             <option value="CASE-2026-1102">CASE-2026-1102 (Judicial Interception)</option>
@@ -468,7 +528,7 @@ export default function KnowledgeGraphPage() {
             activeTab === 'visualizer' ? 'border-blue-600 text-blue-700 bg-blue-50/50 rounded-t-lg' : 'border-transparent text-slate-500 hover:text-slate-900'
           }`}
         >
-          <GitFork className="w-4 h-4" /> Interactive Graph Canvas
+          <GitFork className="w-4 h-4" /> Interactive Canvas (Editable)
         </button>
         <button
           onClick={() => setActiveTab('pathfinder')}
@@ -496,43 +556,50 @@ export default function KnowledgeGraphPage() {
         </button>
       </div>
 
-      {/* TAB 1: INTERACTIVE GRAPH CANVAS (EDITABLE) */}
+      {/* TAB 1: EDITABLE CANVAS VISUALIZER */}
       {activeTab === 'visualizer' && (
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          {/* Main Canvas Area */}
+          {/* Main Canvas Container */}
           <div className="lg:col-span-2 space-y-4">
             <div className="white-card p-4 border border-slate-200 flex flex-wrap items-center justify-between gap-3 font-sans text-xs">
-              <div className="flex items-center gap-2">
-                <button onClick={() => setIsAddNodeOpen(true)} className="btn btn-primary text-xs py-1.5 px-3 flex items-center gap-1.5 font-bold">
+              {isITAdmin ? <span className="rounded bg-blue-50 px-2 py-1 text-[11px] font-bold text-blue-800">IT ADMIN · READ-ONLY GRAPH</span> : <div className="flex items-center gap-2">
+                <button onClick={() => setIsAddNodeOpen(true)} className="btn btn-primary text-xs py-1.5 px-3 flex items-center gap-1.5 font-bold shadow-sm">
                   <Plus className="w-4 h-4" /> Add Entity Node
                 </button>
                 <button onClick={() => setIsAddEdgeOpen(true)} className="btn btn-secondary text-xs py-1.5 px-3 flex items-center gap-1.5">
-                  <LinkIcon className="w-4 h-4 text-blue-600" /> Connect Nodes
+                  <LinkIcon className="w-4 h-4 text-blue-600" /> Connect Relationship Edge
                 </button>
-              </div>
+              </div>}
 
-              <div className="flex items-center gap-3 text-[11px] text-slate-500 font-medium">
-                <span className="flex items-center gap-1"><span className="w-2.5 h-2.5 rounded-full bg-blue-500"></span> Person</span>
-                <span className="flex items-center gap-1"><span className="w-2.5 h-2.5 rounded-full bg-purple-500"></span> Org</span>
-                <span className="flex items-center gap-1"><span className="w-2.5 h-2.5 rounded-full bg-amber-500"></span> Phone</span>
-                <span className="flex items-center gap-1"><span className="w-2.5 h-2.5 rounded-full bg-emerald-500"></span> Location</span>
-                <span className="flex items-center gap-1"><span className="w-2.5 h-2.5 rounded-full bg-red-500"></span> Evidence</span>
+              <div className="flex items-center gap-2">
+                <button onClick={() => setZoomScale(z => Math.max(0.6, z - 0.1))} className="p-1.5 rounded-lg border border-slate-200 text-slate-600 hover:bg-slate-100" title="Zoom Out">
+                  <ZoomOut className="w-4 h-4" />
+                </button>
+                <span className="font-mono text-[11px] font-bold text-slate-600 px-1">{Math.round(zoomScale * 100)}%</span>
+                <button onClick={() => setZoomScale(z => Math.min(1.8, z + 0.1))} className="p-1.5 rounded-lg border border-slate-200 text-slate-600 hover:bg-slate-100" title="Zoom In">
+                  <ZoomIn className="w-4 h-4" />
+                </button>
+                <button onClick={() => setZoomScale(1)} className="p-1.5 rounded-lg border border-slate-200 text-slate-600 hover:bg-slate-100 ml-1" title="Reset Zoom">
+                  <RotateCcw className="w-4 h-4" />
+                </button>
               </div>
             </div>
 
-            <div className="relative white-card p-2 border border-slate-200 rounded-2xl bg-slate-900/5 overflow-hidden shadow-inner">
+            <div className="relative white-card p-0 border border-slate-200 rounded-2xl overflow-hidden bg-slate-50/50 shadow-sm">
               <canvas
                 ref={canvasRef}
-                width={900}
-                height={520}
-                onMouseDown={handleMouseDown}
-                onMouseMove={handleMouseMove}
-                onMouseUp={handleMouseUp}
-                className="w-full h-[520px] cursor-grab active:cursor-grabbing rounded-xl bg-slate-900/10"
+                onMouseDown={isITAdmin ? undefined : handleMouseDown}
+                onMouseMove={isITAdmin ? undefined : handleMouseMove}
+                onMouseUp={isITAdmin ? undefined : handleMouseUp}
+                className={`w-full h-[560px] ${isITAdmin ? 'cursor-default' : 'cursor-grab active:cursor-grabbing'} block`}
               />
 
-              <div className="absolute bottom-4 right-4 bg-white/90 backdrop-blur-sm p-2 rounded-xl border border-slate-200 shadow-md text-[10px] font-mono text-slate-600 space-y-1">
-                <div>• Drag nodes to reposition layout</div>
+              <div className="absolute bottom-4 right-4 bg-white/95 backdrop-blur-md p-3 rounded-xl border border-slate-200 shadow-md text-[10px] font-mono text-slate-600 space-y-1">
+                <div className="font-bold text-slate-900 flex items-center gap-1.5">
+                  <Move className="w-3.5 h-3.5 text-blue-600" /> Interactive Controls:
+                </div>
+                <div>• Drag inside node card to move position</div>
+                <div>• Drag bottom-right blue dot to resize node</div>
                 <div>• Click any node to inspect evidence quotes</div>
               </div>
             </div>
@@ -540,13 +607,13 @@ export default function KnowledgeGraphPage() {
 
           {/* Side Inspector Drawer */}
           <div className="space-y-4">
-            <div className="white-card p-5 border border-slate-200 space-y-4 min-h-[580px] flex flex-col justify-between">
+            <div className="white-card p-5 border border-slate-200 space-y-4 min-h-[610px] flex flex-col justify-between">
               <div>
                 <div className="flex items-center justify-between pb-3 border-b border-slate-200">
                   <h3 className="font-bold text-slate-900 text-sm font-mono flex items-center gap-2">
                     <FileText className="w-4 h-4 text-blue-600" /> Evidence Citation Inspector
                   </h3>
-                  {selectedNode && (
+                  {selectedNode && !isITAdmin && (
                     <button onClick={() => handleDeleteNode(selectedNode.nodeId)} className="text-red-600 hover:text-red-700 p-1 text-xs flex items-center gap-1 font-semibold">
                       <Trash2 className="w-3.5 h-3.5" /> Delete
                     </button>
@@ -555,8 +622,11 @@ export default function KnowledgeGraphPage() {
 
                 {selectedNode ? (
                   <div className="mt-4 space-y-4 font-sans text-xs">
-                    <div className="p-3.5 rounded-xl bg-blue-50/70 border border-blue-200 space-y-1">
-                      <div className="text-[10px] font-mono text-blue-800 font-bold uppercase">{selectedNode.entityType}</div>
+                    <div className="p-3.5 rounded-xl bg-blue-50/70 border border-blue-200 space-y-1.5">
+                      <div className="flex items-center justify-between">
+                        <span className="text-[10px] font-mono text-blue-800 font-bold uppercase">{selectedNode.entityType}</span>
+                        <span className="text-[10px] text-slate-500 font-mono">ID: {selectedNode.nodeId}</span>
+                      </div>
                       <h4 className="text-sm font-bold text-slate-900">{selectedNode.label}</h4>
                       {selectedNode.properties?.title && (
                         <p className="text-xs text-slate-600">{selectedNode.properties.title}</p>
@@ -565,7 +635,7 @@ export default function KnowledgeGraphPage() {
 
                     <div>
                       <h5 className="font-bold text-slate-800 text-xs mb-2">Connected Relationships ({nodeEdges.length}):</h5>
-                      <div className="space-y-2 max-h-[340px] overflow-y-auto pr-1">
+                      <div className="space-y-2 max-h-[360px] overflow-y-auto pr-1">
                         {nodeEdges.map(edge => {
                           const src = nodes.find(n => n.nodeId === edge.sourceId);
                           const tgt = nodes.find(n => n.nodeId === edge.targetId);
@@ -575,7 +645,7 @@ export default function KnowledgeGraphPage() {
                                 <span className="font-bold text-blue-700 font-mono">{edge.relationshipType}</span>
                                 <span className="badge badge-info text-[9px] font-mono">{edge.provenance.trackingNo}</span>
                               </div>
-                              <div className="text-[11px] text-slate-700 font-medium">
+                              <div className="text-[11px] text-slate-800 font-semibold">
                                 {src?.label} ➔ {tgt?.label}
                               </div>
                               <div className="p-2 rounded bg-white border border-slate-200 text-[11px] text-slate-600 italic leading-relaxed">
@@ -592,7 +662,7 @@ export default function KnowledgeGraphPage() {
                     </div>
                   </div>
                 ) : (
-                  <div className="mt-12 text-center text-slate-400 space-y-2 py-8">
+                  <div className="mt-16 text-center text-slate-400 space-y-2 py-8">
                     <GitFork className="w-10 h-10 text-slate-300 mx-auto" />
                     <p className="text-xs font-medium">Click any node or relationship arrow on the canvas to inspect evidence citations.</p>
                   </div>
@@ -812,7 +882,7 @@ export default function KnowledgeGraphPage() {
         </div>
       )}
 
-      {/* MODAL: CONNECT NODES (ADD EDGE) */}
+      {/* MODAL: CONNECT NODES */}
       {isAddEdgeOpen && (
         <div className="modal-overlay">
           <div className="modal-content p-6 border border-slate-200 bg-white max-w-md space-y-4 text-xs font-sans">

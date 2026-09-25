@@ -35,8 +35,8 @@ router.post('/demo-context', authenticateToken, (req, res) => {
     return res.status(400).json({ error: 'INVALID_NETWORK', message: 'Unknown network context' });
   }
 
-  // Manager Network requires Boss/Investigator or Auditor/Judge role
-  const isManagerRole = ['POLICE_INVESTIGATOR', 'COMPLIANCE_AUDITOR', 'JUDICIAL_MAGISTRATE', 'ADMIN'].includes(req.user.role);
+  // Oversight is based on organizational role, not clearance or investigator rank.
+  const isManagerRole = ['COMPLIANCE_AUDITOR', 'JUDICIAL_MAGISTRATE'].includes(req.user.role) || req.user.systemRole === 'IT_ADMIN';
   if (networkName === 'MANAGER_NETWORK' && !isManagerRole) {
     return res.status(403).json({
       error: 'FORBIDDEN_PERSONA_NETWORK_BYPASS',
@@ -50,7 +50,7 @@ router.post('/demo-context', authenticateToken, (req, res) => {
 
 // GET /api/manager/security-alerts - Returns list of unauthorized access & security alert events (Manager/Auditor only)
 router.get('/manager/security-alerts', authenticateToken, (req, res) => {
-  const isManagerRole = ['POLICE_INVESTIGATOR', 'COMPLIANCE_AUDITOR', 'JUDICIAL_MAGISTRATE', 'ADMIN'].includes(req.user.role);
+  const isManagerRole = ['COMPLIANCE_AUDITOR', 'JUDICIAL_MAGISTRATE'].includes(req.user.role) || req.user.systemRole === 'IT_ADMIN';
   if (!isManagerRole) {
     return res.status(403).json({
       error: 'FORBIDDEN_MANAGER_ALERTS_ACCESS',
@@ -58,7 +58,7 @@ router.get('/manager/security-alerts', authenticateToken, (req, res) => {
     });
   }
 
-  const alerts = dbService.getSecurityAlerts ? dbService.getSecurityAlerts() : [
+  let alerts = dbService.getSecurityAlerts ? dbService.getSecurityAlerts() : [
     {
       userId: 'USR-POL-101',
       userName: 'Inspector Vikram Sharma',
@@ -90,12 +90,18 @@ router.get('/manager/security-alerts', authenticateToken, (req, res) => {
       timestamp: new Date(Date.now() - 1000 * 60 * 120).toISOString()
     }
   ];
+  if (req.user.systemRole !== 'IT_ADMIN') {
+    const db = dbService.readDB();
+    const scopeIds = new Set([req.user.id, ...db.users.filter(u => u.supervisorId === req.user.id).map(u => u.id)]);
+    const scopeDocs = new Set(db.documents.filter(d => scopeIds.has(d.ownerId || d.authorId)).map(d => d.id));
+    alerts = alerts.filter(a => scopeIds.has(a.userId) || scopeDocs.has(a.docId) || String(a.actor || '').includes(req.user.name));
+  }
   res.json(alerts);
 });
 
 // GET /api/manager/employees - Returns list of system personnel
 router.get('/manager/employees', authenticateToken, (req, res) => {
-  const isManagerRole = ['POLICE_INVESTIGATOR', 'COMPLIANCE_AUDITOR', 'JUDICIAL_MAGISTRATE', 'ADMIN'].includes(req.user.role);
+  const isManagerRole = ['COMPLIANCE_AUDITOR', 'JUDICIAL_MAGISTRATE'].includes(req.user.role) || req.user.systemRole === 'IT_ADMIN';
   if (!isManagerRole) {
     return res.status(403).json({
       error: 'FORBIDDEN_EMPLOYEE_DIRECTORY',
@@ -103,12 +109,14 @@ router.get('/manager/employees', authenticateToken, (req, res) => {
     });
   }
 
-  const users = dbService.getAllUsers();
+  const users = dbService.getAllUsers().filter(u => req.user.systemRole === 'IT_ADMIN' || u.supervisorId === req.user.id || u.id === req.user.id);
   res.json(users.map(u => ({
-    employeeId: u.id,
+    employeeId: u.employeeId || u.id,
     name: u.name,
     username: u.username,
     role: u.roleTitle || u.role,
+    policeStation: u.policeStation || null,
+    workLocation: u.workLocation || u.departmentName || null,
     department: u.departmentName || u.department,
     clearanceLevel: u.clearanceLevel
   })));

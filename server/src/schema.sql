@@ -108,6 +108,64 @@ CREATE TABLE ledger_blocks (
   details JSONB
 );
 
+-- Owner-controlled evidence access workflow. The API keeps these records in its
+-- JSON persistence adapter today; these tables mirror the same source model for SQL deployments.
+ALTER TABLE documents ADD COLUMN IF NOT EXISTS owner_id VARCHAR(64) REFERENCES users(id);
+ALTER TABLE documents ADD COLUMN IF NOT EXISTS access_policy VARCHAR(64) NOT NULL DEFAULT 'CASE_POLICY';
+UPDATE documents SET owner_id = author_id WHERE owner_id IS NULL;
+ALTER TABLE documents ALTER COLUMN owner_id SET NOT NULL;
+UPDATE documents SET access_policy = 'OWNER_APPROVAL' WHERE clearance_level >= 3 AND access_policy = 'CASE_POLICY';
+ALTER TABLE users ADD COLUMN IF NOT EXISTS system_role VARCHAR(64);
+ALTER TABLE users ADD COLUMN IF NOT EXISTS supervisor_id VARCHAR(64) REFERENCES users(id);
+
+CREATE TABLE IF NOT EXISTS access_requests (
+  id VARCHAR(80) PRIMARY KEY,
+  document_id VARCHAR(64) NOT NULL REFERENCES documents(id),
+  requester_id VARCHAR(64) NOT NULL REFERENCES users(id),
+  owner_id VARCHAR(64) NOT NULL REFERENCES users(id),
+  supervisor_id VARCHAR(64) NOT NULL REFERENCES users(id),
+  requested_permission VARCHAR(20) NOT NULL,
+  reason TEXT NOT NULL,
+  status VARCHAR(20) NOT NULL DEFAULT 'PENDING',
+  owner_decision VARCHAR(20) NOT NULL DEFAULT 'PENDING',
+  supervisor_decision VARCHAR(20) NOT NULL DEFAULT 'PENDING',
+  created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  valid_until TIMESTAMPTZ,
+  expires_at TIMESTAMPTZ
+);
+
+CREATE TABLE IF NOT EXISTS approvals (
+  id BIGSERIAL PRIMARY KEY,
+  request_id VARCHAR(80) NOT NULL REFERENCES access_requests(id),
+  approver_id VARCHAR(64) NOT NULL REFERENCES users(id),
+  approver_type VARCHAR(20) NOT NULL CHECK (approver_type IN ('OWNER', 'SUPERVISOR')),
+  decision VARCHAR(20) NOT NULL CHECK (decision IN ('APPROVED', 'REJECTED')),
+  reason TEXT,
+  timestamp TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS document_permissions (
+  user_id VARCHAR(64) NOT NULL REFERENCES users(id),
+  document_id VARCHAR(64) NOT NULL REFERENCES documents(id),
+  permission VARCHAR(20) NOT NULL,
+  granted_by_request VARCHAR(80) NOT NULL REFERENCES access_requests(id),
+  granted_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  expires_at TIMESTAMPTZ,
+  PRIMARY KEY (user_id, document_id, permission, granted_by_request)
+);
+
+CREATE TABLE IF NOT EXISTS abnormalities (
+  id VARCHAR(80) PRIMARY KEY,
+  request_id VARCHAR(80) NOT NULL REFERENCES access_requests(id),
+  document_id VARCHAR(64) NOT NULL REFERENCES documents(id),
+  supervisor_id VARCHAR(64) NOT NULL REFERENCES users(id),
+  actor_id VARCHAR(64) NOT NULL REFERENCES users(id),
+  actor_name VARCHAR(255) NOT NULL,
+  remark TEXT,
+  timestamp TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
 -- 7. Disable Row Level Security (RLS) for seamless API backend write access
 ALTER TABLE users DISABLE ROW LEVEL SECURITY;
 ALTER TABLE cases DISABLE ROW LEVEL SECURITY;
@@ -115,4 +173,8 @@ ALTER TABLE documents DISABLE ROW LEVEL SECURITY;
 ALTER TABLE manifests DISABLE ROW LEVEL SECURITY;
 ALTER TABLE revocations DISABLE ROW LEVEL SECURITY;
 ALTER TABLE ledger_blocks DISABLE ROW LEVEL SECURITY;
+ALTER TABLE access_requests DISABLE ROW LEVEL SECURITY;
+ALTER TABLE approvals DISABLE ROW LEVEL SECURITY;
+ALTER TABLE document_permissions DISABLE ROW LEVEL SECURITY;
+ALTER TABLE abnormalities DISABLE ROW LEVEL SECURITY;
 

@@ -1,6 +1,9 @@
 import express from 'express';
 import { sharingService } from '../services/sharingService.js';
 import { authenticateToken } from '../middleware/auth.js';
+import { dbService } from '../services/dbService.js';
+import { ledgerService } from '../services/ledgerService.js';
+import { evaluateDocumentAccess } from '../services/documentAccessService.js';
 
 const router = express.Router();
 
@@ -12,6 +15,14 @@ router.post('/create-link', authenticateToken, (req, res) => {
   }
 
   try {
+    const doc = dbService.getDocumentById(docId); const db = dbService.readDB();
+    const policyAllowsShare = doc && evaluateDocumentAccess({ user: req.user, doc, db, permission: 'SHARE' }).allowed;
+    const explicitShareGrant = doc && (db.documentPermissions || []).some(p => p.userId === req.user.id && p.documentId === doc.id && p.permission === 'SHARE' && (!p.expiresAt || Date.parse(p.expiresAt) > Date.now()));
+    const canShare = policyAllowsShare && (doc.accessPolicy !== 'OWNER_APPROVAL' || explicitShareGrant);
+    if (!canShare) {
+      if (doc) ledgerService.addBlock({ action: 'ACCESS_DENIED', actorId: req.user.id, actorName: req.user.name, caseId: doc.caseId, docId: doc.id, docHash: doc.payloadHash, details: { reason: 'Share permission required' } });
+      return res.status(403).json({ error: 'SHARE_PERMISSION_REQUIRED', message: 'The file owner or an explicit share grant is required.' });
+    }
     const shareObj = sharingService.createControlledShareLink({
       docId,
       recipientEmail,

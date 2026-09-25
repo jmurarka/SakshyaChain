@@ -2,6 +2,7 @@ import express from 'express';
 import { ragEngine } from '../services/ragEngine.js';
 import { dbService } from '../services/dbService.js';
 import { authenticateToken } from '../middleware/auth.js';
+import { evaluateDocumentAccess } from '../services/documentAccessService.js';
 
 const router = express.Router();
 
@@ -25,10 +26,8 @@ router.post('/summarize', authenticateToken, (req, res) => {
     return res.status(404).json({ error: 'DOC_NOT_FOUND', message: 'Document not found' });
   }
 
-  // Clearance Guard
-  if (req.user.clearanceLevel < doc.clearanceLevel) {
-    return res.status(403).json({ error: 'FORBIDDEN_CLEARANCE', message: 'Insufficient clearance for AI summary' });
-  }
+  const decision = evaluateDocumentAccess({ user: req.user, doc, db: dbService.readDB(), permission: 'VIEW' });
+  if (!decision.allowed) return res.status(403).json({ error: 'DOCUMENT_ACCESS_REQUIRED', message: decision.reason });
 
   const summary = ragEngine.generateDocumentSummary(doc.extractedText, doc.category);
   res.json({ summary, docTitle: doc.title });
@@ -42,6 +41,9 @@ router.post('/detect-pii', authenticateToken, (req, res) => {
   if (!doc) {
     return res.status(404).json({ error: 'DOC_NOT_FOUND', message: 'Document not found' });
   }
+
+  const decision = evaluateDocumentAccess({ user: req.user, doc, db: dbService.readDB(), permission: 'VIEW' });
+  if (!decision.allowed) return res.status(403).json({ error: 'DOCUMENT_ACCESS_REQUIRED', message: decision.reason });
 
   const piiList = ragEngine.detectPIIForRedaction(doc.extractedText);
   res.json({ piiList, docTitle: doc.title });

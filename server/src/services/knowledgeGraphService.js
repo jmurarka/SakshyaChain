@@ -1,5 +1,3 @@
-import collections from 'collections';
-
 export class EvidenceNode {
   constructor(nodeId, label, entityType, properties = {}) {
     this.nodeId = nodeId;

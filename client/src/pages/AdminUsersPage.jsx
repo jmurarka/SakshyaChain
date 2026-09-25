@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import api from '../services/api';
+import { useAuth } from '../context/AuthContext';
 import { 
   Users, 
   Shield, 
@@ -13,14 +15,15 @@ import {
 } from 'lucide-react';
 
 export default function AdminUsersPage() {
-  const [users, setUsers] = useState([
-    { id: 'usr_001', name: 'Inspector Vikram Singh', role: 'POLICE_INVESTIGATOR', department: 'Crime Branch - South Zone', clearance: 'LEVEL_3', mfa: true, status: 'ACTIVE' },
-    { id: 'usr_002', name: 'Dr. Anita Roy', role: 'FORENSIC_EXPERT', department: 'Central Forensic Science Lab (CFSL)', clearance: 'LEVEL_4', mfa: true, status: 'ACTIVE' },
-    { id: 'usr_003', name: 'Senior Advocate Rajesh Sharma', role: 'PROSECUTOR', department: 'Public Prosecutor Office', clearance: 'LEVEL_3', mfa: true, status: 'ACTIVE' },
-    { id: 'usr_004', name: 'Hon. Justice Verma', role: 'JUDGE', department: 'High Court Bench 4', clearance: 'LEVEL_5', mfa: true, status: 'ACTIVE' },
-    { id: 'usr_005', name: 'Officer Priya Patel', role: 'POLICE_INVESTIGATOR', department: 'Cyber Crime Unit', clearance: 'LEVEL_2', mfa: true, status: 'ACTIVE' },
-    { id: 'usr_006', name: 'Admin Root Control', role: 'SYSTEM_ADMIN', department: 'IT & Security Infrastructure', clearance: 'LEVEL_5', mfa: true, status: 'ACTIVE' }
-  ]);
+  const [users, setUsers] = useState([]);
+  const { isITAdmin } = useAuth();
+  useEffect(() => {
+    const loadUsers = () => api.get('/auth/users').then(r => setUsers((r.data.users || []).map(u => ({ ...u, clearance: `LEVEL_${u.clearanceLevel}`, department: u.departmentName || u.department, mfa: true, status: u.accountFrozen && Number(u.frozenUntil) > Date.now() ? 'FROZEN' : 'ACTIVE' })))).catch(() => {});
+    loadUsers();
+    if (!isITAdmin) return undefined;
+    const timer = window.setInterval(loadUsers, 3000);
+    return () => window.clearInterval(timer);
+  }, [isITAdmin]);
 
   const [search, setSearch] = useState('');
 
@@ -41,14 +44,14 @@ export default function AdminUsersPage() {
           </div>
           <h1 className="text-2xl font-bold text-slate-900">Personnel & Role Management</h1>
           <p className="text-slate-500 text-sm mt-1">
-            Manage multi-agency user profiles, security clearance tiers, and department assignments.
+            {isITAdmin ? 'System directory · IT Admin may grant or revoke employee access only.' : 'Multi-agency user profiles and organizational assignments.'}
           </p>
         </div>
 
-        <button className="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-medium text-sm rounded-xl transition shadow-sm">
+        {!isITAdmin && <button className="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-medium text-sm rounded-xl transition shadow-sm">
           <UserPlus className="w-4 h-4" />
           Provision New Officer Credentials
-        </button>
+        </button>}
       </div>
 
       {/* Directory Search & Table */}
@@ -77,7 +80,8 @@ export default function AdminUsersPage() {
                 <th className="py-3 px-4">Department</th>
                 <th className="py-3 px-4">Clearance Tier</th>
                 <th className="py-3 px-4">MFA Status</th>
-                <th className="py-3 px-4 text-right">Actions</th>
+                {isITAdmin && <th className="py-3 px-4">Account Status</th>}
+                {!isITAdmin && <th className="py-3 px-4 text-right">Actions</th>}
               </tr>
             </thead>
             <tbody className="divide-y divide-slate-100 text-slate-700">
@@ -108,11 +112,17 @@ export default function AdminUsersPage() {
                       <CheckCircle2 className="w-3 h-3 text-emerald-600" /> MFA Hardware Enabled
                     </span>
                   </td>
-                  <td className="py-3.5 px-4 text-right">
+                  {isITAdmin && <td className="py-3.5 px-4">
+                    <span className={`inline-flex items-center gap-1 rounded px-2 py-1 text-[11px] font-bold ${u.status === 'FROZEN' ? 'border border-rose-200 bg-rose-100 text-rose-800' : 'bg-emerald-50 text-emerald-700'}`}>
+                      {u.status === 'FROZEN' ? <><Lock className="h-3 w-3"/> FROZEN</> : 'ACTIVE'}
+                    </span>
+                    {u.status === 'FROZEN' && <div className="mt-1 text-[10px] text-rose-700">Until {new Date(u.frozenUntil).toLocaleString()}<br/>{u.freezeReason}</div>}
+                  </td>}
+                  {!isITAdmin && <td className="py-3.5 px-4 text-right">
                     <button className="text-slate-400 hover:text-slate-600 p-1">
                       <MoreVertical className="w-4 h-4" />
                     </button>
-                  </td>
+                  </td>}
                 </tr>
               ))}
             </tbody>
